@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Cyber-Marx: AR Comic Experience (MLN122)</title>
+  <title>Cyber-Marx: Truyện Tranh Tương Tác 3D (MLN122)</title>
 
-  <!-- PWA Meta Tags for Standalone Mobile Experience -->
+  <!-- PWA Meta Tags for Standalone Non-Web App Mode -->
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#00f0ff">
+  <meta name="theme-color" content="#0a0a14">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="CyberMarx">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <!-- A-Frame and MindAR Libraries -->
-  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <!-- StPageFlip Library for Realistic 3D Paper Curl Physics -->
+  <script src="libs/page-flip.browser.js"></script>
 
   <style>
     :root {
@@ -24,7 +23,7 @@
       --neon-pink: #ff007f;
       --neon-green: #00ff66;
       --neon-yellow: #ffe600;
-      --bg-dark: #0a0a14;
+      --bg-dark: #07070f;
     }
 
     * {
@@ -36,494 +35,574 @@
     }
 
     body {
-      overflow: hidden;
-      background-color: var(--bg-dark);
-      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 30%, #151528 0%, #05050a 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       color: #fff;
       width: 100vw;
       height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* Modern Cyberpunk UI HUD */
-    #hud-overlay {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+    /* Top Navigation Bar */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       z-index: 100;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: env(safe-area-inset-top, 16px) 16px env(safe-area-inset-bottom, 16px) 16px;
     }
 
-    .hud-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      pointer-events: auto;
-    }
-
-    .hud-badge {
-      background: rgba(10, 10, 20, 0.85);
-      border: 1px solid var(--neon-cyan);
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 13px;
-      letter-spacing: 1px;
-      font-weight: 700;
+    .brand {
       display: flex;
       align-items: center;
-      gap: 8px;
-    }
-
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #ff3333;
-      box-shadow: 0 0 8px #ff3333;
-      transition: all 0.3s ease;
-    }
-
-    .status-dot.active {
-      background: var(--neon-green);
-      box-shadow: 0 0 12px var(--neon-green);
-      animation: pulse 1s infinite alternate;
-    }
-
-    @keyframes pulse {
-      from { transform: scale(0.9); opacity: 0.8; }
-      to { transform: scale(1.2); opacity: 1; }
-    }
-
-    .hud-actions {
-      display: flex;
-      gap: 8px;
-    }
-
-    .icon-btn {
-      background: rgba(10, 10, 20, 0.85);
-      border: 1px solid var(--neon-cyan);
-      color: #fff;
-      border-radius: 8px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 18px;
-      pointer-events: auto;
-      transition: all 0.2s;
-    }
-
-    .icon-btn:active {
-      transform: scale(0.92);
-      border-color: var(--neon-pink);
-    }
-
-    /* Reticle / Scanner guide */
-    #scanner-guide {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: min(75vw, 320px);
-      height: min(100vw, 427px);
-      border: 2px dashed rgba(0, 240, 255, 0.4);
-      border-radius: 12px;
-      box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 12px;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-
-    #scanner-guide.hidden {
-      opacity: 0;
-    }
-
-    .corner {
-      width: 20px;
-      height: 20px;
-      border-color: var(--neon-cyan);
-      border-style: solid;
-    }
-    .top-left { border-width: 3px 0 0 3px; align-self: flex-start; }
-    .bottom-right { border-width: 0 3px 3px 0; align-self: flex-end; }
-
-    .scanner-text {
-      text-align: center;
-      font-size: 13px;
-      color: var(--neon-cyan);
-      text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
-      letter-spacing: 1px;
-      background: rgba(10, 10, 20, 0.7);
-      padding: 6px 10px;
-      border-radius: 6px;
-      align-self: center;
-    }
-
-    /* Bottom Control Bar */
-    .hud-bottom {
-      display: flex;
-      flex-direction: column;
       gap: 10px;
-      pointer-events: auto;
     }
 
-    .detected-banner {
-      background: linear-gradient(90deg, rgba(255,0,127,0.85), rgba(0,240,255,0.85));
-      border-radius: 8px;
-      padding: 10px 16px;
-      text-align: center;
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    }
+
+    .brand-title {
+      font-size: 15px;
       font-weight: 800;
       letter-spacing: 1px;
-      font-size: 14px;
+      color: #fff;
       text-transform: uppercase;
-      transform: translateY(100px);
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+      text-shadow: 0 0 10px var(--neon-cyan);
     }
 
-    .detected-banner.show {
-      transform: translateY(0);
+    .brand-badge {
+      font-size: 11px;
+      background: rgba(255, 0, 127, 0.2);
+      border: 1px solid var(--neon-pink);
+      color: var(--neon-pink);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
     }
 
-    .btn-row {
+    .header-actions {
       display: flex;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .action-btn {
-      flex: 1;
-      padding: 12px 8px;
-      background: rgba(15, 15, 30, 0.9);
+    .btn-tool {
+      background: rgba(20, 20, 35, 0.85);
       border: 1px solid var(--neon-cyan);
       color: #fff;
+      padding: 6px 14px;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.5px;
-      border-radius: 8px;
+      border-radius: 20px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
       transition: all 0.2s;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
     }
 
-    .action-btn:active {
-      transform: scale(0.96);
+    .btn-tool:active {
+      transform: scale(0.95);
       background: var(--neon-cyan);
       color: #000;
     }
 
-    /* Start Overlay (Audio/Camera unlock) */
-    #start-overlay {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at center, #151528 0%, #06060c 100%);
+    /* Main Flipbook Stage */
+    main {
+      flex: 1;
+      width: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
-      padding: 24px;
-      text-align: center;
+      position: relative;
+      perspective: 1500px;
+      overflow: hidden;
     }
 
-    .title-glitch {
-      font-size: 28px;
+    .book-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+    }
+
+    #flipbook {
+      display: none; /* revealed after StPageFlip init */
+    }
+
+    /* Individual Page Styles */
+    .page {
+      background-color: #121222;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Hard Covers */
+    .page.--hard {
+      background: linear-gradient(135deg, #181830 0%, #0c0c18 100%);
+      border: 2px solid #2a2a48;
+    }
+
+    .cover-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .cover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      opacity: 0.85;
+    }
+
+    .cover-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(7,7,15,0.7) 0%, rgba(7,7,15,0.2) 50%, rgba(7,7,15,0.9) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .cover-header {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--neon-cyan);
+      text-transform: uppercase;
+      background: rgba(0,0,0,0.6);
+      padding: 6px 12px;
+      border-radius: 4px;
+      align-self: center;
+      border: 1px solid rgba(0,240,255,0.3);
+    }
+
+    .cover-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cover-title {
+      font-size: 26px;
       font-weight: 900;
       color: #fff;
       text-shadow: 0 0 15px var(--neon-cyan), 2px 2px var(--neon-pink);
       letter-spacing: 2px;
-      margin-bottom: 8px;
+      line-height: 1.1;
     }
 
-    .subtitle {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-
-    .preview-thumb {
-      width: 140px;
-      height: 187px;
-      border: 2px solid var(--neon-cyan);
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0,240,255,0.4);
-      object-fit: cover;
-      margin-bottom: 24px;
-    }
-
-    .start-btn {
-      background: linear-gradient(135deg, var(--neon-pink), #9b00e8);
-      color: #fff;
-      border: none;
-      padding: 16px 36px;
-      font-size: 16px;
-      font-weight: 800;
-      border-radius: 30px;
+    .cover-tagline {
+      font-size: 12px;
+      color: var(--neon-yellow);
+      font-weight: 700;
       letter-spacing: 1px;
-      cursor: pointer;
-      box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
-      transition: all 0.2s ease;
     }
 
-    .start-btn:active {
-      transform: scale(0.95);
+    .flip-hint {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #aaa;
+      animation: bounce 1.5s infinite;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    /* Info Modal */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 500;
-      display: none;
+    @keyframes bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
+
+    /* Comic Pages with Illustration */
+    .comic-page-body {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .comic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Interactive hotspot buttons directly on comic panels */
+    .hotspot {
+      position: absolute;
+      background: rgba(0, 240, 255, 0.25);
+      border: 2px solid var(--neon-cyan);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--neon-cyan);
+      animation: hotspot-pulse 1.8s infinite;
+      z-index: 10;
+      transition: transform 0.2s;
     }
 
-    .modal.active {
+    .hotspot:active {
+      transform: scale(1.2);
+      background: var(--neon-pink);
+      border-color: var(--neon-pink);
+    }
+
+    @keyframes hotspot-pulse {
+      0% { transform: scale(0.9); box-shadow: 0 0 5px var(--neon-cyan); }
+      50% { transform: scale(1.1); box-shadow: 0 0 20px var(--neon-cyan); }
+      100% { transform: scale(0.9); box-shadow: 0 0 5px var(--neon-cyan); }
+    }
+
+    /* Editorial Text Pages */
+    .editorial-page {
+      padding: 30px 24px;
+      height: 100%;
       display: flex;
-    }
-
-    .modal-content {
-      background: #111122;
-      border: 1px solid var(--neon-cyan);
-      border-radius: 12px;
-      width: 100%;
-      max-width: 480px;
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 20px;
-      color: #ddd;
-      font-size: 14px;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #ccc;
       line-height: 1.6;
-      box-shadow: 0 0 30px rgba(0,240,255,0.25);
+      font-size: 13px;
+      background: #0d0d18;
+      border-left: 1px solid #1a1a2e;
     }
 
-    .modal-title {
-      font-size: 18px;
+    .page-tag {
+      font-size: 10px;
       font-weight: 800;
       color: var(--neon-cyan);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .page-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
       margin-bottom: 12px;
-      border-bottom: 1px solid rgba(0,240,255,0.3);
+      border-bottom: 1px solid #222238;
       padding-bottom: 8px;
     }
 
-    .modal-close {
-      margin-top: 16px;
-      width: 100%;
-      padding: 12px;
-      background: var(--neon-cyan);
-      color: #000;
-      font-weight: 800;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    .theory-box {
+      background: rgba(0, 240, 255, 0.05);
+      border-left: 3px solid var(--neon-cyan);
+      padding: 10px 12px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 12px;
     }
 
-    /* Embedded Target Viewer for Easy Testing */
-    #sample-target-img {
+    .formula-tag {
+      font-family: monospace;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--neon-green);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .page-footer-num {
+      text-align: center;
+      font-size: 11px;
+      color: #555;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Bottom Controller Bar */
+    footer {
       width: 100%;
-      border-radius: 8px;
-      border: 1px solid #444;
-      margin-top: 10px;
+      max-width: 800px;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-btn {
+      background: rgba(20, 20, 35, 0.9);
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.94);
+      background: var(--neon-cyan);
+      color: #000;
+    }
+
+    .page-indicator {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      letter-spacing: 1px;
+      background: rgba(10, 10, 20, 0.7);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    /* Speech / SFX Popup Notification */
+    #speech-popup {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(50px);
+      background: rgba(10, 10, 25, 0.95);
+      border: 1px solid var(--neon-pink);
+      box-shadow: 0 0 25px rgba(255, 0, 127, 0.4);
+      border-radius: 12px;
+      padding: 14px 20px;
+      max-width: min(90vw, 450px);
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 200;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    #speech-popup.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .popup-icon {
+      font-size: 24px;
+    }
+
+    .popup-text h4 {
+      font-size: 13px;
+      color: var(--neon-pink);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .popup-text p {
+      font-size: 12px;
+      color: #ddd;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
 
-  <!-- Fullscreen Start Overlay -->
-  <div id="start-overlay">
-    <div class="title-glitch">CYBER-MARX AR</div>
-    <div class="subtitle">Đồ Án Sản Phẩm Sáng Tạo Truyện Tranh AR<br>Học phần: Kinh tế chính trị Mác - Lênin (MLN122)</div>
-    <img src="assets/cyber_marx.jpg" class="preview-thumb" alt="Target Preview">
-    <button class="start-btn" onclick="startExperience()">KHỞI ĐỘNG HỆ THỐNG AR</button>
-  </div>
-
-  <!-- Realtime Cyberpunk HUD -->
-  <div id="hud-overlay">
-    <div class="hud-top">
-      <div class="hud-badge">
-        <div class="status-dot" id="status-dot"></div>
-        <span id="status-text">ĐANG QUÉT MỤC TIÊU...</span>
-      </div>
-      <div class="hud-actions">
-        <button class="icon-btn" onclick="toggleAudio()" title="Âm thanh" id="audio-toggle-btn">🔊</button>
-        <button class="icon-btn" onclick="openModal('sampleModal')" title="Xem Tranh Để Quét">🖼️</button>
-        <button class="icon-btn" onclick="openModal('infoModal')" title="Kiến Thức Lý Luận">💡</button>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="icon.png" class="brand-logo" alt="Logo">
+      <div>
+        <div class="brand-title">CYBER-MARX</div>
+        <div class="brand-badge">MLN122 ĐỒ ÁN SÁNG TẠO</div>
       </div>
     </div>
-
-    <div id="scanner-guide">
-      <div class="corner top-left"></div>
-      <div class="scanner-text">HƯỚNG CAMERA VÀO TRANH CYBER-MARX</div>
-      <div class="corner bottom-right"></div>
+    <div class="header-actions">
+      <button class="btn-tool" onclick="window.location.href='ar-camera.html'">📷 CHẾ ĐỘ QUÉT AR</button>
+      <button class="btn-tool" onclick="toggleAudio()" id="audioBtn">🔊 BẬT TIẾNG</button>
+      <button class="btn-tool" onclick="toggleFullscreen()">⛶ TOÀN MÀN HÌNH</button>
     </div>
+  </header>
 
-    <div class="hud-bottom">
-      <div class="detected-banner" id="detected-banner">
-        ⚡ ĐÃ KHÓA MỤC TIÊU: DAS KAPITAL 2.0 (OMNI-CORP DETECTED)
+  <!-- Interactive 3D Flipbook Stage -->
+  <main>
+    <div class="book-container">
+      <div id="flipbook">
+
+        <!-- TRANG BÌA TRƯỚC (BÌA CỨNG HARD COVER) -->
+        <div class="page --hard" data-density="hard">
+          <div class="cover-content">
+            <img src="assets/cyber_marx.jpg" class="cover-img" alt="Cyber Marx Cover">
+            <div class="cover-overlay">
+              <div class="cover-header">ĐẠI HỌC FPT • HỌC PHẦN MLN122</div>
+              <div class="cover-footer">
+                <div class="cover-title">DAS KAPITAL 2.0</div>
+                <div class="cover-tagline">ĐẾ CHẾ OMNI-CORP & GIAO THỨC ĐỘC QUYỀN</div>
+                <div class="flip-hint">👆 BẤM HOẶC KÉO GÓC TRANG ĐỂ LẬT SÁCH ➔</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANG 1: LỜI MỞ ĐẦU & TỰA TRUYỆN -->
+        <div class="page">
+          <div class="editorial-page">
+            <div>
+              <div class="page-tag">CHƯƠNG 4: KINH TẾ CHÍNH TRỊ MÁC - LÊNIN</div>
+              <div class="page-title">LỜI TỰA DỰ ÁN</div>
+              <p>Chào mừng bạn đến với ấn phẩm truyện tranh tương tác <strong>DAS KAPITAL 2.0</strong>.</p>
+              
+              <div class="theory-box">
+                <span class="formula-tag">QUY LUẬT LỊCH SỬ</span>
+                "Cạnh tranh tự do tất yếu sinh ra tập trung sản xuất, và sự tập trung sản xuất đó, khi phát triển tới một trình độ nhất định, sẽ dẫn tới độc quyền." 
+                <br><em>— V.I. Lênin</em>
+              </div>
+
+              <p style="margin-top: 10px;">
+                Trong kỷ nguyên số, độc quyền không còn mang hình hài của những giàn khoan dầu mỏ hay nhà máy hơi nước thế kỷ 19, mà ẩn mình sau <strong>Thuật toán nền tảng (Platform Economy)</strong> và <strong>Dữ liệu lớn (Big Data)</strong>.
+              </p>
+            </div>
+            <div>
+              <div style="font-size:11px; color:#777; margin-bottom:8px;">💡 Mẹo: Bấm vào các nút tròn phát sáng trên tranh để kích hoạt lời thoại & hiệu ứng!</div>
+              <div class="page-footer-num">— TRANG 1 —</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANG 2: TRANH 1 (ĐÔ THỊ NEO-METROPOLIS) -->
+        <div class="page">
+          <div class="comic-page-body">
+            <img src="assets/comic_page1.jpg" class="comic-img" alt="Comic Page 1">
+            
+            <!-- Hotspot 1: Drone Omni-Life -->
+            <div class="hotspot" style="top: 18%; right: 28%;" onclick="triggerHotspot('drone')">
+              🛸
+            </div>
+
+            <!-- Hotspot 2: Kael's Hacker Box -->
+            <div class="hotspot" style="bottom: 24%; right: 38%;" onclick="triggerHotspot('kael')">
+              ⚡
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANG 3: TRANH 2 (MẬT THẤT LẬP TRÌNH W = c + v + m) -->
+        <div class="page">
+          <div class="comic-page-body">
+            <img src="assets/comic_page2.jpg" class="comic-img" alt="Comic Page 2">
+
+            <!-- Hotspot 3: Công thức W = c + v + m -->
+            <div class="hotspot" style="top: 56%; left: 32%;" onclick="triggerHotspot('formula')">
+              📊
+            </div>
+
+            <!-- Hotspot 4: Khinh khí cầu cảnh sát Omni-Corp -->
+            <div class="hotspot" style="top: 18%; right: 24%;" onclick="triggerHotspot('blimp')">
+              🚨
+            </div>
+          </div>
+        </div>
+
+        <!-- TRANG 4: BẢNG GIẢI THÍCH LÝ LUẬN KINH TẾ CHÍNH TRỊ -->
+        <div class="page">
+          <div class="editorial-page">
+            <div>
+              <div class="page-tag">PHÂN TÍCH HỌC THUẬT (CHƯƠNG 4)</div>
+              <div class="page-title">BIỂU HIỆN MỚI CỦA ĐỘC QUYỀN</div>
+
+              <div class="theory-box">
+                <span class="formula-tag">W = c + v + m</span>
+                <strong>c (Tư bản bất biến):</strong> Chip bán dẫn, máy chủ AI, hạ tầng điện toán đám mây.<br>
+                <strong>v (Tư bản khả biến):</strong> Tiền lương trả cho lập trình viên, tài xế xe công nghệ, shipper.<br>
+                <strong>m (Giá trị thặng dư):</strong> Nguồn dữ liệu người dùng khổng lồ bị siêu tập đoàn tích lũy miễn phí!
+              </div>
+
+              <p style="margin-top: 10px;">
+                <strong>Liên minh Độc quyền & Nhà nước (PPP):</strong> 
+                Tập đoàn Omni-Corp lợi dụng các hiệp định hợp tác công - tư và luật an ninh công nghệ để biến công quyền thành công cụ đàn áp phần mềm nguồn mở tự do.
+              </p>
+            </div>
+            <div class="page-footer-num">— TRANG 4 —</div>
+          </div>
+        </div>
+
+        <!-- TRANG BÌA SAU (BÌA CỨNG HARD COVER) -->
+        <div class="page --hard" data-density="hard">
+          <div class="editorial-page" style="background: linear-gradient(135deg, #101020 0%, #06060c 100%);">
+            <div>
+              <div class="page-tag">KẾT THÚC ẤN PHẨM</div>
+              <div class="page-title" style="color:var(--neon-cyan);">THÔNG ĐIỆP BẢO VỆ ĐỒ ÁN</div>
+              <p>Mâu thuẫn giữa tính chất xã hội hóa ngày càng cao của lực lượng sản xuất với quan hệ chiếm hữu tư nhân tư bản chủ nghĩa là không thể dung hòa.</p>
+              
+              <div class="theory-box" style="border-color: var(--neon-pink);">
+                <strong>ĐỒ ÁN HỌC PHẦN MLN122</strong><br>
+                • Đề tài: Sản phẩm sáng tạo Truyện tranh Tương tác<br>
+                • Công nghệ: 3D Physics Page-Curl & PWA Standalone<br>
+                • Nhóm sinh viên Đại học FPT
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size:12px; color:var(--neon-green); font-weight:bold;">© 2026 NHÓM ĐỒ ÁN MLN122</div>
+              <div class="page-footer-num">— BÌA SAU —</div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="btn-row">
-        <button class="action-btn" onclick="openModal('infoModal')">
-          <span>📊</span> GIÁ TRỊ THẶNG DƯ SỐ
-        </button>
-        <button class="action-btn" onclick="openModal('omniModal')">
-          <span>🏢</span> ĐỘC QUYỀN OMNI-CORP
-        </button>
-      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Speech & SFX Toast Popup -->
+  <div id="speech-popup">
+    <div class="popup-icon" id="popup-icon">⚡</div>
+    <div class="popup-text">
+      <h4 id="popup-title">THÔNG TIN TƯƠNG TÁC</h4>
+      <p id="popup-desc">Bấm vào khung tranh để xem tương tác.</p>
     </div>
   </div>
 
-  <!-- A-Frame 3D AR Scene with MindAR -->
-  <a-scene 
-    mindar-image="imageTargetSrc: ./assets/targets.mind; autoStart: false; uiScanning: no; filterMinCF:0.0001; filterBeta: 0.001;" 
-    embedded
-    color-space="sRGB" 
-    renderer="colorManagement: true, physicallyCorrectLights: true" 
-    vr-mode-ui="enabled: false" 
-    device-orientation-permission-ui="enabled: false">
-    
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  <!-- Bottom Navigation -->
+  <footer>
+    <button class="nav-btn" onclick="flipPrev()">◀ TRANG TRƯỚC</button>
+    <div class="page-indicator" id="pageNumber">TRANG 1 / 6</div>
+    <button class="nav-btn" onclick="flipNext()">TRANG TIẾP ▶</button>
+  </footer>
 
-    <!-- Target 0: Cyber-Marx Comic Panel (Aspect Ratio 896x1200 ~ width 1.0, height 1.339) -->
-    <a-entity mindar-image-target="targetIndex: 0" id="marxTarget">
-      
-      <!-- 1. Holographic Neon Frame bordering the target -->
-      <a-plane 
-        position="0 0 0.01" 
-        width="1.05" 
-        height="1.39" 
-        material="color: #00f0ff; opacity: 0.35; transparent: true; wireframe: true" 
-        animation="property: rotation; to: 0 0 360; loop: true; dur: 20000; easing: linear">
-      </a-plane>
-
-      <!-- 2. Rotating Cyberpunk Hologram Circle Behind -->
-      <a-ring 
-        position="0 0 0.05" 
-        radius-inner="0.45" 
-        radius-outer="0.55" 
-        material="color: #ff007f; opacity: 0.6; transparent: true; side: double"
-        animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear">
-      </a-ring>
-
-      <!-- 3. Floating 3D Tech HUD Data Layer -->
-      <!-- Formula W = c + v + m -->
-      <a-entity position="0 0.5 0.15">
-        <a-text 
-          value="W = c + v + m" 
-          align="center" 
-          color="#00ff66" 
-          width="3.5" 
-          font="aileronsemibold">
-        </a-text>
-      </a-entity>
-
-      <!-- Surplus Value Indicator -->
-      <a-entity position="0 0.32 0.12">
-        <a-text 
-          value="GIA TRI THANG DU SO: m = 85%" 
-          align="center" 
-          color="#00f0ff" 
-          width="2.2" 
-          font="kelsonsans">
-        </a-text>
-      </a-entity>
-
-      <!-- Status Badge -->
-      <a-entity position="0 -0.45 0.12">
-        <a-text 
-          value="[ OMNI-CORP OVERRIDE: ACTIVE ]" 
-          align="center" 
-          color="#ffe600" 
-          width="2.4" 
-          font="kelsonsans"
-          animation="property: opacity; from: 0.4; to: 1.0; dir: alternate; loop: true; dur: 800">
-        </a-text>
-      </a-entity>
-
-      <!-- 4. Pulsing Cyber Grid Plane -->
-      <a-plane 
-        position="0 -0.05 0.02" 
-        width="0.95" 
-        height="0.4" 
-        material="color: #0a0a20; opacity: 0.55; transparent: true">
-        <a-text 
-          value="NEO-PROLETARIAT RESISTANCE\nDAS KAPITAL 2.0 PROTOCOL\nDECENTRALIZED DATA COMMUNE" 
-          align="center" 
-          color="#ffffff" 
-          width="1.8" 
-          position="0 0 0.01">
-        </a-text>
-      </a-plane>
-
-    </a-entity>
-  </a-scene>
-
-  <!-- Modal 1: Sample Target Image (Cho phép soi ngay trên màn hình) -->
-  <div class="modal" id="sampleModal">
-    <div class="modal-content">
-      <div class="modal-title">🖼️ TRANH MẪU ĐỂ QUÉT THỬ NGHIỆM</div>
-      <p>Để test camera ngay lập tức, bạn có thể <strong>dùng điện thoại soi thẳng vào bức tranh này trên màn hình máy tính</strong> (hoặc in ra giấy):</p>
-      <img src="assets/cyber_marx.jpg" id="sample-target-img" alt="Cyber-Marx Target">
-      <p style="margin-top: 10px; font-size: 12px; color: var(--neon-cyan);">
-        💡 Nét vẽ vi mạch, kính visor neon và chữ "OMNI-CORP" đã được AI trích xuất điểm nhận diện (Feature Points) đạt chuẩn 5 sao!
-      </p>
-      <button class="modal-close" onclick="closeModal('sampleModal')">ĐÓNG & TIẾP TỤC QUÉT</button>
-    </div>
-  </div>
-
-  <!-- Modal 2: Kiến thức Lý luận KTCT Mác - Lênin -->
-  <div class="modal" id="infoModal">
-    <div class="modal-content">
-      <div class="modal-title">📊 GIÁ TRỊ THẶNG DƯ TRONG KỶ NGUYÊN SỐ</div>
-      <p><strong>1. Bản chất công thức: \(W = c + v + m\)</strong></p>
-      <ul style="margin-left: 20px; margin-bottom: 12px;">
-        <li><strong>\(c\) (Tư bản bất biến):</strong> Server đám mây, hệ thống máy chủ AI, chip bán dẫn, thuật toán nền tảng.</li>
-        <li><strong>\(v\) (Tư bản khả biến):</strong> Tiền lương/chiết khấu chi trả cho lập trình viên, shipper, tài xế công nghệ.</li>
-        <li><strong>\(m\) (Giá trị thặng dư):</strong> Kho dữ liệu lớn (Big Data) và thặng dư hành vi người dùng bị các tập đoàn công nghệ chiếm đoạt không công!</li>
-      </ul>
-      <p><strong>2. Biểu hiện mới của bóc lột:</strong></p>
-      <p>Trong nền kinh tế nền tảng (Platform Economy), người lao động bị giám sát 24/7 bởi "Ông chủ thuật toán" (Algorithmic Management), tạo ra siêu ngạch lợi nhuận khổng lồ cho tập đoàn độc quyền.</p>
-      <button class="modal-close" onclick="closeModal('infoModal')">ĐÃ HIỂU LÝ LUẬN</button>
-    </div>
-  </div>
-
-  <!-- Modal 3: Độc quyền Omni-Corp -->
-  <div class="modal" id="omniModal">
-    <div class="modal-content">
-      <div class="modal-title">🏢 ĐỘC QUYỀN HẠ TẦNG VÀ DỮ LIỆU LỚN</div>
-      <p><strong>Theo Lênin (Chương 4):</strong> Cạnh tranh tự do tất yếu dẫn tới tích tụ và tập trung sản xuất, sinh ra <strong>Độc quyền</strong>.</p>
-      <p style="margin-top: 8px;"><strong>Biểu hiện của tập đoàn Omni-Corp:</strong></p>
-      <ul style="margin-left: 20px; margin-top: 6px;">
-        <li><strong>Độc quyền mạng lưới (Network Effect):</strong> Một khi siêu ứng dụng chiếm đa số người dùng, các đối thủ mới không thể cạnh tranh bình đẳng.</li>
-        <li><strong>Bóp nghẹt đối thủ:</strong> Sẵn sàng mua đứt (Acquisition) hoặc sao chép/đánh cắp tính năng của các ứng dụng nguồn mở.</li>
-        <li><strong>Liên minh với Nhà nước tư sản:</strong> Tận dụng luật bản quyền và an ninh mạng để bảo hộ trật tự độc quyền.</li>
-      </ul>
-      <button class="modal-close" onclick="closeModal('omniModal')">ĐÓNG CỬA SỔ</button>
-    </div>
-  </div>
-
-  <!-- Sound & Controller Logic -->
+  <!-- Script Logic -->
   <script>
-    // Web Audio API Synthesizer (Zero external dependencies)
+    let pageFlipInstance = null;
     let audioCtx = null;
     let audioEnabled = true;
 
+    // Web Audio API Synthesized Paper Rustle / Flip Sound
     function initAudio() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -533,85 +612,163 @@
       }
     }
 
-    function playCyberChime() {
+    function playPaperFlipSound() {
       if (!audioEnabled || !audioCtx) return;
-      const now = audioCtx.currentTime;
-      
-      // Synthwave Arpeggio Chime
-      const freqs = [440, 554.37, 659.25, 880];
-      freqs.forEach((freq, idx) => {
-        const osc = audioCtx.createOscillator();
+      try {
+        const bufferSize = audioCtx.sampleRate * 0.18;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.4));
+        }
+
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(600, audioCtx.currentTime);
+        filter.frequency.exponentialRampToValueAtTime(1600, audioCtx.currentTime + 0.12);
+        filter.Q.value = 1.8;
+
         const gain = audioCtx.createGain();
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+        gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.18);
 
-        gain.gain.setValueAtTime(0.12, now + idx * 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.5);
-
-        osc.connect(gain);
+        noise.connect(filter);
+        filter.connect(gain);
         gain.connect(audioCtx.destination);
 
-        osc.start(now + idx * 0.08);
-        osc.stop(now + idx * 0.08 + 0.5);
-      });
+        noise.start();
+      } catch (e) {
+        console.warn('Audio error:', e);
+      }
+    }
+
+    function playCyberBeep(freq = 880) {
+      if (!audioEnabled || !audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.25);
+      } catch (e) {}
     }
 
     function toggleAudio() {
-      audioEnabled = !audioEnabled;
-      const btn = document.querySelector('#audio-toggle-btn');
-      btn.textContent = audioEnabled ? '🔊' : '🔇';
-      if (audioEnabled) playCyberChime();
-    }
-
-    // Modal helpers
-    function openModal(id) {
-      document.getElementById(id).classList.add('active');
-    }
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('active');
-    }
-
-    // Start Experience
-    function startExperience() {
       initAudio();
-      playCyberChime();
-      document.querySelector('#start-overlay').style.display = 'none';
-
-      const sceneEl = document.querySelector('a-scene');
-      sceneEl.systems["mindar-image-system"].start();
+      audioEnabled = !audioEnabled;
+      const btn = document.getElementById('audioBtn');
+      btn.textContent = audioEnabled ? '🔊 BẬT TIẾNG' : '🔇 TẮT TIẾNG';
+      if (audioEnabled) playPaperFlipSound();
     }
 
-    // Target Tracking Event Listeners
-    window.addEventListener('DOMContentLoaded', () => {
-      const target = document.querySelector('#marxTarget');
-      const statusDot = document.querySelector('#status-dot');
-      const statusText = document.querySelector('#status-text');
-      const scannerGuide = document.querySelector('#scanner-guide');
-      const detectedBanner = document.querySelector('#detected-banner');
-
-      target.addEventListener('targetFound', () => {
-        statusDot.classList.add('active');
-        statusText.textContent = 'ĐÃ KHÓA: CYBER-MARX!';
-        statusText.style.color = 'var(--neon-green)';
-        scannerGuide.classList.add('hidden');
-        detectedBanner.classList.add('show');
-        playCyberChime();
-      });
-
-      target.addEventListener('targetLost', () => {
-        statusDot.classList.remove('active');
-        statusText.textContent = 'ĐANG QUÉT MỤC TIÊU...';
-        statusText.style.color = '#fff';
-        scannerGuide.classList.remove('hidden');
-        detectedBanner.classList.remove('show');
-      });
-
-      // Register PWA Service Worker
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js').catch(err => {
-          console.warn('SW register note:', err);
-        });
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
       }
+    }
+
+    // Hotspot Interactive Click Actions
+    const HOTSPOT_DATA = {
+      drone: {
+        icon: '🛸',
+        title: 'DRONE GIÁM SÁT OMNI-LIFE',
+        desc: 'Hệ thống thuật toán quét nhận diện khuôn mặt công nhân và tính toán năng suất lao động theo từng giây.'
+      },
+      kael: {
+        icon: '⚡',
+        title: 'THIẾT BỊ HACKER OPEN-GRID',
+        desc: 'Kael đang mang theo bản phân tán của giao thức nguồn mở nhằm giải phóng các tài xế và lập trình viên.'
+      },
+      formula: {
+        icon: '📊',
+        title: 'CÔNG THỨC W = c + v + m',
+        desc: 'Kael phát hiện: Giá trị mới tạo ra (v + m) bị thuật toán Omni-Corp âm thầm trích xuất tới 85% giá trị thặng dư!'
+      },
+      blimp: {
+        icon: '🚨',
+        title: 'CẢNH SÁT AN NINH CÔNG NGHỆ',
+        desc: 'Sự dung hợp giữa tập đoàn tư bản độc quyền và bộ máy công quyền đang truy lùng các lập trình viên tự do.'
+      }
+    };
+
+    let popupTimer = null;
+    function triggerHotspot(key) {
+      initAudio();
+      playCyberBeep(key === 'formula' ? 1200 : 700);
+      const data = HOTSPOT_DATA[key];
+      if (!data) return;
+
+      document.getElementById('popup-icon').textContent = data.icon;
+      document.getElementById('popup-title').textContent = data.title;
+      document.getElementById('popup-desc').textContent = data.desc;
+
+      const popup = document.getElementById('speech-popup');
+      popup.classList.add('show');
+
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(() => {
+        popup.classList.remove('show');
+      }, 4000);
+    }
+
+    // Flipbook Navigation Buttons
+    function flipNext() {
+      initAudio();
+      if (pageFlipInstance) pageFlipInstance.flipNext();
+    }
+
+    function flipPrev() {
+      initAudio();
+      if (pageFlipInstance) pageFlipInstance.flipPrev();
+    }
+
+    // Initialize 3D Realistic PageFlip Physics
+    window.addEventListener('DOMContentLoaded', () => {
+      const bookEl = document.getElementById('flipbook');
+
+      // Responsive dimensions calculation
+      const isMobile = window.innerWidth < 768;
+      const baseWidth = isMobile ? Math.min(window.innerWidth - 30, 420) : 480;
+      const baseHeight = isMobile ? Math.min(window.innerHeight - 180, 640) : 680;
+
+      pageFlipInstance = new St.PageFlip(bookEl, {
+        width: baseWidth,
+        height: baseHeight,
+        size: isMobile ? 'fixed' : 'stretch',
+        minWidth: 320,
+        maxWidth: 600,
+        minHeight: 460,
+        maxHeight: 850,
+        maxShadowOpacity: 0.6,
+        showCover: true,
+        mobileScrollSupport: false,
+        useMouseEvents: true,
+        swipeDistance: 30
+      });
+
+      pageFlipInstance.loadFromHtml(document.querySelectorAll('.page'));
+      bookEl.style.display = 'block';
+
+      // Page change listener
+      pageFlipInstance.on('flip', (e) => {
+        playPaperFlipSound();
+        const total = pageFlipInstance.getPageCount();
+        const current = e.data + 1;
+        document.getElementById('pageNumber').textContent = `TRANG ${current} / ${total}`;
+      });
+
+      // User first click enables audio context
+      document.body.addEventListener('click', () => initAudio(), { once: true });
     });
   </script>
 </body>
