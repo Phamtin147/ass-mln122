@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindAR Image Targets Compiler - Trình Biên Dịch Tranh Truyện</title>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image.prod.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d1a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 650px;
+      width: 100%;
+      background: #181829;
+      border: 1px solid #00f0ff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 0 25px rgba(0,240,255,0.2);
+    }
+    h1 {
+      font-size: 20px;
+      color: #00f0ff;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .dropzone {
+      border: 2px dashed #00f0ff;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      cursor: pointer;
+      background: rgba(0, 240, 255, 0.05);
+      transition: all 0.2s;
+    }
+    .dropzone:hover {
+      background: rgba(0, 240, 255, 0.12);
+    }
+    .preview-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .preview-item {
+      position: relative;
+      width: 80px;
+      height: 100px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #555;
+    }
+    .preview-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .badge {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      background: #ff007f;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    .progress-bar-container {
+      width: 100%;
+      height: 14px;
+      background: #252538;
+      border-radius: 7px;
+      margin-top: 20px;
+      overflow: hidden;
+      display: none;
+    }
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #ff007f, #00f0ff);
+      transition: width 0.1s ease;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      background: #00f0ff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,240,255,0.4);
+    }
+    .btn:disabled {
+      background: #555;
+      color: #888;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>TRÌNH BIÊN DỊCH ẢNH TRUYỆN TRANH SANG TARGETS.MIND</h1>
+  <p>Dành cho các thành viên trong nhóm: Thả các trang truyện tranh (PNG/JPG) vào đây để biên dịch thành file <code>targets.mind</code> hoàn toàn tự động ngay trên trình duyệt (chạy bằng GPU của máy, không cần mạng!).</p>
+
+  <div class="dropzone" onclick="document.getElementById('fileInput').click()">
+    📂 KÉO THẢ HOẶC BẤM ĐỂ CHỌN ẢNH TRANH VẼ
+    <input type="file" id="fileInput" multiple accept="image/png, image/jpeg" style="display:none">
+  </div>
+
+  <div class="preview-list" id="previewList"></div>
+
+  <div class="progress-bar-container" id="progressContainer">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div id="statusText" style="margin-top:8px; font-size:13px; text-align:center; color:#00f0ff;"></div>
+
+  <button class="btn" id="compileBtn" disabled onclick="startCompile()">BẮT ĐẦU BIÊN DỊCH</button>
+</div>
+
+<script>
+  let files = [];
+  const fileInput = document.getElementById('fileInput');
+  const previewList = document.getElementById('previewList');
+  const compileBtn = document.getElementById('compileBtn');
+  const progressContainer = document.getElementById('progressContainer');
+  const progressBar = document.getElementById('progressBar');
+  const statusText = document.getElementById('statusText');
+
+  fileInput.addEventListener('change', (e) => {
+    files = Array.from(e.target.files);
+    renderPreviews();
+  });
+
+  function renderPreviews() {
+    previewList.innerHTML = '';
+    files.forEach((file, idx) => {
+      const item = document.createElement('div');
+      item.className = 'preview-item';
+      item.innerHTML = `<span class="badge">#${idx}</span><img src="${URL.createObjectURL(file)}">`;
+      previewList.appendChild(item);
+    });
+    compileBtn.disabled = files.length === 0;
+  }
+
+  async function startCompile() {
+    compileBtn.disabled = true;
+    progressContainer.style.display = 'block';
+    statusText.textContent = 'Đang nạp ảnh vào bộ nhớ...';
+
+    const images = [];
+    for (const f of files) {
+      const img = new Image();
+      img.src = URL.createObjectURL(f);
+      await new Promise(r => img.onload = r);
+      images.push(img);
+    }
+
+    statusText.textContent = 'Đang trích xuất điểm đặc trưng AI (Feature Points)...';
+    const compiler = new window.MINDAR.IMAGE.Compiler();
+
+    await compiler.compileImageTargets(images, (progress) => {
+      progressBar.style.width = Math.floor(progress) + '%';
+      statusText.textContent = `Tiến độ biên dịch: ${Math.floor(progress)}%`;
+    });
+
+    statusText.textContent = 'Đang đóng gói file targets.mind...';
+    const exportedBuffer = await compiler.exportData();
+    const blob = new Blob([exportedBuffer], {type: 'application/octet-stream'});
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = 'targets.mind';
+    downloadLink.click();
+
+    statusText.textContent = '✅ ĐÃ BIÊN DỊCH XONG! File targets.mind đã được tải về máy của bạn.';
+    compileBtn.disabled = false;
+  }
+</script>
+
+</body>
+</html>

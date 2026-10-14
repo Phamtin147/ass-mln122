@@ -1,0 +1,18 @@
+{
+  "name": "Cyber-Marx: AR Comic Experience",
+  "short_name": "CyberMarx",
+  "description": "Dự án Truyện tranh Tương tác AR Kinh tế Chính trị Mác - Lênin (MLN122)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a12",
+  "theme_color": "#00f0ff",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
