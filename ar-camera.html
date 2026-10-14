@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Cyber-Marx: AR Camera Mode</title>
+  <title>Cyber-Marx: AR Camera Mode (3 Trang Truyện)</title>
 
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#00f0ff">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -18,57 +19,83 @@
       --neon-cyan: #00f0ff;
       --neon-pink: #ff007f;
       --neon-green: #00ff66;
+      --neon-yellow: #ffe600;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { overflow:hidden; background:#000; font-family:sans-serif; color:#fff; }
+    * { margin:0; padding:0; box-sizing:border-box; user-select:none; }
+    body { overflow:hidden; background:#000; font-family:-apple-system, BlinkMacSystemFont, sans-serif; color:#fff; }
 
     #hud {
       position:fixed; inset:0; pointer-events:none; z-index:100;
-      display:flex; flex-direction:column; justify-content:space-between; padding:16px;
+      display:flex; flex-direction:column; justify-content:space-between;
+      padding: env(safe-area-inset-top, 16px) 16px env(safe-area-inset-bottom, 16px) 16px;
     }
     .top-bar { display:flex; justify-content:space-between; align-items:center; pointer-events:auto; }
     .back-btn {
       background:rgba(10,10,20,0.85); border:1px solid var(--neon-cyan); color:#fff;
       padding:8px 16px; border-radius:20px; font-weight:bold; cursor:pointer; font-size:12px;
+      box-shadow:0 0 10px rgba(0,240,255,0.3);
     }
     .badge {
       background:rgba(10,10,20,0.85); border:1px solid var(--neon-cyan);
       padding:8px 14px; border-radius:8px; font-size:12px; font-weight:bold;
+      box-shadow:0 0 10px rgba(0,240,255,0.3); transition:all 0.3s;
     }
+    .badge.locked {
+      border-color:var(--neon-green); color:var(--neon-green);
+      box-shadow:0 0 15px var(--neon-green);
+    }
+
     #start-overlay {
-      position:fixed; inset:0; background:rgba(5,5,10,0.92); z-index:9999;
-      display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px;
+      position:fixed; inset:0; background:radial-gradient(circle at center, #151528 0%, #06060c 100%);
+      z-index:9999; display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center; padding:24px;
     }
     .start-btn {
-      margin-top:20px; padding:14px 30px; font-size:16px; font-weight:bold;
-      background:var(--neon-pink); color:#fff; border:none; border-radius:30px; cursor:pointer;
-      box-shadow:0 0 20px var(--neon-pink);
+      margin-top:24px; padding:16px 36px; font-size:16px; font-weight:bold;
+      background:linear-gradient(135deg, var(--neon-pink), #9b00e8); color:#fff; border:none;
+      border-radius:30px; cursor:pointer; box-shadow:0 0 25px rgba(255, 0, 127, 0.6);
+    }
+
+    .guide-box {
+      position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+      width:min(75vw, 300px); height:min(100vw, 400px);
+      border:2px dashed rgba(0,240,255,0.4); border-radius:12px; pointer-events:none;
+      display:flex; justify-content:center; align-items:center; text-align:center;
+      padding:10px; color:rgba(0,240,255,0.8); font-size:12px; font-weight:bold;
+      text-shadow:0 0 8px rgba(0,240,255,0.5);
     }
   </style>
 </head>
 <body>
 
   <div id="start-overlay">
-    <h2 style="color:var(--neon-cyan); margin-bottom:8px;">CYBER-MARX AR CAMERA</h2>
-    <p style="color:#aaa; font-size:14px;">Hướng camera vào tranh Cyber-Marx (trang bìa) để hiện Hologram 3D</p>
+    <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">CYBER-MARX AR CAMERA</h2>
+    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện cả 3 trang truyện: Bìa Karl Marx, Trang 1 Neo-Metropolis, và Trang 2 Mật thất Kael.</p>
     <button class="start-btn" onclick="startAR()">BẬT CAMERA QUÉT AR</button>
   </div>
 
   <div id="hud">
     <div class="top-bar">
       <button class="back-btn" onclick="window.location.href='index.html'">◀ VỀ CUỐN TRUYỆN 3D</button>
-      <div class="badge" id="statusBadge">🔴 ĐANG QUÉT BÌA TRUYỆN...</div>
+      <div class="badge" id="statusBadge">🔴 HƯỚNG CAMERA VÀO TRANH TRUYỆN...</div>
+    </div>
+    <div class="guide-box" id="guideBox">
+      ĐƯA CAMERA VÀO TRANH ĐỂ KHÓA MỤC TIÊU
     </div>
   </div>
 
+  <!-- A-Frame Scene with 3 Image Targets -->
   <a-scene 
-    mindar-image="imageTargetSrc: ./assets/targets.mind; autoStart: false; uiScanning: no;" 
+    mindar-image="imageTargetSrc: ./assets/targets.mind; autoStart: false; uiScanning: no; filterMinCF:0.0001; filterBeta: 0.001;" 
     embedded
     color-space="sRGB" 
+    renderer="colorManagement: true, physicallyCorrectLights: true"
     vr-mode-ui="enabled: false">
+    
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <a-entity mindar-image-target="targetIndex: 0" id="targetMarx">
+    <!-- TARGET 0: BÌA TRUYỆN CYBER-MARX -->
+    <a-entity mindar-image-target="targetIndex: 0" id="target0">
       <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #00f0ff; opacity: 0.35; transparent: true; wireframe: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 20000; easing: linear"></a-plane>
       <a-ring position="0 0 0.05" radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.6; transparent: true" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
       <a-entity position="0 0.5 0.15">
@@ -78,29 +105,92 @@
         <a-text value="GIA TRI THANG DU SO: m = 85%" align="center" color="#00f0ff" width="2.2"></a-text>
       </a-entity>
       <a-entity position="0 -0.45 0.12">
-        <a-text value="[ OMNI-CORP OVERRIDE: ACTIVE ]" align="center" color="#ffe600" width="2.4"></a-text>
+        <a-text value="[ DAS KAPITAL 2.0 PROTOCOL ]" align="center" color="#ffe600" width="2.4"></a-text>
       </a-entity>
     </a-entity>
+
+    <!-- TARGET 1: TRANG 1 NEO-METROPOLIS -->
+    <a-entity mindar-image-target="targetIndex: 1" id="target1">
+      <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #ff007f; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
+      <a-entity position="0 0.5 0.15">
+        <a-text value="OMNI-LIFE SURVEILLANCE" align="center" color="#ff007f" width="3.2"></a-text>
+      </a-entity>
+      <a-entity position="0 0.35 0.12">
+        <a-text value="ALGORITHMIC EXPLOITATION ACTIVE" align="center" color="#ffe600" width="2.2"></a-text>
+      </a-entity>
+      <a-entity position="0 -0.45 0.12">
+        <a-text value="[ CONSUME - OBEY - OMNI ]" align="center" color="#00f0ff" width="2.4"></a-text>
+      </a-entity>
+    </a-entity>
+
+    <!-- TARGET 2: TRANG 2 MẬT THẤT KAEL (W = c + v + m) -->
+    <a-entity mindar-image-target="targetIndex: 2" id="target2">
+      <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #00ff66; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
+      <a-ring position="0 0 0.05" radius-inner="0.35" radius-outer="0.45" material="color: #00ff66; opacity: 0.7; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
+      <a-entity position="0 0.5 0.15">
+        <a-text value="HACKING SURPLUS VALUE..." align="center" color="#00ff66" width="3.2"></a-text>
+      </a-entity>
+      <a-entity position="0 0.32 0.12">
+        <a-text value="OPEN-GRID DECENTRALIZED PROTOCOL" align="center" color="#00f0ff" width="2.2"></a-text>
+      </a-entity>
+      <a-entity position="0 -0.45 0.12">
+        <a-text value="[ OMNI-PATROL INCOMING: 100m ]" align="center" color="#ff3333" width="2.4"></a-text>
+      </a-entity>
+    </a-entity>
+
   </a-scene>
 
   <script>
+    let audioCtx = null;
+    function initAudio() {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    }
+    function playBeep(freq = 880) {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } catch (e) {}
+    }
+
     function startAR() {
+      initAudio();
+      playBeep(880);
       document.getElementById('start-overlay').style.display = 'none';
       document.querySelector('a-scene').systems["mindar-image-system"].start();
     }
+
     window.addEventListener('DOMContentLoaded', () => {
-      const target = document.querySelector('#targetMarx');
       const badge = document.getElementById('statusBadge');
-      target.addEventListener('targetFound', () => {
-        badge.textContent = '🟢 ĐÃ KHÓA: CYBER-MARX!';
-        badge.style.borderColor = 'var(--neon-green)';
-        badge.style.color = 'var(--neon-green)';
-      });
-      target.addEventListener('targetLost', () => {
-        badge.textContent = '🔴 ĐANG QUÉT BÌA TRUYỆN...';
-        badge.style.borderColor = 'var(--neon-cyan)';
-        badge.style.color = '#fff';
-      });
+      const guide = document.getElementById('guideBox');
+
+      const setupTarget = (elId, title, freq) => {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        el.addEventListener('targetFound', () => {
+          badge.textContent = `🟢 ${title}`;
+          badge.classList.add('locked');
+          guide.style.display = 'none';
+          playBeep(freq);
+        });
+        el.addEventListener('targetLost', () => {
+          badge.textContent = '🔴 HƯỚNG CAMERA VÀO TRANH TRUYỆN...';
+          badge.classList.remove('locked');
+          guide.style.display = 'flex';
+        });
+      };
+
+      setupTarget('target0', 'ĐÃ KHÓA: BÌA CYBER-MARX!', 880);
+      setupTarget('target1', 'ĐÃ KHÓA: TRANG 1 - ĐÔ THỊ NEO-METROPOLIS!', 660);
+      setupTarget('target2', 'ĐÃ KHÓA: TRANG 2 - MẬT THẤT KAEL (W = c + v + m)!', 1100);
     });
   </script>
 </body>

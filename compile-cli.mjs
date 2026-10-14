@@ -39,7 +39,6 @@ class PureCompiler extends CompilerBase {
       return { data: greyImageData, height: img.height, width: img.width };
     });
 
-    // Subclass calls compileImageTargets logic
     const dummyImages = targetImages.map((t, idx) => ({
       width: t.width,
       height: t.height,
@@ -47,7 +46,6 @@ class PureCompiler extends CompilerBase {
     }));
 
     this.createProcessCanvas = (dummyImg) => {
-      const target = targetImages[dummyImg.rawIndex];
       const rgbaData = imagesData[dummyImg.rawIndex].data;
       return {
         getContext: () => ({
@@ -63,34 +61,43 @@ class PureCompiler extends CompilerBase {
 
 async function main() {
   const args = process.argv.slice(2);
-  const inputPath = args[0] || 'assets/cyber_marx.jpg';
-  const outputPath = args[1] || 'assets/targets.mind';
-
-  console.log(`Reading input image: ${inputPath}`);
-  const rawBytes = fs.readFileSync(inputPath);
-  let decoded;
-  if (inputPath.endsWith('.png')) {
-    decoded = PNG.sync.read(rawBytes);
-  } else {
-    decoded = jpeg.decode(rawBytes);
+  if (args.length < 2) {
+    console.log('Usage: node compile-cli.mjs <output.mind> <img1> [img2] ...');
+    process.exit(1);
   }
 
-  console.log(`Decoded image dimensions: ${decoded.width}x${decoded.height}`);
-  const compiler = new PureCompiler();
+  const outputPath = args[0];
+  const inputPaths = args.slice(1);
 
-  console.log('Compiling target into MindAR features...');
+  console.log(`Compiling ${inputPaths.length} target images into: ${outputPath}`);
+  const decodedList = [];
+  for (const imgPath of inputPaths) {
+    console.log(`- Reading: ${imgPath}`);
+    const rawBytes = fs.readFileSync(imgPath);
+    let decoded;
+    if (imgPath.endsWith('.png')) {
+      decoded = PNG.sync.read(rawBytes);
+    } else {
+      decoded = jpeg.decode(rawBytes);
+    }
+    console.log(`  Dimensions: ${decoded.width}x${decoded.height}`);
+    decodedList.push(decoded);
+  }
+
+  const compiler = new PureCompiler();
+  console.log('Extracting feature points for all targets...');
   let lastP = 0;
-  await compiler.compilePureImages([decoded], (progress) => {
+  await compiler.compilePureImages(decodedList, (progress) => {
     const p = Math.floor(progress);
     if (p >= lastP + 10) {
-      console.log(`Compiling progress: ${p}%`);
+      console.log(`Overall Progress: ${p}%`);
       lastP = p;
     }
   });
 
   const buffer = compiler.exportData();
   fs.writeFileSync(outputPath, Buffer.from(buffer));
-  console.log(`DONE! Successfully compiled to: ${outputPath} (${(buffer.length / 1024).toFixed(1)} KB)`);
+  console.log(`DONE! Successfully compiled ${inputPaths.length} targets to ${outputPath} (${(buffer.length / 1024).toFixed(1)} KB)`);
 }
 
 main().catch(err => {
