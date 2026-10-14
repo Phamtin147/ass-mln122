@@ -1,10 +1,13 @@
-const CACHE_NAME = 'cyber-marx-ar-v1';
+const CACHE_NAME = 'cyber-marx-ar-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './ar-camera.html',
   './manifest.json',
   './icon.png',
   './assets/cyber_marx.jpg',
+  './assets/comic_page1.jpg',
+  './assets/comic_page2.jpg',
   './assets/targets.mind'
 ];
 
