@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber-Marx: Màn hình Chiếu Tranh Quét AR (Target Viewer)</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-green: #00ff66;
+      --neon-yellow: #ffe600;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; user-select:none; }
+    body {
+      background: #000000;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(10, 10, 20, 0.95);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 240, 255, 0.1);
+      z-index: 100;
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--neon-cyan);
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-nav {
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: var(--neon-cyan);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-cyan);
+    }
+
+    /* Target Selector Tabs */
+    .tabs-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: #0a0a14;
+      border-bottom: 1px solid #1a1a2e;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #141426;
+      border: 1px solid #333;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-btn:hover {
+      border-color: var(--neon-cyan);
+      color: #fff;
+    }
+    .tab-btn.active {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    }
+
+    /* Display Area */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .image-stage {
+      position: relative;
+      background: #000;
+      border: 3px solid #222;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+      max-height: 72vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: border-color 0.3s;
+    }
+    .image-stage.active-stage {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+    }
+
+    .target-image {
+      max-height: 70vh;
+      max-width: 90vw;
+      object-fit: contain;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .stage-info {
+      margin-top: 14px;
+      text-align: center;
+      max-width: 600px;
+    }
+    .stage-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      margin-bottom: 6px;
+    }
+    .stage-desc {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* Target Scanner Frame Overlay for Visual Alignment */
+    .corner-marker {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 3px solid var(--neon-cyan);
+      pointer-events: none;
+    }
+    .top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+    .top-right { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+    .bottom-left { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+    .bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+    /* Footer Navigation */
+    footer {
+      background: #080810;
+      border-top: 1px solid #1a1a2e;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .keyboard-hint {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .key-badge {
+      background: #1a1a30;
+      border: 1px solid #3a3a50;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--neon-yellow);
+      font-family: monospace;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-title">
+      <span>⚡ CYBER-MARX: TARGET VIEWER</span>
+      <span style="font-size:11px; padding:3px 8px; background:rgba(0,240,255,0.2); border-radius:10px; color:#fff;">DÀNH CHO MÀN HÌNH MÁY TÍNH</span>
+    </div>
+    <div style="display:flex; gap:10px;">
+      <a href="index.html" class="btn-nav">📖 CUỐN TRUYỆN 3D</a>
+      <a href="ar-camera.html" class="btn-nav" style="border-color:var(--neon-pink); color:var(--neon-pink);">📷 MỞ CAMERA AR</a>
+    </div>
+  </header>
+
+  <!-- Selector Tabs -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" id="tab0" onclick="showTarget(0)">
+      📕 1. Bìa Cyber-Marx (Target 0)
+    </button>
+    <button class="tab-btn" id="tab1" onclick="showTarget(1)">
+      🏙️ 2. Trang 1: Đô thị Neo-Metropolis (Target 1)
+    </button>
+    <button class="tab-btn" id="tab2" onclick="showTarget(2)">
+      💻 3. Trang 2: Mật thất Kael W=c+v+m (Target 2)
+    </button>
+  </div>
+
+  <main>
+    <div class="image-stage active-stage" id="stage">
+      <div class="corner-marker top-left"></div>
+      <div class="corner-marker top-right"></div>
+      <div class="corner-marker bottom-left"></div>
+      <div class="corner-marker bottom-right"></div>
+      <img src="assets/cyber_marx.jpg" id="targetImg" class="target-image" alt="Target Image">
+    </div>
+
+    <div class="stage-info">
+      <div class="stage-title" id="stageTitle">BÌA TRUYỆN: CYBER-MARX (TARGET 0)</div>
+      <div class="stage-desc" id="stageDesc">
+        Dùng điện thoại mở trang Camera AR và hướng thẳng vào ảnh trên màn hình máy tính (cách khoảng 20 - 35cm). Camera sẽ khóa mục tiêu và bung hiệu ứng Hologram 3D kèm âm thanh!
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="keyboard-hint">
+      <span>💡 Phím tắt chuyển nhanh:</span>
+      <span><span class="key-badge">1</span> Bìa Marx</span>
+      <span><span class="key-badge">2</span> Trang 1 (Đô thị)</span>
+      <span><span class="key-badge">3</span> Trang 2 (Mật thất)</span>
+      <span><span class="key-badge">◀ / ▶</span> Phím mũi tên</span>
+    </div>
+    <div>
+      Đồ án sáng tạo MLN122 • Đại học FPT
+    </div>
+  </footer>
+
+  <script>
+    const targets = [
+      {
+        idx: 0,
+        src: 'assets/cyber_marx.jpg',
+        title: 'BÌA TRUYỆN: CYBER-MARX (TARGET 0)',
+        desc: 'Hiệu ứng AR: Vòng quay neon Synthwave, công thức kinh tế học W = c + v + m, tỷ lệ bóc lột m = 85%, âm thanh Synth beep 880Hz.'
+      },
+      {
+        idx: 1,
+        src: 'assets/comic_page1.jpg',
+        title: 'TRANG 1: ĐÔ THỊ NEO-METROPOLIS & DRONE (TARGET 1)',
+        desc: 'Hiệu ứng AR: Nón quét laser an ninh 3D của drone Omni-Life, cảnh báo kiểm duyệt thuật toán "ALGORITHMIC SURVEILLANCE ACTIVE", âm thanh beep 660Hz.'
+      },
+      {
+        idx: 2,
+        src: 'assets/comic_page2.jpg',
+        title: 'TRANG 2: MẬT THẤT KAEL & KHỐI MA TRẬN W = c + v + m (TARGET 2)',
+        desc: 'Hiệu ứng AR: Khối hộp ma trận lập phương 3D xoay giữa không trung, công thức giải phóng giá trị thặng dư W = c + v + m, radar phát hiện khinh khí cầu cảnh sát.'
+      }
+    ];
+
+    let current = 0;
+
+    function showTarget(idx) {
+      if (idx < 0) idx = targets.length - 1;
+      if (idx >= targets.length) idx = 0;
+      current = idx;
+
+      const data = targets[idx];
+      const img = document.getElementById('targetImg');
+      img.src = data.src;
+      document.getElementById('stageTitle').textContent = data.title;
+      document.getElementById('stageDesc').textContent = data.desc;
+
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '1') showTarget(0);
+      else if (e.key === '2') showTarget(1);
+      else if (e.key === '3') showTarget(2);
+      else if (e.key === 'ArrowRight') showTarget(current + 1);
+      else if (e.key === 'ArrowLeft') showTarget(current - 1);
+    });
+  </script>
+</body>
+</html>

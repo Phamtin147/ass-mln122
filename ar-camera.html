@@ -27,7 +27,7 @@
     #hud {
       position:fixed; inset:0; pointer-events:none; z-index:100;
       display:flex; flex-direction:column; justify-content:space-between;
-      padding: env(safe-area-inset-top, 16px) 16px env(safe-area-inset-bottom, 16px) 16px;
+      padding: env(safe-area-inset-top, 14px) 14px env(safe-area-inset-bottom, 14px) 14px;
     }
     .top-bar { display:flex; justify-content:space-between; align-items:center; pointer-events:auto; gap: 8px; }
     .back-btn {
@@ -36,10 +36,11 @@
       box-shadow:0 0 10px rgba(0,240,255,0.3); white-space: nowrap;
     }
     .badge {
-      background:rgba(10,10,20,0.85); border:1px solid var(--neon-cyan);
+      background:rgba(10,10,20,0.9); border:1px solid var(--neon-cyan);
       padding:8px 12px; border-radius:8px; font-size:12px; font-weight:bold;
       box-shadow:0 0 10px rgba(0,240,255,0.3); transition:all 0.3s;
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      max-width: 65vw;
     }
     .badge.locked {
       border-color:var(--neon-green); color:var(--neon-green);
@@ -58,24 +59,71 @@
     }
 
     .guide-box {
-      position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
-      width:min(75vw, 300px); height:min(100vw, 400px);
-      border:2px dashed rgba(0,240,255,0.4); border-radius:12px; pointer-events:none;
+      position:absolute; top:46%; left:50%; transform:translate(-50%, -50%);
+      width:min(75vw, 290px); height:min(95vw, 380px);
+      border:2px dashed rgba(0,240,255,0.45); border-radius:12px; pointer-events:none;
       display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
       padding:16px; color:rgba(0,240,255,0.9); font-size:12px; font-weight:bold;
-      text-shadow:0 0 8px rgba(0,240,255,0.5); background:rgba(0,0,0,0.2);
+      text-shadow:0 0 8px rgba(0,240,255,0.5); background:rgba(0,0,0,0.25);
     }
 
-    .targets-indicator {
-      display:flex; gap:8px; justify-content:center; margin-bottom:10px; pointer-events:auto;
+    /* Target Selector Controls */
+    .controls-panel {
+      pointer-events:auto;
+      display:flex;
+      flex-direction:column;
+      gap: 8px;
+      margin-bottom: 6px;
     }
-    .target-pill {
-      background:rgba(10,10,25,0.85); border:1px solid #444; border-radius:15px;
-      padding:4px 10px; font-size:11px; color:#888; transition:all 0.2s;
+
+    .switcher-row {
+      display:flex;
+      gap:6px;
+      justify-content:center;
+      overflow-x:auto;
+      padding: 4px 0;
     }
-    .target-pill.active {
-      border-color:var(--neon-green); color:var(--neon-green);
-      box-shadow:0 0 10px var(--neon-green); font-weight:bold;
+    .switcher-btn {
+      background:rgba(15,15,30,0.9);
+      border:1px solid #444;
+      border-radius:18px;
+      padding:7px 12px;
+      font-size:11px;
+      font-weight:bold;
+      color:#aaa;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:all 0.2s;
+    }
+    .switcher-btn:hover {
+      border-color:var(--neon-cyan);
+      color:#fff;
+    }
+    .switcher-btn.active {
+      border-color:var(--neon-cyan);
+      color:var(--neon-cyan);
+      background:rgba(0,240,255,0.18);
+      box-shadow:0 0 12px rgba(0,240,255,0.4);
+    }
+    .switcher-btn.locked {
+      border-color:var(--neon-green) !important;
+      color:var(--neon-green) !important;
+      background:rgba(0,255,102,0.18) !important;
+      box-shadow:0 0 12px var(--neon-green) !important;
+    }
+
+    .tip-box {
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 10px;
+      color: #bbb;
+      text-align: center;
+    }
+    .tip-box a {
+      color: var(--neon-cyan);
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -84,7 +132,7 @@
   <!-- Start Overlay for Camera & Audio Unlock -->
   <div id="start-overlay">
     <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">CYBER-MARX AR SCANNER</h2>
-    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện cả 3 bức tranh: Bìa Karl Marx, Trang 1 Neo-Metropolis, và Trang 2 Mật thất Kael.</p>
+    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện cả 3 tranh: Bìa Karl Marx, Trang 1 Đô thị Neo-Metropolis, và Trang 2 Mật thất Kael.</p>
     <button class="start-btn" onclick="startAR()">BẬT CAMERA QUÉT AR</button>
   </div>
 
@@ -92,24 +140,32 @@
   <div id="hud">
     <div class="top-bar">
       <button class="back-btn" onclick="window.location.href='index.html'">◀ VỀ CUỐN TRUYỆN 3D</button>
-      <div class="badge" id="statusBadge">🔴 HƯỚNG CAMERA VÀO TRANH TRUYỆN...</div>
+      <div class="badge" id="statusBadge">🔴 HƯỚNG CAMERA VÀO TRANH...</div>
     </div>
     
     <div class="guide-box" id="guideBox">
-      <span>ĐƯA CAMERA VÀO TRANH ĐỂ KHÓA MỤC TIÊU</span>
-      <span style="font-size:10px; color:#aaa; margin-top:6px;">(Giữ camera thẳng góc và cách màn hình khoảng 20-30cm)</span>
+      <span>ĐƯA CAMERA THẲNG GÓC VÀO TRANH TRUYỆN</span>
+      <span style="font-size:10px; color:#aaa; margin-top:6px;">(Giữ khoảng cách 20 - 35cm đối diện bức tranh)</span>
+      <span id="guideTargetHint" style="font-size:10px; color:var(--neon-cyan); margin-top:8px;">Đang quét: TẤT CẢ TRANH (Auto)</span>
     </div>
 
-    <div class="targets-indicator">
-      <div class="target-pill" id="pill0">Bìa Marx (0)</div>
-      <div class="target-pill" id="pill1">Trang 1 (1)</div>
-      <div class="target-pill" id="pill2">Trang 2 (2)</div>
+    <!-- Controls Panel: Target Switcher -->
+    <div class="controls-panel">
+      <div class="switcher-row">
+        <button class="switcher-btn active" id="btnAll" onclick="switchFocus(-1)">🌐 TẤT CẢ (Auto)</button>
+        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA MARX</button>
+        <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">🏙️ TRANG 1: ĐÔ THỊ</button>
+        <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">💻 TRANG 2: MẬT THẤT</button>
+      </div>
+      <div class="tip-box">
+        💡 Mẹo: Bấm thẳng vào <b>TRANG 1</b> hoặc <b>TRANG 2</b> để máy quét bắt nét siêu tốc! • <a href="targets-viewer.html" target="_blank">Mở màn hình chiếu tranh</a>
+      </div>
     </div>
   </div>
 
-  <!-- A-Frame Scene with 3 Image Targets & maxTrack: 3 -->
+  <!-- A-Frame Scene with 3 Image Targets: warmupTolerance: 0 & missTolerance: 8 for instant lock -->
   <a-scene 
-    mindar-image="imageTargetSrc: ./assets/targets.mind?t=1791939000; maxTrack: 3; autoStart: false; uiScanning: no; filterMinCF: 0.001; filterBeta: 1000;" 
+    mindar-image="imageTargetSrc: ./assets/targets.mind?t=1791949000; maxTrack: 3; autoStart: false; uiScanning: no; filterMinCF: 0.001; filterBeta: 1000; warmupTolerance: 0; missTolerance: 8;" 
     embedded
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights: true"
@@ -119,45 +175,82 @@
 
     <!-- ================= TARGET 0: BÌA TRUYỆN CYBER-MARX ================= -->
     <a-entity mindar-image-target="targetIndex: 0" id="target0">
-      <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #00f0ff; opacity: 0.35; transparent: true; wireframe: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 20000; easing: linear"></a-plane>
-      <a-ring position="0 0 0.05" radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.6; transparent: true" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
-      <a-entity position="0 0.5 0.15">
+      <!-- Outer Wireframe Boundary -->
+      <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #00f0ff; opacity: 0.35; transparent: true; wireframe: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 20000; easing: linear"></a-plane>
+      
+      <!-- Glowing Hologram Rings -->
+      <a-ring position="0 0 0.05" radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.7; transparent: true" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
+      <a-ring position="0 0 0.04" radius-inner="0.30" radius-outer="0.38" material="color: #00f0ff; opacity: 0.6; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
+
+      <!-- 3D Theory Badges with Dark Backings -->
+      <a-entity position="0 0.52 0.15">
+        <a-plane position="0 0 -0.01" width="0.9" height="0.22" material="color: #050515; opacity: 0.9"></a-plane>
         <a-text value="W = c + v + m" align="center" color="#00ff66" width="3.5"></a-text>
       </a-entity>
+
       <a-entity position="0 0.32 0.12">
+        <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #050515; opacity: 0.85"></a-plane>
         <a-text value="GIA TRI THANG DU SO: m = 85%" align="center" color="#00f0ff" width="2.2"></a-text>
       </a-entity>
-      <a-entity position="0 -0.45 0.12">
+
+      <a-entity position="0 -0.46 0.12">
+        <a-plane position="0 0 -0.01" width="0.9" height="0.16" material="color: #050515; opacity: 0.85"></a-plane>
         <a-text value="[ DAS KAPITAL 2.0 PROTOCOL ]" align="center" color="#ffe600" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
-    <!-- ================= TARGET 1: TRANG 1 NEO-METROPOLIS ================= -->
+    <!-- ================= TARGET 1: TRANG 1 NEO-METROPOLIS & DRONE ================= -->
     <a-entity mindar-image-target="targetIndex: 1" id="target1">
-      <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #ff007f; opacity: 0.4; transparent: true; wireframe: true" animation="property: scale; from: 0.98 0.98 1; to: 1.02 1.02 1; dir: alternate; loop: true; dur: 1200"></a-plane>
-      <a-ring position="0 0 0.05" radius-inner="0.35" radius-outer="0.48" material="color: #00f0ff; opacity: 0.6; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear"></a-ring>
-      <a-entity position="0 0.5 0.15">
-        <a-text value="OMNI-LIFE SURVEILLANCE" align="center" color="#ff007f" width="3.2"></a-text>
+      <!-- Outer Wireframe Boundary -->
+      <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #ff007f; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
+
+      <!-- 3D Drone Surveillance Laser Cone (radar quét laser rọi xuống) -->
+      <a-cone position="0 0.25 0.22" radius-bottom="0.45" radius-top="0.06" height="0.7" material="color: #ff0055; opacity: 0.45; transparent: true; wireframe: true" rotation="180 0 0" animation="property: rotation; to: 180 360 0; loop: true; dur: 4500; easing: linear"></a-cone>
+
+      <!-- Glowing Hazard Ring -->
+      <a-ring position="0 0 0.08" radius-inner="0.36" radius-outer="0.48" material="color: #00f0ff; opacity: 0.7; transparent: true" animation="property: scale; from: 0.9 0.9 1; to: 1.15 1.15 1; dir: alternate; loop: true; dur: 800"></a-ring>
+
+      <!-- 3D Floating Badges with Dark Backings -->
+      <a-entity position="0 0.54 0.16">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.22" material="color: #1a0510; opacity: 0.92"></a-plane>
+        <a-text value="! OMNI-LIFE SURVEILLANCE !" align="center" color="#ff007f" width="3.4"></a-text>
       </a-entity>
-      <a-entity position="0 0.32 0.12">
-        <a-text value="ALGORITHMIC EXPLOITATION ACTIVE" align="center" color="#ffe600" width="2.2"></a-text>
+
+      <a-entity position="0 0.33 0.13">
+        <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
+        <a-text value="THUAT TOAN BOC LOT GIA TRI" align="center" color="#ffe600" width="2.3"></a-text>
       </a-entity>
-      <a-entity position="0 -0.45 0.12">
+
+      <a-entity position="0 -0.46 0.13">
+        <a-plane position="0 0 -0.01" width="0.9" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
         <a-text value="[ CONSUME - OBEY - OMNI ]" align="center" color="#00f0ff" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
     <!-- ================= TARGET 2: TRANG 2 MẬT THẤT KAEL (W = c + v + m) ================= -->
     <a-entity mindar-image-target="targetIndex: 2" id="target2">
-      <a-plane position="0 0 0.01" width="1.05" height="1.39" material="color: #00ff66; opacity: 0.4; transparent: true; wireframe: true"></a-plane>
-      <a-ring position="0 0 0.05" radius-inner="0.38" radius-outer="0.5" material="color: #00ff66; opacity: 0.7; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
-      <a-entity position="0 0.5 0.15">
-        <a-text value="HACKING SURPLUS VALUE..." align="center" color="#00ff66" width="3.2"></a-text>
+      <!-- Outer Wireframe Boundary -->
+      <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #00ff66; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
+
+      <!-- 3D Floating Matrix Data Cube (khối hộp dữ liệu xoay giữa phòng) -->
+      <a-box position="0 0.05 0.22" depth="0.32" height="0.32" width="0.32" material="color: #00ff66; opacity: 0.6; transparent: true; wireframe: true" animation="property: rotation; to: 360 360 0; loop: true; dur: 5000; easing: linear"></a-box>
+
+      <!-- Glowing Emerald Cyber Ring -->
+      <a-ring position="0 0 0.06" radius-inner="0.36" radius-outer="0.5" material="color: #00ff66; opacity: 0.75; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
+
+      <!-- 3D Floating Badges with Dark Backings -->
+      <a-entity position="0 0.54 0.16">
+        <a-plane position="0 0 -0.01" width="0.98" height="0.22" material="color: #021a08; opacity: 0.92"></a-plane>
+        <a-text value="HACKING SURPLUS: W = c + v + m" align="center" color="#00ff66" width="3.3"></a-text>
       </a-entity>
-      <a-entity position="0 0.32 0.12">
+
+      <a-entity position="0 0.33 0.13">
+        <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #050d18; opacity: 0.88"></a-plane>
         <a-text value="OPEN-GRID DECENTRALIZED PROTOCOL" align="center" color="#00f0ff" width="2.2"></a-text>
       </a-entity>
-      <a-entity position="0 -0.45 0.12">
+
+      <a-entity position="0 -0.46 0.13">
+        <a-plane position="0 0 -0.01" width="0.92" height="0.16" material="color: #1f0505; opacity: 0.88"></a-plane>
         <a-text value="[ OMNI-PATROL INCOMING: 100m ]" align="center" color="#ff3333" width="2.4"></a-text>
       </a-entity>
     </a-entity>
@@ -177,7 +270,7 @@
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
         osc.connect(gain);
         gain.connect(audioCtx.destination);
@@ -190,45 +283,102 @@
       initAudio();
       playBeep(880);
       document.getElementById('start-overlay').style.display = 'none';
-      document.querySelector('a-scene').systems["mindar-image-system"].start();
+      const scene = document.querySelector('a-scene');
+      scene.systems["mindar-image-system"].start();
+      startAutoCycle();
     }
 
-    // Robust Multi-target State Manager (No race conditions)
-    window.addEventListener('DOMContentLoaded', () => {
-      const badge = document.getElementById('statusBadge');
-      const guide = document.getElementById('guideBox');
-      
-      const targetMeta = {
-        target0: { title: 'BÌA CYBER-MARX (0)', freq: 880, pill: 'pill0' },
-        target1: { title: 'TRANG 1 - ĐÔ THỊ (1)', freq: 660, pill: 'pill1' },
-        target2: { title: 'TRANG 2 - MẬT THẤT (2)', freq: 1100, pill: 'pill2' }
-      };
+    const targetMeta = {
+      target0: { title: 'BÌA CYBER-MARX (TARGET 0)', freq: 880, btn: 'btn0' },
+      target1: { title: 'TRANG 1 - ĐÔ THỊ (TARGET 1)', freq: 660, btn: 'btn1' },
+      target2: { title: 'TRANG 2 - MẬT THẤT (TARGET 2)', freq: 1100, btn: 'btn2' }
+    };
 
-      const activeSet = new Set();
+    let currentFocus = -1; // -1: auto all, 0: cover, 1: page1, 2: page2
+    const activeSet = new Set();
+    let autoCycleTimer = null;
+    const cycleList = [0, 1, 2];
+    let cycleStep = 0;
 
-      function refreshUI() {
-        // Reset all pills
-        Object.values(targetMeta).forEach(m => {
-          document.getElementById(m.pill).classList.remove('active');
-        });
-
-        if (activeSet.size > 0) {
-          // Highlight active pills
-          let currentTitle = '';
-          activeSet.forEach(id => {
-            document.getElementById(targetMeta[id].pill).classList.add('active');
-            currentTitle = targetMeta[id].title;
-          });
-          badge.textContent = `🟢 ĐÃ KHÓA: ${currentTitle}`;
-          badge.classList.add('locked');
-          guide.style.display = 'none';
-        } else {
-          badge.textContent = '🔴 HƯỚNG CAMERA VÀO TRANH TRUYỆN...';
-          badge.classList.remove('locked');
-          guide.style.display = 'flex';
-        }
+    // Switch focus between targets
+    function switchFocus(idx) {
+      currentFocus = idx;
+      const scene = document.querySelector('a-scene');
+      const system = scene?.systems["mindar-image-system"];
+      if (system) {
+        system.switchTarget(idx);
       }
 
+      // Update button highlights
+      document.querySelectorAll('.switcher-btn').forEach(btn => btn.classList.remove('active'));
+      if (idx === -1) document.getElementById('btnAll').classList.add('active');
+      else if (idx === 0) document.getElementById('btn0').classList.add('active');
+      else if (idx === 1) document.getElementById('btn1').classList.add('active');
+      else if (idx === 2) document.getElementById('btn2').classList.add('active');
+
+      const hints = {
+        '-1': 'Đang quét: TẤT CẢ TRANH (Auto)',
+        '0': 'Đang quét: BÌA CYBER-MARX (Target 0)',
+        '1': 'Đang quét: TRANG 1 - ĐÔ THỊ (Target 1)',
+        '2': 'Đang quét: TRANG 2 - MẬT THẤT (Target 2)'
+      };
+      document.getElementById('guideTargetHint').textContent = hints[idx];
+
+      const freqs = { '-1': 520, '0': 880, '1': 660, '2': 1100 };
+      playBeep(freqs[idx]);
+
+      refreshUI();
+    }
+
+    // Auto-cycle target focus every 1.2s when in Auto mode to prevent starvation
+    function startAutoCycle() {
+      if (autoCycleTimer) clearInterval(autoCycleTimer);
+      autoCycleTimer = setInterval(() => {
+        if (currentFocus === -1 && activeSet.size === 0) {
+          const scene = document.querySelector('a-scene');
+          const system = scene?.systems["mindar-image-system"];
+          if (system) {
+            cycleStep = (cycleStep + 1) % cycleList.length;
+            system.switchTarget(cycleList[cycleStep]);
+            const names = ['Bìa Marx (0)', 'Trang 1: Đô thị (1)', 'Trang 2: Mật thất (2)'];
+            document.getElementById('guideTargetHint').textContent = `Tự động tìm: ${names[cycleStep]}...`;
+          }
+        }
+      }, 1200);
+    }
+
+    function refreshUI() {
+      const badge = document.getElementById('statusBadge');
+      const guide = document.getElementById('guideBox');
+
+      // Clear locked state from all buttons
+      ['btn0', 'btn1', 'btn2'].forEach(id => {
+        document.getElementById(id).classList.remove('locked');
+      });
+
+      if (activeSet.size > 0) {
+        let currentTitle = '';
+        activeSet.forEach(id => {
+          document.getElementById(targetMeta[id].btn).classList.add('locked');
+          currentTitle = targetMeta[id].title;
+        });
+        badge.textContent = `🟢 ĐÃ KHÓA: ${currentTitle}`;
+        badge.classList.add('locked');
+        guide.style.display = 'none';
+      } else {
+        const waitingTitles = {
+          '-1': '🔴 HƯỚNG CAMERA VÀO TRANH...',
+          '0': '🔴 ĐANG TÌM: BÌA MARX...',
+          '1': '🔴 ĐANG TÌM: TRANG 1 (ĐÔ THỊ)...',
+          '2': '🔴 ĐANG TÌM: TRANG 2 (MẬT THẤT)...'
+        };
+        badge.textContent = waitingTitles[currentFocus] || '🔴 HƯỚNG CAMERA VÀO TRANH...';
+        badge.classList.remove('locked');
+        guide.style.display = 'flex';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
       ['target0', 'target1', 'target2'].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
