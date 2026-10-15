@@ -14,6 +14,20 @@
   <meta name="apple-mobile-web-app-title" content="CyberMarx">
   <link rel="apple-touch-icon" href="icon.png">
 
+  <script>
+    // Force unregister legacy service workers and clear browser caches
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        for (let r of regs) { r.unregister(); }
+      });
+    }
+    if (window.caches) {
+      caches.keys().then(function(keys) {
+        for (let k of keys) caches.delete(k);
+      });
+    }
+  </script>
+
   <!-- StPageFlip Library for Realistic 3D Paper Curl Physics -->
   <script src="libs/page-flip.browser.js"></script>
 
