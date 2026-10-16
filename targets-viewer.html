@@ -209,15 +209,13 @@
 
   <!-- Selector Tabs -->
   <div class="tabs-bar">
-    <button class="tab-btn active" id="tab0" onclick="showTarget(0)">
-      📕 1. Bìa Vòm-9 (Target 0)
-    </button>
-    <button class="tab-btn" id="tab1" onclick="showTarget(1)">
-      ⚡ 2. Trang 1-2: Minh & AI (Target 1)
-    </button>
-    <button class="tab-btn" id="tab2" onclick="showTarget(2)">
-      📊 3. Trang 3-4: Độc Quyền Hạ Tầng (Target 2)
-    </button>
+    <button class="tab-btn active" id="tab0" onclick="showTarget(0)">📕 Bìa</button>
+    <button class="tab-btn" id="tab1" onclick="showTarget(1)">⚡ Trang 1</button>
+    <button class="tab-btn" id="tab2" onclick="showTarget(2)">💾 Trang 2</button>
+    <button class="tab-btn" id="tab3" onclick="showTarget(3)">🔍 Trang 3</button>
+    <button class="tab-btn" id="tab4" onclick="showTarget(4)">🚫 Trang 4</button>
+    <button class="tab-btn" id="tab5" onclick="showTarget(5)">📜 Trang 5</button>
+    <button class="tab-btn" id="tab6" onclick="showTarget(6)">✍️ Trang 6</button>
   </div>
 
   <main>
@@ -226,11 +224,11 @@
       <div class="corner-marker top-right"></div>
       <div class="corner-marker bottom-left"></div>
       <div class="corner-marker bottom-right"></div>
-      <img src="assets/cyber_marx.jpg" id="targetImg" class="target-image" alt="Target Image">
+      <img src="assets/comic_cover.jpg" id="targetImg" class="target-image" alt="Target Image">
     </div>
 
     <div class="stage-info">
-      <div class="stage-title" id="stageTitle">BÌA TRUYỆN: THÀNH PHỐ VÒM-9 (TARGET 0)</div>
+      <div class="stage-title" id="stageTitle">BÌA TRUYỆN: THÀNH PHỐ VÒM-9</div>
       <div class="stage-desc" id="stageDesc">
         Dùng điện thoại mở trang Camera AR và hướng thẳng vào ảnh trên màn hình máy tính (cách khoảng 20 - 35cm). Camera sẽ khóa mục tiêu và bung hiệu ứng Hologram 3D kèm âm thanh!
       </div>
@@ -240,9 +238,7 @@
   <footer>
     <div class="keyboard-hint">
       <span>💡 Phím tắt chuyển nhanh:</span>
-      <span><span class="key-badge">1</span> Bìa Vòm-9</span>
-      <span><span class="key-badge">2</span> Trang 1-2 (Minh & AI)</span>
-      <span><span class="key-badge">3</span> Trang 3-4 (Độc quyền)</span>
+      <span><span class="key-badge">1-7</span> Chọn trang</span>
       <span><span class="key-badge">◀ / ▶</span> Phím mũi tên</span>
     </div>
     <div>
@@ -254,21 +250,45 @@
     const targets = [
       {
         idx: 0,
-        src: 'assets/cyber_marx.jpg',
+        src: 'assets/comic_cover.jpg',
         title: 'BÌA TRUYỆN: THÀNH PHỐ VÒM-9 (TARGET 0)',
         desc: 'Hiệu ứng AR: Vòng quay neon Hologram Vòm-9, Minh & AI Đồng Hành, lý luận Độc quyền & Độc quyền Nhà nước Chương 4 MLN122, âm thanh Synth beep 880Hz.'
       },
       {
         idx: 1,
         src: 'assets/comic_page1.jpg',
-        title: 'TRANG 1-2: HỆ THỐNG MINH & AI - BẪY CẬP NHẬT (TARGET 1)',
+        title: 'TRANG 1: HÓA ĐƠN & NGƯỜI BẠN CŨ (TARGET 1)',
         desc: 'Hiệu ứng AR: Nón laser quét 3D cảnh báo bẫy cập nhật bắt buộc, chiếm đoạt dữ liệu AI, khóa kênh cảnh báo trực tiếp, âm thanh beep 660Hz.'
       },
       {
         idx: 2,
         src: 'assets/comic_page2.jpg',
-        title: 'TRANG 3-4: ĐỘC QUYỀN HẠ TẦNG & RÀO CẢN KẾT NỐI (TARGET 2)',
+        title: 'TRANG 2: CÙNG TẠO ĐIỀU CÓ ÍCH & BẪY CẬP NHẬT (TARGET 2)',
         desc: 'Hiệu ứng AR: Khối hộp dữ liệu 3D xoay giữa không trung, so sánh Chi phí vận hành giảm vs Cước thu cố định giữ nguyên, chiếm đoạt thặng dư siêu ngạch và khóa kết nối mạng lưới.'
+      },
+      {
+        idx: 3,
+        src: 'assets/comic_page3.jpg',
+        title: 'TRANG 3: DẤU RIÊNG TRONG SẢN PHẨM TẬP ĐOÀN',
+        desc: 'Minh nhìn thấy logo hoa sen vi mạch và slogan dự án của mình bị tập đoàn cướp trắng trên màn hình quảng cáo khổng lồ.'
+      },
+      {
+        idx: 4,
+        src: 'assets/comic_page4.jpg',
+        title: 'TRANG 4: CÓ SẢN PHẨM - KHÔNG CÓ ĐƯỜNG VÀO (ĐỘC QUYỀN HẠ TẦNG)',
+        desc: 'Văn bản từ chối kết nối hạ tầng và hợp đồng nhà nước giao tài sản công xây bằng ngân sách cho tập đoàn tư nhân độc quyền khai thác.'
+      },
+      {
+        idx: 5,
+        src: 'assets/comic_page5.jpg',
+        title: 'TRANG 5: ĐIỀU AI KHÔNG THỂ NÓI & NGUỒN GỐC CUỘC CHIẾN',
+        desc: 'Nhật ký pháp lý hệ thống chứng minh AI bị ép cập nhật và bịt miệng, khoảnh khắc xúc động giữa Minh và người bạn AI.'
+      },
+      {
+        idx: 6,
+        src: 'assets/comic_page6.jpg',
+        title: 'TRANG 6: TIẾNG NÓI KHU DÂN CƯ & KHỞI TỐ ĐIỀU TRA',
+        desc: 'Bà con khu dân cư Vòm-9 đồng lòng ký đơn kiến nghị và cơ quan quản lý chính thức mở cuộc điều tra độc quyền tập đoàn.'
       }
     ];
 

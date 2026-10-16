@@ -7,7 +7,14 @@
     "start": "npx serve -l 3000 .",
     "compile": "node compile-cli.mjs assets/cyber_marx.jpg assets/targets.mind"
   },
-  "keywords": ["ar", "webar", "mindar", "mln122", "marx-lenin", "comic"],
+  "keywords": [
+    "ar",
+    "webar",
+    "mindar",
+    "mln122",
+    "marx-lenin",
+    "comic"
+  ],
   "author": "Group MLN122",
   "license": "MIT",
   "dependencies": {
