@@ -254,8 +254,8 @@
 
   <!-- Start Overlay for Camera & Audio Unlock -->
   <div id="start-overlay">
-    <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">CYBER-MARX AR SCANNER</h2>
-    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện cả 3 tranh: Bìa Karl Marx, Trang 1 Đô thị Neo-Metropolis, và Trang 2 Mật thất Kael.</p>
+    <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">VÒM-9: AR CAMERA SCANNER</h2>
+    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện truyện tranh Vòm-9: Minh & AI Đồng Hành, Bẫy Cập Nhật Độc Quyền, và Hồ Sơ Độc Quyền Hạ Tầng.</p>
     <button class="start-btn" onclick="startAR()">BẬT CAMERA QUÉT AR</button>
   </div>
 
@@ -276,12 +276,12 @@
     <div class="controls-panel">
       <div class="switcher-row">
         <button class="switcher-btn active" id="btnAll" onclick="switchFocus(-1)">🌐 TẤT CẢ (Auto)</button>
-        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA MARX</button>
-        <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">🏙️ TRANG 1: ĐÔ THỊ</button>
-        <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">💻 TRANG 2: MẬT THẤT</button>
+        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA VÒM-9</button>
+        <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">⚡ TRANG 1-2: MINH & AI</button>
+        <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">📊 TRANG 3-4: ĐỘC QUYỀN HẠ TẦNG</button>
       </div>
       <div class="sub-bar">
-        <span>💡 Bấm <b>TRANG 1</b> hoặc <b>TRANG 2</b> để khóa nét tức thì!</span>
+        <span>💡 Bấm <b>TRANG 1-2</b> hoặc <b>TRANG 3-4</b> để khóa nét tức thì!</span>
         <button class="preview-toggle" id="previewBtn" onclick="togglePreviewMode()">👁️ XEM THỬ 3D HOLOGRAM</button>
       </div>
     </div>
@@ -297,7 +297,7 @@
     
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <!-- ================= TARGET 0: BÌA TRUYỆN CYBER-MARX ================= -->
+    <!-- ================= TARGET 0: BÌA TRUYỆN THÀNH PHỐ VÒM-9 ================= -->
     <a-entity mindar-image-target="targetIndex: 0" id="target0">
       <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #00f0ff; opacity: 0.35; transparent: true; wireframe: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 20000; easing: linear"></a-plane>
       <a-ring position="0 0 0.05" radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.75; transparent: true" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
@@ -305,65 +305,65 @@
 
       <a-entity position="0 0.52 0.15">
         <a-plane position="0 0 -0.01" width="0.92" height="0.22" material="color: #050515; opacity: 0.92"></a-plane>
-        <a-text value="W = c + v + m" align="center" color="#00ff66" width="3.6"></a-text>
+        <a-text value="VOM-9: KY NGUYEN DOC QUYEN" align="center" color="#00ff66" width="3.4"></a-text>
       </a-entity>
 
       <a-entity position="0 0.32 0.12">
         <a-plane position="0 0 -0.01" width="0.96" height="0.16" material="color: #050515; opacity: 0.88"></a-plane>
-        <a-text value="GIA TRI THANG DU SO: m = 85%" align="center" color="#00f0ff" width="2.3"></a-text>
+        <a-text value="MINH & NGUOI BAN AI DONG HANH" align="center" color="#00f0ff" width="2.4"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.12">
         <a-plane position="0 0 -0.01" width="0.92" height="0.16" material="color: #050515; opacity: 0.88"></a-plane>
-        <a-text value="[ DAS KAPITAL 2.0 PROTOCOL ]" align="center" color="#ffe600" width="2.4"></a-text>
+        <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" width="2.3"></a-text>
       </a-entity>
     </a-entity>
 
-    <!-- ================= TARGET 1: TRANG 1 NEO-METROPOLIS & DRONE ================= -->
+    <!-- ================= TARGET 1: TRANG 1-2 HỆ THỐNG MINH & BẪY CẬP NHẬT ================= -->
     <a-entity mindar-image-target="targetIndex: 1" id="target1">
       <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #ff007f; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
       
-      <!-- 3D Drone Surveillance Laser Cone (Nón laser an ninh rọi từ trên xuống) -->
+      <!-- 3D Drone Surveillance / Alert Cone -->
       <a-cone position="0 0.25 0.22" radius-bottom="0.45" radius-top="0.06" height="0.7" material="color: #ff0055; opacity: 0.5; transparent: true; wireframe: true" rotation="180 0 0" animation="property: rotation; to: 180 360 0; loop: true; dur: 4500; easing: linear"></a-cone>
       <a-ring position="0 0 0.08" radius-inner="0.36" radius-outer="0.48" material="color: #00f0ff; opacity: 0.75; transparent: true" animation="property: scale; from: 0.9 0.9 1; to: 1.15 1.15 1; dir: alternate; loop: true; dur: 800"></a-ring>
 
       <a-entity position="0 0.54 0.16">
         <a-plane position="0 0 -0.01" width="0.98" height="0.22" material="color: #1a0510; opacity: 0.92"></a-plane>
-        <a-text value="! OMNI-LIFE SURVEILLANCE !" align="center" color="#ff007f" width="3.4"></a-text>
+        <a-text value="! BAY CAP NHAT BAT BUOC !" align="center" color="#ff007f" width="3.4"></a-text>
       </a-entity>
 
       <a-entity position="0 0.33 0.13">
         <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
-        <a-text value="THUAT TOAN BOC LOT GIA TRI" align="center" color="#ffe600" width="2.3"></a-text>
+        <a-text value="THON TINH DU LIEU & KHOA CANH BAO" align="center" color="#ffe600" width="2.3"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.13">
         <a-plane position="0 0 -0.01" width="0.9" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
-        <a-text value="[ CONSUME - OBEY - OMNI ]" align="center" color="#00f0ff" width="2.4"></a-text>
+        <a-text value="[ MANH MOI: CAU NOI KY NIEM ]" align="center" color="#00f0ff" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
-    <!-- ================= TARGET 2: TRANG 2 MẬT THẤT KAEL (W = c + v + m) ================= -->
+    <!-- ================= TARGET 2: TRANG 3-4 ĐỘC QUYỀN HẠ TẦNG NĂNG LƯỢNG ================= -->
     <a-entity mindar-image-target="targetIndex: 2" id="target2">
       <a-plane position="0 0 0.01" width="1.0" height="1.34" material="color: #00ff66; opacity: 0.35; transparent: true; wireframe: true"></a-plane>
 
-      <!-- 3D Floating Matrix Data Cube (Khối hộp dữ liệu 3D xoay giữa không trung) -->
+      <!-- 3D Floating Grid Data Cube -->
       <a-box position="0 0.05 0.22" depth="0.32" height="0.32" width="0.32" material="color: #00ff66; opacity: 0.65; transparent: true; wireframe: true" animation="property: rotation; to: 360 360 0; loop: true; dur: 5000; easing: linear"></a-box>
       <a-ring position="0 0 0.06" radius-inner="0.36" radius-outer="0.5" material="color: #00ff66; opacity: 0.8; transparent: true" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
 
       <a-entity position="0 0.54 0.16">
         <a-plane position="0 0 -0.01" width="0.98" height="0.22" material="color: #021a08; opacity: 0.92"></a-plane>
-        <a-text value="HACKING SURPLUS: W = c + v + m" align="center" color="#00ff66" width="3.3"></a-text>
+        <a-text value="DOC QUYEN NHA NUOC: KHOA KET NOI" align="center" color="#00ff66" width="3.2"></a-text>
       </a-entity>
 
       <a-entity position="0 0.33 0.13">
         <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #050d18; opacity: 0.88"></a-plane>
-        <a-text value="OPEN-GRID DECENTRALIZED PROTOCOL" align="center" color="#00f0ff" width="2.2"></a-text>
+        <a-text value="CHI PHI GIAM vs CUOC THU CO DINH" align="center" color="#00f0ff" width="2.3"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.13">
         <a-plane position="0 0 -0.01" width="0.92" height="0.16" material="color: #1f0505; opacity: 0.88"></a-plane>
-        <a-text value="[ OMNI-PATROL INCOMING: 100m ]" align="center" color="#ff3333" width="2.4"></a-text>
+        <a-text value="[ LOI NHUAN DOC QUYEN SIEU NGACH ]" align="center" color="#ff3333" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
@@ -373,27 +373,27 @@
       <a-entity id="prev0" visible="true">
         <a-ring radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.85" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
         <a-ring radius-inner="0.30" radius-outer="0.38" material="color: #00f0ff; opacity: 0.75" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
-        <a-text value="W = c + v + m" align="center" color="#00ff66" position="0 0.5 0" width="4"></a-text>
-        <a-text value="GIA TRI THANG DU SO: m = 85%" align="center" color="#00f0ff" position="0 0.28 0" width="2.8"></a-text>
-        <a-text value="[ DAS KAPITAL 2.0 PROTOCOL ]" align="center" color="#ffe600" position="0 -0.45 0" width="3"></a-text>
+        <a-text value="VOM-9: KY NGUYEN DOC QUYEN" align="center" color="#00ff66" position="0 0.5 0" width="3.8"></a-text>
+        <a-text value="MINH & NGUOI BAN AI DONG HANH" align="center" color="#00f0ff" position="0 0.28 0" width="2.8"></a-text>
+        <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" position="0 -0.45 0" width="2.6"></a-text>
       </a-entity>
 
       <!-- Preview Target 1 -->
       <a-entity id="prev1" visible="false">
         <a-cone position="0 0.25 0" radius-bottom="0.45" radius-top="0.06" height="0.7" material="color: #ff0055; opacity: 0.6; wireframe: true" rotation="180 0 0" animation="property: rotation; to: 180 360 0; loop: true; dur: 4500; easing: linear"></a-cone>
         <a-ring radius-inner="0.36" radius-outer="0.48" material="color: #00f0ff; opacity: 0.8" animation="property: scale; from: 0.9 0.9 1; to: 1.15 1.15 1; dir: alternate; loop: true; dur: 800"></a-ring>
-        <a-text value="! OMNI-LIFE SURVEILLANCE !" align="center" color="#ff007f" position="0 0.54 0" width="4"></a-text>
-        <a-text value="THUAT TOAN BOC LOT GIA TRI" align="center" color="#ffe600" position="0 0.32 0" width="3"></a-text>
-        <a-text value="[ CONSUME - OBEY - OMNI ]" align="center" color="#00f0ff" position="0 -0.45 0" width="3"></a-text>
+        <a-text value="! BAY CAP NHAT BAT BUOC !" align="center" color="#ff007f" position="0 0.54 0" width="3.8"></a-text>
+        <a-text value="THON TINH DU LIEU & KHOA CANH BAO" align="center" color="#ffe600" position="0 0.32 0" width="2.8"></a-text>
+        <a-text value="[ MANH MOI: CAU NOI KY NIEM ]" align="center" color="#00f0ff" position="0 -0.45 0" width="2.8"></a-text>
       </a-entity>
 
       <!-- Preview Target 2 -->
       <a-entity id="prev2" visible="false">
         <a-box depth="0.38" height="0.38" width="0.38" material="color: #00ff66; opacity: 0.75; wireframe: true" animation="property: rotation; to: 360 360 0; loop: true; dur: 5000; easing: linear"></a-box>
         <a-ring radius-inner="0.36" radius-outer="0.5" material="color: #00ff66; opacity: 0.85" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
-        <a-text value="HACKING SURPLUS: W = c + v + m" align="center" color="#00ff66" position="0 0.54 0" width="4"></a-text>
-        <a-text value="OPEN-GRID DECENTRALIZED PROTOCOL" align="center" color="#00f0ff" position="0 0.32 0" width="3"></a-text>
-        <a-text value="[ OMNI-PATROL INCOMING: 100m ]" align="center" color="#ff3333" position="0 -0.45 0" width="3"></a-text>
+        <a-text value="DOC QUYEN NHA NUOC: KHOA KET NOI" align="center" color="#00ff66" position="0 0.54 0" width="3.8"></a-text>
+        <a-text value="CHI PHI GIAM vs CUOC THU CO DINH" align="center" color="#00f0ff" position="0 0.32 0" width="2.8"></a-text>
+        <a-text value="[ LOI NHUAN DOC QUYEN SIEU NGACH ]" align="center" color="#ff3333" position="0 -0.45 0" width="2.8"></a-text>
       </a-entity>
     </a-entity>
 
@@ -439,9 +439,9 @@
     }
 
     const targetMeta = {
-      target0: { title: 'BÌA CYBER-MARX (TARGET 0)', freq: 880, btn: 'btn0' },
-      target1: { title: 'TRANG 1 - ĐÔ THỊ (TARGET 1)', freq: 660, btn: 'btn1' },
-      target2: { title: 'TRANG 2 - MẬT THẤT (TARGET 2)', freq: 1100, btn: 'btn2' }
+      target0: { title: 'BÌA VÒM-9 (TARGET 0)', freq: 880, btn: 'btn0' },
+      target1: { title: 'TRANG 1-2: MINH & AI (TARGET 1)', freq: 660, btn: 'btn1' },
+      target2: { title: 'TRANG 3-4: ĐỘC QUYỀN HẠ TẦNG (TARGET 2)', freq: 1100, btn: 'btn2' }
     };
 
     let currentFocus = -1; // -1: auto all, 0: cover, 1: page1, 2: page2
@@ -469,9 +469,9 @@
 
       const hints = {
         '-1': 'Đang quét: TẤT CẢ TRANH (Auto)',
-        '0': 'Đang quét: BÌA CYBER-MARX (Target 0)',
-        '1': 'Đang quét: TRANG 1 - ĐÔ THỊ (Target 1)',
-        '2': 'Đang quét: TRANG 2 - MẬT THẤT (Target 2)'
+        '0': 'Đang quét: BÌA VÒM-9 (Target 0)',
+        '1': 'Đang quét: TRANG 1-2 - MINH & AI (Target 1)',
+        '2': 'Đang quét: TRANG 3-4 - ĐỘC QUYỀN HẠ TẦNG (Target 2)'
       };
       document.getElementById('guideTargetHint').textContent = hints[idx];
 
@@ -531,7 +531,7 @@
           if (system) {
             cycleStep = (cycleStep + 1) % cycleList.length;
             system.switchTarget(cycleList[cycleStep]);
-            const names = ['Bìa Marx (0)', 'Trang 1: Đô thị (1)', 'Trang 2: Mật thất (2)'];
+            const names = ['Bìa Vòm-9 (0)', 'Trang 1-2: Minh & AI (1)', 'Trang 3-4: Độc quyền (2)'];
             document.getElementById('guideTargetHint').textContent = `Tự động tìm: ${names[cycleStep]}...`;
           }
         }
@@ -559,9 +559,9 @@
       } else {
         const waitingTitles = {
           '-1': '🔴 HƯỚNG CAMERA VÀO TRANH...',
-          '0': '🔴 ĐANG TÌM: BÌA MARX...',
-          '1': '🔴 ĐANG TÌM: TRANG 1 (ĐÔ THỊ)...',
-          '2': '🔴 ĐANG TÌM: TRANG 2 (MẬT THẤT)...'
+          '0': '🔴 ĐANG TÌM: BÌA VÒM-9...',
+          '1': '🔴 ĐANG TÌM: TRANG 1-2 (MINH & AI)...',
+          '2': '🔴 ĐANG TÌM: TRANG 3-4 (ĐỘC QUYỀN HẠ TẦNG)...'
         };
         badge.textContent = waitingTitles[currentFocus] || '🔴 HƯỚNG CAMERA VÀO TRANH...';
         badge.classList.remove('locked');
