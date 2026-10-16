@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Cyber-Marx: AR Camera Scanner (3 Targets)</title>
+  <title>GIỮ MỘT ĐỐM SÁNG: AR Camera Scanner (MLN122)</title>
 
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#00f0ff">
@@ -254,8 +254,8 @@
 
   <!-- Start Overlay for Camera & Audio Unlock -->
   <div id="start-overlay">
-    <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">VÒM-9: AR CAMERA SCANNER</h2>
-    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện truyện tranh Vòm-9: Minh & AI Đồng Hành, Bẫy Cập Nhật Độc Quyền, và Hồ Sơ Độc Quyền Hạ Tầng.</p>
+    <h2 style="color:var(--neon-cyan); font-size:24px; margin-bottom:8px; letter-spacing:1px;">GIỮ MỘT ĐỐM SÁNG: AR SCANNER</h2>
+    <p style="color:#aaa; font-size:14px; max-width:320px; line-height:1.5;">Hệ thống nhận diện truyện tranh: Minh & Đốm, Dự án Nếp Sáng, và Bản chất Độc quyền Nhà nước tại Vòm-9.</p>
     <button class="start-btn" onclick="startAR()">BẬT CAMERA QUÉT AR</button>
   </div>
 
@@ -276,9 +276,9 @@
     <div class="controls-panel">
       <div class="switcher-row">
         <button class="switcher-btn active" id="btnAll" onclick="switchFocus(-1)">🌐 TẤT CẢ (Auto)</button>
-        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA VÒM-9</button>
-        <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">⚡ TRANG 1-2: MINH & AI</button>
-        <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">📊 TRANG 3-4: ĐỘC QUYỀN HẠ TẦNG</button>
+        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA: GIỮ MỘT ĐỐM SÁNG</button>
+        <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">⚡ TRANG 1-2: MINH & ĐỐM</button>
+        <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">📊 TRANG 3-4: ĐỘC QUYỀN TRỤC</button>
       </div>
       <div class="sub-bar">
         <span>💡 Bấm <b>TRANG 1-2</b> hoặc <b>TRANG 3-4</b> để khóa nét tức thì!</span>
@@ -305,12 +305,12 @@
 
       <a-entity position="0 0.52 0.15">
         <a-plane position="0 0 -0.01" width="0.92" height="0.22" material="color: #050515; opacity: 0.92"></a-plane>
-        <a-text value="VOM-9: KY NGUYEN DOC QUYEN" align="center" color="#00ff66" width="3.4"></a-text>
+        <a-text value="GIU MOT DOM SANG: VOM-9" align="center" color="#00ff66" width="3.4"></a-text>
       </a-entity>
 
       <a-entity position="0 0.32 0.12">
         <a-plane position="0 0 -0.01" width="0.96" height="0.16" material="color: #050515; opacity: 0.88"></a-plane>
-        <a-text value="MINH & NGUOI BAN AI DONG HANH" align="center" color="#00f0ff" width="2.4"></a-text>
+        <a-text value="MINH & AI DOM: DU AN NEP SANG" align="center" color="#00f0ff" width="2.4"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.12">
@@ -329,17 +329,17 @@
 
       <a-entity position="0 0.54 0.16">
         <a-plane position="0 0 -0.01" width="0.98" height="0.22" material="color: #1a0510; opacity: 0.92"></a-plane>
-        <a-text value="! BAY CAP NHAT BAT BUOC !" align="center" color="#ff007f" width="3.4"></a-text>
+        <a-text value="! CAP NHAT TRUC: TIENG TICH !" align="center" color="#ff007f" width="3.4"></a-text>
       </a-entity>
 
       <a-entity position="0 0.33 0.13">
         <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
-        <a-text value="THON TINH DU LIEU & KHOA CANH BAO" align="center" color="#ffe600" width="2.3"></a-text>
+        <a-text value="O LUU 'NHA MINH' & DU AN NEP SANG" align="center" color="#ffe600" width="2.3"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.13">
         <a-plane position="0 0 -0.01" width="0.9" height="0.16" material="color: #08081a; opacity: 0.88"></a-plane>
-        <a-text value="[ MANH MOI: CAU NOI KY NIEM ]" align="center" color="#00f0ff" width="2.4"></a-text>
+        <a-text value="[ MANH MOI: NHA MINH VAN PHAI SANG CHU ]" align="center" color="#00f0ff" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
@@ -358,12 +358,12 @@
 
       <a-entity position="0 0.33 0.13">
         <a-plane position="0 0 -0.01" width="0.95" height="0.16" material="color: #050d18; opacity: 0.88"></a-plane>
-        <a-text value="CHI PHI GIAM vs CUOC THU CO DINH" align="center" color="#00f0ff" width="2.3"></a-text>
+        <a-text value="CHI PHI GIAM vs PHI CO DINH GIU NGUYEN" align="center" color="#00f0ff" width="2.3"></a-text>
       </a-entity>
 
       <a-entity position="0 -0.46 0.13">
         <a-plane position="0 0 -0.01" width="0.92" height="0.16" material="color: #1f0505; opacity: 0.88"></a-plane>
-        <a-text value="[ LOI NHUAN DOC QUYEN SIEU NGACH ]" align="center" color="#ff3333" width="2.4"></a-text>
+        <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff3333" width="2.4"></a-text>
       </a-entity>
     </a-entity>
 
@@ -373,8 +373,8 @@
       <a-entity id="prev0" visible="true">
         <a-ring radius-inner="0.45" radius-outer="0.55" material="color: #ff007f; opacity: 0.85" animation="property: rotation; to: 0 0 -360; loop: true; dur: 8000; easing: linear"></a-ring>
         <a-ring radius-inner="0.30" radius-outer="0.38" material="color: #00f0ff; opacity: 0.75" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
-        <a-text value="VOM-9: KY NGUYEN DOC QUYEN" align="center" color="#00ff66" position="0 0.5 0" width="3.8"></a-text>
-        <a-text value="MINH & NGUOI BAN AI DONG HANH" align="center" color="#00f0ff" position="0 0.28 0" width="2.8"></a-text>
+        <a-text value="GIU MOT DOM SANG: VOM-9" align="center" color="#00ff66" position="0 0.5 0" width="3.8"></a-text>
+        <a-text value="MINH & AI DOM: DU AN NEP SANG" align="center" color="#00f0ff" position="0 0.28 0" width="2.8"></a-text>
         <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" position="0 -0.45 0" width="2.6"></a-text>
       </a-entity>
 
@@ -382,9 +382,9 @@
       <a-entity id="prev1" visible="false">
         <a-cone position="0 0.25 0" radius-bottom="0.45" radius-top="0.06" height="0.7" material="color: #ff0055; opacity: 0.6; wireframe: true" rotation="180 0 0" animation="property: rotation; to: 180 360 0; loop: true; dur: 4500; easing: linear"></a-cone>
         <a-ring radius-inner="0.36" radius-outer="0.48" material="color: #00f0ff; opacity: 0.8" animation="property: scale; from: 0.9 0.9 1; to: 1.15 1.15 1; dir: alternate; loop: true; dur: 800"></a-ring>
-        <a-text value="! BAY CAP NHAT BAT BUOC !" align="center" color="#ff007f" position="0 0.54 0" width="3.8"></a-text>
-        <a-text value="THON TINH DU LIEU & KHOA CANH BAO" align="center" color="#ffe600" position="0 0.32 0" width="2.8"></a-text>
-        <a-text value="[ MANH MOI: CAU NOI KY NIEM ]" align="center" color="#00f0ff" position="0 -0.45 0" width="2.8"></a-text>
+        <a-text value="! CAP NHAT TRUC: TIENG TICH !" align="center" color="#ff007f" position="0 0.54 0" width="3.8"></a-text>
+        <a-text value="O LUU 'NHA MINH' & DU AN NEP SANG" align="center" color="#ffe600" position="0 0.32 0" width="2.8"></a-text>
+        <a-text value="[ MANH MOI: NHA MINH VAN PHAI SANG CHU ]" align="center" color="#00f0ff" position="0 -0.45 0" width="2.8"></a-text>
       </a-entity>
 
       <!-- Preview Target 2 -->
@@ -392,8 +392,8 @@
         <a-box depth="0.38" height="0.38" width="0.38" material="color: #00ff66; opacity: 0.75; wireframe: true" animation="property: rotation; to: 360 360 0; loop: true; dur: 5000; easing: linear"></a-box>
         <a-ring radius-inner="0.36" radius-outer="0.5" material="color: #00ff66; opacity: 0.85" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear"></a-ring>
         <a-text value="DOC QUYEN NHA NUOC: KHOA KET NOI" align="center" color="#00ff66" position="0 0.54 0" width="3.8"></a-text>
-        <a-text value="CHI PHI GIAM vs CUOC THU CO DINH" align="center" color="#00f0ff" position="0 0.32 0" width="2.8"></a-text>
-        <a-text value="[ LOI NHUAN DOC QUYEN SIEU NGACH ]" align="center" color="#ff3333" position="0 -0.45 0" width="2.8"></a-text>
+        <a-text value="CHI PHI GIAM vs PHI CO DINH GIU NGUYEN" align="center" color="#00f0ff" position="0 0.32 0" width="2.8"></a-text>
+        <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff3333" position="0 -0.45 0" width="2.8"></a-text>
       </a-entity>
     </a-entity>
 
@@ -439,9 +439,9 @@
     }
 
     const targetMeta = {
-      target0: { title: 'BÌA VÒM-9 (TARGET 0)', freq: 880, btn: 'btn0' },
-      target1: { title: 'TRANG 1-2: MINH & AI (TARGET 1)', freq: 660, btn: 'btn1' },
-      target2: { title: 'TRANG 3-4: ĐỘC QUYỀN HẠ TẦNG (TARGET 2)', freq: 1100, btn: 'btn2' }
+      target0: { title: 'BÌA: GIỮ MỘT ĐỐM SÁNG (TARGET 0)', freq: 880, btn: 'btn0' },
+      target1: { title: 'TRANG 1-2: MINH & ĐỐM (TARGET 1)', freq: 660, btn: 'btn1' },
+      target2: { title: 'TRANG 3-4: ĐỘC QUYỀN TRỤC (TARGET 2)', freq: 1100, btn: 'btn2' }
     };
 
     let currentFocus = -1; // -1: auto all, 0: cover, 1: page1, 2: page2
