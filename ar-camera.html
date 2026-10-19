@@ -27,6 +27,7 @@
 
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="./assets/ar-effects.js?t=1792147000"></script>
 
   <style>
     :root {
@@ -312,8 +313,13 @@
     
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
+    <!-- Cyber-Marx Dramatic Stage Lighting -->
+    <a-entity light="type: ambient; color: #ffffff; intensity: 0.85"></a-entity>
+    <a-entity light="type: directional; color: #00f0ff; intensity: 0.95; position: 1 2 2"></a-entity>
+    <a-entity light="type: directional; color: #ff0055; intensity: 0.75; position: -2 -1 1"></a-entity>
+
     <!-- ================= TARGET 0: BÌA TRUYỆN THÀNH PHỐ VÒM-9 ================= -->
-    <a-entity mindar-image-target="targetIndex: 0" id="target0">
+    <a-entity mindar-image-target="targetIndex: 0" id="target0" intro-dome-effect>
       <!-- Steady Neon HUD Page Border (aspect ratio aligned with target) -->
       <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #00f0ff; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
       <!-- Corner Markers for solid locked HUD visual -->
@@ -322,28 +328,23 @@
       <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00f0ff; opacity: 0.8; transparent: true"></a-plane>
       <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00f0ff; opacity: 0.8; transparent: true"></a-plane>
 
-      <!-- Stable Center Reticle (no jittery spinning) -->
-      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #00f0ff; opacity: 0.65; transparent: true"></a-ring>
-      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #ff007f; opacity: 0.65; transparent: true"></a-ring>
-      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #00ff66; opacity: 0.75; transparent: true"></a-circle>
-
       <!-- Top Title HUD Plate -->
-      <a-entity position="0 0.52 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #040914; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 0.54 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #040914; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="GIU MOT DOM SANG: VOM-9" align="center" color="#00ff66" width="3.2" position="0 0.03 0"></a-text>
         <a-text value="MINH & AI DOM // DU AN NEP SANG" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
       </a-entity>
 
       <!-- Bottom Curriculum & Clue HUD Plate -->
-      <a-entity position="0 -0.48 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #040914; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 -0.50 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #040914; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" width="2.4" position="0 0.02 0"></a-text>
         <a-text value=">> MANH MOI: NHA MINH VAN PHAI SANG CHU <<" align="center" color="#00f0ff" width="2.1" position="0 -0.04 0"></a-text>
       </a-entity>
     </a-entity>
 
     <!-- ================= TARGET 1: TRANG 1-2 HỆ THỐNG MINH & BẪY CẬP NHẬT ================= -->
-    <a-entity mindar-image-target="targetIndex: 1" id="target1">
+    <a-entity mindar-image-target="targetIndex: 1" id="target1" meter-scanner-effect>
       <!-- Steady Neon HUD Page Border -->
       <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #ff007f; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
       <!-- Corner Markers -->
@@ -352,29 +353,23 @@
       <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ff007f; opacity: 0.8; transparent: true"></a-plane>
       <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ff007f; opacity: 0.8; transparent: true"></a-plane>
 
-      <!-- Stable Diagnostic Target Reticle -->
-      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #ff007f; opacity: 0.65; transparent: true"></a-ring>
-      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.65; transparent: true"></a-ring>
-      <a-plane position="0 0.02 0.015" width="0.46" height="0.015" material="color: #ff007f; opacity: 0.55; transparent: true"></a-plane>
-      <a-plane position="0 0.02 0.015" width="0.015" height="0.46" material="color: #ff007f; opacity: 0.55; transparent: true"></a-plane>
-
       <!-- Top Alert HUD Plate -->
-      <a-entity position="0 0.52 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #14050d; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 0.54 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #14050d; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="! CANH BAO TRUC: TIENG TICH CONG TO !" align="center" color="#ff007f" width="3.2" position="0 0.03 0"></a-text>
         <a-text value="O LUU 'NHA MINH' // DU AN NEP SANG" align="center" color="#ffe600" width="2.3" position="0 -0.04 0"></a-text>
       </a-entity>
 
       <!-- Bottom Insight HUD Plate -->
-      <a-entity position="0 -0.48 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #14050d; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 -0.50 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #14050d; opacity: 0.94; transparent: true"></a-plane>
         <a-text value=">> MANH MOI: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00f0ff" width="2.3" position="0 0.02 0"></a-text>
         <a-text value="GIA TRI THANG DU SO HOA & BOC LOT DU LIEU" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
       </a-entity>
     </a-entity>
 
     <!-- ================= TARGET 2: TRANG 3-4 ĐỘC QUYỀN HẠ TẦNG NĂNG LƯỢNG ================= -->
-    <a-entity mindar-image-target="targetIndex: 2" id="target2">
+    <a-entity mindar-image-target="targetIndex: 2" id="target2" monopoly-crush-effect>
       <!-- Steady Neon HUD Page Border -->
       <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #00ff66; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
       <!-- Corner Markers -->
@@ -383,34 +378,26 @@
       <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
       <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
 
-      <!-- Stable Economic Reticle -->
-      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.65; transparent: true"></a-ring>
-      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.65; transparent: true"></a-ring>
-      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #00f0ff; opacity: 0.75; transparent: true"></a-circle>
+      <!-- Base Holo Ring Indicator -->
+      <a-ring position="0 0.02 0.01" radius-inner="0.34" radius-outer="0.36" material="color: #ff0044; opacity: 0.75; transparent: true"></a-ring>
 
       <!-- Top Monopoly HUD Plate -->
-      <a-entity position="0 0.52 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #021608; opacity: 0.92; transparent: true"></a-plane>
-        <a-text value="DOC QUYEN NHA NUOC: TAP DOAN TRUC" align="center" color="#00ff66" width="3.2" position="0 0.03 0"></a-text>
-        <a-text value="KHOA CHAT CO SO HA TANG DIEN VOM-9" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
-      </a-entity>
-
-      <!-- Middle Economic Metric Plate -->
-      <a-entity position="0 0.16 0.08">
-        <a-plane position="0 0 -0.01" width="0.92" height="0.14" material="color: #050d18; opacity: 0.88; transparent: true"></a-plane>
-        <a-text value="CHI PHI GIAM: -38%  |  PHI CO DINH: 100%" align="center" color="#ffe600" width="2.4"></a-text>
+      <a-entity position="0 0.54 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #140205; opacity: 0.94; transparent: true"></a-plane>
+        <a-text value="DOC QUYEN NHA NUOC: TAP DOAN TRUC" align="center" color="#ff0044" width="3.2" position="0 0.03 0"></a-text>
+        <a-text value="BOP NGHET DOI MOI // KHOA CHAT HA TANG" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
       </a-entity>
 
       <!-- Bottom Economic Surplus HUD Plate -->
-      <a-entity position="0 -0.48 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #1a0505; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 -0.50 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #140205; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff4444" width="2.4" position="0 0.02 0"></a-text>
-        <a-text value="GIA CA DOC QUYEN THAO TUNG VUOT GIA TRI" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
+        <a-text value="CHI PHI GIAM -38% NHUNG GIA VAN CAO KHONG DOI" align="center" color="#ffe600" width="2.1" position="0 -0.04 0"></a-text>
       </a-entity>
     </a-entity>
 
     <!-- ================= TARGET 3: TRANG 5 NHẬT KÝ THIẾT BỊ & LỆNH ÉP TRỤC ================= -->
-    <a-entity mindar-image-target="targetIndex: 3" id="target3">
+    <a-entity mindar-image-target="targetIndex: 3" id="target3" evidence-drive-effect>
       <!-- Steady Neon HUD Page Border -->
       <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #ffe600; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
       <!-- Corner Markers in Cyber Amber -->
@@ -419,34 +406,23 @@
       <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
       <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
 
-      <!-- Terminal Diagnostics Reticle -->
-      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #ffe600; opacity: 0.65; transparent: true"></a-ring>
-      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.65; transparent: true"></a-ring>
-      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #ffe600; opacity: 0.75; transparent: true"></a-circle>
-
       <!-- Top Title HUD Plate -->
-      <a-entity position="0 0.52 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #141005; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 0.54 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #141005; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="NHAT KY THIET BI: O LUU 'NHA MINH'" align="center" color="#ffe600" width="3.2" position="0 0.03 0"></a-text>
         <a-text value="GIAI MA LENH CAP NHAT BAT BUOC CUA TRUC" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
       </a-entity>
 
-      <!-- Middle Evidence Plate -->
-      <a-entity position="0 0.16 0.08">
-        <a-plane position="0 0 -0.01" width="0.94" height="0.14" material="color: #141005; opacity: 0.88; transparent: true"></a-plane>
-        <a-text value="NEP SANG -> MAY CHU TRUC  |  AI BI KHOA HUY LENH" align="center" color="#ff007f" width="2.3"></a-text>
-      </a-entity>
-
       <!-- Bottom Insight HUD Plate -->
-      <a-entity position="0 -0.48 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #141005; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 -0.50 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #141005; opacity: 0.94; transparent: true"></a-plane>
         <a-text value=">> THAU HIEU: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00ff66" width="2.3" position="0 0.02 0"></a-text>
         <a-text value="GOM DU 4 BO HO SO DOI CHIEU BIEU HIEN DOC QUYEN" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
       </a-entity>
     </a-entity>
 
     <!-- ================= TARGET 4: TRANG 6 KIẾN NGHỊ CỘNG ĐỒNG & GIÁM SÁT VÒM-9 ================= -->
-    <a-entity mindar-image-target="targetIndex: 4" id="target4">
+    <a-entity mindar-image-target="targetIndex: 4" id="target4" justice-lights-effect>
       <!-- Steady Neon HUD Page Border -->
       <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #00ff66; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
       <!-- Corner Markers in Emerald -->
@@ -455,27 +431,16 @@
       <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
       <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
 
-      <!-- Collective Action Emblem Reticle -->
-      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.65; transparent: true"></a-ring>
-      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #ffe600; opacity: 0.65; transparent: true"></a-ring>
-      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #00ff66; opacity: 0.75; transparent: true"></a-circle>
-
       <!-- Top Title HUD Plate -->
-      <a-entity position="0 0.52 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #03140a; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 0.54 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #03140a; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="TIENG NOI CU DAN // DON KIEN NGHI TAP THE" align="center" color="#00ff66" width="3.2" position="0 0.03 0"></a-text>
         <a-text value="DO CU DAN DONG LONG KY TAI PHONG SINH HOAT" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
       </a-entity>
 
-      <!-- Middle Status Plate -->
-      <a-entity position="0 0.16 0.08">
-        <a-plane position="0 0 -0.01" width="0.94" height="0.14" material="color: #03140a; opacity: 0.88; transparent: true"></a-plane>
-        <a-text value="CO QUAN GIAM SAT VOM-9: DA NHAN HO SO DIEU TRA" align="center" color="#ffe600" width="2.3"></a-text>
-      </a-entity>
-
       <!-- Bottom Resolution HUD Plate -->
-      <a-entity position="0 -0.48 0.08">
-        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #03140a; opacity: 0.92; transparent: true"></a-plane>
+      <a-entity position="0 -0.50 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #03140a; opacity: 0.94; transparent: true"></a-plane>
         <a-text value="[ MINH BACH HOA HA TANG & GIA NANG LUONG CONG ]" align="center" color="#00ff66" width="2.3" position="0 0.02 0"></a-text>
         <a-text value="CAN BANG QUYEN LOI NHA NUOC - DOANH NGHIEP - CU DAN" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
       </a-entity>
@@ -483,55 +448,39 @@
 
     <!-- ================= PREVIEW HOLOGRAM (Cho phép người dùng xem thử 3D ngay lập tức) ================= -->
     <a-entity id="previewAnchor" position="0 0 -1.6" visible="false">
-      <!-- Preview Target 0 -->
-      <a-entity id="prev0" visible="true">
-        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #00f0ff; opacity: 0.85"></a-ring>
-        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #ff007f; opacity: 0.85"></a-ring>
-        <a-circle radius="0.06" material="color: #00ff66; opacity: 0.85"></a-circle>
-        <a-text value="GIU MOT DOM SANG: VOM-9" align="center" color="#00ff66" position="0 0.5 0" width="3.6"></a-text>
-        <a-text value="MINH & AI DOM // DU AN NEP SANG" align="center" color="#00f0ff" position="0 0.3 0" width="2.6"></a-text>
-        <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" position="0 -0.45 0" width="2.6"></a-text>
+      <!-- Preview Target 0: Vòm-9 Opening Dome & AI Đốm -->
+      <a-entity id="prev0" visible="true" intro-dome-effect>
+        <a-text value="GIU MOT DOM SANG: VOM-9" align="center" color="#00ff66" position="0 0.54 0" width="3.6"></a-text>
+        <a-text value="MINH & AI DOM // DU AN NEP SANG" align="center" color="#00f0ff" position="0 0.38 0" width="2.6"></a-text>
+        <a-text value="[ KINH TE CHINH TRI MLN122 - CHUONG 4 ]" align="center" color="#ffe600" position="0 -0.48 0" width="2.6"></a-text>
       </a-entity>
 
-      <!-- Preview Target 1 -->
-      <a-entity id="prev1" visible="false">
-        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #ff007f; opacity: 0.85"></a-ring>
-        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.85"></a-ring>
-        <a-plane width="0.46" height="0.015" material="color: #ff007f; opacity: 0.7"></a-plane>
-        <a-plane width="0.015" height="0.46" material="color: #ff007f; opacity: 0.7"></a-plane>
-        <a-text value="! CANH BAO TRUC: TIENG TICH !" align="center" color="#ff007f" position="0 0.52 0" width="3.6"></a-text>
-        <a-text value="O LUU 'NHA MINH' // DU AN NEP SANG" align="center" color="#ffe600" position="0 0.32 0" width="2.6"></a-text>
-        <a-text value=">> MANH MOI: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00f0ff" position="0 -0.45 0" width="2.6"></a-text>
+      <!-- Preview Target 1: Digital Meter & Scanner -->
+      <a-entity id="prev1" visible="false" meter-scanner-effect>
+        <a-text value="! CANH BAO TRUC: TIENG TICH !" align="center" color="#ff007f" position="0 0.54 0" width="3.6"></a-text>
+        <a-text value="O LUU 'NHA MINH' // DU AN NEP SANG" align="center" color="#ffe600" position="0 0.38 0" width="2.6"></a-text>
+        <a-text value=">> MANH MOI: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00f0ff" position="0 -0.48 0" width="2.6"></a-text>
       </a-entity>
 
-      <!-- Preview Target 2 -->
-      <a-entity id="prev2" visible="false">
-        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.85"></a-ring>
-        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.85"></a-ring>
-        <a-circle radius="0.06" material="color: #00f0ff; opacity: 0.85"></a-circle>
-        <a-text value="DOC QUYEN NHA NUOC: TAP DOAN TRUC" align="center" color="#00ff66" position="0 0.52 0" width="3.6"></a-text>
-        <a-text value="CHI PHI GIAM: -38%  |  PHI CO DINH: 100%" align="center" color="#ffe600" position="0 0.22 0" width="2.6"></a-text>
-        <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff4444" position="0 -0.45 0" width="2.6"></a-text>
+      <!-- Preview Target 2: Rising Mechanical Hand & Crushing Effect -->
+      <a-entity id="prev2" visible="false" monopoly-crush-effect>
+        <a-text value="DOC QUYEN NHA NUOC: TAP DOAN TRUC" align="center" color="#ff0044" position="0 0.54 0" width="3.6"></a-text>
+        <a-text value="BOP NGHET DOI MOI // KHOA CHAT HA TANG" align="center" color="#00f0ff" position="0 0.38 0" width="2.6"></a-text>
+        <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff4444" position="0 -0.48 0" width="2.6"></a-text>
       </a-entity>
 
-      <!-- Preview Target 3 -->
-      <a-entity id="prev3" visible="false">
-        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #ffe600; opacity: 0.85"></a-ring>
-        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.85"></a-ring>
-        <a-circle radius="0.06" material="color: #ffe600; opacity: 0.85"></a-circle>
-        <a-text value="NHAT KY THIET BI: O LUU 'NHA MINH'" align="center" color="#ffe600" position="0 0.52 0" width="3.6"></a-text>
-        <a-text value="NEP SANG -> MAY CHU TRUC (AI BI CHAN)" align="center" color="#ff007f" position="0 0.22 0" width="2.6"></a-text>
-        <a-text value=">> THAU HIEU: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00ff66" position="0 -0.45 0" width="2.6"></a-text>
+      <!-- Preview Target 3: Hardware Drive & Legal Dossiers -->
+      <a-entity id="prev3" visible="false" evidence-drive-effect>
+        <a-text value="NHAT KY THIET BI: O LUU 'NHA MINH'" align="center" color="#ffe600" position="0 0.54 0" width="3.6"></a-text>
+        <a-text value="GIAI MA LENH CAP NHAT BAT BUOC" align="center" color="#00f0ff" position="0 0.38 0" width="2.6"></a-text>
+        <a-text value=">> THAU HIEU: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00ff66" position="0 -0.48 0" width="2.6"></a-text>
       </a-entity>
 
-      <!-- Preview Target 4 -->
-      <a-entity id="prev4" visible="false">
-        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.85"></a-ring>
-        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #ffe600; opacity: 0.85"></a-ring>
-        <a-circle radius="0.06" material="color: #00ff66; opacity: 0.85"></a-circle>
-        <a-text value="TIENG NOI CU DAN // DON KIEN NGHI" align="center" color="#00ff66" position="0 0.52 0" width="3.6"></a-text>
-        <a-text value="CO QUAN GIAM SAT VOM-9 THU LY HO SO" align="center" color="#ffe600" position="0 0.22 0" width="2.6"></a-text>
-        <a-text value="[ MINH BACH HOA HA TANG NANG LUONG CONG ]" align="center" color="#00f0ff" position="0 -0.45 0" width="2.6"></a-text>
+      <!-- Preview Target 4: Scale of Justice & Swarm of Hope -->
+      <a-entity id="prev4" visible="false" justice-lights-effect>
+        <a-text value="TIENG NOI CU DAN // DON KIEN NGHI" align="center" color="#00ff66" position="0 0.54 0" width="3.6"></a-text>
+        <a-text value="CO QUAN GIAM SAT VOM-9 THU LY HO SO" align="center" color="#ffe600" position="0 0.38 0" width="2.6"></a-text>
+        <a-text value="[ MINH BACH HOA HA TANG NANG LUONG CONG ]" align="center" color="#00f0ff" position="0 -0.48 0" width="2.6"></a-text>
       </a-entity>
     </a-entity>
 
@@ -660,7 +609,13 @@
           const el = document.getElementById(`prev${i}`);
           if (el) el.setAttribute('visible', pIdx === i);
         }
-        playBeep(1100);
+        if (window.playArSound) {
+          if (pIdx === 2) window.playArSound('crush');
+          else if (pIdx === 1) window.playArSound('glitch');
+          else window.playArSound('chime');
+        } else {
+          playBeep(1100);
+        }
       } else {
         prevAnchor.setAttribute('visible', 'false');
         btn.textContent = '👁️ XEM THỬ 3D HOLOGRAM';
@@ -713,7 +668,13 @@
         el.addEventListener('targetFound', () => {
           activeSet.add(id);
           refreshUI();
-          if (targetMeta[id]) playBeep(targetMeta[id].freq);
+          if (window.playArSound) {
+            if (id === 'target2') window.playArSound('crush');
+            else if (id === 'target1') window.playArSound('glitch');
+            else window.playArSound('chime');
+          } else if (targetMeta[id]) {
+            playBeep(targetMeta[id].freq);
+          }
         });
 
         el.addEventListener('targetLost', () => {
