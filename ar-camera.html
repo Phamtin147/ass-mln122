@@ -287,12 +287,14 @@
     <div class="controls-panel">
       <div class="switcher-row">
         <button class="switcher-btn active" id="btnAll" onclick="switchFocus(-1)">🌐 TẤT CẢ (Auto)</button>
-        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA: GIỮ MỘT ĐỐM SÁNG</button>
+        <button class="switcher-btn" id="btn0" onclick="switchFocus(0)">📕 BÌA: VÒM-9</button>
         <button class="switcher-btn" id="btn1" onclick="switchFocus(1)">⚡ TRANG 1-2: MINH & ĐỐM</button>
         <button class="switcher-btn" id="btn2" onclick="switchFocus(2)">📊 TRANG 3-4: ĐỘC QUYỀN TRỤC</button>
+        <button class="switcher-btn" id="btn3" onclick="switchFocus(3)">📜 TRANG 5: NHẬT KÝ LỆNH ÉP</button>
+        <button class="switcher-btn" id="btn4" onclick="switchFocus(4)">⚖️ TRANG 6: KIẾN NGHỊ CỘNG ĐỒNG</button>
       </div>
       <div class="sub-bar">
-        <span>💡 Bấm <b>TRANG 1-2</b> hoặc <b>TRANG 3-4</b> để khóa nét tức thì!</span>
+        <span>💡 Bấm nút để khóa nét ngay trang tương ứng hoặc chọn <b>TẤT CẢ</b>!</span>
         <button class="preview-toggle" id="previewBtn" onclick="togglePreviewMode()">👁️ XEM THỬ 3D HOLOGRAM</button>
       </div>
     </div>
@@ -302,7 +304,7 @@
   <div class="ar-viewport">
     <a-scene 
       embedded
-      mindar-image="imageTargetSrc: ./assets/targets.mind?t=1792033000; maxTrack: 3; autoStart: false; uiScanning: no; filterMinCF: 0.0005; filterBeta: 0.01; warmupTolerance: 4; missTolerance: 15;" 
+      mindar-image="imageTargetSrc: ./assets/targets.mind?t=1792144000; maxTrack: 5; autoStart: false; uiScanning: no; filterMinCF: 0.0005; filterBeta: 0.01; warmupTolerance: 4; missTolerance: 15;" 
       color-space="sRGB" 
       renderer="colorManagement: true, physicallyCorrectLights: true"
       vr-mode-ui="enabled: false"
@@ -407,6 +409,78 @@
       </a-entity>
     </a-entity>
 
+    <!-- ================= TARGET 3: TRANG 5 NHẬT KÝ THIẾT BỊ & LỆNH ÉP TRỤC ================= -->
+    <a-entity mindar-image-target="targetIndex: 3" id="target3">
+      <!-- Steady Neon HUD Page Border -->
+      <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #ffe600; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
+      <!-- Corner Markers in Cyber Amber -->
+      <a-plane position="-0.48 0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="0.48 0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #ffe600; opacity: 0.8; transparent: true"></a-plane>
+
+      <!-- Terminal Diagnostics Reticle -->
+      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #ffe600; opacity: 0.65; transparent: true"></a-ring>
+      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.65; transparent: true"></a-ring>
+      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #ffe600; opacity: 0.75; transparent: true"></a-circle>
+
+      <!-- Top Title HUD Plate -->
+      <a-entity position="0 0.52 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #141005; opacity: 0.92; transparent: true"></a-plane>
+        <a-text value="NHAT KY THIET BI: O LUU 'NHA MINH'" align="center" color="#ffe600" width="3.2" position="0 0.03 0"></a-text>
+        <a-text value="GIAI MA LENH CAP NHAT BAT BUOC CUA TRUC" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
+      </a-entity>
+
+      <!-- Middle Evidence Plate -->
+      <a-entity position="0 0.16 0.08">
+        <a-plane position="0 0 -0.01" width="0.94" height="0.14" material="color: #141005; opacity: 0.88; transparent: true"></a-plane>
+        <a-text value="NEP SANG -> MAY CHU TRUC  |  AI BI KHOA HUY LENH" align="center" color="#ff007f" width="2.3"></a-text>
+      </a-entity>
+
+      <!-- Bottom Insight HUD Plate -->
+      <a-entity position="0 -0.48 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #141005; opacity: 0.92; transparent: true"></a-plane>
+        <a-text value=">> THAU HIEU: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00ff66" width="2.3" position="0 0.02 0"></a-text>
+        <a-text value="GOM DU 4 BO HO SO DOI CHIEU BIEU HIEN DOC QUYEN" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
+      </a-entity>
+    </a-entity>
+
+    <!-- ================= TARGET 4: TRANG 6 KIẾN NGHỊ CỘNG ĐỒNG & GIÁM SÁT VÒM-9 ================= -->
+    <a-entity mindar-image-target="targetIndex: 4" id="target4">
+      <!-- Steady Neon HUD Page Border -->
+      <a-plane position="0 0 0.005" width="1.0" height="1.38" material="color: #00ff66; opacity: 0.45; transparent: true; wireframe: true"></a-plane>
+      <!-- Corner Markers in Emerald -->
+      <a-plane position="-0.48 0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="0.48 0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="-0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
+      <a-plane position="0.48 -0.67 0.008" width="0.08" height="0.08" material="color: #00ff66; opacity: 0.8; transparent: true"></a-plane>
+
+      <!-- Collective Action Emblem Reticle -->
+      <a-ring position="0 0.02 0.02" radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.65; transparent: true"></a-ring>
+      <a-ring position="0 0.02 0.02" radius-inner="0.22" radius-outer="0.23" material="color: #ffe600; opacity: 0.65; transparent: true"></a-ring>
+      <a-circle position="0 0.02 0.015" radius="0.06" material="color: #00ff66; opacity: 0.75; transparent: true"></a-circle>
+
+      <!-- Top Title HUD Plate -->
+      <a-entity position="0 0.52 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.20" material="color: #03140a; opacity: 0.92; transparent: true"></a-plane>
+        <a-text value="TIENG NOI CU DAN // DON KIEN NGHI TAP THE" align="center" color="#00ff66" width="3.2" position="0 0.03 0"></a-text>
+        <a-text value="DO CU DAN DONG LONG KY TAI PHONG SINH HOAT" align="center" color="#00f0ff" width="2.3" position="0 -0.04 0"></a-text>
+      </a-entity>
+
+      <!-- Middle Status Plate -->
+      <a-entity position="0 0.16 0.08">
+        <a-plane position="0 0 -0.01" width="0.94" height="0.14" material="color: #03140a; opacity: 0.88; transparent: true"></a-plane>
+        <a-text value="CO QUAN GIAM SAT VOM-9: DA NHAN HO SO DIEU TRA" align="center" color="#ffe600" width="2.3"></a-text>
+      </a-entity>
+
+      <!-- Bottom Resolution HUD Plate -->
+      <a-entity position="0 -0.48 0.08">
+        <a-plane position="0 0 -0.01" width="0.96" height="0.18" material="color: #03140a; opacity: 0.92; transparent: true"></a-plane>
+        <a-text value="[ MINH BACH HOA HA TANG & GIA NANG LUONG CONG ]" align="center" color="#00ff66" width="2.3" position="0 0.02 0"></a-text>
+        <a-text value="CAN BANG QUYEN LOI NHA NUOC - DOANH NGHIEP - CU DAN" align="center" color="#aaa" width="2.0" position="0 -0.04 0"></a-text>
+      </a-entity>
+    </a-entity>
+
     <!-- ================= PREVIEW HOLOGRAM (Cho phép người dùng xem thử 3D ngay lập tức) ================= -->
     <a-entity id="previewAnchor" position="0 0 -1.6" visible="false">
       <!-- Preview Target 0 -->
@@ -438,6 +512,26 @@
         <a-text value="DOC QUYEN NHA NUOC: TAP DOAN TRUC" align="center" color="#00ff66" position="0 0.52 0" width="3.6"></a-text>
         <a-text value="CHI PHI GIAM: -38%  |  PHI CO DINH: 100%" align="center" color="#ffe600" position="0 0.22 0" width="2.6"></a-text>
         <a-text value="[ SIEU NGACH DOC QUYEN TAP DOAN TRUC ]" align="center" color="#ff4444" position="0 -0.45 0" width="2.6"></a-text>
+      </a-entity>
+
+      <!-- Preview Target 3 -->
+      <a-entity id="prev3" visible="false">
+        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #ffe600; opacity: 0.85"></a-ring>
+        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #00f0ff; opacity: 0.85"></a-ring>
+        <a-circle radius="0.06" material="color: #ffe600; opacity: 0.85"></a-circle>
+        <a-text value="NHAT KY THIET BI: O LUU 'NHA MINH'" align="center" color="#ffe600" position="0 0.52 0" width="3.6"></a-text>
+        <a-text value="NEP SANG -> MAY CHU TRUC (AI BI CHAN)" align="center" color="#ff007f" position="0 0.22 0" width="2.6"></a-text>
+        <a-text value=">> THAU HIEU: 'NHA MINH VAN PHAI SANG CHU' <<" align="center" color="#00ff66" position="0 -0.45 0" width="2.6"></a-text>
+      </a-entity>
+
+      <!-- Preview Target 4 -->
+      <a-entity id="prev4" visible="false">
+        <a-ring radius-inner="0.32" radius-outer="0.34" material="color: #00ff66; opacity: 0.85"></a-ring>
+        <a-ring radius-inner="0.22" radius-outer="0.23" material="color: #ffe600; opacity: 0.85"></a-ring>
+        <a-circle radius="0.06" material="color: #00ff66; opacity: 0.85"></a-circle>
+        <a-text value="TIENG NOI CU DAN // DON KIEN NGHI" align="center" color="#00ff66" position="0 0.52 0" width="3.6"></a-text>
+        <a-text value="CO QUAN GIAM SAT VOM-9 THU LY HO SO" align="center" color="#ffe600" position="0 0.22 0" width="2.6"></a-text>
+        <a-text value="[ MINH BACH HOA HA TANG NANG LUONG CONG ]" align="center" color="#00f0ff" position="0 -0.45 0" width="2.6"></a-text>
       </a-entity>
     </a-entity>
 
@@ -491,10 +585,12 @@
     const targetMeta = {
       target0: { title: 'BÌA: GIỮ MỘT ĐỐM SÁNG (TARGET 0)', freq: 880, btn: 'btn0' },
       target1: { title: 'TRANG 1-2: MINH & ĐỐM (TARGET 1)', freq: 660, btn: 'btn1' },
-      target2: { title: 'TRANG 3-4: ĐỘC QUYỀN TRỤC (TARGET 2)', freq: 1100, btn: 'btn2' }
+      target2: { title: 'TRANG 3-4: ĐỘC QUYỀN TRỤC (TARGET 2)', freq: 1100, btn: 'btn2' },
+      target3: { title: 'TRANG 5: NHẬT KÝ "NHÀ MÌNH" (TARGET 3)', freq: 750, btn: 'btn3' },
+      target4: { title: 'TRANG 6: KIẾN NGHỊ CỘNG ĐỒNG (TARGET 4)', freq: 980, btn: 'btn4' }
     };
 
-    let currentFocus = -1; // -1: auto all, 0: cover, 1: page1, 2: page2
+    let currentFocus = -1; // -1: auto all, 0: cover, 1: p1-2, 2: p3-4, 3: p5, 4: p6
     const activeSet = new Set();
     let isPreviewMode = false;
 
@@ -513,24 +609,29 @@
       else if (idx === 0) document.getElementById('btn0').classList.add('active');
       else if (idx === 1) document.getElementById('btn1').classList.add('active');
       else if (idx === 2) document.getElementById('btn2').classList.add('active');
+      else if (idx === 3) document.getElementById('btn3').classList.add('active');
+      else if (idx === 4) document.getElementById('btn4').classList.add('active');
 
       const hints = {
         '-1': 'Đang quét: TẤT CẢ TRANH (Auto)',
         '0': 'Đang quét: BÌA VÒM-9 (Target 0)',
         '1': 'Đang quét: TRANG 1-2 - MINH & AI (Target 1)',
-        '2': 'Đang quét: TRANG 3-4 - ĐỘC QUYỀN HẠ TẦNG (Target 2)'
+        '2': 'Đang quét: TRANG 3-4 - ĐỘC QUYỀN HẠ TẦNG (Target 2)',
+        '3': 'Đang quét: TRANG 5 - NHẬT KÝ THIẾT BỊ (Target 3)',
+        '4': 'Đang quét: TRANG 6 - KIẾN NGHỊ CỘNG ĐỒNG (Target 4)'
       };
       document.getElementById('guideTargetHint').textContent = hints[idx];
 
-      const freqs = { '-1': 520, '0': 880, '1': 660, '2': 1100 };
+      const freqs = { '-1': 520, '0': 880, '1': 660, '2': 1100, '3': 750, '4': 980 };
       playBeep(freqs[idx]);
 
       // If in preview mode, switch visible preview entity
       if (isPreviewMode) {
         const pIdx = idx === -1 ? 0 : idx;
-        document.getElementById('prev0').setAttribute('visible', pIdx === 0);
-        document.getElementById('prev1').setAttribute('visible', pIdx === 1);
-        document.getElementById('prev2').setAttribute('visible', pIdx === 2);
+        for (let i = 0; i <= 4; i++) {
+          const el = document.getElementById(`prev${i}`);
+          if (el) el.setAttribute('visible', pIdx === i);
+        }
       }
 
       refreshUI();
@@ -555,9 +656,10 @@
         guide.style.display = 'none';
 
         const pIdx = currentFocus === -1 ? 0 : currentFocus;
-        document.getElementById('prev0').setAttribute('visible', pIdx === 0);
-        document.getElementById('prev1').setAttribute('visible', pIdx === 1);
-        document.getElementById('prev2').setAttribute('visible', pIdx === 2);
+        for (let i = 0; i <= 4; i++) {
+          const el = document.getElementById(`prev${i}`);
+          if (el) el.setAttribute('visible', pIdx === i);
+        }
         playBeep(1100);
       } else {
         prevAnchor.setAttribute('visible', 'false');
@@ -573,15 +675,17 @@
       const badge = document.getElementById('statusBadge');
       const guide = document.getElementById('guideBox');
 
-      ['btn0', 'btn1', 'btn2'].forEach(id => {
-        document.getElementById(id).classList.remove('locked');
+      ['btn0', 'btn1', 'btn2', 'btn3', 'btn4'].forEach(id => {
+        const b = document.getElementById(id);
+        if (b) b.classList.remove('locked');
       });
 
       if (activeSet.size > 0) {
         let currentTitle = '';
         activeSet.forEach(id => {
-          document.getElementById(targetMeta[id].btn).classList.add('locked');
-          currentTitle = targetMeta[id].title;
+          const b = document.getElementById(targetMeta[id]?.btn);
+          if (b) b.classList.add('locked');
+          currentTitle = targetMeta[id]?.title || id;
         });
         badge.textContent = `🟢 ĐÃ KHÓA: ${currentTitle}`;
         badge.classList.add('locked');
@@ -591,7 +695,9 @@
           '-1': '🔴 HƯỚNG CAMERA VÀO TRANH...',
           '0': '🔴 ĐANG TÌM: BÌA VÒM-9...',
           '1': '🔴 ĐANG TÌM: TRANG 1-2 (MINH & AI)...',
-          '2': '🔴 ĐANG TÌM: TRANG 3-4 (ĐỘC QUYỀN HẠ TẦNG)...'
+          '2': '🔴 ĐANG TÌM: TRANG 3-4 (ĐỘC QUYỀN HẠ TẦNG)...',
+          '3': '🔴 ĐANG TÌM: TRANG 5 (NHẬT KÝ THIẾT BỊ)...',
+          '4': '🔴 ĐANG TÌM: TRANG 6 (KIẾN NGHỊ CỘNG ĐỒNG)...'
         };
         badge.textContent = waitingTitles[currentFocus] || '🔴 HƯỚNG CAMERA VÀO TRANH...';
         badge.classList.remove('locked');
@@ -600,14 +706,14 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      ['target0', 'target1', 'target2'].forEach(id => {
+      ['target0', 'target1', 'target2', 'target3', 'target4'].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
 
         el.addEventListener('targetFound', () => {
           activeSet.add(id);
           refreshUI();
-          playBeep(targetMeta[id].freq);
+          if (targetMeta[id]) playBeep(targetMeta[id].freq);
         });
 
         el.addEventListener('targetLost', () => {

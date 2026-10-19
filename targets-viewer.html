@@ -251,44 +251,44 @@
       {
         idx: 0,
         src: 'assets/comic_cover.jpg',
-        title: 'BÌA TRUYỆN: GIỮ MỘT ĐỐM SÁNG (TARGET 0)',
-        desc: 'Hiệu ứng AR: Vòng quay neon Hologram Vòm-9, Minh & AI Đốm, Dự án Nếp Sáng, Chương 4 Kinh tế chính trị MLN122, âm thanh Synth beep 880Hz.'
+        title: 'BÌA TRUYỆN: GIỮ MỘT ĐỐM SÁNG (AR TARGET 0)',
+        desc: 'Hiệu ứng AR: Vòng quay neon HUD Vòm-9, Minh & AI Đốm, Dự án Nếp Sáng, Chương 4 Kinh tế chính trị MLN122, âm thanh Synth beep 880Hz.'
       },
       {
         idx: 1,
         src: 'assets/comic_page1.jpg',
-        title: 'TRANG 1: ĐỂ THÁNG SAU VẬY (TARGET 1)',
-        desc: 'Hiệu ứng AR: Nón laser quét 3D cảnh báo bẫy cập nhật bắt buộc, ổ lưu "NHÀ MÌNH", gợi ý "Nhà mình vẫn phải sáng chứ", âm thanh beep 660Hz.'
+        title: 'TRANG 1-2: MINH & ĐỐM — HÓA ĐƠN & Ô CỬA MÉO (AR TARGET 1)',
+        desc: 'Hiệu ứng AR: Radar cảnh báo bẫy cập nhật bắt buộc, ổ lưu "NHÀ MÌNH", gợi ý "Nhà mình vẫn phải sáng chứ", âm thanh beep 660Hz.'
       },
       {
         idx: 2,
         src: 'assets/comic_page2.jpg',
-        title: 'TRANG 2: CẤT Ở NHÀ NHÉ (TARGET 2)',
-        desc: 'Hiệu ứng AR: Khối hộp dữ liệu 3D xoay giữa không trung, vạch trần chi phí vận hành giảm nhưng phí cố định giữ nguyên, chiếm đoạt thặng dư siêu ngạch và khóa mạng lưới.'
+        title: 'TRANG 2: CẤT Ở NHÀ NHÉ & BẪY CẬP NHẬT',
+        desc: 'Minh lưu Nếp Sáng vào ổ "Nhà mình". Bản cập nhật bắt buộc từ TRỤC khiến Đốm bị khựng lại giữa chừng.'
       },
       {
         idx: 3,
         src: 'assets/comic_page3.jpg',
-        title: 'TRANG 3: CÁI NÀY QUEN QUÁ',
-        desc: 'TRỤC ra mắt sản phẩm mới có ô cửa méo và câu nói riêng. Đốm định nói sự thật thì bị nghẽn tiếng "tích".'
+        title: 'TRANG 3-4: ĐỘC QUYỀN TRỤC & THỎA THUẬN HẠ TẦNG (AR TARGET 2)',
+        desc: 'Hiệu ứng AR: Ma trận kinh tế phân tích nghịch lý chi phí giảm -38% nhưng phí cố định giữ nguyên 100%, siêu ngạch độc quyền TRỤC chiếm đoạt, beep 1100Hz.'
       },
       {
         idx: 4,
         src: 'assets/comic_page4.jpg',
-        title: 'TRANG 4: KHÔNG CHO VÀO (ĐỘC QUYỀN HẠ TẦNG)',
+        title: 'TRANG 4: KHÔNG CHO VÀO (RÀO CẢN HẠ TẦNG)',
         desc: 'TRỤC từ chối kết nối Nếp Sáng. Minh đối chiếu thỏa thuận mạng lưới công xây bằng ngân sách nhưng giao TRỤC độc quyền tự quyết.'
       },
       {
         idx: 5,
         src: 'assets/comic_page5.jpg',
-        title: 'TRANG 5: À, LÀ Ở ĐÂY (Ổ LƯU "NHÀ MÌNH")',
-        desc: 'Minh mở nhật ký thiết bị trên ổ "NHÀ MÌNH", phát hiện TRỤC ép chuyển dữ liệu và chặn cảnh báo. Minh thấu hiểu sự dũng cảm của Đốm và gom 4 tài liệu.'
+        title: 'TRANG 5: NHẬT KÝ THIẾT BỊ "NHÀ MÌNH" (AR TARGET 3)',
+        desc: 'Hiệu ứng AR: Trích xuất nhật ký ổ lưu "Nhà Mình", lệnh TRỤC ép đồng bộ dữ liệu trái phép và khóa quyền từ chối của AI Đốm, beep 750Hz.'
       },
       {
         idx: 6,
         src: 'assets/comic_page6.jpg',
-        title: 'TRANG 6: ĐỂ MỌI NGƯỜI CÙNG XEM',
-        desc: 'Minh và Đốm mang tài liệu ra phòng sinh hoạt chung. Cả khu cùng ký kiến nghị. Cơ quan giám sát Vòm-9 mở cuộc xem xét. Bữa cơm gia đình ấm áp.'
+        title: 'TRANG 6: KIẾN NGHỊ CỘNG ĐỒNG & GIÁM SÁT VÒM-9 (AR TARGET 4)',
+        desc: 'Hiệu ứng AR: Đơn kiến nghị cư dân Vòm-9 được thụ lý, minh bạch hóa hạ tầng công và giá năng lượng, beep 980Hz.'
       }
     ];
 
@@ -310,13 +310,18 @@
       });
     }
 
-    // Keyboard navigation
+    // Keyboard navigation (1-7, Arrow keys, Spacebar)
     window.addEventListener('keydown', (e) => {
-      if (e.key === '1') showTarget(0);
-      else if (e.key === '2') showTarget(1);
-      else if (e.key === '3') showTarget(2);
-      else if (e.key === 'ArrowRight') showTarget(current + 1);
-      else if (e.key === 'ArrowLeft') showTarget(current - 1);
+      const num = parseInt(e.key);
+      if (!isNaN(num) && num >= 1 && num <= targets.length) {
+        showTarget(num - 1);
+      } else if (e.key === '0') {
+        showTarget(0);
+      } else if (e.key === 'ArrowRight' || e.key === ' ') {
+        showTarget(current + 1);
+      } else if (e.key === 'ArrowLeft') {
+        showTarget(current - 1);
+      }
     });
   </script>
 </body>

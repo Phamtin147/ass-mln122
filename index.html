@@ -809,6 +809,18 @@
       }
     };
 
+    function speakText(text) {
+      if (!audioEnabled || !('speechSynthesis' in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'vi-VN';
+        utter.rate = 1.05;
+        utter.pitch = 1.0;
+        window.speechSynthesis.speak(utter);
+      } catch (e) {}
+    }
+
     let popupTimer = null;
     function triggerHotspot(key) {
       initAudio();
@@ -823,10 +835,13 @@
       const popup = document.getElementById('speech-popup');
       popup.classList.add('show');
 
+      // Speech synthesis narration for dialog & scene insights
+      speakText(`${data.title}. ${data.desc}`);
+
       clearTimeout(popupTimer);
       popupTimer = setTimeout(() => {
         popup.classList.remove('show');
-      }, 4000);
+      }, 5500);
     }
 
     // Flipbook Navigation Buttons
@@ -839,6 +854,17 @@
       initAudio();
       if (pageFlipInstance) pageFlipInstance.flipPrev();
     }
+
+    // Keyboard Shortcuts for easy navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        flipNext();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        flipPrev();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      }
+    });
 
     // Initialize 3D Realistic PageFlip Physics
     window.addEventListener('DOMContentLoaded', () => {
