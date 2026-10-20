@@ -69,6 +69,45 @@ for (let i = 1; i < pageBlocks.length; i += 3) {
 }
 
 let articlesHtml = `
+    <!-- Character Model Sheet Card (baoyu-comic & ai-comic-factory) -->
+    <article class="page-wrapper model-sheet-card">
+      <div class="page-tag-bar" style="background:#1a1028; border-color:#ff007f;">
+        <span class="page-title" style="color:var(--neon-pink);">✨ BẢNG KHÓA ĐỒNG NHẤT NHÂN VẬT (CHARACTER MODEL SHEET)</span>
+        <span class="page-badge" style="background:rgba(255,0,127,0.2); border:1px solid var(--neon-pink); color:var(--neon-pink);">CHUẨN BAOYU-COMIC</span>
+      </div>
+      <div class="sheet-body">
+        <p class="sheet-desc">
+          Để chấm dứt tình trạng <em>"nhân vật mỗi trang mỗi khác"</em>, dự án đã thiết lập hệ thống <strong>Character Model Sheet</strong> và <strong>Token Anchor</strong> chuẩn hóa của <code>baoyu-comic</code>. Tất cả các trang đều dùng chung một bộ thông số nhận diện và mỏ neo tham chiếu <code>--cref characters/characters.png --cw 80 --niji 6</code>:
+        </p>
+        <div class="character-specs-grid">
+          <div class="spec-card minh-border">
+            <div class="spec-name">👓 MINH (22 Tuổi)</div>
+            <div class="spec-detail">
+              <strong>Khuôn mặt:</strong> Anime boy thon gọn, tóc đen layer hơi rối, đeo kính gọng tròn mảnh kim loại bạc.<br>
+              <strong>Trang phục cố định:</strong> Áo gile kỹ thuật xanh rêu <code>#4b5320</code> có túi hộp viền cam <code>#ff6b35</code>, áo thun cộc tay xám tro <code>#2c2c36</code>, quần cargo đen.<br>
+              <strong>Biểu tượng mỏ neo:</strong> Ô cửa sổ méo lệch 172 độ có chấm vàng Nếp Sáng.
+            </div>
+          </div>
+          <div class="spec-card dom-border">
+            <div class="spec-name">⚡ AI ĐỐM (Chibi Mascot)</div>
+            <div class="spec-detail">
+              <strong>Hình thái:</strong> Quả cầu hạt sáng đường kính 15cm, lõi vàng hổ phách <code>#ffe600</code>, hào quang ngọc cyan <code>#00f0ff</code>.<br>
+              <strong>Biểu cảm:</strong> Hai đốm mắt hạt đậu đen cực kỳ linh động, vệt hạt bụi sáng bay theo sau.<br>
+              <strong>Câu nói mỏ neo:</strong> <em>“Nhà mình vẫn phải sáng chứ.”</em>
+            </div>
+          </div>
+          <div class="spec-card mom-border">
+            <div class="spec-name">👟 MẸ MINH (52 Tuổi)</div>
+            <div class="spec-detail">
+              <strong>Diện mạo:</strong> Tóc điểm bạc búi thấp trâm gỗ, khuôn mặt hiền hậu hằn nếp nhăn lao động.<br>
+              <strong>Trang phục cố định:</strong> Áo cánh vải hoa nhí bạc màu hồng đất <code>#8b5a5a</code>, quần lụa đen.<br>
+              <strong>Vật phẩm mỏ neo:</strong> Đôi giày vải sờn rách đế bôi keo dán lại & cuốn sổ chi tiêu gạch xóa.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- Bìa Truyện -->
     <article class="page-wrapper">
       <div class="page-tag-bar">
@@ -231,6 +270,46 @@ const fullHtml = `<!DOCTYPE html>
     .page-wrapper.pending-card {
       border-color: rgba(255, 230, 0, 0.3);
       background: #0d0d1e;
+    }
+
+    /* Model Sheet Styles */
+    .model-sheet-card {
+      border-color: rgba(255, 0, 127, 0.4);
+      background: #0e0a1a;
+    }
+    .sheet-body {
+      padding: 16px 20px;
+    }
+    .sheet-desc {
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .character-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .spec-card {
+      background: #151126;
+      border: 1px solid #2a1f48;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .spec-card.minh-border { border-left: 3px solid var(--neon-cyan); }
+    .spec-card.dom-border { border-left: 3px solid var(--neon-yellow); }
+    .spec-card.mom-border { border-left: 3px solid #ffaa44; }
+    .spec-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .spec-detail {
+      font-size: 11px;
+      color: #bbb;
+      line-height: 1.5;
     }
 
     .page-tag-bar {
@@ -491,4 +570,4 @@ const fullHtml = `<!DOCTYPE html>
 </html>`;
 
 fs.writeFileSync(path.join(__dirname, 'gallery.html'), fullHtml, 'utf8');
-console.log('Successfully generated gallery.html with all 20 pages!');
+console.log('Successfully regenerated gallery.html with Character Model Sheet!');
