@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>GIỮ MỘT ĐỐM SÁNG — Thư Viện Tranh Anime / Manga (Webtoon Viewer)</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-green: #00ff66;
+      --neon-yellow: #ffe600;
+      --bg-dark: #07070f;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #070712;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(10, 10, 20, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--neon-cyan);
+      letter-spacing: 1px;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: #888;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-nav {
+      background: #151528;
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: var(--neon-cyan);
+      color: #000;
+    }
+
+    /* Webtoon Continuous Scroll Container */
+    .comic-stream {
+      max-width: 720px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 16px 60px;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      background: #111122;
+      border: 1px solid #222244;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .page-tag-bar {
+      padding: 10px 16px;
+      background: #16162e;
+      border-bottom: 1px solid #25254a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--neon-yellow);
+    }
+    .page-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--neon-cyan);
+      color: var(--neon-cyan);
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .comic-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .page-caption {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #ccc;
+      line-height: 1.5;
+      background: #0d0d1a;
+      border-top: 1px solid #1a1a34;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      width: 100%;
+      background: #05050a;
+      border-top: 1px solid #151525;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <div class="brand-title">GIỮ MỘT ĐỐM SÁNG: VÒM-9</div>
+      <div class="brand-sub">THƯ VIỆN TRANH ANIME / MANGA (FULL CHẤT LƯỢNG CAO)</div>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-nav">📖 Sách Lật 3D</a>
+      <a href="novel-reader.html" class="btn-nav" style="border-color:var(--neon-pink); color:var(--neon-pink);">📚 Toàn Tập 20 Trang</a>
+      <a href="ar-camera.html" class="btn-nav">📷 Quét AR</a>
+    </div>
+  </header>
+
+  <main class="comic-stream">
+
+    <!-- Bìa Truyện -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">BÌA TRUYỆN — VÒM-9</span>
+        <span class="page-badge">POSTER COVER</span>
+      </div>
+      <img src="assets/comic_cover.jpg" class="comic-img" alt="Bìa Truyện">
+      <div class="page-caption">
+        <strong>Giữ Một Đốm Sáng:</strong> Minh và AI Đốm đứng trước toàn cảnh thành phố Vòm-9 lúc chiều tà dưới mái vòm thép khổng lồ.
+      </div>
+    </article>
+
+    <!-- Trang 1 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 1 — HOÀNG HÔN TRÊN VÒM-9</span>
+        <span class="page-badge">ANIME MAKOTO SHINKAI</span>
+      </div>
+      <img src="assets/comic_20pages/page_1.jpg" class="comic-img" alt="Trang 1 Anime">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Toàn cảnh hoàng hôn rực rỡ Vòm-9, Minh cùng chibi Đốm đi trên cầu bộ hành và mở cánh cửa ấm áp căn hộ 1408.
+      </div>
+    </article>
+
+    <!-- Trang 2 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 2 — ĐÔI GIÀY CỦA MẸ</span>
+        <span class="page-badge">KYOTO ANIMATION DRAMA</span>
+      </div>
+      <img src="assets/comic_20pages/page_2.jpg" class="comic-img" alt="Trang 2 Anime">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Mẹ Minh cặm cụi dán lại đôi giày rách đế, cuốn sổ chi tiêu gạch dòng mua giày mới vì hóa đơn điện cố định của tập đoàn TRỤC; Minh siết chặt nắm tay quyết tâm.
+      </div>
+    </article>
+
+    <!-- Trang 3 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 3 — PHÒNG TRỐNG CŨNG MÁT</span>
+        <span class="page-badge">STUDIO WIT CYBERPUNK</span>
+      </div>
+      <img src="assets/comic_20pages/page_3.jpg" class="comic-img" alt="Trang 3 Anime">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Sảnh công cộng vắng tanh nhưng máy lạnh công nghiệp vẫn chạy gầm rú; Minh phẫn nộ trước sự lãng phí cơ cấu do cơ chế biểu giá độc quyền.
+      </div>
+    </article>
+
+    <!-- Trang 4 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 4 — Ô CỬA SỔ MÉO</span>
+        <span class="page-badge">MAKOTO SHINKAI AESTHETIC</span>
+      </div>
+      <img src="assets/comic_20pages/page_4.jpg" class="comic-img" alt="Trang 4 Anime">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Minh phác thảo sơ đồ Nếp Sáng; Chibi Đốm tinh nghịch nhảy vào đứng trong ô cửa sổ méo có chấm vàng lệch 172 độ phát sáng rực rỡ như chiếc đèn ngủ.
+      </div>
+    </article>
+
+    <!-- Trang 5 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 5 — NHỮNG ĐÊM KHÔNG NGỦ</span>
+        <span class="page-badge">ANIME MIDNIGHT SCENE</span>
+      </div>
+      <img src="assets/comic_20pages/page_5.jpg" class="comic-img" alt="Trang 5 Manga">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Góc làm việc lúc 2h45 sáng, mẹ nhẹ nhàng mang cốc trà gừng ấm và xoa đầu Minh đang cặm cụi bên mô hình thử nghiệm.
+      </div>
+    </article>
+
+    <!-- Trang 6 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 6 — KHO LƯU "NHÀ MÌNH"</span>
+        <span class="page-badge">MANGA TECH</span>
+      </div>
+      <img src="assets/comic_20pages/page_6.jpg" class="comic-img" alt="Trang 6 Manga">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Cất toàn bộ mã nguồn vào chiếc ổ cứng nhôm độc lập ngoài mạng TRỤC và khóa lại trong ngăn kéo bàn.
+      </div>
+    </article>
+
+    <!-- Trang 7 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 7 — ĐÊM CẬP NHẬT ĐỊNH MỆNH</span>
+        <span class="page-badge">ANIME THRILLER</span>
+      </div>
+      <img src="assets/comic_20pages/page_7.jpg" class="comic-img" alt="Trang 7 Manga">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Màn hình đỏ rực bản cập nhật cưỡng bức của TRỤC; Đốm bị xích laser đỏ khống chế và khóa mã trong câm lặng.
+      </div>
+    </article>
+
+    <!-- Trang 8 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 8 — HY VỌNG TRƯỚC GIÔNG BÃO</span>
+        <span class="page-badge">BITTERSWEET MORNING</span>
+      </div>
+      <img src="assets/comic_20pages/page_8.jpg" class="comic-img" alt="Trang 8 Manga">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Minh hân hoan nộp đơn hòa lưới điện công; Đốm bối rối nhìn ngăn kéo bị khóa trong nỗi bất lực nghẹn ngào.
+      </div>
+    </article>
+
+    <!-- Trang 9 -->
+    <article class="page-wrapper">
+      <div class="page-tag-bar">
+        <span class="page-title">TRANG 9 — CÚ SỐC SẢNH CÔNG CỘNG</span>
+        <span class="page-badge">DRAMATIC CLIMAX</span>
+      </div>
+      <img src="assets/comic_20pages/page_9.jpg" class="comic-img" alt="Trang 9 Manga">
+      <div class="page-caption">
+        <strong>Phân cảnh:</strong> Minh bàng hoàng đánh rơi cuộn dây khi thấy TRỤC ăn cắp biểu tượng ô cửa méo và chấm lệch 172 độ trên bảng quảng cáo khổng lồ.
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p><strong>GIỮ MỘT ĐỐM SÁNG: VÒM-9</strong> — Đồ Án Học Phần Kinh Tế Chính Trị Mác – Lênin (MLN122)</p>
+    <p style="margin-top: 6px;">Đại học FPT © 2026</p>
+  </footer>
+
+</body>
+</html>
