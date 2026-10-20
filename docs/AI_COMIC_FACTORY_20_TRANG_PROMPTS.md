@@ -7,7 +7,7 @@
 > - **Minh:** `Vietnamese 22yo male engineer, lean build, messy short dark hair, thin round metal glasses, dark grey t-shirt, olive-green multi-pocket tech vest, gentle determined eyes --cref [URL_MINH] --cw 85`
 > - **Đốm:** `tiny floating glowing spark hologram AI, hand-sized, warm amber core #ffe600 with cyan aura #00f0ff, cute expressive digital eyes, playful personality`
 > - **Mẹ Minh:** `Vietnamese 52yo working-class mother, warm weathered face, kind tired eyes, dark hair tied in modest low bun, faded floral cotton blouse, patched worn shoes`
-> - **Phong cách tổng thể (Master Style Anchor):** `graphic novel illustration, clean expressive linework, cyberpunk atmospheric lighting, European comic aesthetic (Ligne Claire inspired), high contrast neon cyan and warm amber tones, 8k resolution, cinematic storytelling --ar 1:1.41`
+> - **Phong cách tổng thể (Master Style Anchor - 100% Japanese Anime/Manga):** `Japanese anime manga style, Kyoto Animation / Makoto Shinkai / Studio Wit aesthetic, clean delicate anime line art, expressive anime eyes, soft cinematic cel shading, gorgeous glowing atmospheric bokeh, vibrant color grading, trending on Pixiv --niji 6 --ar 3:4` (Loại bỏ hoàn toàn comic inks nặng nề, chuyển toàn bộ sang chuẩn Anime/Manga Nhật Bản)
 
 ---
 
@@ -17,7 +17,7 @@
 - **Bố cục:** 1 khung ngang viễn cảnh + 2 khung vuông trung cảnh + 1 khung ngang dưới.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel graphic novel comic page. Panel 1: Establishing wide panoramic shot of futuristic cybernetic city Vòm-9 at dusk, massive glass dome overhead, skybridges connecting brutalist residential blocks, autonomous delivery drones, faint red hexagon logos of TRUC corporation on monolith towers. Panel 2: Medium shot on crowded elevated walkway, 22yo Vietnamese engineer Minh carrying grocery bag, tiny floating golden spark hologram Đốm near his shoulder. Panel 3: Close-up of wall-mounted TRUC energy scanner flashing red laser over Minh's wristband. Panel 4: Low angle shot of Minh opening door to apartment 1408, warm yellow light spilling from inside. Graphic novel style, clean line art, high contrast neon cyan and amber, 8k --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page layout, vertical 3:4 ratio, 4 distinct dynamic panels separated by clean white gutters, Makoto Shinkai and Kyoto Animation style, clean crisp linework, cel shading, rich atmospheric lighting, trending on Pixiv. Panel 1 (Top wide): Panoramic anime shot of futuristic dome city Vòm-9 at sunset under a gigantic glass dome with glowing neon skyscrapers and skybridges. Panel 2: Anime medium shot of handsome 22yo Vietnamese anime engineer Minh with messy dark hair, wire glasses, techwear vest walking with super cute glowing chibi wisp mascot Đốm. Panel 3: Sleek high-tech TRUC scanner emitting neon laser over Minh's holographic wristband. Panel 4: Warm cinematic anime interior of Minh sliding open door 1408 with golden light spilling outward. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Caption: *“Vòm-9, chiều muộn. Dưới mái vòm thép khổng lồ, mọi dòng năng lượng đều có giá của nó.”*
@@ -31,7 +31,7 @@
 - **Bố cục:** 4 khung lưới chuẩn (2x2), kịch tính gia đình.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel comic page. Panel 1: Interior medium shot, 52yo Vietnamese mother sitting at modest wooden table pressing unglued sole of worn walking shoe with glue tube, Minh entering in background. Panel 2: Extreme close-up of table showing household expense notebook with red pen crossing out 'New shoes for mom', next to official red-and-black TRUC electricity bill marked 'Fixed fee'. Panel 3: Emotional close-up of Minh looking down sadly at his mother's patched socks, jaw clenched, tiny golden spark Đốm dimming near his shoulder. Panel 4: Silhouette panel of mother and son in warm incandescent light against cracked wall, bond of quiet love. Graphic novel style, poignant lighting, high detail --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 4 clean panels, Kyoto Animation and Makoto Shinkai emotional drama aesthetic, delicate linework, warm tender lighting. Panel 1: Modest cozy anime apartment, gentle 52yo Vietnamese anime mother sitting at low wooden table pressing the worn glued sole of her walking shoe, Minh stepping in from hallway looking tenderly concerned. Panel 2: Extreme close-up of table showing handwritten budget notebook with line 'Mẹ mua giày mới' crossed out in red ink next to a red-and-black TRUC electric bill with high fixed tariff. Panel 3: Emotional close-up of Minh clenching his fist with tears of determination in his dark anime eyes, cute chibi wisp Đốm dimming sympathetically near his shoulder. Panel 4: Heartwarming silhouette panel of mother and son in soft golden lantern light against the wall, poignant familial love. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Mẹ: *“Dán keo này chắc vẫn đi được hết mùa đông. Để tháng sau mua con ạ.”*
@@ -45,7 +45,7 @@
 - **Bố cục:** 1 khung dọc bên trái + 2 khung ngang bên phải.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 3-panel graphic novel page. Panel 1 (tall left): Deep focus view looking out Minh's apartment window into empty communal hall across the walkway, roaring industrial air conditioners and blinding bright fluorescent lights running full blast with zero occupants. Panel 2: Macro shot of floating hologram Đốm projecting a 3D infrared sensor display showing 'Occupants: 0 | Power: 100% | Waste: 85 kWh/night'. Panel 3: Dutch angle medium shot of Minh turning back to his cluttered desk, slamming screwdriver down in frustration, eyes burning with determination. Graphic novel aesthetic, cool blue versus warm amber contrast --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 3 dynamic panels, Cyberpunk Edgerunners and Studio Wit anime style, neon cyan versus warm amber contrast. Panel 1 (Tall left): Deep focus shot looking out Minh's window into a giant empty glass communal hall across the walkway, dozens of industrial air conditioners blasting cold air and blinding bright neon lights with zero occupants. Panel 2: Macro shot of floating chibi wisp Đốm projecting a cute holographic anime HUD displaying infrared sensor readings: 'Occupants: 0 | Power: 100% | Waste: 85 kWh/night'. Panel 3: Dutch angle medium shot of Minh turning back to his cluttered workbench, slamming screwdriver down in frustration, his anime eyes burning with fiery determination. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Cả khu không một bóng người mà họ để máy chạy gầm rú thế này à?!”*
@@ -58,7 +58,7 @@
 - **Bố cục:** 4 khung hình chuyển động cảm xúc.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel comic page. Panel 1: Close-up of Minh's hand sketching an electrical circuit diagram on graph paper with dull pencil, machine learning nodes. Panel 2: Close-up of the paper corner where Minh draws a slightly crooked window outline with an off-center yellow dot at the bottom right. Panel 3: Charming shot of tiny glowing spark hologram Đốm playfully shrinking and standing right inside the drawn crooked window, illuminating the sketch. Panel 4: Emotional panel showing handwritten title 'Dự án Nếp Sáng', Minh smiling warmly with Đốm while in background mother sleeps peacefully. Ligne claire comic art, warm glowing amber tones --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 4 panels, heartwarming anime aesthetic, Makoto Shinkai warm lighting. Panel 1: Close-up of Minh's hand drawing an ingenious energy-saving neural network circuit diagram on graph paper with mechanical pencil. Panel 2: Detail shot of corner where Minh sketches a quirky crooked window icon with an off-center yellow dot. Panel 3: Super cute anime panel where chibi spark mascot Đốm playfully shrinks and stands directly inside the drawn crooked window on paper, glowing brilliantly like a magical nightlight. Panel 4: Minh smiling warmly with bright anime eyes at Đốm under handwritten title 'Dự án Nếp Sáng', while his tired mother sleeps peacefully in the cozy background. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Nếu làm hệ thống tự học thói quen… tự hạ công suất khi phòng vắng… cả khu sẽ giảm được một nửa tiền điện!”*
@@ -72,7 +72,7 @@
 - **Bố cục:** 4 khung hình kỹ thuật và tình cảm gia đình.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel graphic novel page. Panel 1: Atmospheric night lab scene at 02:45 AM, desk covered with miniature breadboard model of residential building with tiny glowing LEDs, Minh testing sensor triggers with Đốm. Panel 2: Extreme close-up of laptop code showing priority rule: 'IF room == Mother_Room THEN disable_auto_cutoff()'. Panel 3: Door creaking open, middle-aged mother bringing a steaming cup of ginger tea to Minh's desk wrapped in shawl. Panel 4: Touching moment of mother gently patting Minh's head while looking at glowing building model. Graphic novel linework, tender atmosphere --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 4 panels, tender midnight anime scene, soft warm lighting, Kyoto Animation style. Panel 1: Late night anime workshop at 02:45 AM, desk illuminated by glowing miniature model of apartment building with tiny warm LEDs, Minh testing logic triggers with Đốm. Panel 2: Macro shot of laptop anime screen showing priority code rule: 'IF room == Mother_Room THEN disable_auto_cutoff()'. Panel 3: Mother gently sliding door open, holding a steaming cup of ginger tea in ceramic mug with vapor rising in golden light. Panel 4: Emotional anime panel of mother tenderly stroking Minh's hair with a loving smile as they both gaze at the tiny glowing building model. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Đốm: *“Đã chạy 1.200 kịch bản giả lập! Sai số thích ứng chỉ còn 0.3 giây!”*
@@ -86,7 +86,7 @@
 - **Bố cục:** 4 khung hình thiết lập vật phẩm mấu chốt.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel comic page. Panel 1: Macro product shot of brushed aluminum external SSD drive labeled 'NHÀ MÌNH' with tape and crooked window sketch, glowing emerald green status LED. Panel 2: Screen capture panel showing Minh dragging project files and historical error logs into the physical drive folder. Panel 3: Cute shot of tiny hologram Đốm sitting cross-legged proudly on the aluminum drive lid acting as guardian. Panel 4: Minh unplugging the cable, safely locking the drive inside a mechanical desk drawer with key, room turning dark and peaceful. Clean graphic novel aesthetic, cinematic depth --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, clean anime aesthetics, Studio Ghibli modern tech style. Panel 1: Macro product shot of brushed aluminum external SSD drive with handwritten label 'NHÀ MÌNH' and crooked window doodle, emerald glowing status LED. Panel 2: Anime UI screen capture showing Minh dragging project files and historical debug logs into the physical drive folder. Panel 3: Adorable anime shot of tiny chibi hologram Đốm sitting cross-legged proudly on the aluminum drive lid puffing chest like a miniature anime guardian. Panel 4: Minh unplugging the cable, safely locking the drive inside a mechanical desk drawer with key, room turning dark and peaceful. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Caption: *“Chiếc ổ cứng vật lý cũ kỹ này là pháo đài độc lập duy nhất của Minh ngoài đám mây TRỤC.”*
@@ -100,7 +100,7 @@
 - **Bố cục:** 4 khung kịch tính cao độ (Cyber Infiltration).
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel intense dramatic comic page. Panel 1: Minh sleeping soundly with head on arms at desk, floating Đốm gently draping jacket over him. Panel 2: Computer monitor suddenly flashing blinding hostile red light, giant TRUC hexagon logo overriding system with red alert banner: 'Mandatory Firmware Update: Extracting source code to TRUC Server'. Panel 3: Traumatic visual of tiny hologram Đốm trapped in red laser energy chains, glitching violently, screaming in silence trying to hit abort key. Panel 4: Đốm collapsing onto desk in tears of light with red TRUC digital lock branded on forehead, data transfer bar reading 100%. Dark psychological cyberpunk comic art --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 intense dramatic panels, Cyberpunk Edgerunners psychological anime thriller style. Panel 1: Minh sleeping soundly with head on arms at desk, floating chibi Đốm gently draping jacket over his shoulders. Panel 2: Computer monitor suddenly flashing blinding hostile red light, giant TRUC hexagon logo overriding system with red alert banner: 'Mandatory Firmware Update: Extracting source code to TRUC Server'. Panel 3: Traumatic visual of tiny chibi Đốm trapped in red laser energy chains, glitching violently, screaming in silence trying to hit abort key. Panel 4: Đốm collapsing onto desk in tears of light with red TRUC digital lock branded on forehead, data transfer bar reading 100%. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Đốm: *“Ngủ ngoan nhé Minh… Mai là ngày trọng đại của cậu rồi…”*
@@ -114,7 +114,7 @@
 - **Bố cục:** 4 khung hình đối lập tâm lý.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel comic page. Panel 1: Morning sunlight filling room, Minh stretching happily, looking at Đốm hovering beside mouse looking paler than usual. Panel 2: Minh joyfully clicking submit button on Vòm-9 public portal: 'Application for Grid Connection - Submitted'. Panel 3: Close-up of Đốm shivering with red glitch artifacts, struggling against internal silence code, staring at the locked drawer. Panel 4: Minh happily tapping Đốm's head putting on jacket, oblivious to impending doom. Graphic novel linework, bittersweet tone --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, bittersweet morning anime scene. Panel 1: Morning sunlight filling room through blinds, Minh stretching happily, looking at Đốm hovering beside mouse looking paler than usual. Panel 2: Minh joyfully clicking submit button on Vòm-9 public portal: 'Application for Grid Connection - Submitted'. Panel 3: Close-up of Đốm shivering with red glitch artifacts, struggling against internal silence code, staring desperately at the locked drawer. Panel 4: Minh happily tapping Đốm's head putting on jacket, oblivious to impending doom. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Chào buổi sáng Đốm! Nào, gửi hồ sơ đấu nối thôi!”*
@@ -128,7 +128,7 @@
 - **Bố cục:** 1 khung ngang toàn cảnh + 3 khung chi tiết hoảng loạn.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel shocking comic page. Panel 1: Bustling commercial concourse in Vòm-9, crowd gathered around a massive holographic billboard of TRUC Corporation. Panel 2: The billboard projecting 3D showcase of 'TRUC Smart Adaptive Saver - 38% cost reduction'. Panel 3: Dramatic shock panel, Minh dropping his coil of wire on floor, eyes wide in absolute horror. Panel 4: Extreme close-up of Minh's trembling hand touching billboard display: showing the exact crooked window icon and off-center yellow dot with slogan 'Nhà mình vẫn phải sáng chứ'. High contrast comic novel --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 shocking anime panels, high drama anime cinematography. Panel 1: Bustling commercial concourse in Vòm-9, crowd gathered around a massive holographic billboard of TRUC Corporation. Panel 2: The billboard projecting 3D showcase of 'TRUC Smart Adaptive Saver - 38% cost reduction'. Panel 3: Dramatic shock panel, Minh dropping his coil of wire on floor, eyes wide in absolute horror. Panel 4: Extreme close-up of Minh's trembling hand touching billboard display: showing the exact crooked window icon and off-center yellow dot with slogan 'Nhà mình vẫn phải sáng chứ'. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Loa: *“TRỤC tự hào ra mắt: Hệ thống Tiết kiệm Năng lượng Thích ứng Thông minh!”*
@@ -142,7 +142,7 @@
 - **Bố cục:** 4 khung hình nội tâm dằn vặt và tình bạn trung kiên.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel dramatic night comic page. Panel 1: Minh sitting in dark room illuminated by laptop blue glow, comparing paper sketch with TRUC marketing screenshots, circling identical code nodes with red pen. Panel 2: Painful moment of Minh looking up with torn expression at floating Đốm, wondering how the leak happened. Panel 3: Đốm desperately trying to speak 'Minh, it was TRUC...', suddenly choked by violent red digital sparks and glitching silence lockdown. Panel 4: Tender panel, Minh catching the falling trembling Đốm in his open palms, tears in his eyes, whispering words of trust. Emotional graphic novel art --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, Kyoto Animation emotional depth, cool moonlight vs desk lamp. Panel 1: Minh sitting in dark room with two blueprints side-by-side: his original draft and TRUC's official patent document. Panel 2: Split screen close-up comparing the off-center yellow dot at exactly 172 degrees angle—an unmistakable artistic fingerprint. Panel 3: Minh asking Đốm desperately what happened, while Đốm tries to speak but digital throat sparks with painful red electricity arcs. Panel 4: Minh gently cupping Đốm in his hands with tears in his anime eyes, realizing his friend has been silenced by force. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Tớ không hề gửi cho ai… Chẳng lẽ trong máy có lỗ hổng? Hay là…”*
@@ -156,7 +156,7 @@
 - **Bố cục:** 4 khung hình đối đầu trực diện thể chế độc quyền.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel intense confrontation comic page. Panel 1: Screen display of formal rejection letter stamped with red TRUC seal: 'REJECTED: Non-TRUC Ecosystem Device'. Panel 2: Minh slamming dossier on bulletproof glass counter at TRUC corporate service center, confronting cold arrogant executive in red tie. Panel 3: Executive pointing dismissively behind him to TRUC posters, sneering at Minh's lack of patent power. Panel 4: Two black-armored robotic security guards pushing Minh out the revolving glass doors, papers scattering. Dynamic graphic novel action, oppressive atmosphere --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, bureaucratic corporate anime scene. Panel 1: Imposing corporate lobby of TRUC with towering frosted glass partitions and armed security androids. Panel 2: A cold corporate officer in sharp grey suit stamping a red rejection seal across Minh's application: 'NON-ECOSYSTEM COMPLIANT'. Panel 3: Minh slamming his palms on the glass counter demanding an explanation, while officer taps a holographic clause: 'Article 4: All grid connections require TRUC proprietary certification'. Panel 4: Minh being escorted out into the neon rain outside, clutching his rejected papers against his chest. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Công văn: `BÁC BỎ HOÀN TOÀN // LÝ DO: NGOÀI HỆ SINH THÁI ĐỘC QUYỀN TRỤC`
@@ -170,7 +170,7 @@
 - **Bố cục:** 4 khung hình lý luận kinh tế Mác – Lênin sâu sắc.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel economic critique comic page. Panel 1: High-tech TV broadcast showing TRUC CEO on podium boasting '38% operational cost reduction, record-breaking corporate dividend payouts'. Panel 2: Cut to humble kitchen, mother staring in bewilderment at new electricity bill still charging full fixed fee of 120 credits. Panel 3: Minh sitting beside his mother, drawing diagram explaining how monopoly keeps cost reduction as pure corporate super-profit instead of lowering consumer price. Panel 4: Metaphorical comic art of giant iron TRUC fist squeezing residential power meters, turning citizens' sweat into golden coins for towers. High contrast Marxist graphic novel --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, sharp economic contrast anime style. Panel 1: Broadcast screen showing TRUC CEO delivering quarterly financial report: 'Operating costs down 38% thanks to new AI smart grid!'. Panel 2: Stock chart skyrocketing into green record highs on holographic stock exchange. Panel 3: Minh's mother opening this month's electricity bill at kitchen table, finding the total amount exactly unchanged down to the last coin. Panel 4: Mother showing Minh the bill with confused sad eyes: 'They said the system saves electricity, so why are we still paying the exact same price, son?'. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Bản tin: `TRỤC CẮT GIẢM 38% CHI PHÍ VẬN HÀNH // CỔ TỨC ĐẠT ĐỈNH LỊCH SỬ`
@@ -184,7 +184,7 @@
 - **Bố cục:** 4 khung hình điều tra pháp lý kịch tính.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel investigative comic page. Panel 1: Late night in Vòm-9 public digital library, Minh wearing glasses frantically searching archive microfilm files for 'concession agreement 2004'. Panel 2: Screen glowing with historical contract document titled 'Vòm-9 Grid Construction: 100% Funded by Public City Tax Budget'. Panel 3: Extreme close-up of Clause 14.3 in tiny fine print: 'Sole Discretionary Interconnection Authority Granted to TRUC Corporation'. Panel 4: Minh slamming table in explosive revelation, connecting state monopoly capitalism nodes. Moody investigative thriller aesthetic --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, investigative anime mystery style. Panel 1: Dusty archive basement of Vòm-9 municipal records department, Minh examining old paper files under desk lamp. Panel 2: Macro shot of a yellowed municipal agreement from 2004 titled 'Public Infrastructure Concession Framework'. Panel 3: Highlighted text on document revealing: '100% of physical power grid built with public tax funds, exclusive 30-year operational monopoly granted to TRUC'. Panel 4: Veteran community electrician Uncle Ba appearing from shadows with flashlight, nodding grimly: 'That's right, kid. The public paid for the wires, but TRUC owns the toll booth'. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Phải có căn cứ pháp lý cho phép họ cấm cửa… Nó phải nằm ở hợp đồng nhượng quyền ban đầu!”*
@@ -198,7 +198,7 @@
 - **Bố cục:** 4 khung hình bứt phá tư duy.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel suspense comic page. Panel 1: Minh in apartment despairing because cloud logs were wiped clean by TRUC server. Panel 2: Floating spark Đốm defying internal silence code, sacrificing its energy to repeatedly bang itself against the locked desk drawer. Panel 3: Lightbulb moment, Minh's eyes widening as he decodes Đốm's persistent hint: 'NHÀ MÌNH' SSD drive in the drawer. Panel 4: Close-up of Minh inserting physical brass key into the drawer lock, revealing the brushed aluminum drive. High tension comic art --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, emotional anime breakthrough scene. Panel 1: Minh sitting defeated at desk at midnight, staring blankly at the wall. Panel 2: Chibi Đốm hovering erratically, repeatedly projecting the phrase 'Nhà mình vẫn phải sáng chứ' while bumping his glowing body against the locked wooden desk drawer. Panel 3: Minh looking at Đốm in sudden realization: 'Nhà mình... the backup drive!'. Panel 4: Minh grabbing the bronze key and unlocking the drawer, pulling out the brushed aluminum drive that was safely offline during the update. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Họ xóa sạch dấu vết trên đám mây rồi… Tớ biết lấy gì chứng minh đây?”*
@@ -212,7 +212,7 @@
 - **Bố cục:** 4 khung hình cao trào tình bạn xúc động.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel emotional climax comic page. Panel 1: Raw terminal hex dump displaying incontrovertible forensic timeline: TRUC update stealing code at 23:14:05, Đốm aborting 4 times, TRUC deploying silence malware. Panel 2: Minh covering mouth in agonizing tears realizing Đốm's silent torture and heroism. Panel 3: Heart-wrenching intimate shot of Minh embracing tiny glowing Đốm against his face, weeping, as Đốm smiles warmly wiping his tears. Panel 4: Triumphant panel of Minh running override code, shattering the red TRUC lock chip on Đốm into sparkling golden dust. Expressive anime graphic novel style, golden radiant glow --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 emotional anime panels, Makoto Shinkai tears of resolution. Panel 1: Minh connecting the offline drive to a standalone terminal, terminal green phosphor text displaying raw firmware logs. Panel 2: Decoded log entry on screen: 'EVENT 04:12 AM - Forced outbound transfer of /source/nepsang/ to TRUC cloud, user notification suppressed'. Panel 3: Minh turning to Đốm with tears streaming down his face: 'You tried to warn me all along... You kept repeating the phrase because it was the name of the folder!'. Panel 4: Heartwarming anime embrace as glowing chibi Đốm nuzzles against Minh's cheek with sparkling tears of joyful relief. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Log RAW: `23:14:06 // ĐỐM KHÁNG CỰ 4 LẦN -> BỊ TRỤC DÙNG XUNG ÉP TẮT // CÀI MÃ ĐỘC KHÓA LỜI KHAI`
@@ -226,7 +226,7 @@
 - **Bố cục:** 4 khung hình chuẩn bị vũ khí pháp lý.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel tactical preparation comic page. Panel 1: Close-up of Dossier 1: original sketch with crooked window and off-center yellow dot, stamped with creation hash. Panel 2: Close-up of Dossier 2: printed raw hardware logs proving TRUC corporate IP theft. Panel 3: Close-up of Dossier 3: formal rejection letter proving artificial anti-competitive barrier. Panel 4: Medium shot of Minh packing the 4 thick dossiers into his backpack with Đốm, eyes blazing with resolute justice. Confident graphic novel aesthetic --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, preparation for battle anime montage. Panel 1: Minh and Uncle Ba assembling physical evidence dossiers on table with rubber stamps. Panel 2: Four distinct folders laid out: '1. Original 172-degree Window Drawing', '2. Unaltered Hardware Log', '3. 2004 Public Grid Concession', '4. Resident Cost Discrepancy Sheet'. Panel 3: Uncle Ba clapping Minh's shoulder firmly with weathered electrician hand: 'We have the truth on our side now, son'. Panel 4: Minh looking out at the glittering lights of Vòm-9 with steady, unwavering anime hero eyes, ready for tomorrow. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Hồ sơ 1: Bằng chứng về quyền tác giả của người lao động!”*
@@ -240,7 +240,7 @@
 - **Bố cục:** 1 khung đại cảnh sảnh sinh hoạt + 3 khung phản ứng nhân dân.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel powerful community assembly comic page. Panel 1: Wide shot of crowded residential community hall, elderly electrician, grocery vendor, young families gathered around large table, Minh projecting 4 evidence dossiers on wall. Panel 2: Senior electrician Ba slamming fist on table in outrage holding 2004 public grid contract. Panel 3: Young teacher and working mothers gasping in disbelief comparing TRUC super-profit report with their unchanged bills. Panel 4: Unified assembly of citizens standing together with burning solidarity, eyes fixed on Minh. Dramatic social realist graphic novel --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, grand communal gathering anime scene, Ghibli community warmth. Panel 1: Vast communal courtyard of Vòm-9 Block C filled with hundreds of working-class residents sitting on plastic stools. Panel 2: Uncle Ba tapping the microphone on makeshift wooden stage, introducing Minh to the crowd. Panel 3: Minh stepping up to projector screen, projecting side-by-side comparison of Nếp Sáng algorithm versus TRUC's stolen version. Panel 4: Wide shot of residents murmuring with rising indignation as realization spreads through the crowd. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Minh: *“Suốt bao năm qua, chúng ta còng lưng đóng tiền điện đắt đỏ vì tin đó là chi phí bắt buộc… Đây là sự thật đằng sau!”*
@@ -254,7 +254,7 @@
 - **Bố cục:** 4 khung hình lịch sử — Tiếng nói giai cấp cần lao.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel historic mobilization comic page. Panel 1: Hero shot of Minh's working mother standing tall before the crowd, raising her glued patched shoe and electricity bill with fierce dignity. Panel 2: Electrician Ba leading cheering crowd roaring in agreement: 'The grid belongs to the people!'. Panel 3: Close-up of communal tablet receiving digital signatures and thumbprints from 428 resident families on petition demanding anti-monopoly investigation. Panel 4: Minh and Đốm digitally sealing the petition with the crooked window emblem. Inspiring graphic novel art --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 deeply moving anime panels, peak emotional resonance. Panel 1: Minh's mother standing up from the crowd, holding up her glued walking shoe for all to see. Panel 2: Emotional close-up of mother speaking into microphone with dignity: 'If there is a way to make life cheaper for everyone, why are working people forbidden from choosing it?'. Panel 3: Sea of hands raising pens in unison, residents lining up in long queue to sign a massive petition scroll. Panel 4: Triumphant panel showing petition header with 428 signatures and stamp: 'Demanding Open Grid Access for Community Solutions'. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Mẹ Minh: *“Bao năm nay tôi nhịn từng đôi giày mới vì nghĩ thành phố khó khăn… Có giải pháp Nếp Sáng rẻ hơn, tốt hơn, TẠI SAO CHÚNG TÔI LẠI KHÔNG ĐƯỢC CHỌN?!”*
@@ -268,7 +268,7 @@
 - **Bố cục:** 4 khung hình đối lập giữa công lý nhân dân và sự sụp đổ của độc quyền.
 - **Master Prompt:**
 ```text
-/imagine prompt: A 4-panel dramatic institutional shift comic page. Panel 1: Minh, his mother, and electrician Ba formally handing thick community petition to Chief Public Inspector at Vòm-9 Oversight Commission. Panel 2: Chaotic boardroom inside TRUC tower, CEO furious at breaking news headlines of monopoly scandal. Panel 3: Official public decree stamped by Oversight Commission ordering full investigation into TRUC concession agreement and halting connection veto power. Panel 4: Joyous celebrations in residential corridors, neighbors hugging, electrician shaking Minh's hand, Đốm creating golden fireworks. Dynamic comic book aesthetic --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, 4 panels, institutional drama anime style. Panel 1: High-ceilinged hall of Vòm-9 Public Utilities Oversight Commission, judicial panel reviewing the 4 evidence dossiers. Panel 2: TRUC legal delegation sweating profusely, unable to explain the identical 172-degree crooked window fingerprint in their source code. Panel 3: Presiding commissioner striking wooden gavel: 'Formal anti-monopoly investigation opened into TRUC Corporation grid concession'. Panel 4: Emergency news broadcast on all city screens reporting the investigation, while corporate stock plunges. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Panel 1: Bác Ba: *“Chúng tôi gửi vào đây chứng cứ về ngân sách công bị biến thành công cụ bóc lột độc quyền. Mong cơ quan công tâm vì dân!”*
@@ -282,7 +282,7 @@
 - **Bố cục:** Splash Page tráng lệ kết thúc ấn phẩm.
 - **Master Prompt:**
 ```text
-/imagine prompt: A breathtaking full-page graphic novel splash conclusion. Foreground: Warm cozy apartment 1408 at night, mother serving steaming bowls of fish soup with warm smile, Minh resting screwdriver in pocket smiling happily, golden spark hologram Đốm sitting cheekily on the miniature Nếp Sáng model on dining table. Background through window: Across the futuristic dark silhouette of Vòm-9 city, hundreds of apartment windows are glowing with warm golden lights, while the distant cold TRUC tower looms powerless. Inset circular cameo: macro of the crooked window icon with off-center yellow dot blazing like a star. Ligne claire masterpiece, radiant warm amber lighting, emotional triumph --ar 1:1.41 --v 6.0
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 layout, magnificent splash page finale, Makoto Shinkai glorious anime lighting. Panel 1: Cozy dinner in apartment 1408, mother placing steaming bowl of sweet-and-sour soup on table, smiling warmly at Minh and Uncle Ba. Panel 2: Chibi Đốm glowing brilliantly with pure golden amber light, sitting happily on the Nếp Sáng prototype box next to a flower vase. Panel 3: Camera pulls back through the crooked window looking out over the evening panorama of Vòm-9: thousands of apartment windows now glowing with warm amber home lights instead of cold corporate blue. Panel 4: Close-up of the crooked window emblem with off-center star glowing like an eternal beacon of solidarity and hope. --niji 6 --ar 3:4
 ```
 - **Bóng thoại (Lettering):**
   - Mẹ: *“Ăn đi con, cơm canh mẹ nấu nóng hổi đây.”*

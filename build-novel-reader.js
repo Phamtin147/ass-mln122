@@ -66,22 +66,18 @@ for (let i = 1; i < pageBlocks.length; i += 3) {
     const kTitle = pm[2].trim();
     const kBody = pm[3].trim();
 
-    // extract sub items: Hình ảnh, Lời dẫn, Thoại, Chữ trên tranh, Hiệu ứng âm thanh
     const visualM = kBody.match(/- \*\*Hình ảnh:\*\*([\s\S]*?)(?=- \*\*|$)/);
     const narrationM = kBody.match(/- \*\*Lời dẫn(?:\s*\([^)]*\))?:\*\*([\s\S]*?)(?=- \*\*|$)/);
-    const dialogM = kBody.match(/- \*\*Thoại[^\n]*:\*\*([\s\S]*?)(?=- \*\*|$)/g) || [];
     const textM = kBody.match(/- \*\*Chữ trên tranh:\*\*([\s\S]*?)(?=- \*\*|$)/);
     const sfxM = kBody.match(/- \*\*Hiệu ứng âm thanh:\*\*([\s\S]*?)(?=- \*\*|$)/);
 
-    // parse dialogues
     const dialogues = [];
-    const rawDialogText = kBody;
-    const dialogLines = rawDialogText.match(/- \*\*Thoại — ([^*]+)\*\*:\s*([^\n]+)/g);
+    const dialogLines = kBody.match(/- \*\*Thoại — ([^*]+)\*\*:\s*([^\n]+)/g);
     if (dialogLines) {
       for (const dl of dialogLines) {
         const m = dl.match(/- \*\*Thoại — ([^*]+)\*\*:\s*([^\n]+)/);
         if (m) {
-          dialoges.push({ speaker: m[1].trim(), text: m[2].trim() });
+          dialogues.push({ speaker: m[1].trim(), text: m[2].trim() });
         }
       }
     }
@@ -93,12 +89,10 @@ for (let i = 1; i < pageBlocks.length; i += 3) {
       narration: narrationM ? narrationM[1].trim() : '',
       dialogues: dialogues,
       textOnScreen: textM ? textM[1].trim() : '',
-      sfx: sfxM ? sfxM[1].trim() : '',
-      rawBody: kBody
+      sfx: sfxM ? sfxM[1].trim() : ''
     });
   }
 
-  // Theory summary for this page
   let theoryText = '';
   if (pNum === 1) theoryText = 'MLN122: Tích tụ và tập trung tư bản trong kinh tế số; hình thành các tập đoàn công nghệ chi phối nguồn sống xã hội.';
   else if (pNum === 2) theoryText = 'MLN122: Giá cả độc quyền cao và sự bóc lột gián tiếp đối với chi phí sinh hoạt tối thiểu của người lao động.';
@@ -121,6 +115,8 @@ for (let i = 1; i < pageBlocks.length; i += 3) {
   else if (pNum === 19) theoryText = 'MLN122: Sự can thiệp của thể chế công nhằm thiết lập lại trật tự minh bạch, vì lợi ích đại đa số nhân dân.';
   else if (pNum === 20) theoryText = 'MLN122: Chân lý tất yếu: Tiến bộ công nghệ phải phục vụ hạnh phúc của nhân dân lao động, không thể bị độc quyền tư bản mãi mãi chiếm đoạt.';
 
+  const imgExists = fs.existsSync(path.join(__dirname, 'assets', 'comic_20pages', 'page_' + pNum + '.jpg'));
+
   pagesData.push({
     num: pNum,
     title: pTitle,
@@ -129,11 +125,13 @@ for (let i = 1; i < pageBlocks.length; i += 3) {
     panels: panels,
     theory: theoryText,
     prompt: promptPages[pNum] ? promptPages[pNum].prompt : '',
-    lettering: promptPages[pNum] ? promptPages[pNum].lettering : ''
+    lettering: promptPages[pNum] ? promptPages[pNum].lettering : '',
+    hasImage: imgExists,
+    imageSrc: imgExists ? `assets/comic_20pages/page_${pNum}.jpg` : ''
   });
 }
 
-console.log(`Successfully parsed ${pagesData.length} pages.`);
+console.log(`Parsed ${pagesData.length} pages. Pages with images: ${pagesData.filter(p => p.hasImage).length}`);
 
 // Generate novel-reader.html
 const html = `<!DOCTYPE html>
@@ -141,7 +139,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>GIỮ MỘT ĐỐM SÁNG — Kịch Bản & Phân Cảnh Toàn Tập 20 Trang (MLN122)</title>
+  <title>GIỮ MỘT ĐỐM SÁNG — Trọn Bộ 20 Trang Truyện Tranh Anime / Manga (MLN122)</title>
   <link rel="icon" href="icon.png">
   <style>
     :root {
@@ -288,7 +286,7 @@ const html = `<!DOCTYPE html>
     .hero-subtitle {
       font-size: 14px;
       color: #aaa;
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto 20px;
     }
 
@@ -525,6 +523,73 @@ const html = `<!DOCTYPE html>
       font-style: italic;
     }
 
+    /* Artwork Display Box */
+    .artwork-section {
+      margin-bottom: 20px;
+      background: #080812;
+      border: 1px solid #1c1c34;
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .artwork-img-wrapper {
+      position: relative;
+      max-width: 520px;
+      width: 100%;
+      cursor: zoom-in;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 2px solid #2a2a4e;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      transition: all 0.3s;
+    }
+    .artwork-img-wrapper:hover {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+    }
+
+    .artwork-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .artwork-img-wrapper:hover .artwork-img {
+      transform: scale(1.02);
+    }
+
+    .artwork-badge {
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--neon-green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .placeholder-box {
+      width: 100%;
+      padding: 24px 16px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed #2a2a4e;
+      border-radius: 8px;
+    }
+    .placeholder-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--neon-yellow);
+      margin-bottom: 6px;
+    }
+    .placeholder-desc {
+      font-size: 12px;
+      color: #888;
+    }
+
     /* Panels Grid */
     .panels-grid {
       display: grid;
@@ -567,9 +632,6 @@ const html = `<!DOCTYPE html>
       font-size: 13px;
       color: #ddd;
       line-height: 1.5;
-    }
-    .panel-visual strong {
-      color: #fff;
     }
 
     .panel-narration {
@@ -712,6 +774,39 @@ const html = `<!DOCTYPE html>
       color: #000;
     }
 
+    /* Lightbox Modal */
+    #lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      z-index: 99999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+    #lightbox-modal.show {
+      display: flex;
+    }
+    #lightbox-img {
+      max-width: 95vw;
+      max-height: 95vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.3);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     /* Floating Toast */
     #copy-toast {
       position: fixed;
@@ -760,7 +855,7 @@ const html = `<!DOCTYPE html>
       <img src="icon.png" class="brand-logo" alt="Logo">
       <div>
         <div class="brand-title">GIỮ MỘT ĐỐM SÁNG</div>
-        <div class="brand-badge">ĐỒ ÁN MLN122 • FULL 20 TRANG</div>
+        <div class="brand-badge">ĐỒ ÁN MLN122 • ANIME / MANGA</div>
       </div>
     </div>
     <div class="nav-actions">
@@ -775,9 +870,9 @@ const html = `<!DOCTYPE html>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-badge">ĐẠI HỌC FPT • HỌC PHẦN KINH TẾ CHÍNH TRỊ MÁC - LÊNIN (MLN122)</div>
-    <h1 class="hero-title">KỊCH BẢN & PHÂN CẢNH TOÀN TẬP 20 TRANG</h1>
+    <h1 class="hero-title">BỘ TRUYỆN TRANH ANIME / MANGA: 20 TRANG TOÀN TẬP</h1>
     <p class="hero-subtitle">
-      Khám phá 5 Chương kịch tính với 85 Phân cảnh điện ảnh sắc nét, lồng ghép sâu sắc lý luận <strong>Chương 4: Cạnh tranh và Độc quyền trong nền kinh tế thị trường</strong> — phản ánh cuộc đấu tranh vì ánh sáng công bằng xã hội tại đô thị Vòm-9.
+      Khám phá 5 Chương kịch tính với 85 Phân cảnh điện ảnh chuẩn phong cách <strong>Japanese Anime / Manga (Makoto Shinkai & Kyoto Animation)</strong>, lồng ghép sâu sắc lý luận <strong>Chương 4: Cạnh tranh & Độc quyền Nhà nước</strong> — Cuộc đấu tranh vì ánh sáng công bằng tại đô thị Vòm-9.
     </p>
 
     <!-- Project Metrics Chips -->
@@ -787,46 +882,46 @@ const html = `<!DOCTYPE html>
         <span class="stat-lbl">Trang Nội Dung</span>
       </div>
       <div class="stat-chip">
-        <span class="stat-val">5</span>
-        <span class="stat-lbl">Chương Hồi Kịch Tính</span>
+        <span class="stat-val" style="color:var(--neon-green);">9</span>
+        <span class="stat-lbl">Tranh Đã Xuất Bản</span>
       </div>
       <div class="stat-chip">
         <span class="stat-val">85</span>
-        <span class="stat-lbl">Khung Tranh Điện Ảnh</span>
-      </div>
-      <div class="stat-chip">
-        <span class="stat-val">20</span>
-        <span class="stat-lbl">Master Prompts AI</span>
+        <span class="stat-lbl">Khung Phân Cảnh</span>
       </div>
       <div class="stat-chip">
         <span class="stat-val">100%</span>
-        <span class="stat-lbl">Chuẩn Lý Luận MLN122</span>
+        <span class="stat-lbl">Phong Cách Anime Nhật</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-val">MLN122</span>
+        <span class="stat-lbl">Chuẩn Lý Luận Chương 4</span>
       </div>
     </div>
   </section>
 
   <!-- Character Cast Section -->
   <section class="character-bar">
-    <div class="char-title">✨ Tuyến Nhân Vật & Linh Hồn Câu Chuyện</div>
+    <div class="char-title">✨ Tuyến Nhân Vật Phong Cách Anime / Manga</div>
     <div class="char-grid">
       <div class="char-card minh">
         <div class="char-name">MINH (22T) <span>👓</span></div>
-        <div class="char-role">Kỹ sư điện tử tự do • Nhà sáng lập Nếp Sáng</div>
+        <div class="char-role">Kỹ sư điện tử anime • Tự do sáng tạo</div>
         <div class="char-quote">"Nhà mình vẫn phải sáng chứ mẹ. Bớt mấy chỗ chạy thừa thì ai cũng được dùng điện rẻ."</div>
       </div>
       <div class="char-card dom">
         <div class="char-name">AI ĐỐM <span>⚡</span></div>
-        <div class="char-role">Thực thể Hologram hạt sáng • Bạn đồng hành</div>
+        <div class="char-role">Chibi wisp mascot • Bạn đồng hành trung thành</div>
         <div class="char-quote">"Minh! Tớ không thể gửi cảnh báo, nhưng câu nói ấy chính là chìa khóa mở ổ cứng!"</div>
       </div>
       <div class="char-card mom">
         <div class="char-name">MẸ MINH (52T) <span>👟</span></div>
-        <div class="char-role">Người mẹ lao động nghèo • Giai cấp vô sản</div>
+        <div class="char-role">Người mẹ hiền hậu • Đại diện giai cấp lao động</div>
         <div class="char-quote">"Có cách đỡ tốn hơn, sao người nghèo chúng tôi lại không được quyền lựa chọn?"</div>
       </div>
       <div class="char-card ba">
         <div class="char-name">BÁC BA (65T) <span>🔧</span></div>
-        <div class="char-role">Cựu thợ điện Vòm-9 • Đại diện tiếng nói cộng đồng</div>
+        <div class="char-role">Cựu thợ điện Vòm-9 • Tiếng nói nhân dân</div>
         <div class="char-quote">"Mạng lưới điện này ngày xưa chính tay chúng tôi đổ mồ hôi dựng nên bằng tiền thuế của dân!"</div>
       </div>
       <div class="char-card truc">
@@ -857,6 +952,12 @@ const html = `<!DOCTYPE html>
   <main class="pages-container" id="pagesContainer">
     <!-- Generated Dynamically by JS -->
   </main>
+
+  <!-- Lightbox Modal for Full Image Zoom -->
+  <div id="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoom Image">
+  </div>
 
   <!-- Copy Toast Notification -->
   <div id="copy-toast">📋 Đã sao chép Prompt thành công!</div>
@@ -904,6 +1005,25 @@ const html = `<!DOCTYPE html>
         card.className = 'page-card';
         card.id = 'page-' + p.num;
 
+        let artworkHtml = '';
+        if (p.hasImage) {
+          artworkHtml = 
+            '<div class="artwork-section">' +
+              '<div class="artwork-img-wrapper" onclick="openLightbox(\'' + p.imageSrc + '\')">' +
+                '<img src="' + p.imageSrc + '" class="artwork-img" alt="Bản vẽ Trang ' + p.num + '">' +
+              '</div>' +
+              '<div class="artwork-badge">✨ BẢN VẼ ANIME / MANGA ĐÃ HOÀN TẤT (BẤM VÀO ẢNH ĐỂ PHÓNG TO TOÀN MÀN HÌNH)</div>' +
+            '</div>';
+        } else {
+          artworkHtml = 
+            '<div class="artwork-section">' +
+              '<div class="placeholder-box">' +
+                '<div class="placeholder-title">🎨 PHÂN CẢNH ĐANG CHỜ XUẤT ẢNH ANIME (MIDJOURNEY NIJI 6 / FLUX)</div>' +
+                '<div class="placeholder-desc">Sử dụng Master Prompt chuẩn hóa ở bên dưới để xuất ảnh tức thì cho Trang ' + p.num + '</div>' +
+              '</div>' +
+            '</div>';
+        }
+
         let panelsHtml = '';
         p.panels.forEach(pan => {
           let dialogHtml = '';
@@ -944,6 +1064,8 @@ const html = `<!DOCTYPE html>
             '<span class="page-num-badge">TRANG ' + (p.num < 10 ? '0' + p.num : p.num) + '</span>' +
           '</div>' +
 
+          artworkHtml +
+
           '<div class="panels-grid">' +
             panelsHtml +
           '</div>' +
@@ -959,8 +1081,8 @@ const html = `<!DOCTYPE html>
           (p.prompt ? (
             '<div class="prompt-drawer">' +
               '<div class="prompt-drawer-header" onclick="togglePrompt(' + p.num + ')">' +
-                '<span>🎨 Master Prompt AI Comic Factory (Midjourney / SDXL / Flux)</span>' +
-                '<span id="prompt-chevron-' + p.num + '">▼ Bấm để xem</span>' +
+                '<span>🎨 Master Prompt Anime / Manga (Niji 6 / Midjourney V6 / Flux)</span>' +
+                '<span id="prompt-chevron-' + p.num + '">▼ Bấm để xem Prompt</span>' +
               '</div>' +
               '<div class="prompt-drawer-body" id="prompt-body-' + p.num + '">' +
                 '<div class="prompt-code" id="prompt-text-' + p.num + '">' + p.prompt + '</div>' +
@@ -993,7 +1115,7 @@ const html = `<!DOCTYPE html>
       const chevron = document.getElementById('prompt-chevron-' + pNum);
       if (body.classList.contains('show')) {
         body.classList.remove('show');
-        chevron.textContent = '▼ Bấm để xem';
+        chevron.textContent = '▼ Bấm để xem Prompt';
       } else {
         body.classList.add('show');
         chevron.textContent = '▲ Thu gọn';
@@ -1004,10 +1126,21 @@ const html = `<!DOCTYPE html>
       const codeEl = document.getElementById('prompt-text-' + pNum);
       if (!codeEl) return;
       navigator.clipboard.writeText(codeEl.textContent).then(() => {
-        showToast('📋 Đã sao chép Prompt Trang ' + pNum + ' vào clipboard!');
+        showToast('📋 Đã sao chép Prompt Anime Trang ' + pNum + ' vào clipboard!');
       }).catch(() => {
         showToast('Lỗi khi sao chép!');
       });
+    }
+
+    function openLightbox(src) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      modal.classList.add('show');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('show');
     }
 
     function showToast(msg) {
@@ -1028,4 +1161,4 @@ const html = `<!DOCTYPE html>
 </html>`;
 
 fs.writeFileSync(path.join(__dirname, 'novel-reader.html'), html, 'utf8');
-console.log('Successfully generated novel-reader.html!');
+console.log('Successfully generated novel-reader.html with artwork integration!');
