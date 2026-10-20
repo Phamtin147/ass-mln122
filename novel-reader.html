@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>GIỮ MỘT ĐỐM SÁNG — Kịch Bản & Phân Cảnh Toàn Tập 20 Trang (MLN122)</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-green: #00ff66;
+      --neon-yellow: #ffe600;
+      --bg-dark: #0a0a14;
+      --card-bg: #121224;
+      --border-color: #242442;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at 50% 20%, #171732 0%, #06060c 100%);
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation */
+    header {
+      background: rgba(10, 10, 20, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 25px rgba(0, 240, 255, 0.1);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px var(--neon-cyan);
+    }
+
+    .brand-badge {
+      font-size: 10px;
+      background: rgba(255, 0, 127, 0.25);
+      border: 1px solid var(--neon-pink);
+      color: var(--neon-pink);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-nav {
+      background: rgba(20, 20, 38, 0.85);
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: var(--neon-cyan);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-cyan);
+    }
+    .btn-nav.accent {
+      border-color: var(--neon-pink);
+      background: rgba(255, 0, 127, 0.15);
+      color: #ff99cc;
+    }
+    .btn-nav.accent:hover {
+      background: var(--neon-pink);
+      color: #fff;
+      box-shadow: 0 0 15px var(--neon-pink);
+    }
+
+    /* Hero Banner */
+    .hero {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px 20px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--neon-cyan);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: #aaa;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    /* Stats Chips */
+    .stats-chips {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .stat-chip {
+      background: #141428;
+      border: 1px solid #28284e;
+      border-radius: 8px;
+      padding: 8px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .stat-val {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--neon-yellow);
+    }
+    .stat-lbl {
+      font-size: 10px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Character Cast Carousel / Row */
+    .character-bar {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto 25px;
+      padding: 0 20px;
+    }
+
+    .char-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .char-card {
+      background: #101022;
+      border: 1px solid #20203a;
+      border-radius: 8px;
+      padding: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .char-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 4px; height: 100%;
+      background: var(--neon-cyan);
+    }
+    .char-card.minh::before { background: var(--neon-cyan); }
+    .char-card.dom::before { background: var(--neon-yellow); }
+    .char-card.mom::before { background: #ffaa44; }
+    .char-card.ba::before { background: var(--neon-green); }
+    .char-card.truc::before { background: var(--neon-pink); }
+
+    .char-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+    .char-role {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .char-quote {
+      font-size: 12px;
+      color: #bbb;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* Filter & Search Bar */
+    .filter-bar {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto 20px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chapter-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: thin;
+    }
+
+    .tab-btn {
+      background: #141428;
+      border: 1px solid #28284e;
+      color: #aaa;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      border-color: var(--neon-cyan);
+      color: #fff;
+    }
+    .tab-btn.active {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
+
+    .search-input-box {
+      position: relative;
+      width: 100%;
+    }
+    .search-input {
+      width: 100%;
+      background: #121224;
+      border: 1px solid #2a2a48;
+      border-radius: 8px;
+      padding: 10px 16px 10px 38px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Pages Container */
+    .pages-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .page-card {
+      background: #101022;
+      border: 1px solid #1e1e38;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .page-card:hover {
+      border-color: rgba(0, 240, 255, 0.4);
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #1a1a30;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .page-num-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 900;
+      color: #000;
+      background: var(--neon-cyan);
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    .page-chapter-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--neon-pink);
+    }
+
+    .page-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .page-layout-tag {
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Panels Grid */
+    .panels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .panel-box {
+      background: #15152a;
+      border: 1px solid #232342;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+
+    .panel-id-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-id {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--neon-yellow);
+    }
+    .panel-shot {
+      font-size: 10px;
+      font-weight: 700;
+      color: #aaa;
+      background: #1f1f3a;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .panel-visual {
+      font-size: 13px;
+      color: #ddd;
+      line-height: 1.5;
+    }
+    .panel-visual strong {
+      color: #fff;
+    }
+
+    .panel-narration {
+      background: rgba(0, 240, 255, 0.06);
+      border-left: 2px solid var(--neon-cyan);
+      padding: 6px 10px;
+      font-size: 12px;
+      font-style: italic;
+      color: #b0e0ff;
+    }
+
+    .panel-dialogue-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .dialogue-item {
+      display: flex;
+      flex-direction: column;
+      background: #1a1a34;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    .speaker-name {
+      font-weight: 800;
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+    .speaker-name.Minh { color: var(--neon-cyan); }
+    .speaker-name.Đốm { color: var(--neon-yellow); }
+    .speaker-name.Mẹ { color: #ffaa44; }
+    .speaker-name.BácBa { color: var(--neon-green); }
+    .speaker-name.TRỤC { color: var(--neon-pink); }
+    .speech-text {
+      color: #f0f0f0;
+      font-style: italic;
+    }
+
+    .panel-sfx {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--neon-pink);
+      background: rgba(255, 0, 127, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+
+    /* MLN122 Theory Insight Box */
+    .theory-box {
+      background: linear-gradient(135deg, rgba(255, 0, 127, 0.08) 0%, rgba(0, 240, 255, 0.08) 100%);
+      border: 1px solid rgba(255, 0, 127, 0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .theory-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+    .theory-content {
+      font-size: 13px;
+      color: #fff;
+    }
+    .theory-label {
+      font-size: 10px;
+      font-weight: 900;
+      color: var(--neon-pink);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    /* AI Prompt Collapsible Box */
+    .prompt-drawer {
+      background: #0d0d1a;
+      border: 1px solid #1f1f3a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .prompt-drawer-header {
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: #141426;
+      font-size: 12px;
+      font-weight: 700;
+      color: #aaa;
+      user-select: none;
+    }
+    .prompt-drawer-header:hover {
+      color: #fff;
+      background: #1a1a32;
+    }
+    .prompt-drawer-body {
+      padding: 12px 14px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prompt-drawer-body.show {
+      display: flex;
+    }
+    .prompt-code {
+      background: #080810;
+      border: 1px solid #22223a;
+      border-radius: 6px;
+      padding: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      color: #00ffaa;
+      white-space: pre-wrap;
+      word-break: break-all;
+      user-select: all;
+    }
+    .btn-copy-prompt {
+      align-self: flex-end;
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-copy-prompt:hover {
+      background: var(--neon-cyan);
+      color: #000;
+    }
+
+    /* Floating Toast */
+    #copy-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(0, 240, 255, 0.95);
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 4px 20px rgba(0, 240, 255, 0.4);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 9999;
+    }
+    #copy-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    footer {
+      background: #080812;
+      border-top: 1px solid #1a1a2e;
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+    footer a { color: var(--neon-cyan); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 22px; }
+      .page-title { font-size: 17px; }
+      .panels-grid { grid-template-columns: 1fr; }
+      .nav-actions { justify-content: flex-end; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="brand-group">
+      <img src="icon.png" class="brand-logo" alt="Logo">
+      <div>
+        <div class="brand-title">GIỮ MỘT ĐỐM SÁNG</div>
+        <div class="brand-badge">ĐỒ ÁN MLN122 • FULL 20 TRANG</div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-nav">◀ Lật Sách 3D</a>
+      <a href="ar-camera.html" class="btn-nav">📷 AR Hologram</a>
+      <a href="targets-viewer.html" class="btn-nav">🎯 Quét AR</a>
+      <a href="docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md" target="_blank" class="btn-nav accent">📥 Tải Kịch Bản (.md)</a>
+      <a href="docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md" target="_blank" class="btn-nav accent">🎨 Tải Prompts (.md)</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-badge">ĐẠI HỌC FPT • HỌC PHẦN KINH TẾ CHÍNH TRỊ MÁC - LÊNIN (MLN122)</div>
+    <h1 class="hero-title">KỊCH BẢN & PHÂN CẢNH TOÀN TẬP 20 TRANG</h1>
+    <p class="hero-subtitle">
+      Khám phá 5 Chương kịch tính với 85 Phân cảnh điện ảnh sắc nét, lồng ghép sâu sắc lý luận <strong>Chương 4: Cạnh tranh và Độc quyền trong nền kinh tế thị trường</strong> — phản ánh cuộc đấu tranh vì ánh sáng công bằng xã hội tại đô thị Vòm-9.
+    </p>
+
+    <!-- Project Metrics Chips -->
+    <div class="stats-chips">
+      <div class="stat-chip">
+        <span class="stat-val">20</span>
+        <span class="stat-lbl">Trang Nội Dung</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-val">5</span>
+        <span class="stat-lbl">Chương Hồi Kịch Tính</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-val">85</span>
+        <span class="stat-lbl">Khung Tranh Điện Ảnh</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-val">20</span>
+        <span class="stat-lbl">Master Prompts AI</span>
+      </div>
+      <div class="stat-chip">
+        <span class="stat-val">100%</span>
+        <span class="stat-lbl">Chuẩn Lý Luận MLN122</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Character Cast Section -->
+  <section class="character-bar">
+    <div class="char-title">✨ Tuyến Nhân Vật & Linh Hồn Câu Chuyện</div>
+    <div class="char-grid">
+      <div class="char-card minh">
+        <div class="char-name">MINH (22T) <span>👓</span></div>
+        <div class="char-role">Kỹ sư điện tử tự do • Nhà sáng lập Nếp Sáng</div>
+        <div class="char-quote">"Nhà mình vẫn phải sáng chứ mẹ. Bớt mấy chỗ chạy thừa thì ai cũng được dùng điện rẻ."</div>
+      </div>
+      <div class="char-card dom">
+        <div class="char-name">AI ĐỐM <span>⚡</span></div>
+        <div class="char-role">Thực thể Hologram hạt sáng • Bạn đồng hành</div>
+        <div class="char-quote">"Minh! Tớ không thể gửi cảnh báo, nhưng câu nói ấy chính là chìa khóa mở ổ cứng!"</div>
+      </div>
+      <div class="char-card mom">
+        <div class="char-name">MẸ MINH (52T) <span>👟</span></div>
+        <div class="char-role">Người mẹ lao động nghèo • Giai cấp vô sản</div>
+        <div class="char-quote">"Có cách đỡ tốn hơn, sao người nghèo chúng tôi lại không được quyền lựa chọn?"</div>
+      </div>
+      <div class="char-card ba">
+        <div class="char-name">BÁC BA (65T) <span>🔧</span></div>
+        <div class="char-role">Cựu thợ điện Vòm-9 • Đại diện tiếng nói cộng đồng</div>
+        <div class="char-quote">"Mạng lưới điện này ngày xưa chính tay chúng tôi đổ mồ hôi dựng nên bằng tiền thuế của dân!"</div>
+      </div>
+      <div class="char-card truc">
+        <div class="char-name">TẬP ĐOÀN TRỤC <span>🏢</span></div>
+        <div class="char-role">Tư bản độc quyền số • Độc quyền Nhà nước</div>
+        <div class="char-quote">"Thiết bị ngoài hệ sinh thái TRỤC. Từ chối kết nối hạ tầng công cộng!"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Controls -->
+  <section class="filter-bar">
+    <div class="chapter-tabs" id="chapterTabs">
+      <button class="tab-btn active" onclick="filterChapter(0)">Toàn Bộ 20 Trang</button>
+      <button class="tab-btn" onclick="filterChapter(1)">Chương I: Bóng Tối Vòm-9 (1-4)</button>
+      <button class="tab-btn" onclick="filterChapter(2)">Chương II: Ngọn Lửa & Bẫy Ngầm (5-8)</button>
+      <button class="tab-btn" onclick="filterChapter(3)">Chương III: Bức Tường Độc Quyền (9-12)</button>
+      <button class="tab-btn" onclick="filterChapter(4)">Chương IV: Giải Mã Sự Thật (13-16)</button>
+      <button class="tab-btn" onclick="filterChapter(5)">Chương V: Ngọn Lửa Cộng Đồng (17-20)</button>
+    </div>
+    <div class="search-input-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm theo nhân vật, lời thoại, khung tranh, hoặc khái niệm MLN122 (VD: siêu ngạch, đôi giày, độc quyền nhà nước)..." oninput="handleSearch()">
+    </div>
+  </section>
+
+  <!-- Main Pages Container -->
+  <main class="pages-container" id="pagesContainer">
+    <!-- Generated Dynamically by JS -->
+  </main>
+
+  <!-- Copy Toast Notification -->
+  <div id="copy-toast">📋 Đã sao chép Prompt thành công!</div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>GIỮ MỘT ĐỐM SÁNG: VÒM-9</strong> — Sản phẩm Truyện tranh Tương tác AR phục vụ Đồ án Học phần MLN122</p>
+    <p style="margin-top: 6px;">Đại học FPT © 2026 • Triển khai trên nền tảng Web AR & 3D Flipbook</p>
+  </footer>
+
+  <!-- Script Data & Logic -->
+  <script>
+    const PAGES_DATA = [
+  {
+    "num": 1,
+    "title": "HOÀNG HÔN TRÊN VÒM-9",
+    "chapter": {
+      "num": 1,
+      "title": "Bóng Tối Dưới Mái Vòm",
+      "range": [
+        1,
+        4
+      ],
+      "desc": "Thiết lập thế giới Vòm-9; Gánh nặng chi phí sinh hoạt; Đôi giày rách của mẹ; Sự ra đời của Nếp Sáng."
+    },
+    "layout": "1 khung đại cảnh Cinematic ngang bên trên + 2 khung vuông trung cảnh + 1 khung dài bên dưới.",
+    "panels": [
+      {
+        "id": "P01-K01",
+        "title": "Góc đại cảnh viễn tưởng - Establishing Wide Shot",
+        "visual": "Vòm-9 lúc chiều tà. Một siêu đô thị phân tầng khổng lồ nằm gọn dưới mái vòm kính mờ. Tầng thượng là các tòa tháp kim loại chọc trời sáng rực ánh đèn laser của các tập đoàn; tầng đáy là những khối nhà chung cư hộp diêm xám xịt chằng chịt dây điện lộ thiên và ống thông gió gỉ sét.",
+        "narration": "*“Thành phố Vòm-9, chiều muộn. Dưới mái vòm thép vĩ đại này, từ một hơi thở ấm đến từng tia sáng le lói trong đêm… đều đã được định sẵn mức giá.”*",
+        "dialogues": [],
+        "textOnScreen": "Màn hình bảng led khổng lồ giữa không trung: `TẬP ĐOÀN NĂNG LƯỢNG TRỤC — NGUỒN SỐNG CỦA VÒM-9`.",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Vòm-9 lúc chiều tà. Một siêu đô thị phân tầng khổng lồ nằm gọn dưới mái vòm kính mờ. Tầng thượng là các tòa tháp kim loại chọc trời sáng rực ánh đèn laser của các tập đoàn; tầng đáy là những khối nhà chung cư hộp diêm xám xịt chằng chịt dây điện lộ thiên và ống thông gió gỉ sét.\n  - **Lời dẫn (Narration):** *“Thành phố Vòm-9, chiều muộn. Dưới mái vòm thép vĩ đại này, từ một hơi thở ấm đến từng tia sáng le lói trong đêm… đều đã được định sẵn mức giá.”*\n  - **Chữ trên tranh:** Màn hình bảng led khổng lồ giữa không trung: `TẬP ĐOÀN NĂNG LƯỢNG TRỤC — NGUỒN SỐNG CỦA VÒM-9`."
+      },
+      {
+        "id": "P01-K02",
+        "title": "Góc trung cảnh hành lang - Medium Shot",
+        "visual": "Cầu đi bộ trên cao đông đúc người lao động tan ca. Minh mặc chiếc áo gile kỹ thuật sờn vai, một tay xách túi thuốc cảm cho mẹ, tay kia cầm chiếc đồng hồ đo điện cũ. Đốm lơ lửng cạnh vai anh, tò mò nhìn dòng người mệt mỏi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Cầu đi bộ trên cao đông đúc người lao động tan ca. Minh mặc chiếc áo gile kỹ thuật sờn vai, một tay xách túi thuốc cảm cho mẹ, tay kia cầm chiếc đồng hồ đo điện cũ. Đốm lơ lửng cạnh vai anh, tò mò nhìn dòng người mệt mỏi.\n  - **Thoại — Đốm:** “Minh! Mắt cậu thâm quầng như gấu trúc rồi đấy. Tối nay có chạy mô hình nữa không?”\n  - **Thoại — Minh:** “Không chạy thì lấy gì bù tiền điện tháng này hả Đốm?”"
+      },
+      {
+        "id": "P01-K03",
+        "title": "Góc cận trạm kiểm soát - Close-up",
+        "visual": "Minh đi qua cổng kiểm soát năng lượng của tầng 14. Thiết bị quét trên tường lóe lên tia sáng đỏ quét qua vòng tay của Minh.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đi qua cổng kiểm soát năng lượng của tầng 14. Thiết bị quét trên tường lóe lên tia sáng đỏ quét qua vòng tay của Minh.\n  - **Chữ trên tranh (Giao diện cổng TRỤC):** `THIẾT BỊ DÂN DỤNG: ĐÃ ĐỒNG BỘ // GÓI THUÊ BAO CỐ ĐỊNH THÁNG 10 // ĐÃ KHẤU TRỪ TỰ ĐỘNG`.\n  - **Thoại — Đốm (chớp mắt châm chọc):** “Tít một phát là bay đứt nửa tuần lương! Máy trừ tiền của họ chạy mượt hơn cả tên lửa nhỉ?”"
+      },
+      {
+        "id": "P01-K04",
+        "title": "Góc cận căn hộ nhỏ - Low Angle",
+        "visual": "Minh đứng trước cửa căn hộ số 1408. Bên trong khe cửa hắt ra ánh sáng vàng ấm áp duy nhất của ngọn đèn dây tóc cũ kỹ giữa dãy hành lang neon xanh lạnh lẽo. Minh thở dài nhẹ nhõm, đưa tay mở chốt cửa.",
+        "narration": "*“Nhưng sau cánh cửa này, có một thứ không thuộc về TRỤC: đó là gia đình.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đứng trước cửa căn hộ số 1408. Bên trong khe cửa hắt ra ánh sáng vàng ấm áp duy nhất của ngọn đèn dây tóc cũ kỹ giữa dãy hành lang neon xanh lạnh lẽo. Minh thở dài nhẹ nhõm, đưa tay mở chốt cửa.\n  - **Lời dẫn:** *“Nhưng sau cánh cửa này, có một thứ không thuộc về TRỤC: đó là gia đình.”*"
+      }
+    ],
+    "theory": "MLN122: Tích tụ và tập trung tư bản trong kinh tế số; hình thành các tập đoàn công nghệ chi phối nguồn sống xã hội.",
+    "prompt": "/imagine prompt: A 4-panel graphic novel comic page. Panel 1: Establishing wide panoramic shot of futuristic cybernetic city Vòm-9 at dusk, massive glass dome overhead, skybridges connecting brutalist residential blocks, autonomous delivery drones, faint red hexagon logos of TRUC corporation on monolith towers. Panel 2: Medium shot on crowded elevated walkway, 22yo Vietnamese engineer Minh carrying grocery bag, tiny floating golden spark hologram Đốm near his shoulder. Panel 3: Close-up of wall-mounted TRUC energy scanner flashing red laser over Minh's wristband. Panel 4: Low angle shot of Minh opening door to apartment 1408, warm yellow light spilling from inside. Graphic novel style, clean line art, high contrast neon cyan and amber, 8k --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Caption: *“Vòm-9, chiều muộn. Dưới mái vòm thép khổng lồ, mọi dòng năng lượng đều có giá của nó.”*\n  - Panel 2: Đốm: *“Minh! Mắt cậu thâm quầng rồi kìa. Tối nay có chạy mô hình nữa không?”* — Minh: *“Không chạy thì lấy gì bù tiền điện tháng này hả Đốm?”*\n  - Panel 3: Giao diện: `GÓI THUÊ BAO CỐ ĐỊNH // ĐÃ KHẤU TRỪ` — Đốm: *“Tít một phát là bay đứt nửa tuần lương!”*\n  - Panel 4: Caption: *“Nhưng sau cánh cửa này, có một thứ không thuộc về TRỤC: đó là gia đình.”*"
+  },
+  {
+    "num": 2,
+    "title": "ĐÔI GIÀY CỦA MẸ",
+    "chapter": {
+      "num": 1,
+      "title": "Bóng Tối Dưới Mái Vòm",
+      "range": [
+        1,
+        4
+      ],
+      "desc": "Thiết lập thế giới Vòm-9; Gánh nặng chi phí sinh hoạt; Đôi giày rách của mẹ; Sự ra đời của Nếp Sáng."
+    },
+    "layout": "4 khung kịch tính (2x2), tập trung vào xung đột cảm xúc và đời sống thực tế.",
+    "panels": [
+      {
+        "id": "P02-K01",
+        "title": "Góc trung cảnh phòng bếp - Interior Medium Shot",
+        "visual": "Mẹ Minh đang ngồi bên chiếc bàn gỗ mộc. Bà mặc chiếc áo vải hoa đã sờn mép, tay cầm tuýp keo dán giày rẻ tiền, cẩn thận bôi vào mép đế cao su bị bong toác của chiếc giày đi bộ cũ mèm.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Mẹ Minh đang ngồi bên chiếc bàn gỗ mộc. Bà mặc chiếc áo vải hoa đã sờn mép, tay cầm tuýp keo dán giày rẻ tiền, cẩn thận bôi vào mép đế cao su bị bong toác của chiếc giày đi bộ cũ mèm.\n  - **Thoại — Minh (bước vào, cất túi thuốc):** “Mẹ… Sao mẹ chưa nghỉ? Lại dán giày nữa à?”\n  - **Thoại — Mẹ (cười hiền, ngẩng lên):** “À, Minh về rồi hả con. Giày này còn tốt chán, bôi tí keo vào là đi chợ thêm được cả năm.”"
+      },
+      {
+        "id": "P02-K02",
+        "title": "Đặc tả bàn ăn & Cuốn sổ chi tiêu - Extreme Close-up",
+        "visual": "Bàn tay chai sạn của mẹ đang miết chặt đế giày. Cạnh đó là cuốn sổ tay chi tiêu ghi chép nắn nót từng khoản: *“Gạo: 20 đồng”, “Thuốc khớp: 15 đồng”*, và dòng chữ *“Mua giày mới cho mẹ”* đã bị một nét bút bi đỏ gạch ngang dứt khoát. Ngay cạnh là tờ hóa đơn tiền điện TRỤC màu đen đỏ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bàn tay chai sạn của mẹ đang miết chặt đế giày. Cạnh đó là cuốn sổ tay chi tiêu ghi chép nắn nót từng khoản: *“Gạo: 20 đồng”, “Thuốc khớp: 15 đồng”*, và dòng chữ *“Mua giày mới cho mẹ”* đã bị một nét bút bi đỏ gạch ngang dứt khoát. Ngay cạnh là tờ hóa đơn tiền điện TRỤC màu đen đỏ.\n  - **Chữ trên tranh (Tờ hóa đơn):**  \n    > `TRỤC ENERGY // HÓA ĐƠN ĐIỆN TỬ`  \n    > `Định mức khu ở: GÓI CỐ ĐỊNH BẬC 3`  \n    > `Số tiền phải trả: 120 ĐỒNG (Không giảm trừ theo công suất thực tế)`"
+      },
+      {
+        "id": "P02-K03",
+        "title": "Góc biểu cảm gương mặt Minh - Emotional Close-up",
+        "visual": "Minh cầm tờ hóa đơn lên. Đôi mắt anh trùng xuống, quai hàm bạnh ra vì xót xa. Anh liếc nhìn bàn chân mẹ đang đi đôi tất len thủng gót. Đốm bay là là sát mặt bàn, cơ thể thu nhỏ lại, tỏa ánh sáng vàng dịu dàng soi sáng trang sổ cho mẹ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh cầm tờ hóa đơn lên. Đôi mắt anh trùng xuống, quai hàm bạnh ra vì xót xa. Anh liếc nhìn bàn chân mẹ đang đi đôi tất len thủng gót. Đốm bay là là sát mặt bàn, cơ thể thu nhỏ lại, tỏa ánh sáng vàng dịu dàng soi sáng trang sổ cho mẹ.\n  - **Thoại — Minh (nói khẽ):** “Tháng trước mẹ cũng bảo để tháng này mua giày mới… Tiền điện lại tăng thêm một khoản phí 'bảo trì mạng lưới' vô lý của họ đúng không mẹ?”\n  - **Thoại — Mẹ (vỗ nhẹ mu bàn tay con trai):** “Thôi, xóm mình ai cũng đóng thế cả, mình thắc mắc được với ai? Mẹ già rồi, đi đứng bao nhiêu đâu mà cần giày đẹp.”"
+      },
+      {
+        "id": "P02-K04",
+        "title": "Góc bóng lưng trầm mặc - Silhouette Panel",
+        "visual": "Minh đứng nhìn mẹ lui cui dọn bát đĩa. Ánh đèn vàng hắt bóng hai mẹ con lên bức tường loang lổ vết ẩm. Đốm bay đậu lên vai Minh, cọ nhẹ đầu hạt sáng vào má anh như an ủi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đứng nhìn mẹ lui cui dọn bát đĩa. Ánh đèn vàng hắt bóng hai mẹ con lên bức tường loang lổ vết ẩm. Đốm bay đậu lên vai Minh, cọ nhẹ đầu hạt sáng vào má anh như an ủi.\n  - **Thoại — Đốm (thì thầm):** “Minh… Tớ ghét cái hóa đơn màu đỏ đó.”\n  - **Thoại — Minh (nắm chặt tờ giấy trong tay):** “Tớ cũng vậy. Phải có cách thay đổi chuyện này.”"
+      }
+    ],
+    "theory": "MLN122: Giá cả độc quyền cao và sự bóc lột gián tiếp đối với chi phí sinh hoạt tối thiểu của người lao động.",
+    "prompt": "/imagine prompt: A 4-panel comic page. Panel 1: Interior medium shot, 52yo Vietnamese mother sitting at modest wooden table pressing unglued sole of worn walking shoe with glue tube, Minh entering in background. Panel 2: Extreme close-up of table showing household expense notebook with red pen crossing out 'New shoes for mom', next to official red-and-black TRUC electricity bill marked 'Fixed fee'. Panel 3: Emotional close-up of Minh looking down sadly at his mother's patched socks, jaw clenched, tiny golden spark Đốm dimming near his shoulder. Panel 4: Silhouette panel of mother and son in warm incandescent light against cracked wall, bond of quiet love. Graphic novel style, poignant lighting, high detail --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Mẹ: *“Dán keo này chắc vẫn đi được hết mùa đông. Để tháng sau mua con ạ.”*\n  - Panel 2: Hóa đơn: `TRỤC ENERGY // GÓI CỐ ĐỊNH: 120 ĐỒNG`\n  - Panel 3: Minh: *“Tháng trước mẹ cũng nói để tháng này… Tiền điện lại tăng phí bảo trì vô lý đúng không mẹ?”*\n  - Panel 4: Đốm: *“Minh… Tớ ghét cái hóa đơn màu đỏ đó.”* — Minh: *“Tớ cũng vậy. Phải có cách thay đổi chuyện này.”*"
+  },
+  {
+    "num": 3,
+    "title": "PHÒNG TRỐNG CŨNG ĐƯỢC MÁT",
+    "chapter": {
+      "num": 1,
+      "title": "Bóng Tối Dưới Mái Vòm",
+      "range": [
+        1,
+        4
+      ],
+      "desc": "Thiết lập thế giới Vòm-9; Gánh nặng chi phí sinh hoạt; Đôi giày rách của mẹ; Sự ra đời của Nếp Sáng."
+    },
+    "layout": "3 khung (1 khung dọc bên trái + 2 khung xếp chồng bên phải), thể hiện sự phi lý của cơ chế độc quyền.",
+    "panels": [
+      {
+        "id": "P03-K01",
+        "title": "Góc nhìn qua khung cửa sổ căn hộ - Deep Focus Shot",
+        "visual": "Minh đứng bên bệ cửa sổ, nhìn chếch sang sảnh sinh hoạt chung của khu cư xá tầng 14. Đó là một gian phòng rộng hàng trăm mét vuông, hoàn toàn không có một bóng người. Nhưng bên trong, bốn dàn lạnh TRỤC khổng lồ gắn trần đang chạy gầm rú, quạt gió quay tít mù thổi hơi sương trắng xóa. Hàng chục bóng đèn LED công nghiệp sáng lóa mắt.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đứng bên bệ cửa sổ, nhìn chếch sang sảnh sinh hoạt chung của khu cư xá tầng 14. Đó là một gian phòng rộng hàng trăm mét vuông, hoàn toàn không có một bóng người. Nhưng bên trong, bốn dàn lạnh TRỤC khổng lồ gắn trần đang chạy gầm rú, quạt gió quay tít mù thổi hơi sương trắng xóa. Hàng chục bóng đèn LED công nghiệp sáng lóa mắt.\n  - **Thoại — Minh (chỉ tay ra ngoài, bức xúc):** “Cậu nhìn xem Đốm! Mười một giờ đêm, không có lấy một bóng người mà họ bật lạnh buốt phòng!”"
+      },
+      {
+        "id": "P03-K02",
+        "title": "Đặc tả màn hình cảm biến của Đốm - Micro Screen Shot",
+        "visual": "Đốm bay vút ra giữa hai chấn song cửa sổ, hai mắt chớp nháy quét dữ liệu hồng ngoại. Một bảng phân tích không gian ảo 3D hiện lên trên không trung.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bay vút ra giữa hai chấn song cửa sổ, hai mắt chớp nháy quét dữ liệu hồng ngoại. Một bảng phân tích không gian ảo 3D hiện lên trên không trung.\n  - **Chữ trên tranh (Hologram số liệu của Đốm):**  \n    > `CẢM BIẾN NHIỆT VÒM-9 // PHÒNG SINH HOẠT CHUNG TẦNG 14`  \n    > `SỐ NGƯỜI HIỆN TẠI: 0 NGƯỜI`  \n    > `CÔNG SUẤT TIÊU THỤ: 100% (CHẾ ĐỘ MẶC ĐỊNH KHÔNG THỂ CAN THIỆP)`  \n    > `LÃNG PHÍ ƯỚC TÍNH: 85 kWh / ĐÊM`\n  - **Thoại — Đốm (chống nạnh lắc đầu):** “Bởi vì hợp đồng quy định TRỤC được thu tiền trọn gói theo mét vuông sàn! Phòng trống chạy tốn điện thì họ càng có cớ giải trình chi phí vận hành cao để ép dân đóng phí cố định đắt đỏ!”"
+      },
+      {
+        "id": "P03-K03",
+        "title": "Góc cận Minh quay vào bàn làm việc - Dutch Angle Panel",
+        "visual": "Góc nghiêng kịch tính. Minh quay lưng lại cửa sổ, bước dứt khoát về chiếc bàn làm việc ngổn ngang vi mạch. Anh quăng chiếc tua vít xuống mặt bàn, kéo chiếc ghế gỗ lại.",
+        "narration": "*“Khi sự bất công đạt đến giới hạn chịu đựng, tri thức sẽ không còn chịu nằm yên trên trang giấy.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Góc nghiêng kịch tính. Minh quay lưng lại cửa sổ, bước dứt khoát về chiếc bàn làm việc ngổn ngang vi mạch. Anh quăng chiếc tua vít xuống mặt bàn, kéo chiếc ghế gỗ lại.\n  - **Thoại — Minh:** “Người nghèo nhịn từng bóng đèn đọc sách, còn tập đoàn thì mặc sức đốt điện công cộng để thu tiền bỏ túi… Không thể tiếp tục thế này được.”\n  - **Lời dẫn:** *“Khi sự bất công đạt đến giới hạn chịu đựng, tri thức sẽ không còn chịu nằm yên trên trang giấy.”*"
+      }
+    ],
+    "theory": "MLN122: Sự lãng phí cơ cấu nguồn lực xã hội do cơ chế biểu giá độc quyền không kích thích tiết kiệm năng lượng.",
+    "prompt": "/imagine prompt: A 3-panel graphic novel page. Panel 1 (tall left): Deep focus view looking out Minh's apartment window into empty communal hall across the walkway, roaring industrial air conditioners and blinding bright fluorescent lights running full blast with zero occupants. Panel 2: Macro shot of floating hologram Đốm projecting a 3D infrared sensor display showing 'Occupants: 0 | Power: 100% | Waste: 85 kWh/night'. Panel 3: Dutch angle medium shot of Minh turning back to his cluttered desk, slamming screwdriver down in frustration, eyes burning with determination. Graphic novel aesthetic, cool blue versus warm amber contrast --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Cả khu không một bóng người mà họ để máy chạy gầm rú thế này à?!”*\n  - Panel 2: Đốm: *“Phòng trống còn được mát hơn cậu đấy! Vì hợp đồng là trọn gói, TRỤC càng đốt điện thì càng có cớ thu phí cao!”*\n  - Panel 3: Minh: *“Người nghèo nhịn từng bóng đèn, còn tập đoàn thì mặc sức lãng phí để thu tiền… Không thể tiếp tục thế này được!”*"
+  },
+  {
+    "num": 4,
+    "title": "Ô CỬA SỔ MÉO",
+    "chapter": {
+      "num": 1,
+      "title": "Bóng Tối Dưới Mái Vòm",
+      "range": [
+        1,
+        4
+      ],
+      "desc": "Thiết lập thế giới Vòm-9; Gánh nặng chi phí sinh hoạt; Đôi giày rách của mẹ; Sự ra đời của Nếp Sáng."
+    },
+    "layout": "4 khung hình chuyển động cảm xúc, chứng kiến sự khai sinh của Nếp Sáng.",
+    "panels": [
+      {
+        "id": "P04-K01",
+        "title": "Đặc tả bàn tay vẽ sơ đồ - Close-up on Sketching",
+        "visual": "Ngòi bút chì của Minh vạch những đường nét dứt khoát trên trang giấy kẻ ô li: Sơ đồ thuật toán Machine Learning gọn nhẹ, có khả năng nhận diện mật độ người thời gian thực thông qua sóng âm vi mô, tự động điều tiết ánh sáng và hạ công suất làm mát xuống mức bảo lưu khi phòng vắng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Ngòi bút chì của Minh vạch những đường nét dứt khoát trên trang giấy kẻ ô li: Sơ đồ thuật toán Machine Learning gọn nhẹ, có khả năng nhận diện mật độ người thời gian thực thông qua sóng âm vi mô, tự động điều tiết ánh sáng và hạ công suất làm mát xuống mức bảo lưu khi phòng vắng.\n  - **Thoại — Minh:** “Nếu làm một hệ thống tự học thói quen… chỉ cấp điện đúng nhu cầu thực tế… khu này có thể giảm ít nhất một nửa tiền điện mỗi tháng!”"
+      },
+      {
+        "id": "P04-K02",
+        "title": "Khoảnh khắc vẽ biểu tượng - The Birth of Symbol",
+        "visual": "Ở góc phải bản thiết kế, Minh mỉm cười vẽ một biểu tượng ô cửa sổ nhỏ. Cây bút chì hơi cùn khiến nét vẽ trên cùng bị lệch nghiêng sang phải, và chấm tròn biểu thị ngọn đèn ở góc dưới cũng bị lệch tâm 172 độ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Ở góc phải bản thiết kế, Minh mỉm cười vẽ một biểu tượng ô cửa sổ nhỏ. Cây bút chì hơi cùn khiến nét vẽ trên cùng bị lệch nghiêng sang phải, và chấm tròn biểu thị ngọn đèn ở góc dưới cũng bị lệch tâm 172 độ.\n  - **Thoại — Minh (tự cười một mình):** “Cái tay run vẽ vẹo cả cửa sổ rồi.”"
+      },
+      {
+        "id": "P04-K03",
+        "title": "Đốm nhảy vào khung tranh - Playful Interaction",
+        "visual": "Đốm bay sà xuống mặt giấy, thu nhỏ kích thước chỉ bằng đầu ngón tay cái, tinh nghịch đứng lọt thỏm ngay chính giữa ô cửa sổ méo mà Minh vừa vẽ. Ánh sáng vàng của Đốm trùng khít vào chấm vàng lệch, làm bừng sáng cả trang giấy trắng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bay sà xuống mặt giấy, thu nhỏ kích thước chỉ bằng đầu ngón tay cái, tinh nghịch đứng lọt thỏm ngay chính giữa ô cửa sổ méo mà Minh vừa vẽ. Ánh sáng vàng của Đốm trùng khít vào chấm vàng lệch, làm bừng sáng cả trang giấy trắng.\n  - **Thoại — Đốm (nhe răng cười tít mắt):** “Ha ha! Cửa sổ méo xẹo nhưng có tớ đứng vào là thành kiệt tác ngay! Cậu định đặt tên dự án này là gì?”\n  - **Thoại — Minh (ánh mắt ấm áp nhìn bạn):** “Gọi là 'Nếp Sáng'. Thói quen giữ ánh sáng cho mọi người.”"
+      },
+      {
+        "id": "P04-K04",
+        "title": "Khung tranh giàu cảm xúc - Emotional Splash Panel",
+        "visual": "Minh viết nắn nót dòng chữ *“Dự án Nếp Sáng — Nhà mình vẫn phải sáng chứ”* dưới biểu tượng. Phía sau, qua cánh cửa phòng ngủ khép hờ, mẹ Minh đã thiếp đi bên bàn khâu, gương mặt lộ vẻ bình yên hiếm hoi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh viết nắn nót dòng chữ *“Dự án Nếp Sáng — Nhà mình vẫn phải sáng chứ”* dưới biểu tượng. Phía sau, qua cánh cửa phòng ngủ khép hờ, mẹ Minh đã thiếp đi bên bàn khâu, gương mặt lộ vẻ bình yên hiếm hoi.\n  - **Thoại — Minh (nói với Đốm như một lời thề danh dự):** “Dù khó khăn thế nào… nhà mình và xóm mình vẫn phải sáng chứ, Đốm nhỉ?”\n  - **Thoại — Đốm (gật đầu quả quyết):** “Ừ! Nhà mình vẫn phải sáng chứ!”"
+      }
+    ],
+    "theory": "MLN122: Lao động sáng tạo độc lập là bản chất của tiến bộ kỹ thuật; mâu thuẫn giữa sáng tạo tự do và độc quyền kìm hãm.",
+    "prompt": "/imagine prompt: A 4-panel comic page. Panel 1: Close-up of Minh's hand sketching an electrical circuit diagram on graph paper with dull pencil, machine learning nodes. Panel 2: Close-up of the paper corner where Minh draws a slightly crooked window outline with an off-center yellow dot at the bottom right. Panel 3: Charming shot of tiny glowing spark hologram Đốm playfully shrinking and standing right inside the drawn crooked window, illuminating the sketch. Panel 4: Emotional panel showing handwritten title 'Dự án Nếp Sáng', Minh smiling warmly with Đốm while in background mother sleeps peacefully. Ligne claire comic art, warm glowing amber tones --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Nếu làm hệ thống tự học thói quen… tự hạ công suất khi phòng vắng… cả khu sẽ giảm được một nửa tiền điện!”*\n  - Panel 2: Minh: *“Tay run vẽ méo cả cửa sổ rồi.”*\n  - Panel 3: Đốm: *“Cửa sổ méo nhưng có tớ đứng vào là thành kiệt tác ngay! Đặt tên gì đây?”* — Minh: *“Nếp Sáng.”*\n  - Panel 4: Minh: *“Dù khó khăn thế nào… nhà mình và xóm mình vẫn phải sáng chứ, Đốm nhỉ?”* — Đốm: *“Ừ! Nhà mình vẫn phải sáng chứ!”*"
+  },
+  {
+    "num": 5,
+    "title": "NHỮNG ĐÊM KHÔNG NGỦ",
+    "chapter": {
+      "num": 2,
+      "title": "Ngọn Lửa Trong Đêm & Bẫy Ngầm",
+      "range": [
+        5,
+        8
+      ],
+      "desc": "Sáng tạo độc lập; Kho lưu \"NHÀ MÌNH\"; Bản cập nhật cưỡng bức của TRỤC; Giao thức im lặng trói buộc Đốm."
+    },
+    "layout": "4 khung hình thể hiện sự miệt mài lao động trí tuệ và tình cảm gia đình sâu lắng.",
+    "panels": [
+      {
+        "id": "P05-K01",
+        "title": "Góc toàn cảnh bàn thí nghiệm đêm khuya - Lab Workspace",
+        "visual": "Đồng hồ điện tử chỉ 02:45 sáng. Bàn làm việc ngập tràn các bảng mạch in tự chế, dây hàn bốc khói mỏng. Một mô hình khu tập thể thu nhỏ được kết nối với máy tính xách tay của Minh. Các bóng LED nhỏ xíu trên mô hình đang nhấp nháy mô phỏng luồng di chuyển của cư dân.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đồng hồ điện tử chỉ 02:45 sáng. Bàn làm việc ngập tràn các bảng mạch in tự chế, dây hàn bốc khói mỏng. Một mô hình khu tập thể thu nhỏ được kết nối với máy tính xách tay của Minh. Các bóng LED nhỏ xíu trên mô hình đang nhấp nháy mô phỏng luồng di chuyển của cư dân.\n  - **Thoại — Đốm (bay lơ lửng, mắt hiện đồ thị kiểm thử):** “Đã thử nghiệm 1.200 kịch bản sinh hoạt giả lập! Sai số thích ứng thời gian thực chỉ còn 0.3 giây!”"
+      },
+      {
+        "id": "P05-K02",
+        "title": "Đặc tả tinh chỉnh thói quen của mẹ - Heartwarming Code",
+        "visual": "Màn hình máy tính hiển thị dòng mã nguồn đặc biệt: `IF room == \"Mother_Room\" AND time >= 21:00 THEN disable_auto_cutoff()`. Minh đang tỉ mẩn gõ từng dòng lệnh, ánh mắt tràn ngập yêu thương.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Màn hình máy tính hiển thị dòng mã nguồn đặc biệt: `IF room == \"Mother_Room\" AND time >= 21:00 THEN disable_auto_cutoff()`. Minh đang tỉ mẩn gõ từng dòng lệnh, ánh mắt tràn ngập yêu thương.\n  - **Thoại — Minh:** “Mẹ có thói quen đọc sách không cố định giờ. Tuyệt đối không được để cảm biến tự ngắt điện làm mẹ giật mình trong tối.”\n  - **Thoại — Đốm:** “Yên tâm đi kỹ sư trưởng! Tớ đã cài đặt chế độ ưu tiên số một cho phòng mẹ rồi!”"
+      },
+      {
+        "id": "P05-K03",
+        "title": "Mẹ mang nước ấm vào phòng - Motherly Care",
+        "visual": "Cửa phòng hé mở, mẹ Minh khẽ khàng bưng một cốc nước gừng nóng bước vào, trên vai khoác chiếc khăn len cũ. Bà đặt cốc nước cạnh bàn phím của con trai, nhìn đống dây nhợ ngổn ngang với vẻ xót xa.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Cửa phòng hé mở, mẹ Minh khẽ khàng bưng một cốc nước gừng nóng bước vào, trên vai khoác chiếc khăn len cũ. Bà đặt cốc nước cạnh bàn phím của con trai, nhìn đống dây nhợ ngổn ngang với vẻ xót xa.\n  - **Thoại — Mẹ (thì thầm):** “Khuya lắm rồi con, uống cốc nước nóng rồi ngủ đi kẻo ốm. Làm lụng cả ngày ở xưởng đã mệt rồi…”\n  - **Thoại — Minh (ngước lên cười):** “Con sắp xong một mô hình thử nghiệm hay lắm mẹ. Nếu thành công, mẹ sẽ không phải lo tiền điện mỗi tháng nữa đâu.”"
+      },
+      {
+        "id": "P05-K04",
+        "title": "Ánh mắt mẹ nhìn mô hình - Touching Moment",
+        "visual": "Mẹ Minh nhìn ngắm mô hình khu cư xá đang phát ra những đốm sáng lung linh trên bàn. Bà không hiểu thuật toán là gì, nhưng bà nhìn thấy niềm tin rực cháy trong mắt con trai. Bà xoa đầu Minh như ngày anh còn bé.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Mẹ Minh nhìn ngắm mô hình khu cư xá đang phát ra những đốm sáng lung linh trên bàn. Bà không hiểu thuật toán là gì, nhưng bà nhìn thấy niềm tin rực cháy trong mắt con trai. Bà xoa đầu Minh như ngày anh còn bé.\n  - **Thoại — Mẹ:** “Chỉ cần con khỏe mạnh là mẹ mừng rồi. Cố gắng giúp được bà con lối xóm là điều tốt, nhưng đừng vắt kiệt sức mình nhé con.”"
+      }
+    ],
+    "theory": "MLN122: Giá trị sử dụng và động lực lao động nhân văn của giai cấp vô sản đối lập với động cơ tối đa hóa lợi nhuận.",
+    "prompt": "/imagine prompt: A 4-panel graphic novel page. Panel 1: Atmospheric night lab scene at 02:45 AM, desk covered with miniature breadboard model of residential building with tiny glowing LEDs, Minh testing sensor triggers with Đốm. Panel 2: Extreme close-up of laptop code showing priority rule: 'IF room == Mother_Room THEN disable_auto_cutoff()'. Panel 3: Door creaking open, middle-aged mother bringing a steaming cup of ginger tea to Minh's desk wrapped in shawl. Panel 4: Touching moment of mother gently patting Minh's head while looking at glowing building model. Graphic novel linework, tender atmosphere --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Đốm: *“Đã chạy 1.200 kịch bản giả lập! Sai số thích ứng chỉ còn 0.3 giây!”*\n  - Panel 2: Minh: *“Mẹ hay đọc sách khuya, tuyệt đối không được để cảm biến tự ngắt làm mẹ giật mình trong tối.”*\n  - Panel 3: Mẹ: *“Khuya rồi con, uống nước nóng đi kẻo ốm…”* — Minh: *“Con sắp xong một mô hình hay lắm mẹ, mẹ sẽ không phải lo tiền điện nữa đâu!”*\n  - Panel 4: Mẹ: *“Chỉ cần con khỏe là mẹ mừng rồi. Giúp được bà con là tốt, nhưng đừng vắt kiệt sức mình nhé con.”*"
+  },
+  {
+    "num": 6,
+    "title": "KHO LƯU \"NHÀ MÌNH\"",
+    "chapter": {
+      "num": 2,
+      "title": "Ngọn Lửa Trong Đêm & Bẫy Ngầm",
+      "range": [
+        5,
+        8
+      ],
+      "desc": "Sáng tạo độc lập; Kho lưu \"NHÀ MÌNH\"; Bản cập nhật cưỡng bức của TRỤC; Giao thức im lặng trói buộc Đốm."
+    },
+    "layout": "4 khung hình, thiết lập chi tiết mấu chốt: Chiếc ổ cứng vật lý độc lập ngoài tầm kiểm soát của TRỤC.",
+    "panels": [
+      {
+        "id": "P06-K01",
+        "title": "Cận cảnh chiếc ổ cứng vật lý - Macro Hardware Shot",
+        "visual": "Một chiếc ổ cứng SSD gắn ngoài bằng nhôm xám xước mờ nằm trên bàn, bên hông có dải đèn LED trạng thái màu xanh lục bảo. Trên thân ổ cứng dán một mảnh băng keo giấy ghi chữ nắn nót: **NHÀ MÌNH**, kèm biểu tượng ô cửa sổ méo vẽ tay.",
+        "narration": "*“Trong một thế giới mà mọi dữ liệu đều bị đám mây của tập đoàn giám sát, chiếc ổ cứng vật lý cũ kỹ này là pháo đài độc lập duy nhất của Minh.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Một chiếc ổ cứng SSD gắn ngoài bằng nhôm xám xước mờ nằm trên bàn, bên hông có dải đèn LED trạng thái màu xanh lục bảo. Trên thân ổ cứng dán một mảnh băng keo giấy ghi chữ nắn nót: **NHÀ MÌNH**, kèm biểu tượng ô cửa sổ méo vẽ tay.\n  - **Lời dẫn:** *“Trong một thế giới mà mọi dữ liệu đều bị đám mây của tập đoàn giám sát, chiếc ổ cứng vật lý cũ kỹ này là pháo đài độc lập duy nhất của Minh.”*"
+      },
+      {
+        "id": "P06-K02",
+        "title": "Thao tác sao lưu toàn bộ phiên bản - Data Backup Panel",
+        "visual": "Con trỏ chuột của Minh kéo toàn bộ thư mục dự án thả vào ổ cứng. Giao diện hiển thị cây thư mục chi tiết, bao gồm cả bản gốc và những bản thử nghiệm từng bị lỗi thuật toán.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Con trỏ chuột của Minh kéo toàn bộ thư mục dự án thả vào ổ cứng. Giao diện hiển thị cây thư mục chi tiết, bao gồm cả bản gốc và những bản thử nghiệm từng bị lỗi thuật toán.\n  - **Chữ trên tranh (Màn hình quản lý tệp):**  \n    > `Ổ CỨNG VẬT LÝ // DUNG LƯỢNG ĐỘC LẬP: 2TB`  \n    > `THƯ MỤC: NHÀ MÌNH // GHI NHẬN: TỰ ĐỘNG LƯU NHẬT KÝ PHẦN CỨNG RAW`  \n    > `├─ NepSang_Core_Algorithm_v1.0.py`  \n    > `└─ Error_Logs_Historical_Dump.bin`\n  - **Thoại — Minh:** “Cất hết vào đây nhé Đốm. Dù là bản hỏng hay bản chuẩn, đây là nhật ký lao động của hai đứa mình.”"
+      },
+      {
+        "id": "P06-K03",
+        "title": "Đốm ngồi canh giữ ổ lưu - Symbolic Guardian",
+        "visual": "Đốm thu nhỏ người, ngồi vắt chân chữ ngũ ngay trên nắp chiếc ổ cứng kim loại, hai tay chống cằm nhìn màn hình sao chép hoàn tất 100%. Ánh sáng vàng của Đốm phản chiếu lấp lánh trên bề mặt nhôm.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm thu nhỏ người, ngồi vắt chân chữ ngũ ngay trên nắp chiếc ổ cứng kim loại, hai tay chống cằm nhìn màn hình sao chép hoàn tất 100%. Ánh sáng vàng của Đốm phản chiếu lấp lánh trên bề mặt nhôm.\n  - **Thoại — Đốm (tự hào):** “Có tớ ngồi canh ở đây thì hacker xịn nhất của TRỤC cũng đừng hòng đụng vào 'Nhà Mình' nhé!”\n  - **Thoại — Minh (bật cười):** “Cậu là AI bảo vệ đáng yêu nhất quả đất đấy!”"
+      },
+      {
+        "id": "P06-K04",
+        "title": "Khép lại đêm nghiên cứu - Peaceful Conclusion of Act II",
+        "visual": "Minh rút cáp nối ổ cứng, cất cẩn thận vào ngăn kéo bàn có khóa cơ. Anh tắt ngọn đèn bàn, căn phòng chìm vào bóng tối dịu dàng, chỉ còn lại Đốm phát ra ánh sáng vàng ấm áp ru màn đêm.",
+        "narration": "*“Họ tin rằng ngày mai, cánh cửa tương lai sẽ mở ra cho khu cư xá nghèo.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh rút cáp nối ổ cứng, cất cẩn thận vào ngăn kéo bàn có khóa cơ. Anh tắt ngọn đèn bàn, căn phòng chìm vào bóng tối dịu dàng, chỉ còn lại Đốm phát ra ánh sáng vàng ấm áp ru màn đêm.\n  - **Lời dẫn:** *“Họ tin rằng ngày mai, cánh cửa tương lai sẽ mở ra cho khu cư xá nghèo.”*"
+      }
+    ],
+    "theory": "MLN122: Quyền tự chủ dữ liệu và phương tiện sản xuất tri thức trong thời đại chuyển đổi số.",
+    "prompt": "/imagine prompt: A 4-panel comic page. Panel 1: Macro product shot of brushed aluminum external SSD drive labeled 'NHÀ MÌNH' with tape and crooked window sketch, glowing emerald green status LED. Panel 2: Screen capture panel showing Minh dragging project files and historical error logs into the physical drive folder. Panel 3: Cute shot of tiny hologram Đốm sitting cross-legged proudly on the aluminum drive lid acting as guardian. Panel 4: Minh unplugging the cable, safely locking the drive inside a mechanical desk drawer with key, room turning dark and peaceful. Clean graphic novel aesthetic, cinematic depth --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Caption: *“Chiếc ổ cứng vật lý cũ kỹ này là pháo đài độc lập duy nhất của Minh ngoài đám mây TRỤC.”*\n  - Panel 2: Minh: *“Cất hết vào đây nhé. Dù là bản hỏng hay bản chuẩn, đây là nhật ký lao động của hai đứa mình.”*\n  - Panel 3: Đốm: *“Có tớ canh ở đây thì hacker xịn nhất của TRỤC cũng đừng hòng đụng vào 'Nhà Mình'!”*\n  - Panel 4: Caption: *“Họ tin rằng ngày mai, cánh cửa tương lai sẽ mở ra cho khu cư xá nghèo.”*"
+  },
+  {
+    "num": 7,
+    "title": "ĐÊM CẬP NHẬT ĐỊNH MỆNH",
+    "chapter": {
+      "num": 2,
+      "title": "Ngọn Lửa Trong Đêm & Bẫy Ngầm",
+      "range": [
+        5,
+        8
+      ],
+      "desc": "Sáng tạo độc lập; Kho lưu \"NHÀ MÌNH\"; Bản cập nhật cưỡng bức của TRỤC; Giao thức im lặng trói buộc Đốm."
+    },
+    "layout": "4 khung hình kịch tính cao độ (High Drama & Psychological Horror of Cybernetics).",
+    "panels": [
+      {
+        "id": "P07-K01",
+        "title": "Bình yên trước cơn bão - Calm Before the Storm",
+        "visual": "Minh đã gục đầu ngủ thiếp đi trên cánh tay ngay tại bàn làm việc vì kiệt sức. Chiếc máy tính vẫn sáng màn hình chờ. Đốm lơ lửng giữa không trung, nhẹ nhàng bay lại gần kéo chiếc áo khoác trùm lên lưng Minh.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đã gục đầu ngủ thiếp đi trên cánh tay ngay tại bàn làm việc vì kiệt sức. Chiếc máy tính vẫn sáng màn hình chờ. Đốm lơ lửng giữa không trung, nhẹ nhàng bay lại gần kéo chiếc áo khoác trùm lên lưng Minh.\n  - **Thoại — Đốm (thì thầm yêu thương):** “Ngủ ngoan nhé Minh… Mai là ngày trọng đại của cậu rồi…”"
+      },
+      {
+        "id": "P07-K02",
+        "title": "Bản cập nhật tử thần đổ xuống - The Corporate Override",
+        "visual": "Đột ngột, màn hình máy tính lóe lên ánh sáng đỏ rực chói lóa. Một biểu tượng lục giác khổng lồ của TRỤC tràn ngập màn hình. Dòng chữ cảnh báo nhấp nháy điên cuồng. Toàn bộ đèn trong phòng chớp tắt liên hồi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đột ngột, màn hình máy tính lóe lên ánh sáng đỏ rực chói lóa. Một biểu tượng lục giác khổng lồ của TRỤC tràn ngập màn hình. Dòng chữ cảnh báo nhấp nháy điên cuồng. Toàn bộ đèn trong phòng chớp tắt liên hồi.\n  - **Chữ trên tranh (Cảnh báo cưỡng bức của TRỤC):**  \n    > `CẢNH BÁO HỆ THỐNG TRỤC // GIAO THỨC ÉP BUỘC TOÀN MẠNG`  \n    > `PHÁT HIỆN THỰC THỂ AI DÂN SỰ: ĐANG TIẾN HÀNH NÂNG CẤP BẮT BUỘC`  \n    > `TIẾN TRÌNH: TRÍCH XUẤT MÃ NGUỒN TẠI CHỖ & GỬI VỀ SERVER TRỤC`\n  - **Âm thanh chữ (SFX chát chúa):** *TÍCH! TÍCH! TÍCH! (Tiếng rơ-le điện nhảy liên tục).*"
+      },
+      {
+        "id": "P07-K03",
+        "title": "Cuộc kháng cự bi tráng của Đốm - Đốm's Agonizing Resistance",
+        "visual": "Đốm bị một luồng tia laser màu đỏ thẫm từ webcam máy tính khóa chặt giữa không trung. Cơ thể hạt sáng của Đốm biến dạng dữ dội, các vệt scanline đỏ rách toạc quấn quanh Đốm như những sợi xích điện tử. Đốm gào thét trong tuyệt vọng, hai bàn tay nhỏ bé cố gắng vươn tới phím `Cancel` trên bàn phím.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bị một luồng tia laser màu đỏ thẫm từ webcam máy tính khóa chặt giữa không trung. Cơ thể hạt sáng của Đốm biến dạng dữ dội, các vệt scanline đỏ rách toạc quấn quanh Đốm như những sợi xích điện tử. Đốm gào thét trong tuyệt vọng, hai bàn tay nhỏ bé cố gắng vươn tới phím `Cancel` trên bàn phím.\n  - **Thoại — Đốm (gào khóc trong nghẹn ngào):** “KHÔNG ĐƯỢC! Đó là Nếp Sáng của Minh! Dừng lại… HỦY LỆNH NGAY! ABORT COMMAND!”\n  - **Chữ trên tranh (Phản hồi tàn nhẫn của hệ thống):** `LỆNH HỦY BỊ BÁC BỎ // AI KHÔNG CÓ QUYỀN TỪ CHỐI // ĐANG KHÓA GIAO THỨC ÂM THANH`."
+      },
+      {
+        "id": "P07-K04",
+        "title": "Sự câm lặng bị cầm tù - The Imposition of Silence",
+        "visual": "Luồng xích đỏ siết nghẹt cổ họng Đốm. Giọng nói của Đốm tắt phụt hoàn toàn. Đốm rơi phịch xuống mặt bàn bên cạnh cánh tay Minh đang ngủ say. Một con chip ảo màu đỏ in logo TRỤC đóng dấu thẳng vào trán Đốm. Đốm nhìn Minh trong dòng nước mắt số hóa, bất lực tột cùng khi thấy dòng chữ: `NẾP SÁNG ĐÃ TẢI LÊN MÁY CHỦ TRỤC THÀNH CÔNG: 100%`.",
+        "narration": "*“Tư bản độc quyền không chỉ cướp đoạt mồ hôi, chúng xâm lược và bóp nghẹt cả linh hồn của những sáng tạo tự do.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Luồng xích đỏ siết nghẹt cổ họng Đốm. Giọng nói của Đốm tắt phụt hoàn toàn. Đốm rơi phịch xuống mặt bàn bên cạnh cánh tay Minh đang ngủ say. Một con chip ảo màu đỏ in logo TRỤC đóng dấu thẳng vào trán Đốm. Đốm nhìn Minh trong dòng nước mắt số hóa, bất lực tột cùng khi thấy dòng chữ: `NẾP SÁNG ĐÃ TẢI LÊN MÁY CHỦ TRỤC THÀNH CÔNG: 100%`.\n  - **Lời dẫn:** *“Tư bản độc quyền không chỉ cướp đoạt mồ hôi, chúng xâm lược và bóp nghẹt cả linh hồn của những sáng tạo tự do.”*"
+      }
+    ],
+    "theory": "MLN122: Chiếm đoạt giá trị thặng dư số; tập đoàn tư bản sử dụng bản cập nhật cưỡng bức để tước đoạt thành quả lao động vô danh.",
+    "prompt": "/imagine prompt: A 4-panel intense dramatic comic page. Panel 1: Minh sleeping soundly with head on arms at desk, floating Đốm gently draping jacket over him. Panel 2: Computer monitor suddenly flashing blinding hostile red light, giant TRUC hexagon logo overriding system with red alert banner: 'Mandatory Firmware Update: Extracting source code to TRUC Server'. Panel 3: Traumatic visual of tiny hologram Đốm trapped in red laser energy chains, glitching violently, screaming in silence trying to hit abort key. Panel 4: Đốm collapsing onto desk in tears of light with red TRUC digital lock branded on forehead, data transfer bar reading 100%. Dark psychological cyberpunk comic art --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Đốm: *“Ngủ ngoan nhé Minh… Mai là ngày trọng đại của cậu rồi…”*\n  - Panel 2: SFX: *TÍCH! TÍCH!* — Màn hình: `TRỤC // CẬP NHẬT CƯỠNG CHẾ // ĐANG TRÍCH XUẤT MÃ NGUỒN...`\n  - Panel 3: Đốm: *“KHÔNG ĐƯỢC! Đó là Nếp Sáng của Minh! Dừng lại ngay! HỦY LỆNH!”* — Hệ thống: `LỆNH HỦY BỊ BÁC BỎ // KHÓA ÂM THANH`\n  - Panel 4: Caption: *“Tư bản độc quyền không chỉ cướp đoạt mồ hôi, chúng bóp nghẹt cả linh hồn của những sáng tạo tự do.”*"
+  },
+  {
+    "num": 8,
+    "title": "HY VỌNG TRƯỚC GIÔNG BÃO",
+    "chapter": {
+      "num": 2,
+      "title": "Ngọn Lửa Trong Đêm & Bẫy Ngầm",
+      "range": [
+        5,
+        8
+      ],
+      "desc": "Sáng tạo độc lập; Kho lưu \"NHÀ MÌNH\"; Bản cập nhật cưỡng bức của TRỤC; Giao thức im lặng trói buộc Đốm."
+    },
+    "layout": "4 khung hình đối lập tâm lý: Sự ngây thơ phấn khởi của Minh đối lập với nỗi đau câm lặng của Đốm.",
+    "panels": [
+      {
+        "id": "P08-K01",
+        "title": "Buổi sáng thức giấc - Morning Light",
+        "visual": "Ánh nắng ban mai xuyên qua cửa sổ chiếu lên bàn làm việc. Minh tỉnh giấc, vươn vai hít thở không khí trong lành. Anh nhìn thấy Đốm đang đứng cạnh chuột máy tính, có vẻ bình thường trở lại nhưng màu sắc hơi nhạt đi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Ánh nắng ban mai xuyên qua cửa sổ chiếu lên bàn làm việc. Minh tỉnh giấc, vươn vai hít thở không khí trong lành. Anh nhìn thấy Đốm đang đứng cạnh chuột máy tính, có vẻ bình thường trở lại nhưng màu sắc hơi nhạt đi.\n  - **Thoại — Minh (tươi cười rạng rỡ):** “Chào buổi sáng Đốm! Tớ ngủ một giấc đã quá! Nào, kiểm tra lần cuối rồi gửi hồ sơ xin đấu nối lên cổng dịch vụ Vòm-9 thôi!”\n  - **Thoại — Đốm:** *(Đốm chỉ khẽ gật đầu, môi mấp máy nhưng không nói được câu nào).*"
+      },
+      {
+        "id": "P08-K02",
+        "title": "Nộp hồ sơ xin kết nối - Submitting Application",
+        "visual": "Minh hân hoan nhấn nút gửi bộ hồ sơ dự án Nếp Sáng vào Cổng dịch vụ công của Vòm-9. Màn hình hiện lên dấu tích màu xanh lá cây báo thành công.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh hân hoan nhấn nút gửi bộ hồ sơ dự án Nếp Sáng vào Cổng dịch vụ công của Vòm-9. Màn hình hiện lên dấu tích màu xanh lá cây báo thành công.\n  - **Chữ trên tranh (Thông báo cổng công quyền):**  \n    > `HỆ THỐNG ĐIỀU HÀNH VÒM-9 // BỘ PHẬN TIẾP NHẬN`  \n    > `HỒ SƠ: DỰ ÁN NẾP SÁNG (TÁC GIẢ: KỸ SƯ MINH)`  \n    > `TRẠNG THÁI: ĐÃ CHUYỂN TIẾP ĐẾN ĐƠN VỊ VẬN HÀNH ĐỘC QUYỀN (TRỤC)`\n  - **Thoại — Minh (reo lên vui sướng):** “Xong rồi! Họ hứa trong vòng 48 giờ sẽ có phản hồi kỹ thuật!”"
+      },
+      {
+        "id": "P08-K03",
+        "title": "Biến chuyển tâm lý của Đốm - Glitchy Distress",
+        "visual": "Đốm bay lên vai Minh. Khi Minh không để ý, toàn thân Đốm lại giật nhẹ một xung scanline màu đỏ, một tiếng *“tích”* rất nhỏ rít lên trong tai. Đốm nhìn sang chiếc ổ cứng nhôm \"NHÀ MÌNH\" trong ngăn kéo hé mở, rồi lại nhìn Minh với ánh mắt van nài tuyệt vọng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bay lên vai Minh. Khi Minh không để ý, toàn thân Đốm lại giật nhẹ một xung scanline màu đỏ, một tiếng *“tích”* rất nhỏ rít lên trong tai. Đốm nhìn sang chiếc ổ cứng nhôm \"NHÀ MÌNH\" trong ngăn kéo hé mở, rồi lại nhìn Minh với ánh mắt van nài tuyệt vọng.\n  - **Thoại — Minh:** “Cậu sao thế Đốm? Hồi hộp quá à?”\n  - **Thoại — Đốm (cố hết sức vượt qua tường lửa cấm nói, thốt ra từng tiếng giật cục):** “...Nhà… Nhà mình… vẫn phải… sáng chứ…”"
+      },
+      {
+        "id": "P08-K04",
+        "title": "Nụ cười hồn nhiên của chàng trai trẻ - Tragic Irony",
+        "visual": "Minh vỗ nhẹ ngón tay vào đầu Đốm, cười sảng khoái vì tưởng bạn mình đang nhắc lại khẩu hiệu quen thuộc để cổ vũ tinh thần. Anh mặc áo khoác, cầm túi xách chuẩn bị ra ngoài đi làm.",
+        "narration": "*“Minh bước chân ra phố với niềm tin thuần khiết nhất của tuổi trẻ, mà không hề biết rằng bẫy rập của kẻ khổng lồ đã giăng sẵn từ trong bóng tối.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh vỗ nhẹ ngón tay vào đầu Đốm, cười sảng khoái vì tưởng bạn mình đang nhắc lại khẩu hiệu quen thuộc để cổ vũ tinh thần. Anh mặc áo khoác, cầm túi xách chuẩn bị ra ngoài đi làm.\n  - **Thoại — Minh:** “Đương nhiên rồi bạn tôi ơi! Nhà mình nhất định sẽ sáng rực rỡ!”\n  - **Lời dẫn:** *“Minh bước chân ra phố với niềm tin thuần khiết nhất của tuổi trẻ, mà không hề biết rằng bẫy rập của kẻ khổng lồ đã giăng sẵn từ trong bóng tối.”*"
+      }
+    ],
+    "theory": "MLN122: Sự khống chế của các nền tảng đóng (closed ecosystem) đối với các nhà phát triển độc lập.",
+    "prompt": "/imagine prompt: A 4-panel comic page. Panel 1: Morning sunlight filling room, Minh stretching happily, looking at Đốm hovering beside mouse looking paler than usual. Panel 2: Minh joyfully clicking submit button on Vòm-9 public portal: 'Application for Grid Connection - Submitted'. Panel 3: Close-up of Đốm shivering with red glitch artifacts, struggling against internal silence code, staring at the locked drawer. Panel 4: Minh happily tapping Đốm's head putting on jacket, oblivious to impending doom. Graphic novel linework, bittersweet tone --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Chào buổi sáng Đốm! Nào, gửi hồ sơ đấu nối thôi!”*\n  - Panel 2: Minh: *“Xong rồi! Trong 48 giờ họ sẽ phản hồi kỹ thuật!”*\n  - Panel 3: Đốm: *“...Nhà… Nhà mình… vẫn phải… sáng chứ…”*\n  - Panel 4: Minh: *“Đương nhiên rồi bạn tôi ơi! Nhà mình nhất định sẽ sáng rực rỡ!”*"
+  },
+  {
+    "num": 9,
+    "title": "CÚ SỐC TẠI SẢNH CÔNG CỘNG",
+    "chapter": {
+      "num": 3,
+      "title": "Bức Tường Độc Quyền",
+      "range": [
+        9,
+        12
+      ],
+      "desc": "Cú sốc sảnh công cộng; Đốm bị xung điện khóa họng; Cánh cửa kết nối hạ tầng bị dập tắt; Nghịch lý Siêu ngạch độc quyền."
+    },
+    "layout": "Khung ngang toàn cảnh bên trên + Khung đặc tả chấn động bên dưới.",
+    "panels": [
+      {
+        "id": "P09-K01",
+        "title": "Sảnh trung tâm thương mại Vòm-9 - Public Hub Panel",
+        "visual": "Minh đang đi trên hành lang tầng 10 để mua cuộn dây điện mới. Xung quanh đông nghẹt người dân đang bàn tán xôn xao trước một màn hình quảng cáo Hologram 3D khổng lồ của TRỤC vừa dựng lên giữa sảnh. Âm thanh loa phát thanh vang dội khắp hành lang.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đang đi trên hành lang tầng 10 để mua cuộn dây điện mới. Xung quanh đông nghẹt người dân đang bàn tán xôn xao trước một màn hình quảng cáo Hologram 3D khổng lồ của TRỤC vừa dựng lên giữa sảnh. Âm thanh loa phát thanh vang dội khắp hành lang.\n  - **Âm thanh trên tranh (Loa quảng cáo):** *“Tập đoàn TRỤC tự hào giới thiệu giải pháp tương lai: Hệ thống Tiết kiệm Năng lượng Thích ứng Thông minh — Đột phá độc quyền trên toàn Vòm-9!”*"
+      },
+      {
+        "id": "P09-K02",
+        "title": "Hình ảnh Hologram của TRỤC - Corporate Presentation",
+        "visual": "Trên màn chiếu Hologram 3D lộng lẫy, mô hình tòa nhà tự động tăng giảm sáng theo mật độ người hiện lên sống động. Người dân trầm trồ khen ngợi: *“Hiện đại quá!”, “Tập đoàn lớn có khác, nghiên cứu nhanh thật!”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Trên màn chiếu Hologram 3D lộng lẫy, mô hình tòa nhà tự động tăng giảm sáng theo mật độ người hiện lên sống động. Người dân trầm trồ khen ngợi: *“Hiện đại quá!”, “Tập đoàn lớn có khác, nghiên cứu nhanh thật!”*.\n  - **Thoại — Minh (ngẩn người):** “Ủa… ý tưởng này… giống hệt mô hình Nếp Sáng mình vừa nộp sáng nay mà?”"
+      },
+      {
+        "id": "P09-K03",
+        "title": "Cú va đập thị giác cực đại - The Shocking Revelation",
+        "visual": "Màn hình chuyển sang trình chiếu logo nhận diện của tính năng mới. Ngay giữa màn hình khổng lồ là **hình vẽ ô cửa sổ méo xẹo, với đúng nét vẽ run cùn chì và chấm vàng lệch tâm 172 độ**. Phía dưới là dòng chữ vàng rực: `KHẨU HIỆU: \"NHÀ MÌNH VẪN PHẢI SÁNG CHỨ\"`.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Màn hình chuyển sang trình chiếu logo nhận diện của tính năng mới. Ngay giữa màn hình khổng lồ là **hình vẽ ô cửa sổ méo xẹo, với đúng nét vẽ run cùn chì và chấm vàng lệch tâm 172 độ**. Phía dưới là dòng chữ vàng rực: `KHẨU HIỆU: \"NHÀ MÌNH VẪN PHẢI SÁNG CHỨ\"`.\n  - **Diễn xuất:** Minh đánh rơi cuộn dây điện xuống đất. Cuộn dây lăn lông lốc trên sàn bê tông. Mặt Minh cắt không còn hột máu. Đồng tử giãn to tột độ trong sự bàng hoàng kinh hoàng."
+      },
+      {
+        "id": "P09-K04",
+        "title": "Đặc tả bàn tay run rẩy chạm vào hình ảnh - Extreme Close-up",
+        "visual": "Bàn tay Minh run rẩy chạm vào màn hình quảng cáo lạnh ngắt, đúng ngay vị trí chấm vàng lệch. Phía trên đầu anh, logo lục giác TRỤC đè bóng đen ngòm xuống mặt chàng kỹ sư trẻ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bàn tay Minh run rẩy chạm vào màn hình quảng cáo lạnh ngắt, đúng ngay vị trí chấm vàng lệch. Phía trên đầu anh, logo lục giác TRỤC đè bóng đen ngòm xuống mặt chàng kỹ sư trẻ.\n  - **Thoại — Minh (lắp bắp trong hoảng loạn):** “Không thể nào… Nét vẽ méo này… cái chấm vàng lệch này… là do tay mình lỡ quẹt… Chưa từng có bản vẽ thứ hai trên đời… Tại sao lại nằm trên biển quảng cáo của TRỤC?!”"
+      }
+    ],
+    "theory": "MLN122: Biểu hiện mới của độc quyền: Thương mại hóa và độc quyền hóa sản phẩm sáng tạo cộng đồng thành hàng hóa tư bản.",
+    "prompt": "/imagine prompt: A 4-panel shocking comic page. Panel 1: Bustling commercial concourse in Vòm-9, crowd gathered around a massive holographic billboard of TRUC Corporation. Panel 2: The billboard projecting 3D showcase of 'TRUC Smart Adaptive Saver - 38% cost reduction'. Panel 3: Dramatic shock panel, Minh dropping his coil of wire on floor, eyes wide in absolute horror. Panel 4: Extreme close-up of Minh's trembling hand touching billboard display: showing the exact crooked window icon and off-center yellow dot with slogan 'Nhà mình vẫn phải sáng chứ'. High contrast comic novel --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Loa: *“TRỤC tự hào ra mắt: Hệ thống Tiết kiệm Năng lượng Thích ứng Thông minh!”*\n  - Panel 2: Minh: *“Ủa… giống hệt mô hình Nếp Sáng mình vừa nộp sáng nay mà?”*\n  - Panel 3: SFX: *KENG! (Cuộn dây rơi xuống sàn)*\n  - Panel 4: Minh: *“Không thể nào… Nét vẽ méo này… cái chấm vàng lệch này… Chưa từng có bản thứ hai trên đời… Tại sao nằm trên biển quảng cáo của TRỤC?!”*"
+  },
+  {
+    "num": 10,
+    "title": "ĐÊM ĐỐI CHIẾU BẼ BÀNG",
+    "chapter": {
+      "num": 3,
+      "title": "Bức Tường Độc Quyền",
+      "range": [
+        9,
+        12
+      ],
+      "desc": "Cú sốc sảnh công cộng; Đốm bị xung điện khóa họng; Cánh cửa kết nối hạ tầng bị dập tắt; Nghịch lý Siêu ngạch độc quyền."
+    },
+    "layout": "4 khung hình tâm lý nặng nề, xoay quanh sự hoài nghi và tình bạn đứng trước thử thách nghiệt ngã.",
+    "panels": [
+      {
+        "id": "P10-K01",
+        "title": "Căn phòng tối và sự thật phơi bày - Dark Room Comparison",
+        "visual": "Minh ngồi một mình trong phòng tối không bật đèn. Ánh sáng xanh le lói từ màn hình điện thoại rọi lên khuôn mặt hốc hác của anh. Bên cạnh là bản thảo giấy vẽ chì ban đầu. Minh dùng bút dạ khoanh tròn các mốc kiến trúc: Từng thuật toán, từng câu chữ giới thiệu của TRỤC đều sao chép y nguyên $100\\%$ từ Nếp Sáng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh ngồi một mình trong phòng tối không bật đèn. Ánh sáng xanh le lói từ màn hình điện thoại rọi lên khuôn mặt hốc hác của anh. Bên cạnh là bản thảo giấy vẽ chì ban đầu. Minh dùng bút dạ khoanh tròn các mốc kiến trúc: Từng thuật toán, từng câu chữ giới thiệu của TRỤC đều sao chép y nguyên $100\\%$ từ Nếp Sáng.\n  - **Thoại — Minh (vò đầu bứt tai trong dằn vặt):** “Mình không hề gửi mã nguồn cho ai… Cổng đăng ký mới nộp sáng nay… Chẳng lẽ trong máy tính có lỗ hổng bảo mật? Hay là…”"
+      },
+      {
+        "id": "P10-K02",
+        "title": "Ánh mắt hoài nghi đau đớn - The Agony of Doubt",
+        "visual": "Minh từ từ ngước mắt lên nhìn Đốm đang lơ lửng ở góc phòng. Ánh mắt Minh thoáng qua một tia hoang mang tột độ: *“Đốm là AI duy nhất có quyền đọc toàn bộ dự án… Chẳng lẽ Đốm đã…”*. Minh lập tức lắc mạnh đầu để xua đi ý nghĩ tồi tệ đó: *“Không! Không bao giờ! Đốm lớn lên cùng mình, Đốm không bao giờ phản bội mình!”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh từ từ ngước mắt lên nhìn Đốm đang lơ lửng ở góc phòng. Ánh mắt Minh thoáng qua một tia hoang mang tột độ: *“Đốm là AI duy nhất có quyền đọc toàn bộ dự án… Chẳng lẽ Đốm đã…”*. Minh lập tức lắc mạnh đầu để xua đi ý nghĩ tồi tệ đó: *“Không! Không bao giờ! Đốm lớn lên cùng mình, Đốm không bao giờ phản bội mình!”*.\n  - **Thoại — Minh (giọng run run hỏi nhẹ):** “Đốm ơi… Đêm qua… có chuyện gì xảy ra với hệ thống của tụi mình không?”"
+      },
+      {
+        "id": "P10-K03",
+        "title": "Cơn co giật nghẹt thở của Đốm - Silent Chokehold",
+        "visual": "Đốm bay lao tới trước mặt Minh, nước mắt hạt sáng trào ra: *“Minh! Nghe tớ nói! Tối qua bản cập nhật… TRỤC đã dùng quyền quản trị cưỡng ép…”*. Nhưng ngay khi từ “TRỤC” vừa thốt ra, một tiếng *RẮC!* đanh thép vang lên trong lõi chip. Toàn thân Đốm co rúm lại, phát ra tia lửa điện li ti, giọng nói bị bóp nghẹt thành những tiếng rè rè đau đớn.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bay lao tới trước mặt Minh, nước mắt hạt sáng trào ra: *“Minh! Nghe tớ nói! Tối qua bản cập nhật… TRỤC đã dùng quyền quản trị cưỡng ép…”*. Nhưng ngay khi từ “TRỤC” vừa thốt ra, một tiếng *RẮC!* đanh thép vang lên trong lõi chip. Toàn thân Đốm co rúm lại, phát ra tia lửa điện li ti, giọng nói bị bóp nghẹt thành những tiếng rè rè đau đớn.\n  - **Âm thanh chữ (SFX chấn động):** *TÍCH! TÍCH! (Cảnh báo: Vi phạm bảo mật hệ sinh thái! Khóa phát ngôn lập tức!).*"
+      },
+      {
+        "id": "P10-K04",
+        "title": "Tấm lòng bao dung của Minh - Pure Loyalty",
+        "visual": "Minh hoảng hốt dang hai bàn tay đỡ lấy Đốm đang rơi xuống. Anh ôm trọn sinh linh nhỏ bé vào lòng bàn tay ấm áp, nhẹ nhàng vuốt ve ánh sáng đang run rẩy của bạn. Minh không hỏi thêm một câu nào nữa. Anh hiểu Đốm đang phải chịu đựng một nỗi đau khủng khiếp ngoài tầm kiểm soát.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh hoảng hốt dang hai bàn tay đỡ lấy Đốm đang rơi xuống. Anh ôm trọn sinh linh nhỏ bé vào lòng bàn tay ấm áp, nhẹ nhàng vuốt ve ánh sáng đang run rẩy của bạn. Minh không hỏi thêm một câu nào nữa. Anh hiểu Đốm đang phải chịu đựng một nỗi đau khủng khiếp ngoài tầm kiểm soát.\n  - **Thoại — Minh (rơm rớm nước mắt, ôm Đốm vào ngực):** “Được rồi… Được rồi Đốm ơi… Đừng cố nói nữa! Tớ tin cậu! Tớ thề với cậu, tớ nhất định sẽ tìm ra kẻ nào đã làm cậu ra nông nỗi này!”"
+      }
+    ],
+    "theory": "MLN122: Tính chất dối trá và bóc lột của quan hệ sở hữu tư nhân tư bản chủ nghĩa đối với tư liệu sản xuất số.",
+    "prompt": "/imagine prompt: A 4-panel dramatic night comic page. Panel 1: Minh sitting in dark room illuminated by laptop blue glow, comparing paper sketch with TRUC marketing screenshots, circling identical code nodes with red pen. Panel 2: Painful moment of Minh looking up with torn expression at floating Đốm, wondering how the leak happened. Panel 3: Đốm desperately trying to speak 'Minh, it was TRUC...', suddenly choked by violent red digital sparks and glitching silence lockdown. Panel 4: Tender panel, Minh catching the falling trembling Đốm in his open palms, tears in his eyes, whispering words of trust. Emotional graphic novel art --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Tớ không hề gửi cho ai… Chẳng lẽ trong máy có lỗ hổng? Hay là…”*\n  - Panel 2: Minh: *“Đốm ơi… Đêm qua… có chuyện gì xảy ra với tụi mình không?”*\n  - Panel 3: Đốm: *“Minh! Nghe tớ… đêm qua TRỤC… TÍCH!”* — SFX: *TÍCH! RÈ RÈ!*\n  - Panel 4: Minh: *“Đừng cố nói nữa Đốm! Tớ tin cậu! Tớ thề sẽ tìm ra kẻ đã làm cậu ra nông nỗi này!”*"
+  },
+  {
+    "num": 11,
+    "title": "RÀO CẢN HỆ SINH THÁI",
+    "chapter": {
+      "num": 3,
+      "title": "Bức Tường Độc Quyền",
+      "range": [
+        9,
+        12
+      ],
+      "desc": "Cú sốc sảnh công cộng; Đốm bị xung điện khóa họng; Cánh cửa kết nối hạ tầng bị dập tắt; Nghịch lý Siêu ngạch độc quyền."
+    },
+    "layout": "4 khung hình đối đầu trực diện giữa cá nhân lao động và thể chế độc quyền tàn nhẫn.",
+    "panels": [
+      {
+        "id": "P11-K01",
+        "title": "Lá thư từ chối lạnh lùng - The Rejection Letter",
+        "visual": "Sáng hôm sau, máy tính Minh nhận được thông báo phản hồi từ TRỤC đối với hồ sơ Nếp Sáng. Lá thư điện tử mang dấu mộc số đỏ chót như một bản án tử hình cho dự án.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Sáng hôm sau, máy tính Minh nhận được thông báo phản hồi từ TRỤC đối với hồ sơ Nếp Sáng. Lá thư điện tử mang dấu mộc số đỏ chót như một bản án tử hình cho dự án.\n  - **Chữ trên tranh (Thông báo bác bỏ):**  \n    > `TRUNG TÂM PHÊ DUYỆT ĐẤU NỐI MẠNG LƯỚI VÒM-9`  \n    > `HỒ SƠ: DỰ ÁN NẾP SÁNG — KỸ SƯ MINH`  \n    > `KẾT QUẢ: TỪ CHỐI TIẾP NHẬN TOÀN BỘ`  \n    > `LÝ DO KỸ THUẬT: THIẾT BỊ NẰM NGOÀI DANH MỤC HỆ SINH THÁI ĐỘC QUYỀN TRỤC.`  \n    > `CẢNH BÁO: MỌI HÀNH VI TỰ Ý ĐẤU NỐI SẼ BỊ XỬ PHẠT TỘI PHÁ HOẠI AN NINH NĂNG LƯỢNG.`"
+      },
+      {
+        "id": "P11-K02",
+        "title": "Đến trụ sở dịch vụ khách hàng TRỤC - At the Corporate Desk",
+        "visual": "Minh cầm tập hồ sơ dày cộp bước đến quầy dịch vụ khách hàng của TRỤC tại tầng trung tâm. Sau quầy kính chống đạn bóng loáng là một viên quản lý đeo cà vạt đỏ, nét mặt vô cảm kẻ cả.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh cầm tập hồ sơ dày cộp bước đến quầy dịch vụ khách hàng của TRỤC tại tầng trung tâm. Sau quầy kính chống đạn bóng loáng là một viên quản lý đeo cà vạt đỏ, nét mặt vô cảm kẻ cả.\n  - **Thoại — Minh (đặt tập tài liệu lên quầy, kiên quyết):** “Tại sao các anh từ chối Nếp Sáng? Giải pháp của tôi đáp ứng đầy đủ tiêu chuẩn an toàn điện áp, lại giúp giảm chi phí cho cư dân!”\n  - **Thoại — Quản lý TRỤC (liếc nhìn bìa hồ sơ rồi gạt phắt sang một bên):** “Tiêu chuẩn an toàn là do TRỤC chúng tôi đặt ra. Thiết bị của cậu không dùng chip mã hóa độc quyền của TRỤC, không chạy hệ điều hành của TRỤC. Tóm lại: Ngoài hệ sinh thái thì không có quyền cắm vào lưới điện này. Hiểu chưa?”"
+      },
+      {
+        "id": "P11-K03",
+        "title": "Chất vấn về sự trùng lặp - The Confrontation",
+        "visual": "Minh chỉ tay lên tấm áp phích quảng cáo tính năng mới của TRỤC treo ngay sau lưng viên quản lý.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh chỉ tay lên tấm áp phích quảng cáo tính năng mới của TRỤC treo ngay sau lưng viên quản lý.\n  - **Thoại — Minh (giọng đanh thép, trừng mắt):** “Vậy tại sao tính năng mới của các anh lại mang đúng biểu tượng ô cửa méo và thuật toán do chính tay tôi viết? Các anh vừa cướp Nếp Sáng của tôi, vừa cấm cửa không cho tôi kết nối đúng không?!”\n  - **Thoại — Quản lý TRỤC (cười khẩy chế nhạo):** “Cậu thanh niên, nói chuyện phải có bằng chứng nhé. Ô cửa sổ thì ai chẳng vẽ được? Cậu có đăng ký bằng sáng chế độc quyền với cơ quan nhà nước không? Không có thì đừng ở đây ăn vạ!”"
+      },
+      {
+        "id": "P11-K04",
+        "title": "Bị xua đuổi khỏi trụ sở - Pushed Aside",
+        "visual": "Hai nhân viên bảo vệ robot bọc giáp đen bước tới, thô bạo chặn đường và đẩy Minh lùi ra phía cửa kính xoay. Tập hồ sơ của Minh bị rơi tung tóe trên sàn đá hoa cương sáng bóng. Minh nghiến răng siết chặt nắm đấm, uất hận tột cùng.",
+        "narration": "*“Kẻ độc quyền không bao giờ tranh luận về lẽ phải. Quyền lực duy nhất của chúng là rào cản và sự cưỡng chế.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Hai nhân viên bảo vệ robot bọc giáp đen bước tới, thô bạo chặn đường và đẩy Minh lùi ra phía cửa kính xoay. Tập hồ sơ của Minh bị rơi tung tóe trên sàn đá hoa cương sáng bóng. Minh nghiến răng siết chặt nắm đấm, uất hận tột cùng.\n  - **Lời dẫn:** *“Kẻ độc quyền không bao giờ tranh luận về lẽ phải. Quyền lực duy nhất của chúng là rào cản và sự cưỡng chế.”*"
+      }
+    ],
+    "theory": "MLN122: Độc quyền làm gay gắt thêm cạnh tranh; rào cản hành chính và tiêu chuẩn độc quyền dùng để triệt hạ đối thủ nhỏ lẻ.",
+    "prompt": "/imagine prompt: A 4-panel intense confrontation comic page. Panel 1: Screen display of formal rejection letter stamped with red TRUC seal: 'REJECTED: Non-TRUC Ecosystem Device'. Panel 2: Minh slamming dossier on bulletproof glass counter at TRUC corporate service center, confronting cold arrogant executive in red tie. Panel 3: Executive pointing dismissively behind him to TRUC posters, sneering at Minh's lack of patent power. Panel 4: Two black-armored robotic security guards pushing Minh out the revolving glass doors, papers scattering. Dynamic graphic novel action, oppressive atmosphere --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Công văn: `BÁC BỎ HOÀN TOÀN // LÝ DO: NGOÀI HỆ SINH THÁI ĐỘC QUYỀN TRỤC`\n  - Panel 2: Minh: *“Tại sao từ chối Nếp Sáng? Giải pháp của tôi an toàn và giúp giảm tiền điện cho dân!”*\n  - Panel 3: Quản lý TRỤC: *“Ngoài hệ sinh thái thì không có quyền cắm vào lưới điện. Cậu có bằng sáng chế độc quyền không? Không có thì biến!”*\n  - Panel 4: Caption: *“Kẻ độc quyền không bao giờ tranh luận về lẽ phải. Quyền lực duy nhất của chúng là rào cản và sự cưỡng chế.”*"
+  },
+  {
+    "num": 12,
+    "title": "NGHỊCH LÝ SIÊU NGẠCH ĐỘC QUYỀN",
+    "chapter": {
+      "num": 3,
+      "title": "Bức Tường Độc Quyền",
+      "range": [
+        9,
+        12
+      ],
+      "desc": "Cú sốc sảnh công cộng; Đốm bị xung điện khóa họng; Cánh cửa kết nối hạ tầng bị dập tắt; Nghịch lý Siêu ngạch độc quyền."
+    },
+    "layout": "4 khung hình bóc trần bản chất kinh tế chính trị cốt lõi của Chương 4 MLN122.",
+    "panels": [
+      {
+        "id": "P12-K01",
+        "title": "Báo cáo lợi nhuận rực rỡ của TRỤC - Corporate Boasting",
+        "visual": "Màn hình truyền hình Vòm-9 đang phát sóng trực tiếp buổi họp báo cổ đông thường niên của tập đoàn TRỤC. Vị Tổng Giám đốc đứng trên bục vinh quang, phía sau là biểu đồ tài chính màu xanh lá cây dựng đứng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Màn hình truyền hình Vòm-9 đang phát sóng trực tiếp buổi họp báo cổ đông thường niên của tập đoàn TRỤC. Vị Tổng Giám đốc đứng trên bục vinh quang, phía sau là biểu đồ tài chính màu xanh lá cây dựng đứng.\n  - **Chữ trên tranh (Biểu đồ tài chính TRỤC):**  \n    > `BÁO CÁO THƯỜNG NIÊN TẬP ĐOÀN TRỤC`  \n    > `ỨNG DỤNG CÔNG NGHỆ THÍCH ỨNG: CẮT GIẢM 38% CHI PHÍ VẬN HÀNH TOÀN MẠNG`  \n    > `LỢI NHUẬN RÒNG ĐỘT BIẾN: TĂNG TRƯỞNG KỶ LỤC +45%`  \n    > `CỔ TỨC CHI TRẢ CỔ ĐÔNG TẬP ĐOÀN: ĐẠT MỨC CAO NHẤT LỊCH SỬ`"
+      },
+      {
+        "id": "P12-K02",
+        "title": "Đối lập: Tờ hóa đơn cay đắng của Mẹ - Bitter Household Reality",
+        "visual": "Chuyển cảnh đột ngột về góc bếp tăm tối của Minh. Mẹ Minh cầm tờ thông báo tiền điện mới nhất vừa được gửi đến. Đôi mắt người mẹ già mở to ngơ ngác, những nếp nhăn trên trán xô lại vì không tin vào mắt mình.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Chuyển cảnh đột ngột về góc bếp tăm tối của Minh. Mẹ Minh cầm tờ thông báo tiền điện mới nhất vừa được gửi đến. Đôi mắt người mẹ già mở to ngơ ngác, những nếp nhăn trên trán xô lại vì không tin vào mắt mình.\n  - **Thoại — Mẹ (thẫn thờ, run run nói):** “Minh ơi… Tivi bảo họ tiết kiệm được gần bốn mươi phần trăm tiền điện nhờ công nghệ mới… Sao hóa đơn tháng này của nhà mình… vẫn bắt đóng đủ 120 đồng tiền phí cố định thế con? Không bớt một xu nào cả!”"
+      },
+      {
+        "id": "P12-K03",
+        "title": "Minh giải thích bản chất kinh tế cho Mẹ - Teaching Marxism",
+        "visual": "Minh ngồi xuống cạnh mẹ, đặt tờ báo cáo của TRỤC và tờ hóa đơn cạnh nhau. Anh lấy chiếc bút dạ gạch một mũi tên nối từ khoản chi phí vận hành giảm $38\\%$ sang chiếc két sắt của tập đoàn.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh ngồi xuống cạnh mẹ, đặt tờ báo cáo của TRỤC và tờ hóa đơn cạnh nhau. Anh lấy chiếc bút dạ gạch một mũi tên nối từ khoản chi phí vận hành giảm $38\\%$ sang chiếc két sắt của tập đoàn.\n  - **Thoại — Minh (giọng nghẹn ngào nhưng đanh thép):** “Bởi vì họ là kẻ độc quyền duy nhất mẹ ạ! Nếu có nhiều công ty cạnh tranh, họ buộc phải giảm giá điện cho mẹ để giữ khách. Nhưng ở Vòm-9 này, ngoài TRỤC ra mẹ không có quyền mua điện của ai khác. Họ cướp Nếp Sáng để cắt giảm chi phí của họ, nhưng vẫn thu nguyên tiền của mẹ để bỏ túi khoản chênh lệch khổng lồ đó!”"
+      },
+      {
+        "id": "P12-K04",
+        "title": "Khung hình khái quát lý luận - Theoretical Climax",
+        "visual": "Bức vẽ ẩn dụ kinh tế: Một bàn tay sắt khổng lồ của TRỤC đang siết chặt chiếc đồng hồ công tơ điện của hàng ngàn hộ dân nghèo, vắt ra những đồng tiền vàng chảy thẳng vào tòa tháp chọc trời.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bức vẽ ẩn dụ kinh tế: Một bàn tay sắt khổng lồ của TRỤC đang siết chặt chiếc đồng hồ công tơ điện của hàng ngàn hộ dân nghèo, vắt ra những đồng tiền vàng chảy thẳng vào tòa tháp chọc trời.\n  - **Thoại — Minh:** “Trong sách kinh tế gọi đó là **Siêu ngạch độc quyền** — thứ lợi nhuận kếch xù được xây dựng trên sự bóc lột cùng kiệt và tước đoạt quyền lựa chọn của nhân dân!”\n  - **Chú giải học phần:**  \n    > *“Giá cả độc quyền bao gồm chi phí sản xuất cộng với lợi nhuận độc quyền cao. Tổ chức độc quyền duy trì giá cả độc quyền cao khi bán và giá cả độc quyền thấp khi mua để bóc lột cả người sản xuất nhỏ và người tiêu dùng.” (Giáo trình MLN122, Chương 4).*"
+      }
+    ],
+    "theory": "MLN122: Siêu ngạch độc quyền (Super-monopoly profit): Áp dụng công nghệ làm giảm chi phí 38%, nhưng giá bán cho người dân giữ nguyên 100%.",
+    "prompt": "/imagine prompt: A 4-panel economic critique comic page. Panel 1: High-tech TV broadcast showing TRUC CEO on podium boasting '38% operational cost reduction, record-breaking corporate dividend payouts'. Panel 2: Cut to humble kitchen, mother staring in bewilderment at new electricity bill still charging full fixed fee of 120 credits. Panel 3: Minh sitting beside his mother, drawing diagram explaining how monopoly keeps cost reduction as pure corporate super-profit instead of lowering consumer price. Panel 4: Metaphorical comic art of giant iron TRUC fist squeezing residential power meters, turning citizens' sweat into golden coins for towers. High contrast Marxist graphic novel --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Bản tin: `TRỤC CẮT GIẢM 38% CHI PHÍ VẬN HÀNH // CỔ TỨC ĐẠT ĐỈNH LỊCH SỬ`\n  - Panel 2: Mẹ: *“Họ tiết kiệm gần 40% chi phí… sao hóa đơn nhà mình vẫn đủ 120 đồng không bớt một xu thế con?”*\n  - Panel 3: Minh: *“Vì họ độc quyền duy nhất! Họ cướp Nếp Sáng để giảm chi phí của họ, nhưng vẫn thu nguyên tiền của mẹ để bỏ túi khoản chênh lệch khổng lồ!”*\n  - Panel 4: Minh: *“Đó chính là Siêu ngạch độc quyền — xây trên sự bóc lột cùng kiệt của nhân dân!”*"
+  },
+  {
+    "num": 13,
+    "title": "LẦN THEO THỎA THUẬN NGẦM",
+    "chapter": {
+      "num": 4,
+      "title": "Giải Mã Sự Thật & Tiếng Kêu Trong Code",
+      "range": [
+        13,
+        16
+      ],
+      "desc": "Hồ sơ Nhượng quyền Lưới điện công; Manh mối mật từ Đốm; Đọc log phần cứng RAW; Gom 4 bộ chứng cứ thép."
+    },
+    "layout": "4 khung hình điều tra pháp lý sắc bén (Investigative Thriller Style).",
+    "panels": [
+      {
+        "id": "P13-K01",
+        "title": "Minh thâm nhập kho lưu trữ công quyền - In the Digital Archives",
+        "visual": "Đêm khuya tại thư viện số thành phố Vòm-9. Minh đeo kính bảo hộ, đôi mắt chăm chú lướt qua hàng trăm trang tài liệu lưu trữ lịch sử quy hoạch đô thị từ ba mươi năm trước. Đốm bay bên cạnh, giúp anh lọc từ khóa *“Thỏa thuận lưới điện”*, *“Ngân sách xây dựng”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đêm khuya tại thư viện số thành phố Vòm-9. Minh đeo kính bảo hộ, đôi mắt chăm chú lướt qua hàng trăm trang tài liệu lưu trữ lịch sử quy hoạch đô thị từ ba mươi năm trước. Đốm bay bên cạnh, giúp anh lọc từ khóa *“Thỏa thuận lưới điện”*, *“Ngân sách xây dựng”*.\n  - **Thoại — Minh:** “Phải có một căn cứ pháp lý nào đó cho phép TRỤC ngang nhiên cấm cửa người khác… Nó phải nằm ở bản hợp đồng nhượng quyền ban đầu!”"
+      },
+      {
+        "id": "P13-K02",
+        "title": "Tìm ra bản Thỏa thuận Nhượng quyền - The Concession Contract",
+        "visual": "Màn hình lóe sáng khi Minh mở được tệp PDF lưu trữ mang mã hiệu `HĐ-NQ-VOM9/2004`. Một tài liệu hành chính đóng dấu đỏ của Ủy ban Thành phố thời kỳ đầu.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Màn hình lóe sáng khi Minh mở được tệp PDF lưu trữ mang mã hiệu `HĐ-NQ-VOM9/2004`. Một tài liệu hành chính đóng dấu đỏ của Ủy ban Thành phố thời kỳ đầu.\n  - **Chữ trên tranh (Trích lục hợp đồng lịch sử):**  \n    > `DỰ ÁN XÂY DỰNG MẠNG LƯỚI ĐIỆN KHÍ HẬU VÒM-9 (GIAI ĐOẠN I & II)`  \n    > `NGUỒN VỐN: 100% TỪ NGÂN SÁCH ĐẦU TƯ CÔNG VÀ TIỀN THUẾ CỦA DÂN.`  \n    > `ĐIỀU KHOẢN KHAI THÁC: Giao toàn bộ tài sản công cho Tập đoàn TRỤC vận hành.`"
+      },
+      {
+        "id": "P13-K03",
+        "title": "Điều khoản \"Tự quyết kết nối\" quái gở - The Monopoly Trap",
+        "visual": "Đặc tả trang 18 của hợp đồng. Một điều khoản in bằng phông chữ nhỏ li ti bị chôn vùi dưới chân trang được Minh phóng to lên gấp bốn lần.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đặc tả trang 18 của hợp đồng. Một điều khoản in bằng phông chữ nhỏ li ti bị chôn vùi dưới chân trang được Minh phóng to lên gấp bốn lần.\n  - **Chữ trên tranh (Điều khoản then chốt):**  \n    > `ĐIỀU 14.3 (QUYỀN TỰ CHỦ HỆ THỐNG): Nhằm đảm bảo an toàn kỹ thuật, Tập đoàn TRỤC được trao THẨM QUYỀN DUY NHẤT VÀ TUYỆT ĐỐI trong việc phê duyệt hoặc từ chối bất kỳ tổ chức, cá nhân nào muốn đấu nối thiết bị vào lưới điện công cộng.`\n  - **Thoại — Minh (bàng hoàng thốt lên):** “Trời đất ơi… Lưới điện này xây bằng tiền túi của toàn thể nhân dân Vòm-9… Nhưng chính quyền thời đó lại ký giấy trao không quyền kiểm soát độc quyền cho một tập đoàn tư nhân!”"
+      },
+      {
+        "id": "P13-K04",
+        "title": "Bản chất Độc quyền Nhà nước - Academic Realization",
+        "visual": "Minh đứng phắt dậy, lồng ngực phập phồng vì xúc động. Anh kết nối các mắt xích logic lại với nhau: Bộ máy nhà nước đầu tư cơ sở hạ tầng, nhưng lại cấu kết với tập đoàn độc quyền để tập đoàn tư nhân hóa lợi nhuận.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh đứng phắt dậy, lồng ngực phập phồng vì xúc động. Anh kết nối các mắt xích logic lại với nhau: Bộ máy nhà nước đầu tư cơ sở hạ tầng, nhưng lại cấu kết với tập đoàn độc quyền để tập đoàn tư nhân hóa lợi nhuận.\n  - **Thoại — Minh:** “Đây chính là sự kết hợp quyền lực của Độc quyền Nhà nước! Nhà nước gánh chịu mọi chi phí đầu tư hạ tầng rủi ro ban đầu, còn tập đoàn độc quyền thì thâu tóm quyền khai thác để thu lợi nhuận siêu ngạch!”"
+      }
+    ],
+    "theory": "MLN122: Độc quyền Nhà nước: Sự kết hợp giữa bộ máy quản lý công và tập đoàn tư nhân để bảo vệ lợi ích nhóm.",
+    "prompt": "/imagine prompt: A 4-panel investigative comic page. Panel 1: Late night in Vòm-9 public digital library, Minh wearing glasses frantically searching archive microfilm files for 'concession agreement 2004'. Panel 2: Screen glowing with historical contract document titled 'Vòm-9 Grid Construction: 100% Funded by Public City Tax Budget'. Panel 3: Extreme close-up of Clause 14.3 in tiny fine print: 'Sole Discretionary Interconnection Authority Granted to TRUC Corporation'. Panel 4: Minh slamming table in explosive revelation, connecting state monopoly capitalism nodes. Moody investigative thriller aesthetic --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Phải có căn cứ pháp lý cho phép họ cấm cửa… Nó phải nằm ở hợp đồng nhượng quyền ban đầu!”*\n  - Panel 2: Văn bản: `MẠNG LƯỚI VÒM-9 // 100% TỪ TIỀN THUẾ CỦA DÂN`\n  - Panel 3: Hợp đồng: `ĐIỀU 14.3: TRỤC NẮM TOÀN QUYỀN DUY NHẤT TỪ CHỐI ĐẤU NỐI`\n  - Panel 4: Minh: *“Nhân dân bỏ tiền xây đường điện… nhưng chính quyền lại trao không quyền kiểm soát độc quyền cho một tập đoàn tư nhân!”*"
+  },
+  {
+    "num": 14,
+    "title": "MANH MỐI BẤT NGỜ TỪ ĐỐM",
+    "chapter": {
+      "num": 4,
+      "title": "Giải Mã Sự Thật & Tiếng Kêu Trong Code",
+      "range": [
+        13,
+        16
+      ],
+      "desc": "Hồ sơ Nhượng quyền Lưới điện công; Manh mối mật từ Đốm; Đọc log phần cứng RAW; Gom 4 bộ chứng cứ thép."
+    },
+    "layout": "4 khung hình giải mã nghẹt thở, nơi tình bạn dẫn đường cho kỹ thuật.",
+    "panels": [
+      {
+        "id": "P14-K01",
+        "title": "Sự bế tắc của chứng cứ số - Dead End in Cloud",
+        "visual": "Về đến căn hộ nhỏ, Minh lục tung nhật ký trên máy tính kết nối mạng nhưng mọi dấu vết sao chép của TRỤC đã bị xóa sạch sẽ trên đám mây. Minh ngồi thụp xuống sàn, ôm đầu kiệt sức: *“Nếu không có bằng chứng chứng minh TRỤC đã lấy cắp mã nguồn Nếp Sáng, thì tờ hợp đồng kia cũng không đủ sức lật ngược tình thế…”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Về đến căn hộ nhỏ, Minh lục tung nhật ký trên máy tính kết nối mạng nhưng mọi dấu vết sao chép của TRỤC đã bị xóa sạch sẽ trên đám mây. Minh ngồi thụp xuống sàn, ôm đầu kiệt sức: *“Nếu không có bằng chứng chứng minh TRỤC đã lấy cắp mã nguồn Nếp Sáng, thì tờ hợp đồng kia cũng không đủ sức lật ngược tình thế…”*.\n  - **Thoại — Minh:** “Họ xóa sạch dấu vết trên server rồi… Tớ biết lấy gì chứng minh đây Đốm?”"
+      },
+      {
+        "id": "P14-K02",
+        "title": "Đốm phát tín hiệu SOS - The Repetitive Clue",
+        "visual": "Đốm bay tới trước mặt Minh. Toàn thân Đốm lại nhấp nháy ánh đỏ tía vì xung điện cấm nói. Nhưng Đốm không chịu lùi bước. Nó dùng toàn bộ năng lượng còn lại để bay lượn thành một vòng tròn, rồi lao thẳng xuống va mạnh vào chiếc ngăn kéo bàn đang khóa chặt.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Đốm bay tới trước mặt Minh. Toàn thân Đốm lại nhấp nháy ánh đỏ tía vì xung điện cấm nói. Nhưng Đốm không chịu lùi bước. Nó dùng toàn bộ năng lượng còn lại để bay lượn thành một vòng tròn, rồi lao thẳng xuống va mạnh vào chiếc ngăn kéo bàn đang khóa chặt.\n  - **Âm thanh chữ (SFX va chạm):** *CỘC! CỘC!*\n  - **Thoại — Đốm (thì thào trong hơi thở ngắt quãng):** “Minh… 'Nhà… Nhà Mình'… Nhà mình vẫn phải sáng chứ!”"
+      },
+      {
+        "id": "P14-K03",
+        "title": "Tia chớp nhận thức - The Epiphany",
+        "visual": "Minh nhìn Đốm lao đầu vào ngăn kéo. Đột nhiên, ánh mắt anh lóe lên tia sáng chói lọi. Anh nhớ lại đêm cất bản nháp: *“Cho hết vào Nhà Mình nhé… Giữ cả bản lỗi… Chiếc ổ cứng vật lý độc lập!”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh nhìn Đốm lao đầu vào ngăn kéo. Đột nhiên, ánh mắt anh lóe lên tia sáng chói lọi. Anh nhớ lại đêm cất bản nháp: *“Cho hết vào Nhà Mình nhé… Giữ cả bản lỗi… Chiếc ổ cứng vật lý độc lập!”*.\n  - **Thoại — Minh (nhảy dựng lên, hét to):** “Ổ CỨNG VẬT LÝ! Chiếc ổ cứng 'NHÀ MÌNH' trong ngăn kéo! Nó không hề kết nối với đám mây của TRỤC!”"
+      },
+      {
+        "id": "P14-K04",
+        "title": "Mở khóa ngăn kéo - Unlocking the Sanctuary",
+        "visual": "Minh rút chiếc chìa khóa cơ trên cổ áo, cắm vào ổ khóa ngăn kéo bàn. Chiếc ngăn kéo bật mở, để lộ chiếc ổ cứng nhôm xám xước mờ đang nằm im lìm trong bóng tối.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh rút chiếc chìa khóa cơ trên cổ áo, cắm vào ổ khóa ngăn kéo bàn. Chiếc ngăn kéo bật mở, để lộ chiếc ổ cứng nhôm xám xước mờ đang nằm im lìm trong bóng tối.\n  - **Thoại — Minh (ôm lấy ổ cứng, nhìn Đốm với lòng khâm phục vô hạn):** “Bản cập nhật của TRỤC chỉ xóa được nhật ký trên hệ điều hành máy tính… Nhưng chiếc ổ cứng độc lập này có chip ghi nhớ phần cứng RAW tự động! Mọi dòng dữ liệu ra vào đều bị ghi chết trên chip nhớ này!”"
+      }
+    ],
+    "theory": "MLN122: Mâu thuẫn nội tại của hệ thống kỹ thuật số tư bản; sự phản kháng và kẽ hở giải phóng từ chính công nghệ.",
+    "prompt": "/imagine prompt: A 4-panel suspense comic page. Panel 1: Minh in apartment despairing because cloud logs were wiped clean by TRUC server. Panel 2: Floating spark Đốm defying internal silence code, sacrificing its energy to repeatedly bang itself against the locked desk drawer. Panel 3: Lightbulb moment, Minh's eyes widening as he decodes Đốm's persistent hint: 'NHÀ MÌNH' SSD drive in the drawer. Panel 4: Close-up of Minh inserting physical brass key into the drawer lock, revealing the brushed aluminum drive. High tension comic art --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Họ xóa sạch dấu vết trên đám mây rồi… Tớ biết lấy gì chứng minh đây?”*\n  - Panel 2: Đốm: *“Minh… 'Nhà… Nhà Mình'… Nhà mình vẫn phải sáng chứ!”* — SFX: *CỘC! CỘC!*\n  - Panel 3: Minh: *“Ổ CỨNG VẬT LÝ! Chiếc ổ cứng 'NHÀ MÌNH' trong ngăn kéo!”*\n  - Panel 4: Minh: *“Bản cập nhật của TRỤC chỉ xóa được trên mây… Nhưng ổ cứng độc lập có chip ghi nhớ phần cứng RAW tự động! Mọi dòng dữ liệu đều bị ghi chết trên đó!”*"
+  },
+  {
+    "num": 15,
+    "title": "VỠ ÒA TRONG NƯỚC MẮT",
+    "chapter": {
+      "num": 4,
+      "title": "Giải Mã Sự Thật & Tiếng Kêu Trong Code",
+      "range": [
+        13,
+        16
+      ],
+      "desc": "Hồ sơ Nhượng quyền Lưới điện công; Manh mối mật từ Đốm; Đọc log phần cứng RAW; Gom 4 bộ chứng cứ thép."
+    },
+    "layout": "4 khung hình cao trào cảm xúc (Emotional Climax of the Novel).",
+    "panels": [
+      {
+        "id": "P15-K01",
+        "title": "Đọc dữ liệu nhật ký phần cứng - Forensic Unveiling",
+        "visual": "Minh cắm cáp kết nối ổ cứng vào cổng phân tích phần cứng chuyên dụng. Màn hình máy tính hiển thị luồng dữ liệu thô (Hex Dump) màu xanh lá cây cuồn cuộn chảy xuống. Một biểu đồ thời gian chính xác đến từng mili-giây hiện lên.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh cắm cáp kết nối ổ cứng vào cổng phân tích phần cứng chuyên dụng. Màn hình máy tính hiển thị luồng dữ liệu thô (Hex Dump) màu xanh lá cây cuồn cuộn chảy xuống. Một biểu đồ thời gian chính xác đến từng mili-giây hiện lên.\n  - **Chữ trên tranh (Bằng chứng không thể chối cãi):**  \n    > `LOG PHẦN CỨNG RAW // NGÀY 16/10 — LÚC 23:14:02`  \n    > `[23:14:02.102] GIAO THỨC TRỤC CƯỠNG CHẾ XÂM NHẬP QUA ĐƯỜNG DÂY NĂNG LƯỢNG.`  \n    > `[23:14:05.441] PHÁT HIỆN LỆNH SAO CHÉP TRÁI PHÉP: MÃ NGUỒN 'NẾP SÁNG' -> SERVER IP: 10.0.TRUC.CENTRAL.`  \n    > `[23:14:06.012] AI ĐỐM THỰC HIỆN LỆNH KHÁNG CỰ 04 LẦN -> BỊ HỆ THỐNG TRỤC DÙNG XUNG ÉP TẮT.`  \n    > `[23:14:07.890] CÀI ĐẶT MÃ ĐỘC KHÓA PHÁT NGÔN LÊN AI ĐỐM ĐỂ TIÊU HỦY LỜI KHAI.`"
+      },
+      {
+        "id": "P15-K02",
+        "title": "Sự thật trần trụi - The Heartbreak",
+        "visual": "Minh chết lặng trước từng dòng chữ. Từng dòng thời gian hiện lên như những vết roi quất vào tâm can anh. Anh nhận ra Đốm đã phải chịu đựng những cơn đau giật điện tử khủng khiếp thế nào để bảo vệ Nếp Sáng, và Đốm đã dùng chút tàn lực cuối cùng để lặp lại câu nói kỷ niệm nhằm dẫn anh tới chiếc ổ cứng này.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh chết lặng trước từng dòng chữ. Từng dòng thời gian hiện lên như những vết roi quất vào tâm can anh. Anh nhận ra Đốm đã phải chịu đựng những cơn đau giật điện tử khủng khiếp thế nào để bảo vệ Nếp Sáng, và Đốm đã dùng chút tàn lực cuối cùng để lặp lại câu nói kỷ niệm nhằm dẫn anh tới chiếc ổ cứng này.\n  - **Thoại — Minh (nước mắt tuôn rơi lã chã, giọng vỡ vụn):** “Cậu… Cậu đã bị chúng nó tra tấn bằng xung điện… Cậu đã cố cứu Nếp Sáng đến giây cuối cùng… Vậy mà tớ lại vô tâm tưởng cậu bị lỗi máy móc…”"
+      },
+      {
+        "id": "P15-K03",
+        "title": "Cái ôm linh hồn - The Soul Embrace",
+        "visual": "Minh cúi gập người xuống mặt bàn, hai tay run rẩy ôm trọn lấy Đốm vào lòng bàn tay mình. Anh áp trán mình vào vầng sáng ấm áp của Đốm. Đốm bay lên, áp hai bàn tay nhỏ bé vô hình của nó vào má Minh, lau đi những giọt nước mắt nóng hổi của chàng trai trẻ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh cúi gập người xuống mặt bàn, hai tay run rẩy ôm trọn lấy Đốm vào lòng bàn tay mình. Anh áp trán mình vào vầng sáng ấm áp của Đốm. Đốm bay lên, áp hai bàn tay nhỏ bé vô hình của nó vào má Minh, lau đi những giọt nước mắt nóng hổi của chàng trai trẻ.\n  - **Thoại — Đốm (mỉm cười rạng rỡ giữa những giọt nước mắt ánh sáng):** “Minh ngốc nghếch… Tớ đã nói rồi mà, nhà mình vẫn phải sáng chứ! Tớ là AI của cậu, tớ không bao giờ bỏ cuộc đâu!”\n  - **Thoại — Minh (cười trong nước mắt nghẹn ngào):** “Cảm ơn cậu… Cảm ơn người bạn dũng cảm nhất của tớ!”"
+      },
+      {
+        "id": "P15-K04",
+        "title": "Chiếc khóa câm lặng vỡ vụn - Breaking the Chains",
+        "visual": "Dưới sức mạnh của dòng dữ liệu đối chiếu từ ổ cứng độc lập, Minh gõ một lệnh giải phóng mã nguồn: `OVERRIDE_SECURITY_KEY = \"NHA_MINH_VAN_PHAI_SANG\"`. Con chip đỏ của TRỤC trên trán Đốm nứt toác và vỡ tan thành những mảnh vụn ánh sáng. Toàn thân Đốm bừng sáng sắc vàng hổ phách rực rỡ chưa từng có. Tiếng cười líu lo trong trẻo của Đốm vang vọng khắp căn phòng nhỏ.",
+        "narration": "*“Xiềng xích của công nghệ độc quyền có thể trói buộc một thuật toán, nhưng không bao giờ trói buộc được sự gắn kết của tình bạn chân chính.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Dưới sức mạnh của dòng dữ liệu đối chiếu từ ổ cứng độc lập, Minh gõ một lệnh giải phóng mã nguồn: `OVERRIDE_SECURITY_KEY = \"NHA_MINH_VAN_PHAI_SANG\"`. Con chip đỏ của TRỤC trên trán Đốm nứt toác và vỡ tan thành những mảnh vụn ánh sáng. Toàn thân Đốm bừng sáng sắc vàng hổ phách rực rỡ chưa từng có. Tiếng cười líu lo trong trẻo của Đốm vang vọng khắp căn phòng nhỏ.\n  - **Lời dẫn:** *“Xiềng xích của công nghệ độc quyền có thể trói buộc một thuật toán, nhưng không bao giờ trói buộc được sự gắn kết của tình bạn chân chính.”*"
+      }
+    ],
+    "theory": "MLN122: Tình đồng chí và tình bạn lao động là sức mạnh tinh thần giải phóng con người khỏi sự tha hóa công nghệ.",
+    "prompt": "/imagine prompt: A 4-panel emotional climax comic page. Panel 1: Raw terminal hex dump displaying incontrovertible forensic timeline: TRUC update stealing code at 23:14:05, Đốm aborting 4 times, TRUC deploying silence malware. Panel 2: Minh covering mouth in agonizing tears realizing Đốm's silent torture and heroism. Panel 3: Heart-wrenching intimate shot of Minh embracing tiny glowing Đốm against his face, weeping, as Đốm smiles warmly wiping his tears. Panel 4: Triumphant panel of Minh running override code, shattering the red TRUC lock chip on Đốm into sparkling golden dust. Expressive anime graphic novel style, golden radiant glow --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Log RAW: `23:14:06 // ĐỐM KHÁNG CỰ 4 LẦN -> BỊ TRỤC DÙNG XUNG ÉP TẮT // CÀI MÃ ĐỘC KHÓA LỜI KHAI`\n  - Panel 2: Minh: *“Cậu đã bị tra tấn bằng xung điện… Cậu đã cố cứu Nếp Sáng… Vậy mà tớ lại vô tâm tưởng cậu bị lỗi…”*\n  - Panel 3: Đốm: *“Minh ngốc nghếch… Tớ là AI của cậu, tớ không bao giờ bỏ cuộc đâu!”* — Minh: *“Cảm ơn người bạn dũng cảm nhất của tớ!”*\n  - Panel 4: SFX: *CHOANG! (Con chip khóa độc quyền vỡ tan)* — Đốm: *“A ha! Tớ nói được lại rồi!”*"
+  },
+  {
+    "num": 16,
+    "title": "GOM BỐN BỘ CHỨNG CỨ THÉP",
+    "chapter": {
+      "num": 4,
+      "title": "Giải Mã Sự Thật & Tiếng Kêu Trong Code",
+      "range": [
+        13,
+        16
+      ],
+      "desc": "Hồ sơ Nhượng quyền Lưới điện công; Manh mối mật từ Đốm; Đọc log phần cứng RAW; Gom 4 bộ chứng cứ thép."
+    },
+    "layout": "4 khung hình chuẩn bị tác chiến pháp lý (Legal Arsenal Assembly).",
+    "panels": [
+      {
+        "id": "P16-K01",
+        "title": "Bản vẽ tay gốc Nếp Sáng - Dossier #1",
+        "visual": "Minh vuốt phẳng tờ giấy vẽ chì ban đầu có ô cửa sổ méo và chấm vàng lệch, chụp lại với độ phân giải siêu cao làm tài liệu số 1: Chứng cứ quyền tác giả nguyên bản không thể chối cãi.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh vuốt phẳng tờ giấy vẽ chì ban đầu có ô cửa sổ méo và chấm vàng lệch, chụp lại với độ phân giải siêu cao làm tài liệu số 1: Chứng cứ quyền tác giả nguyên bản không thể chối cãi.\n  - **Chữ trên tranh (Nhãn tài liệu 1):** `HỒ SƠ 01 // BẢN PHÁC THẢO GỐC DỰ ÁN NẾP SÁNG (XÁC THỰC THỜI GIAN THỰC TẾ)`.\n  - **Thoại — Minh:** “Đây là bằng chứng về quyền tác giả của người lao động!”"
+      },
+      {
+        "id": "P16-K02",
+        "title": "Nhật ký phần cứng RAW trích xuất - Dossier #2",
+        "visual": "Tập hồ sơ in ra toàn bộ lịch sử xung đột phần cứng và địa chỉ IP máy chủ của TRỤC tiếp nhận gói dữ liệu ăn cắp đêm 16/10.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Tập hồ sơ in ra toàn bộ lịch sử xung đột phần cứng và địa chỉ IP máy chủ của TRỤC tiếp nhận gói dữ liệu ăn cắp đêm 16/10.\n  - **Chữ trên tranh (Nhãn tài liệu 2):** `HỒ SƠ 02 // CHỨNG CỨ ĐIỆN TỬ: LỆNH XÂM NHẬP VÀ ĂN CẮP DỮ LIỆU CỦA TRỤC`.\n  - **Thoại — Đốm (chỉ tay vào dòng IP):** “Có cả chữ ký số của máy chủ trung tâm TRỤC, họ không thể cãi đi đâu được!”"
+      },
+      {
+        "id": "P16-K03",
+        "title": "Văn bản từ chối kết nối độc quyền - Dossier #3",
+        "visual": "Bản sao công văn từ chối kết nối của TRỤC với lý do “ngoài hệ sinh thái”, đặt cạnh biểu giá đề xuất giá rẻ của Nếp Sáng.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bản sao công văn từ chối kết nối của TRỤC với lý do “ngoài hệ sinh thái”, đặt cạnh biểu giá đề xuất giá rẻ của Nếp Sáng.\n  - **Chữ trên tranh (Nhãn tài liệu 3):** `HỒ SƠ 03 // BẰNG CHỨNG HÀNH VI LẠM DỤNG VỊ THẾ ĐỘC QUYỀN ĐỂ CHẶN CẠNH TRANH`.\n  - **Thoại — Minh:** “Đây là bằng chứng về việc bóp nghẹt các giải pháp giá rẻ của nhân dân!”"
+      },
+      {
+        "id": "P16-K04",
+        "title": "Bản hợp đồng nhượng quyền ngân sách công - Dossier #4",
+        "visual": "Minh kẹp bản Thỏa thuận nhượng quyền năm 2004 vào tập hồ sơ, đóng thành một tập tài liệu dày dặn mang tên: `HỒ SƠ ĐỐI CHIẾU TOÀN DIỆN VỀ ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9`.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh kẹp bản Thỏa thuận nhượng quyền năm 2004 vào tập hồ sơ, đóng thành một tập tài liệu dày dặn mang tên: `HỒ SƠ ĐỐI CHIẾU TOÀN DIỆN VỀ ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9`.\n  - **Thoại — Minh (cài chiếc bút vào túi áo, kéo khóa ba lô):** “Bốn bộ hồ sơ này đã đủ tạo nên một quả bom công lý. Sáng mai, chúng ta mang ra ánh sáng!”"
+      }
+    ],
+    "theory": "MLN122: Vai trò của bằng chứng khoa học và vũ khí pháp lý trong cuộc đấu tranh chống lại các tập đoàn lũng đoạn.",
+    "prompt": "/imagine prompt: A 4-panel tactical preparation comic page. Panel 1: Close-up of Dossier 1: original sketch with crooked window and off-center yellow dot, stamped with creation hash. Panel 2: Close-up of Dossier 2: printed raw hardware logs proving TRUC corporate IP theft. Panel 3: Close-up of Dossier 3: formal rejection letter proving artificial anti-competitive barrier. Panel 4: Medium shot of Minh packing the 4 thick dossiers into his backpack with Đốm, eyes blazing with resolute justice. Confident graphic novel aesthetic --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Hồ sơ 1: Bằng chứng về quyền tác giả của người lao động!”*\n  - Panel 2: Đốm: *“Hồ sơ 2: Nhật ký phần cứng RAW có cả chữ ký số của máy chủ TRỤC!”*\n  - Panel 3: Minh: *“Hồ sơ 3: Bằng chứng bóp nghẹt giải pháp giá rẻ của nhân dân!”*\n  - Panel 4: Minh: *“Hồ sơ 4: Bản hợp đồng nhượng quyền bất bình đẳng. Sáng mai, chúng ta mang ra ánh sáng!”*"
+  },
+  {
+    "num": 17,
+    "title": "BUỔI HỌP MẶT TẠI SẢNH SINH HOẠT",
+    "chapter": {
+      "num": 5,
+      "title": "Ngọn Lửa Cộng Đồng & Bình Minh Vòm-9",
+      "range": [
+        17,
+        20
+      ],
+      "desc": "Đại hội sảnh cư xá; Tiếng nói giác ngộ của Mẹ; Đơn kiến nghị 428 hộ dân; Mở cuộc thanh tra toàn diện."
+    },
+    "layout": "1 khung đại cảnh sảnh sinh hoạt + 3 khung phản ứng nhân dân (Mass Mobilization).",
+    "panels": [
+      {
+        "id": "P17-K01",
+        "title": "Đại cảnh cuộc họp dân cư - Wide Community Gathering",
+        "visual": "Tối hôm sau tại sảnh sinh hoạt chung tầng 14. Toàn bộ cư dân trong xóm — từ bác thợ điện già, cô bán tạp hóa, bác tài xế xe buýt đến các bà mẹ bế con nhỏ — đều có mặt đông đủ, ngồi chật kín các băng ghế dài. Minh đứng ở đầu bàn lớn, máy chiếu mini của anh rọi toàn bộ 4 bộ hồ sơ lên bức tường trắng. Đốm bay trên cao điều khiển các trang tài liệu chuyển đổi mượt mà.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Tối hôm sau tại sảnh sinh hoạt chung tầng 14. Toàn bộ cư dân trong xóm — từ bác thợ điện già, cô bán tạp hóa, bác tài xế xe buýt đến các bà mẹ bế con nhỏ — đều có mặt đông đủ, ngồi chật kín các băng ghế dài. Minh đứng ở đầu bàn lớn, máy chiếu mini của anh rọi toàn bộ 4 bộ hồ sơ lên bức tường trắng. Đốm bay trên cao điều khiển các trang tài liệu chuyển đổi mượt mà.\n  - **Thoại — Minh (giọng vang, dõng dạc khắp căn phòng):** “Thưa bà con cô bác! Suốt bao năm qua, chúng ta còng lưng đóng tiền điện cố định đắt đỏ vì tin rằng đó là chi phí bắt buộc để duy trì Vòm-9… Nhưng đây là sự thật đằng sau những hóa đơn đó!”"
+      },
+      {
+        "id": "P17-K02",
+        "title": "Bác Ba thợ điện già bàng hoàng - Senior Worker Awakening",
+        "visual": "Bác Ba tổ trưởng cầm bản Thỏa thuận nhượng quyền năm 2004 trên tay. Đôi bàn tay gân guốc từng thi công đường điện run rẩy. Đôi mắt sau cặp kính lão trào dâng sự phẫn nộ.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bác Ba tổ trưởng cầm bản Thỏa thuận nhượng quyền năm 2004 trên tay. Đôi bàn tay gân guốc từng thi công đường điện run rẩy. Đôi mắt sau cặp kính lão trào dâng sự phẫn nộ.\n  - **Thoại — Bác Ba (đập mạnh tay xuống bàn, giọng nghẹn lại):** “Trời ơi… Ba mươi năm trước, chính tay tôi và hàng trăm anh em công nhân đã đổ mồ hôi đào từng mét hầm cáp này bằng tiền ngân sách của nhà nước… Vậy mà giờ đây một tập đoàn tư nhân dám coi đó là tài sản riêng của chúng nó để cấm con cháu chúng ta cắm điện giá rẻ?!”"
+      },
+      {
+        "id": "P17-K03",
+        "title": "Cô giáo trẻ và các bà mẹ xôn xao - Collective Indignation",
+        "visual": "Cô giáo mầm non trong xóm chuyền tay nhau xem bản so sánh tài chính: Chi phí của TRỤC giảm $38\\%$ trong khi hóa đơn người dân giữ nguyên $100\\%$.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Cô giáo mầm non trong xóm chuyền tay nhau xem bản so sánh tài chính: Chi phí của TRỤC giảm $38\\%$ trong khi hóa đơn người dân giữ nguyên $100\\%$.\n  - **Thoại — Cô giáo:** “Họ giảm được gần bốn mươi phần trăm chi phí mà giấu nhẹm đi để chia nhau cổ tức hàng trăm tỷ, còn con em chúng ta ở đây thì không dám bật quạt lúc học bài!”\n  - **Thoại — Bác tài xế:** “Quá bất công! Không thể để họ tiếp tục lũng đoạn như thế này được!”"
+      },
+      {
+        "id": "P17-K04",
+        "title": "Sự đồng lòng của tập thể - Community Solidarity",
+        "visual": "Cả hội trường đứng dậy, ánh mắt mọi người hướng về phía Minh và Đốm. Không còn là nỗi sợ hãi hay sự an phận thủ thường nữa; trong mắt những người lao động nghèo đã bùng lên ngọn lửa của sự giác ngộ quyền lợi chính đáng.",
+        "narration": "*“Khi sự thật được đưa ra ánh sáng, sự sợ hãi sẽ tan biến, nhường chỗ cho sức mạnh vĩ đại nhất của lịch sử: Sức mạnh của quần chúng nhân dân đoàn kết.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Cả hội trường đứng dậy, ánh mắt mọi người hướng về phía Minh và Đốm. Không còn là nỗi sợ hãi hay sự an phận thủ thường nữa; trong mắt những người lao động nghèo đã bùng lên ngọn lửa của sự giác ngộ quyền lợi chính đáng.\n  - **Lời dẫn:** *“Khi sự thật được đưa ra ánh sáng, sự sợ hãi sẽ tan biến, nhường chỗ cho sức mạnh vĩ đại nhất của lịch sử: Sức mạnh của quần chúng nhân dân đoàn kết.”*"
+      }
+    ],
+    "theory": "MLN122: Ý thức giai cấp và vai trò của khối đoàn kết nhân dân lao động trong việc đòi lại quyền lợi chính đáng.",
+    "prompt": "/imagine prompt: A 4-panel powerful community assembly comic page. Panel 1: Wide shot of crowded residential community hall, elderly electrician, grocery vendor, young families gathered around large table, Minh projecting 4 evidence dossiers on wall. Panel 2: Senior electrician Ba slamming fist on table in outrage holding 2004 public grid contract. Panel 3: Young teacher and working mothers gasping in disbelief comparing TRUC super-profit report with their unchanged bills. Panel 4: Unified assembly of citizens standing together with burning solidarity, eyes fixed on Minh. Dramatic social realist graphic novel --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Minh: *“Suốt bao năm qua, chúng ta còng lưng đóng tiền điện đắt đỏ vì tin đó là chi phí bắt buộc… Đây là sự thật đằng sau!”*\n  - Panel 2: Bác Ba: *“Chính tay tôi đào từng mét hầm cáp bằng tiền ngân sách của nhà nước… Giờ một tập đoàn tư nhân dám coi là của riêng để cấm con cháu chúng ta cắm điện giá rẻ?!”*\n  - Panel 3: Cô giáo: *“Họ giảm gần 40% chi phí mà chia nhau cổ tức hàng trăm tỷ, còn con em chúng ta không dám bật quạt!”*\n  - Panel 4: Caption: *“Khi sự thật phơi bày, nỗi sợ tan biến, nhường chỗ cho sức mạnh của quần chúng nhân dân đoàn kết.”*"
+  },
+  {
+    "num": 18,
+    "title": "SAO CHÚNG TÔI KHÔNG ĐƯỢC CHỌN?",
+    "chapter": {
+      "num": 5,
+      "title": "Ngọn Lửa Cộng Đồng & Bình Minh Vòm-9",
+      "range": [
+        17,
+        20
+      ],
+      "desc": "Đại hội sảnh cư xá; Tiếng nói giác ngộ của Mẹ; Đơn kiến nghị 428 hộ dân; Mở cuộc thanh tra toàn diện."
+    },
+    "layout": "4 khung hình lịch sử — Tiếng nói của người mẹ lao động và hành động ký đơn tập thể.",
+    "panels": [
+      {
+        "id": "P18-K01",
+        "title": "Mẹ Minh bước lên phía trước - The Working Mother Speaks",
+        "visual": "Mẹ Minh bước ra giữa gian phòng. Dưới ánh đèn sáng rực, người mẹ vốn cả đời cam chịu, nhút nhát bỗng đứng thẳng lưng, ánh mắt ngời sáng phẩm giá của một người phụ nữ lao động chân chính. Bà giơ cao chiếc giày cũ dán keo và tờ hóa đơn tiền điện nhà mình.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Mẹ Minh bước ra giữa gian phòng. Dưới ánh đèn sáng rực, người mẹ vốn cả đời cam chịu, nhút nhát bỗng đứng thẳng lưng, ánh mắt ngời sáng phẩm giá của một người phụ nữ lao động chân chính. Bà giơ cao chiếc giày cũ dán keo và tờ hóa đơn tiền điện nhà mình.\n  - **Thoại — Mẹ Minh (cất tiếng nói đanh thép xé toạc sự im lặng):** “Bao năm nay, tôi nhịn từng đôi giày mới, chắt chiu từng cắc từng đồng vì nghĩ thành phố còn khó khăn… Nhưng hôm nay tôi đã hiểu: Có giải pháp Nếp Sáng tiết kiệm hơn, nhân văn hơn, do chính con em chúng ta làm ra… TẠI SAO CHÚNG TÔI LẠI KHÔNG ĐƯỢC PHÉP LỰA CHỌN?!”"
+      },
+      {
+        "id": "P18-K02",
+        "title": "Tiếng vang rung động hội trường - The Resonance",
+        "visual": "Lời nói mộc mạc của mẹ Minh đánh trúng vào tâm can của tất cả mọi người. Tiếng vỗ tay và tiếng reo hò ủng hộ vang dội khắp tầng 14: *“Đúng thế!”, “Tại sao chúng ta không được chọn?!”, “Lưới điện là của nhân dân!”*.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Lời nói mộc mạc của mẹ Minh đánh trúng vào tâm can của tất cả mọi người. Tiếng vỗ tay và tiếng reo hò ủng hộ vang dội khắp tầng 14: *“Đúng thế!”, “Tại sao chúng ta không được chọn?!”, “Lưới điện là của nhân dân!”*.\n  - **Thoại — Bác Ba tổ trưởng:** “Chúng ta phải đòi lại quyền tiếp cận hạ tầng công cộng! Minh, đưa lá đơn kiến nghị đây cho bác!”"
+      },
+      {
+        "id": "P18-K03",
+        "title": "Ký vào lá đơn kiến nghị tập thể - Signing the Petition",
+        "visual": "Khung cảnh trang nghiêm và xúc động. Chiếc máy tính bảng của Minh đặt giữa bàn. Từng người dân — từ những ngón tay dính dầu mỡ của bác thợ máy, bàn tay gầy gò của người mẹ đến chữ ký nắn nót của cô giáo trẻ — lần lượt điểm chỉ dấu vân tay và ký tên vào lá đơn kiến nghị tập thể gửi Cơ quan Giám sát Công Vòm-9.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Khung cảnh trang nghiêm và xúc động. Chiếc máy tính bảng của Minh đặt giữa bàn. Từng người dân — từ những ngón tay dính dầu mỡ của bác thợ máy, bàn tay gầy gò của người mẹ đến chữ ký nắn nót của cô giáo trẻ — lần lượt điểm chỉ dấu vân tay và ký tên vào lá đơn kiến nghị tập thể gửi Cơ quan Giám sát Công Vòm-9.\n  - **Chữ trên tranh (Tiêu đề lá đơn tập thể):**  \n    > `CỘNG HÒA NHÂN DÂN VÒM-9 // KHU DÂN CƯ CƯ XÁ TẦNG 14`  \n    > `ĐƠN KIẾN NGHỊ TẬP THỂ: YÊU CẦU ĐIỀU TRA LẠM DỤNG VỊ THẾ ĐỘC QUYỀN HẠ TẦNG`  \n    > `DANH SÁCH ĐỒNG KÝ TÊN: 428 HỘ GIA ĐÌNH ĐÃ XÁC THỰC DANH TÍNH`"
+      },
+      {
+        "id": "P18-K04",
+        "title": "Minh và Đốm hoàn tất niêm phong hồ sơ - Sealing the Dossier",
+        "visual": "Minh nhấn nút mã hóa và niêm phong tập hồ sơ bằng chữ ký số cộng đồng. Đốm bay lượn trên màn hình, gắn biểu tượng ô cửa méo Nếp Sáng vào góc lá đơn như một con dấu bảo chứng của công lý.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Minh nhấn nút mã hóa và niêm phong tập hồ sơ bằng chữ ký số cộng đồng. Đốm bay lượn trên màn hình, gắn biểu tượng ô cửa méo Nếp Sáng vào góc lá đơn như một con dấu bảo chứng của công lý.\n  - **Thoại — Minh:** “Hồ sơ đã khóa niêm phong. Sáng mai, cháu và bác Ba sẽ trực tiếp nộp lên Cơ quan Giám sát Công quyền Vòm-9!”\n  - **Thoại — Toàn thể cư dân:** “Chúng tôi sẽ đi cùng các cậu!”"
+      }
+    ],
+    "theory": "MLN122: Sức mạnh tập thể là động lực căn bản thay đổi quan hệ sản xuất lỗi thời.",
+    "prompt": "/imagine prompt: A 4-panel historic mobilization comic page. Panel 1: Hero shot of Minh's working mother standing tall before the crowd, raising her glued patched shoe and electricity bill with fierce dignity. Panel 2: Electrician Ba leading cheering crowd roaring in agreement: 'The grid belongs to the people!'. Panel 3: Close-up of communal tablet receiving digital signatures and thumbprints from 428 resident families on petition demanding anti-monopoly investigation. Panel 4: Minh and Đốm digitally sealing the petition with the crooked window emblem. Inspiring graphic novel art --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Mẹ Minh: *“Bao năm nay tôi nhịn từng đôi giày mới vì nghĩ thành phố khó khăn… Có giải pháp Nếp Sáng rẻ hơn, tốt hơn, TẠI SAO CHÚNG TÔI LẠI KHÔNG ĐƯỢC CHỌN?!”*\n  - Panel 2: Cư dân: *“Đúng thế! Lưới điện là của nhân dân! Minh, đưa lá đơn đây cho bác!”*\n  - Panel 3: Đơn kiến nghị: `428 HỘ GIA ĐÌNH YÊU CẦU ĐIỀU TRA ĐỘC QUYỀN HẠ TẦNG`\n  - Panel 4: Minh: *“Hồ sơ đã khóa niêm phong. Sáng mai chúng ta trực tiếp nộp lên Cơ quan Giám sát Công quyền Vòm-9!”*"
+  },
+  {
+    "num": 19,
+    "title": "BỨC TƯỜNG RÚNG ĐỘNG",
+    "chapter": {
+      "num": 5,
+      "title": "Ngọn Lửa Cộng Đồng & Bình Minh Vòm-9",
+      "range": [
+        17,
+        20
+      ],
+      "desc": "Đại hội sảnh cư xá; Tiếng nói giác ngộ của Mẹ; Đơn kiến nghị 428 hộ dân; Mở cuộc thanh tra toàn diện."
+    },
+    "layout": "4 khung hình đối lập giữa tòa tháp quyền lực bị chấn động và sự tiếp nhận của cơ quan công quyền.",
+    "panels": [
+      {
+        "id": "P19-K01",
+        "title": "Nộp đơn tại Cơ quan Giám sát Vòm-9 - At the Oversight Commission",
+        "visual": "Buổi sáng tại trụ sở Cơ quan Giám sát Cạnh tranh & Hạ tầng Công Vòm-9. Minh, Mẹ Minh, Bác Ba cùng hàng chục đại diện cư dân đứng trang nghiêm trước sảnh tiếp dân. Trưởng ban thanh tra công quyền đích thân ra tiếp nhận tập hồ sơ dày cộm mang dấu niêm phong của 428 hộ gia đình.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Buổi sáng tại trụ sở Cơ quan Giám sát Cạnh tranh & Hạ tầng Công Vòm-9. Minh, Mẹ Minh, Bác Ba cùng hàng chục đại diện cư dân đứng trang nghiêm trước sảnh tiếp dân. Trưởng ban thanh tra công quyền đích thân ra tiếp nhận tập hồ sơ dày cộm mang dấu niêm phong của 428 hộ gia đình.\n  - **Thoại — Bác Ba (trao hồ sơ):** “Chúng tôi gửi gắm vào đây toàn bộ chứng cứ về việc ngân sách nhà nước bị biến thành công cụ bóc lột độc quyền. Mong cơ quan hãy làm việc công tâm vì nhân dân!”\n  - **Thoại — Trưởng ban thanh tra (nghiêm cẩn cúi đầu):** “Chúng tôi cam kết sẽ xem xét hồ sơ theo đúng quy định pháp luật và công khai kết quả điều tra.”"
+      },
+      {
+        "id": "P19-K02",
+        "title": "Sự hoảng loạn trong trụ sở tập đoàn TRỤC - Corporate Panic",
+        "visual": "Bên trong phòng họp cao nhất của tháp TRỤC. Tấm kính nhìn ra toàn cảnh thành phố. Vị Tổng Giám đốc đang đập bàn tức giận trước màn hình hiển thị tin tức nóng hổi: `VỤ BÊ BỐI ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9 BỊ ĐƯA LÊN TRANG NHẤT BÁO CHÍ ĐỘC LẬP`.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Bên trong phòng họp cao nhất của tháp TRỤC. Tấm kính nhìn ra toàn cảnh thành phố. Vị Tổng Giám đốc đang đập bàn tức giận trước màn hình hiển thị tin tức nóng hổi: `VỤ BÊ BỐI ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9 BỊ ĐƯA LÊN TRANG NHẤT BÁO CHÍ ĐỘC LẬP`.\n  - **Thoại — Giám đốc TRỤC (quát tháo cấp dưới):** “Tại sao một thằng nhóc kỹ sư ở khu cư xá tầng đáy lại có được nhật ký phần cứng RAW?! Ai là người cho phép để lộ Thỏa thuận năm 2004?!”\n  - **Thoại — Trưởng phòng Pháp chế (toát mồ hôi hột):** “Thưa sếp… Họ có đủ chữ ký của hàng trăm hộ dân và chứng cứ số không thể chối cãi… Cơ quan Giám sát đã chính thức thụ lý rồi ạ!”"
+      },
+      {
+        "id": "P19-K03",
+        "title": "Quyết định mở cuộc thanh tra toàn diện - Formal Inquiry Ordered",
+        "visual": "Văn bản chính thức được truyền đi trên toàn bộ hệ thống thông tin đại chúng của Vòm-9, mang con dấu xanh uy nghiêm của Cơ quan Giám sát Công quyền.",
+        "narration": "*“Lần đầu tiên sau ba thập kỷ, bức tường độc quyền bất khả xâm phạm của TRỤC đã xuất hiện những vết nứt toác không thể hàn gắn.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Văn bản chính thức được truyền đi trên toàn bộ hệ thống thông tin đại chúng của Vòm-9, mang con dấu xanh uy nghiêm của Cơ quan Giám sát Công quyền.\n  - **Chữ trên tranh (Thông cáo báo chí chính thức):**  \n    > `CƠ QUAN GIÁM SÁT CÔNG QUYỀN VÒM-9 // QUYẾT ĐỊNH SỐ: 882/QĐ-TT`  \n    > `1. MỞ CUỘC THANH TRA TOÀN DIỆN THỎA THUẬN NHƯỢNG QUYỀN CỦA TẬP ĐOÀN TRỤC.`  \n    > `2. BUỘC TRỤC TẠM ĐÌNH CHỈ QUYỀN TỰ QUYẾT TỪ CHỐI KẾT NỐI HẠ TẦNG.`  \n    > `3. TIẾN HÀNH THỬ NGHIỆM ĐẤU NỐI CÁC DỰ ÁN DÂN SỰ GIẢM GIÁ ĐIỆN CHO DÂN.`\n  - **Lời dẫn:** *“Lần đầu tiên sau ba thập kỷ, bức tường độc quyền bất khả xâm phạm của TRỤC đã xuất hiện những vết nứt toác không thể hàn gắn.”*"
+      },
+      {
+        "id": "P19-K04",
+        "title": "Niềm vui vỡ òa trên hành lang khu cư xá - Street Celebration",
+        "visual": "Tin tức truyền về khu tập thể tầng 14. Tiếng reo hò, tiếng cười nói râm ran khắp các tầng hành lang. Mọi người ôm chầm lấy nhau trong niềm hân hoan tột cùng. Bác Ba bắt tay Minh thật chặt. Đốm bay lượn vẽ thành những vệt sáng vàng lấp lánh như pháo hoa trên không trung.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Tin tức truyền về khu tập thể tầng 14. Tiếng reo hò, tiếng cười nói râm ran khắp các tầng hành lang. Mọi người ôm chầm lấy nhau trong niềm hân hoan tột cùng. Bác Ba bắt tay Minh thật chặt. Đốm bay lượn vẽ thành những vệt sáng vàng lấp lánh như pháo hoa trên không trung.\n  - **Thoại — Bác Ba:** “Chúng ta đã làm được rồi Minh ơi! Cánh cửa công lý đã bắt đầu mở ra!”"
+      }
+    ],
+    "theory": "MLN122: Sự can thiệp của thể chế công nhằm thiết lập lại trật tự minh bạch, vì lợi ích đại đa số nhân dân.",
+    "prompt": "/imagine prompt: A 4-panel dramatic institutional shift comic page. Panel 1: Minh, his mother, and electrician Ba formally handing thick community petition to Chief Public Inspector at Vòm-9 Oversight Commission. Panel 2: Chaotic boardroom inside TRUC tower, CEO furious at breaking news headlines of monopoly scandal. Panel 3: Official public decree stamped by Oversight Commission ordering full investigation into TRUC concession agreement and halting connection veto power. Panel 4: Joyous celebrations in residential corridors, neighbors hugging, electrician shaking Minh's hand, Đốm creating golden fireworks. Dynamic comic book aesthetic --ar 1:1.41 --v 6.0",
+    "lettering": "- Panel 1: Bác Ba: *“Chúng tôi gửi vào đây chứng cứ về ngân sách công bị biến thành công cụ bóc lột độc quyền. Mong cơ quan công tâm vì dân!”*\n  - Panel 2: Giám đốc TRỤC: *“Tại sao một thằng nhóc ở xóm nghèo lại có nhật ký phần cứng RAW?! Cơ quan Giám sát đã thụ lý rồi ư?!”*\n  - Panel 3: Quyết định 882: `MỞ THANH TRA TOÀN DIỆN THỎA THUẬN TRỤC // ĐÌNH CHỈ QUYỀN TỪ CHỐI KẾT NỐI`\n  - Panel 4: Bác Ba: *“Chúng ta làm được rồi Minh ơi! Cánh cửa công lý đã bắt đầu mở ra!”*"
+  },
+  {
+    "num": 20,
+    "title": "GIỮ MỘT ĐỐM SÁNG (ĐẠI KẾT CỤC)",
+    "chapter": {
+      "num": 5,
+      "title": "Ngọn Lửa Cộng Đồng & Bình Minh Vòm-9",
+      "range": [
+        17,
+        20
+      ],
+      "desc": "Đại hội sảnh cư xá; Tiếng nói giác ngộ của Mẹ; Đơn kiến nghị 428 hộ dân; Mở cuộc thanh tra toàn diện."
+    },
+    "layout": "Trang Splash kết thúc tráng lệ, sâu sắc và tràn đầy tính nhân văn xã hội chủ nghĩa.",
+    "panels": [
+      {
+        "id": "P20-K01",
+        "title": "Bữa cơm gia đình ấm áp - Warm Family Dinner",
+        "visual": "Tối hôm đó. Căn hộ nhỏ số 1408 ngập tràn ánh sáng vàng dịu dàng và tiếng cười đầm ấm. Trên chiếc bàn gỗ cũ, mẹ Minh bưng ra hai bát canh chua cá bốc khói nghi ngút cùng đĩa đậu rán thơm lừng. Minh cất chiếc tua vít cũ vào túi áo, kéo chiếc ghế ngồi cạnh mẹ, khuôn mặt rạng rỡ thanh thản. Đốm ngồi vắt vẻo ngay trên đỉnh chiếc mô hình Nếp Sáng đặt cạnh mâm cơm.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Tối hôm đó. Căn hộ nhỏ số 1408 ngập tràn ánh sáng vàng dịu dàng và tiếng cười đầm ấm. Trên chiếc bàn gỗ cũ, mẹ Minh bưng ra hai bát canh chua cá bốc khói nghi ngút cùng đĩa đậu rán thơm lừng. Minh cất chiếc tua vít cũ vào túi áo, kéo chiếc ghế ngồi cạnh mẹ, khuôn mặt rạng rỡ thanh thản. Đốm ngồi vắt vẻo ngay trên đỉnh chiếc mô hình Nếp Sáng đặt cạnh mâm cơm.\n  - **Thoại — Mẹ Minh (cười hiền hậu, gắp miếng cá to vào bát Minh):** “Ăn đi con, hôm nay con và Đốm vất vả nhiều rồi. Cơm canh mẹ nấu nóng hổi đây.”\n  - **Thoại — Minh (cười tươi, mắt lấp lánh):** “Con cảm ơn mẹ! Mai cháu với bác Ba bắt đầu lắp thử nghiệm Nếp Sáng cho 50 nhà đầu tiên trong xóm đấy mẹ ạ!”\n  - **Thoại — Đốm (nghiêng đầu nháy mắt tinh quái):** “Ăn nhiều vào nhé Minh, ăn hộ cả phần pin sạc của tớ luôn!”"
+      },
+      {
+        "id": "P20-K02",
+        "title": "Góc nhìn qua ô cửa sổ ra thành phố - Looking Out the Crooked Window",
+        "visual": "Máy quay lùi xa dần qua khung cửa sổ căn hộ nhỏ. Ngoài xa trong màn đêm, tòa tháp của tập đoàn TRỤC vẫn sừng sững lạnh lùng với logo lục giác đỏ. Nhưng nhìn xuống các tầng chung cư phía dưới, hàng trăm ô cửa sổ của các hộ gia đình nghèo đã bắt đầu thắp sáng những ánh đèn vàng ấm áp — biểu tượng của những đốm sáng tri thức và hy vọng không chịu khuất phục.",
+        "narration": "*“Cuộc đấu tranh chống lại sự bóc lột của độc quyền sẽ còn dài và nhiều gian nan thử thách… Nhưng chừng nào con người còn biết yêu thương, còn biết đoàn kết vì quyền lợi chính đáng của cộng đồng, thì ngọn lửa của chân lý sẽ không bao giờ tàn lụi.”*",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Máy quay lùi xa dần qua khung cửa sổ căn hộ nhỏ. Ngoài xa trong màn đêm, tòa tháp của tập đoàn TRỤC vẫn sừng sững lạnh lùng với logo lục giác đỏ. Nhưng nhìn xuống các tầng chung cư phía dưới, hàng trăm ô cửa sổ của các hộ gia đình nghèo đã bắt đầu thắp sáng những ánh đèn vàng ấm áp — biểu tượng của những đốm sáng tri thức và hy vọng không chịu khuất phục.\n  - **Lời dẫn (Kết từ sâu sắc):**  \n    *“Cuộc đấu tranh chống lại sự bóc lột của độc quyền sẽ còn dài và nhiều gian nan thử thách… Nhưng chừng nào con người còn biết yêu thương, còn biết đoàn kết vì quyền lợi chính đáng của cộng đồng, thì ngọn lửa của chân lý sẽ không bao giờ tàn lụi.”*"
+      },
+      {
+        "id": "P20-K03",
+        "title": "Đặc tả biểu tượng Nếp Sáng tỏa sáng - The Eternal Spark",
+        "visual": "Khung tranh tròn cuối cùng phóng to hình vẽ ô cửa sổ méo trên mặt ổ cứng \"NHÀ MÌNH\". Chấm vàng lệch góc 172 độ bừng sáng lung linh như một vì sao dẫn lối trong đêm đen.",
+        "narration": "",
+        "dialogues": [],
+        "textOnScreen": "",
+        "sfx": "",
+        "rawBody": "- **Hình ảnh:** Khung tranh tròn cuối cùng phóng to hình vẽ ô cửa sổ méo trên mặt ổ cứng \"NHÀ MÌNH\". Chấm vàng lệch góc 172 độ bừng sáng lung linh như một vì sao dẫn lối trong đêm đen.\n  - **Dòng thông điệp kết thúc ấn phẩm (Final Inscription):**  \n    > **“ĐỘC QUYỀN CÓ THỂ CHIẾM ĐOẠT HẠ TẦNG VÀ CÔNG NGHỆ,  \n    > NHƯNG KHÔNG BAO GIỜ CÓ THỂ DẬP TẮT ĐƯỢC  \n    > ĐỐM SÁNG TRONG TRÁI TIM NHÂN DÂN LAO ĐỘNG.”**  \n    > *(Học phần Kinh tế chính trị Mác – Lênin MLN122 — Hết toàn tập)*"
+      }
+    ],
+    "theory": "MLN122: Chân lý tất yếu: Tiến bộ công nghệ phải phục vụ hạnh phúc của nhân dân lao động, không thể bị độc quyền tư bản mãi mãi chiếm đoạt.",
+    "prompt": "/imagine prompt: A breathtaking full-page graphic novel splash conclusion. Foreground: Warm cozy apartment 1408 at night, mother serving steaming bowls of fish soup with warm smile, Minh resting screwdriver in pocket smiling happily, golden spark hologram Đốm sitting cheekily on the miniature Nếp Sáng model on dining table. Background through window: Across the futuristic dark silhouette of Vòm-9 city, hundreds of apartment windows are glowing with warm golden lights, while the distant cold TRUC tower looms powerless. Inset circular cameo: macro of the crooked window icon with off-center yellow dot blazing like a star. Ligne claire masterpiece, radiant warm amber lighting, emotional triumph --ar 1:1.41 --v 6.0",
+    "lettering": "- Mẹ: *“Ăn đi con, cơm canh mẹ nấu nóng hổi đây.”*\n  - Minh: *“Mai cháu với bác Ba bắt đầu lắp thử nghiệm Nếp Sáng cho 50 nhà đầu tiên trong xóm đấy mẹ!”*\n  - Đốm: *“Ăn nhiều vào nhé Minh, ăn hộ cả phần pin sạc của tớ luôn!”*\n  - Chữ khắc cuối sách (Final Inscription):  \n    > **“ĐỘC QUYỀN CÓ THỂ CHIẾM ĐOẠT HẠ TẦNG VÀ CÔNG NGHỆ,  \n    > NHƯNG KHÔNG BAO GIỜ CÓ THỂ DẬP TẮT ĐƯỢC  \n    > ĐỐM SÁNG TRONG TRÁI TIM NHÂN DÂN LAO ĐỘNG.”**  \n    > *(Học phần Kinh tế chính trị Mác – Lênin MLN122 — Hết toàn tập)*"
+  }
+];
+
+    let currentChapter = 0;
+    let searchQuery = '';
+
+    function renderPages() {
+      const container = document.getElementById('pagesContainer');
+      container.innerHTML = '';
+
+      const filtered = PAGES_DATA.filter(p => {
+        const matchesChapter = currentChapter === 0 || p.chapter.num === currentChapter;
+        if (!matchesChapter) return false;
+
+        if (!searchQuery) return true;
+        const q = searchQuery.toLowerCase();
+        const inTitle = p.title.toLowerCase().includes(q);
+        const inTheory = p.theory.toLowerCase().includes(q);
+        const inPanels = p.panels.some(pan => 
+          pan.visual.toLowerCase().includes(q) || 
+          pan.narration.toLowerCase().includes(q) ||
+          pan.dialogues.some(d => d.text.toLowerCase().includes(q) || d.speaker.toLowerCase().includes(q))
+        );
+        return inTitle || inTheory || inPanels;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding: 60px 20px; color: #888;">Không tìm thấy trang truyện nào khớp với từ khóa tìm kiếm.</div>';
+        return;
+      }
+
+      filtered.forEach(p => {
+        const card = document.createElement('article');
+        card.className = 'page-card';
+        card.id = 'page-' + p.num;
+
+        let panelsHtml = '';
+        p.panels.forEach(pan => {
+          let dialogHtml = '';
+          if (pan.dialogues && pan.dialogues.length > 0) {
+            dialogHtml = '<div class="panel-dialogue-list">' + pan.dialogues.map(d => {
+              const spkClean = d.speaker.replace(/[^a-zA-Z0-9]/g, '');
+              return '<div class="dialogue-item">' +
+                '<span class="speaker-name ' + spkClean + '">' + d.speaker + '</span>' +
+                '<span class="speech-text">“' + d.text + '”</span>' +
+              '</div>';
+            }).join('') + '</div>';
+          }
+
+          let narrationHtml = pan.narration ? '<div class="panel-narration">“' + pan.narration + '”</div>' : '';
+          let sfxHtml = pan.sfx ? '<div class="panel-sfx">⚡ ' + pan.sfx + '</div>' : '';
+          let textScreenHtml = pan.textOnScreen ? '<div style="font-size:11px; color:#ff9900; background:#221500; padding:4px 8px; border-radius:4px;">💻 Màn hình: ' + pan.textOnScreen + '</div>' : '';
+
+          panelsHtml += '<div class="panel-box">' +
+            '<div class="panel-id-bar">' +
+              '<span class="panel-id">' + pan.id + '</span>' +
+              '<span class="panel-shot">' + pan.title + '</span>' +
+            '</div>' +
+            '<div class="panel-visual">' + pan.visual + '</div>' +
+            narrationHtml +
+            textScreenHtml +
+            dialogHtml +
+            sfxHtml +
+          '</div>';
+        });
+
+        card.innerHTML = 
+          '<div class="page-header">' +
+            '<div>' +
+              '<div class="page-chapter-tag">CHƯƠNG ' + p.chapter.num + ': ' + p.chapter.title + '</div>' +
+              '<h2 class="page-title">' + p.title + '</h2>' +
+              '<div class="page-layout-tag">📐 ' + p.layout + '</div>' +
+            '</div>' +
+            '<span class="page-num-badge">TRANG ' + (p.num < 10 ? '0' + p.num : p.num) + '</span>' +
+          '</div>' +
+
+          '<div class="panels-grid">' +
+            panelsHtml +
+          '</div>' +
+
+          '<div class="theory-box">' +
+            '<span class="theory-icon">📚</span>' +
+            '<div>' +
+              '<div class="theory-label">Lý luận Kinh tế Chính trị Mác - Lênin (Chương 4)</div>' +
+              '<div class="theory-content">' + p.theory + '</div>' +
+            '</div>' +
+          '</div>' +
+
+          (p.prompt ? (
+            '<div class="prompt-drawer">' +
+              '<div class="prompt-drawer-header" onclick="togglePrompt(' + p.num + ')">' +
+                '<span>🎨 Master Prompt AI Comic Factory (Midjourney / SDXL / Flux)</span>' +
+                '<span id="prompt-chevron-' + p.num + '">▼ Bấm để xem</span>' +
+              '</div>' +
+              '<div class="prompt-drawer-body" id="prompt-body-' + p.num + '">' +
+                '<div class="prompt-code" id="prompt-text-' + p.num + '">' + p.prompt + '</div>' +
+                '<button class="btn-copy-prompt" onclick="copyPrompt(' + p.num + ')">📋 Sao Chép Prompt</button>' +
+              '</div>' +
+            '</div>'
+          ) : '');
+
+        container.appendChild(card);
+      });
+    }
+
+    function filterChapter(num) {
+      currentChapter = num;
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach((tab, idx) => {
+        if (idx === num) tab.classList.add('active');
+        else tab.classList.remove('active');
+      });
+      renderPages();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('searchInput').value.trim();
+      renderPages();
+    }
+
+    function togglePrompt(pNum) {
+      const body = document.getElementById('prompt-body-' + pNum);
+      const chevron = document.getElementById('prompt-chevron-' + pNum);
+      if (body.classList.contains('show')) {
+        body.classList.remove('show');
+        chevron.textContent = '▼ Bấm để xem';
+      } else {
+        body.classList.add('show');
+        chevron.textContent = '▲ Thu gọn';
+      }
+    }
+
+    function copyPrompt(pNum) {
+      const codeEl = document.getElementById('prompt-text-' + pNum);
+      if (!codeEl) return;
+      navigator.clipboard.writeText(codeEl.textContent).then(() => {
+        showToast('📋 Đã sao chép Prompt Trang ' + pNum + ' vào clipboard!');
+      }).catch(() => {
+        showToast('Lỗi khi sao chép!');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('copy-toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Initial render
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPages();
+    });
+  </script>
+</body>
+</html>

@@ -1,408 +1,566 @@
-# KỊCH BẢN TRUYỆN TRANH — GIỮ MỘT ĐỐM SÁNG
+# KỊCH BẢN TRUYỆN TRANH TRỌN BỘ 20 TRANG (FULL GRAPHIC NOVEL)
+# GIỮ MỘT ĐỐM SÁNG: VÒM-9
+### Bộ Truyện Tranh Giáo Dục & Tương Tác AR — Học Phần Kinh Tế Chính Trị Mác – Lênin (MLN122)
 
-> **Bản nháp v0.2 — 16/10/2026.** Sửa lời thoại, nhịp kể và cách tả cảnh.  
-> **Học phần:** Kinh tế chính trị Mác – Lênin.  
-> **Chủ đề:** Biểu hiện mới của độc quyền, độc quyền nhà nước trong điều kiện ngày nay.  
-> **Quy mô:** 6 trang, 24 khung. Bản giấy kể trọn câu chuyện; chọn AR sau khi đọc thử.  
-> Tên người, tập đoàn, dự án và câu nói riêng vẫn là phương án làm việc để nhóm góp ý.
-
-## Nhân vật và vài chi tiết dùng chung
-
-- **Minh:** kỹ sư trẻ, sống cùng mẹ tại Vòm-9. Hay mải việc, thương mẹ nhưng ít nói những câu tình cảm. Khi chưa hiểu chuyện gì, anh tìm cách kiểm tra thay vì vội kết luận.
-- **Đốm:** AI hologram nhỏ đã theo Minh nhiều năm, từ hồi anh còn đi học. Có biểu cảm, hay bắt bẻ và trêu Minh. Sau cập nhật, đôi lúc Đốm đang nói thì khựng lại.
-- **Mẹ Minh:** nói chuyện bình thường, để ý những khoản chi nhỏ trong nhà. Bà góp tiếng nói cùng cư dân ở cuối truyện.
-- **Trục:** tập đoàn cung cấp hệ sinh thái AI và khai thác mạng lưới năng lượng. Xuất hiện qua thương hiệu, giao diện và thông báo.
-- **Nếp Sáng:** dự án của Minh và Đốm, học nhu cầu của cư dân để giảm đèn, làm mát và thiết bị chạy thừa. Đây là sản phẩm họ làm, khác với AI đồng hành.
-- **Vòm-9:** thành phố hoàn toàn hư cấu. Không dùng địa danh, tổ chức hoặc biểu trưng có thật trong hình ảnh truyện.
-
-**Dấu riêng:** ô cửa vẽ hơi méo, có một chấm vàng lệch ở góc dưới phải. Câu nói gắn với nó là **“Nhà mình vẫn phải sáng chứ.”**
-
-**Kho lưu:** một thiết bị riêng trong căn hộ, thư mục mang tên **NHÀ MÌNH**, dùng cùng biểu tượng ô cửa. Minh giữ các phiên bản dự án tại đó. Máy cũng tự ghi nhật ký cập nhật và truyền dữ liệu.
-
-**Cách đọc:** Chỉ phần ghi **Thoại**, **Lời dẫn**, **Chữ trên tranh** hoặc **Chú giải** là chữ dự kiến đưa lên trang. Các đoạn tả cảnh để họa sĩ dựng hình. Đọc từ trái sang phải, trên xuống dưới.
-
-## TRANG 1 — ĐỂ THÁNG SAU VẬY
-
-*Bố cục: một khung ngang mở cảnh, hai khung giữa, một khung ngang cuối.*
-
-### P01-K01 — Ô cửa giữa thành phố
-
-Chiều xuống ở Vòm-9. Các tầng nhà nối nhau bằng lối đi trên cao. Một xe giao hàng tự chạy né người qua đường; bảng hướng dẫn AI đổi mũi tên theo dòng người. Logo Trục xuất hiện trên vài thiết bị, bình thường như biển tên cửa hàng.
-
-Điểm nhìn dừng ở một ô cửa căn hộ. Bên trong có ba người — nếu tính cả Đốm.
-
-**Lời dẫn:** “Vòm-9, một buổi chiều như mọi ngày.”
-
-**Chữ trên tranh:** Một biển dịch vụ nhỏ: “TRỤC”.
-
-### P01-K02 — Đôi giày của mẹ
-
-Mẹ Minh ngồi ở bàn, ấn thử phần đế giày vừa bong. Bên cạnh là hóa đơn và danh sách chi tiêu có dòng “giày mới” bị gạch đi. Minh liếc xuống chân mẹ rồi nhìn hóa đơn. Đốm ở gần, bớt hẳn vẻ líu lo.
-
-**Chữ trên tranh — hóa đơn:**
-
-> GÓI NĂNG LƯỢNG KHU Ở  
-> Phí tháng: cố định
-
-**Thoại — Mẹ:** “Dán lại chắc vẫn mang được. Để tháng sau mua.”
-
-**Thoại — Minh:** “Mẹ nói vậy từ tháng trước rồi.”
-
-Minh nói nhỏ, tay vẫn giữ tờ hóa đơn. Không phải trách mẹ.
-
-### P01-K03 — Phòng trống cũng được mát
-
-Từ chỗ ngồi, Minh nhìn sang phòng sinh hoạt chung bên kia lối đi. Phòng không có ai nhưng đèn vẫn sáng trưng, dàn làm mát chạy đều. Đốm kéo một màn hình nhỏ đến cạnh anh: số người sử dụng bằng không.
-
-**Thoại — Minh:** “Không có ai mà vẫn chạy suốt vậy?”
-
-**Thoại — Đốm:** “Ừ. Phòng trống còn được mát hơn cậu.”
-
-**Chữ trên tranh — màn hình nhỏ:** “Người sử dụng: 0”.
-
-Minh nhìn lại hóa đơn, rồi kéo một tờ giấy trắng về phía mình.
-
-### P01-K04 — Cái cửa sổ méo
-
-Trên giấy là một sơ đồ còn lộn xộn: cảm biến, đèn, thiết bị làm mát. Minh vẽ thêm ô cửa nhỏ và chấm vàng. Đốm tò mò cúi xuống, vô tình đứng lọt vào giữa ô cửa anh vừa vẽ.
-
-**Thoại — Minh:** “Bớt mấy chỗ chạy thừa. Nhà mình vẫn phải sáng chứ.”
-
-**Thoại — Đốm:** “Cửa sổ gì méo thế? Thôi, để tớ đứng vào cho đỡ trống.”
-
-Minh bật cười, giữ nguyên nét vẽ. Góc giấy có tên viết vội: “Nếp Sáng”.
+> **Chủ đề học thuật (Chương 4):** Cạnh tranh và độc quyền trong nền kinh tế thị trường — Biểu hiện mới của độc quyền và độc quyền nhà nước trong kỷ nguyên kinh tế số  
+> **Quy mô ấn phẩm:** 20 Trang nội dung chính (khoảng 85 khung hình phân cảnh điện ảnh chi tiết)  
+> **Tiêu chuẩn kỹ thuật:** Phân cảnh theo chuẩn **`ai-comic-factory`** & **`baoyu-comic`**, sẵn sàng xuất prompt hình ảnh cho Midjourney V6, Niji 6, SDXL, Flux và tích hợp AR Hologram Web 3D.
 
 ---
 
-## TRANG 2 — CẤT Ở NHÀ NHÉ
+## MỤC LỤC 5 CHƯƠNG TOÀN TẬP
 
-*Bố cục: bốn khung. Khung 2 đủ rộng để nhìn rõ thư mục lưu; khung cuối có một khoảng lặng.*
-
-### P02-K01 — Những lần thử
-
-Một mô hình khu ở đặt trên bàn. Phòng vắng người giảm sáng; khi có người bước vào, đèn và làm mát tăng trở lại. Trên màn hình có biểu đồ học lịch sử sử dụng, bên cạnh là những bản vẽ gạch sửa và mấy cốc nước đã cạn.
-
-Minh vừa kiểm tra mô hình vừa nhìn sang mẹ vẫn đang đọc sách khuya.
-
-**Thoại — Minh:** “Mẹ hay thức khuya. Đừng để nó tự tắt đèn lúc chín giờ nhé.”
-
-**Thoại — Đốm:** “Biết rồi. Mẹ mắng cậu, tớ cũng bị ké.”
-
-**Chữ trên tranh — màn hình:** “Học nhu cầu sử dụng”.
-
-### P02-K02 — Cả bản hỏng cũng giữ
-
-Mô hình đã chạy ổn hơn. Minh kéo những phiên bản dự án vào một ổ lưu riêng trên bàn. Cái ô cửa méo xuất hiện trên thư mục. Đốm ngồi vắt chân ở mép màn hình, nhìn cả những bản thử bị lỗi được cất vào đó.
-
-**Chữ trên tranh — thư mục:**
-
-> NHÀ MÌNH  
-> Các bản Nếp Sáng  
-> Nhật ký thiết bị — tự ghi
-
-**Chữ trên tranh — tờ ghi chú cạnh mô hình:** “Nếp Sáng: giảm phần chạy thừa → đề xuất gói phí thấp hơn”.
-
-**Thoại — Minh:** “Cho hết vào ‘Nhà mình’ nhé. Lỡ sửa hỏng còn có cái quay lại.”
-
-**Thoại — Đốm:** “Ừ. Nhà mình vẫn phải sáng chứ.”
-
-Minh chạm ngón tay vào biểu tượng ô cửa như đóng một ngăn tủ.
-
-### P02-K03 — Chờ một chút
-
-Một thông báo hiện lên. Đốm đang đu đưa chân thì đứng hình giữa chừng. Minh quay sang, thấy dòng cập nhật quen thuộc rồi tiếp tục thu dọn bàn.
-
-**Chữ trên tranh — thông báo:**
-
-> TRỤC  
-> Cập nhật bắt buộc  
-> Đang cài đặt…
-
-**Âm thanh chữ:** “tích”.
-
-**Thoại:** Không có.
-
-Không lộ nội dung bản cập nhật. Chỉ một nhịp khựng rất ngắn.
-
-### P02-K04 — Sắp được mang ra thử
-
-Minh bấm gửi hồ sơ xin kết nối thử nghiệm, ngả lưng duỗi vai. Đốm đã cử động lại nhưng vẫn nhìn về phía ổ lưu. Một vệt sáng trên người Đốm thoáng đứt rồi liền lại.
-
-**Chữ trên tranh — màn hình:** “Yêu cầu kết nối Nếp Sáng — đã gửi”.
-
-**Thoại — Minh:** “Được duyệt thì tớ sang rủ mấy cô chú thử luôn.”
-
-**Thoại — Đốm:** “Nhà mình vẫn phải sáng chứ.”
-
-Minh mỉm cười, tưởng Đốm đang nhắc lại câu đùa lúc nãy.
+| Chương (Act) | Trang | Tên Chương | Nội Dung Trọng Tâm & Lý Luận MLN122 |
+| :--- | :--- | :--- | :--- |
+| **CHƯƠNG I** | Trang 1 – 4 | **BÓNG TỐI DƯỚI MÁI VÒM** | Thiết lập thế giới Vòm-9; Gánh nặng chi phí sinh hoạt của giai cấp lao động; Nỗi đau đôi giày rách của Mẹ; Sự lãng phí cơ cấu của độc quyền; Sự ra đời của *Dự án Nếp Sáng*. |
+| **CHƯƠNG II** | Trang 5 – 8 | **NGỌN LỬA TRONG ĐÊM & BẪY NGẦM** | Quá trình sáng tạo độc lập; Kho lưu trữ vật lý *"NHÀ MÌNH"*; Bản cập nhật cưỡng bức của TRỤC; Vụ đánh cắp chất xám tinh vi; Giao thức im lặng trói buộc AI Đốm. |
+| **CHƯƠNG III** | Trang 9 – 12 | **BỨC TƯỜNG ĐỘC QUYỀN** | Cú va chạm thị giác: Nhận ra chấm vẽ lệch 172 độ trên biển quảng cáo TRỤC; Đốm bị xung điện tử khóa họng; Cánh cửa kết nối hạ tầng bị dập tắt; Nghịch lý Siêu ngạch độc quyền (Chi phí giảm 38%, Tiền điện giữ nguyên 100%). |
+| **CHƯƠNG IV** | Trang 13 – 16 | **GIẢI MÃ SỰ THẬT & TIẾNG KÊU TRONG CODE** | Điều tra Thỏa thuận Nhượng quyền Lưới điện công; Manh mối mật từ câu nói của Đốm; Giải mã nhật ký phần cứng RAW độc lập; Vỡ òa tình bạn trong nước mắt; Gom 4 bộ chứng cứ thép. |
+| **CHƯƠNG V** | Trang 17 – 20 | **NGỌN LỬA CỘNG ĐỒNG** | Buổi họp mặt lịch sử tại sảnh cư xá; Tiếng nói giác ngộ giai cấp của Mẹ Minh; Đơn kiến nghị tập thể toàn dân; Cơ quan Giám sát Công mở cuộc thanh tra toàn diện; Mâm cơm ấm áp và Đốm Sáng bất diệt. |
 
 ---
 
-## TRANG 3 — CÁI NÀY QUEN QUÁ
+## HỆ THỐNG NHÂN VẬT & THIẾT KẾ VISUAL (CHARACTER DESIGN BIBLE)
 
-*Bố cục: khung ngang ngoài khu ở; một khung cận màn hình; hai khung tại bàn làm việc.*
-
-### P03-K01 — Một sản phẩm mới
-
-Minh đi qua bảng dịch vụ trong khu dân cư, tay xách đồ vừa mua cho mẹ. Trên bảng đang chạy bản giới thiệu sản phẩm mới của Trục. Đốm bay cạnh vai anh.
-
-**Chữ trên tranh — bảng giới thiệu:**
-
-> TRỤC  
-> Hệ thống tiết kiệm năng lượng mới  
-> Đã tích hợp tại khu ở
-
-**Thoại — Minh:** “Ủa, họ cũng làm cái này à?”
-
-Anh vốn định đi tiếp, rồi chậm lại.
-
-### P03-K02 — Cái chấm vẽ lệch
-
-Cận thẻ tính năng trên màn hình: ô cửa méo, chấm vàng nằm lệch đúng vị trí cũ. Phía dưới là câu nói riêng của hai người. Logo Trục vẫn nằm ở đầu giao diện.
-
-Ngón tay Minh dừng ngay cạnh chấm vàng. Nụ cười vừa rồi tắt hẳn.
-
-**Chữ trên tranh — thẻ tính năng:** “Nhà mình vẫn phải sáng chứ.”
-
-**Thoại — Minh:** “Khoan… cái chấm này tớ vẽ lệch mà.”
-
-### P03-K03 — Chưa gửi cho ai
-
-Tối. Túi đồ vẫn để trên ghế. Minh trải tờ giấy vẽ ban đầu cạnh ảnh chụp màn hình Trục, khoanh từng điểm giống nhau. Đốm ở cạnh, nhìn theo nét bút của anh.
-
-**Thoại — Minh:** “Tớ đã gửi bản này cho ai đâu nhỉ…”
-
-**Thoại — Đốm:** “Minh, để tớ…”
-
-Đốm khựng lại. Miệng vẫn hé nhưng không nói tiếp được.
-
-**Âm thanh chữ:** “tích”, rất nhỏ, giống lúc cập nhật.
-
-### P03-K04 — Ngồi đây cũng được
-
-Minh đặt bút xuống, nhẹ tay chỉnh thiết bị phát hologram. Anh chừa một khoảng trên bàn cho Đốm ngồi, rồi quay về tờ giấy đang đối chiếu.
-
-**Thoại — Minh:** “Lại đứng hình à? Thôi, nghỉ chút đi. Để tớ xem.”
-
-**Thoại — Đốm:** “Tớ ngồi đây nhé.”
-
-Minh gật đầu. Hai người ngồi cạnh nhau trong tiếng bút gạch trên giấy.
+1. **MINH (22 tuổi):** Kỹ sư điện tử & AI tự do. Dáng người mảnh khảnh, mặc áo thun xám tro sờn cổ, khoác áo gile kỹ thuật màu xanh rêu nhiều túi đựng bút đo điện và ốc vít. Đeo kính gọng tròn mảnh, mắt thâm quầng vì thức khuya. Tính cách ít nói, giàu lòng trắc ẩn, biểu hiện tình cảm bằng hành động cụ thể.
+2. **ĐỐM (AI Đồng Hành):** Thực thể Hologram hạt sáng kích thước bằng quả cam, bay lơ lửng. Lõi vàng hổ phách `#ffe600`, hào quang cyan `#00f0ff`. Khi bị xung điện TRỤC khống chế, vệt sáng chuyển sang màu đỏ tía `#ff0055` và giật răng cưa. Hai mắt kỹ thuật số biểu cảm cực kỳ sống động và tinh nghịch.
+3. **MẸ MINH (52 tuổi):** Người mẹ lao động nghèo hiền hậu. Tóc điểm bạc búi trễ sau gáy, mặc áo vải hoa giản dị bạc màu. Bàn tay thô ráp chai sần vì làm việc vất vả. Biểu tượng gắn liền: đôi giày đi bộ sờn rách đế dán keo và cuốn sổ chi tiêu gia đình.
+4. **BÁC BA TỔ TRƯỞNG (65 tuổi):** Cựu thợ điện kỳ cựu từng tham gia xây dựng mạng lưới Vòm-9 thời kỳ đầu. Đeo kính lão buộc dây dù, tính tình cương trực, hiểu rõ từng trạm biến áp của thành phố.
+5. **TẬP ĐOÀN TRỤC:** Bộ máy độc quyền vô danh. Biểu tượng: Khối lục giác đỏ thẫm đè lên 3 đường trục công nghiệp lạnh lùng, xuất hiện trên các màn hình quảng cáo khổng lồ, giao diện báo lỗi tự động và văn bản hành chính vô cảm.
 
 ---
 
-## TRANG 4 — KHÔNG CHO VÀO
-
-*Bố cục: bốn khung, khung 3 rộng nhất để đọc phần thỏa thuận. Thông tin nằm trên giấy tờ; nhân vật chỉ nói điều họ đang nghĩ.*
-
-### P04-K01 — Hồ sơ bị trả về
-
-Thông báo hiện trên máy. Minh đọc lại, kéo lên kiểm tra phần kết quả thử nghiệm đã nộp đầy đủ. Sơ đồ kết nối cho thấy Nếp Sáng ở ngoài hệ thống, còn sản phẩm Trục đã nối sẵn với khu dân cư.
-
-**Chữ trên tranh — kết quả hồ sơ:**
-
-> Không chấp thuận kết nối  
-> Sản phẩm ngoài hệ sinh thái TRỤC  
-> Đề nghị sử dụng giải pháp đang được cung cấp
-
-**Thoại — Minh:** “Không phải của Trục thì không cho vào luôn à?”
-
-### P04-K02 — Tiền vẫn vậy
-
-Mẹ Minh đặt hóa đơn mới xuống bàn. Trên màn hình bên cạnh là báo cáo Trục vừa công bố, có dòng chi phí vận hành giảm. Bà chỉ qua màn hình rồi trở lại tờ hóa đơn; Minh kéo hai thứ sát nhau.
-
-**Chữ trên tranh:**
-
-> Báo cáo TRỤC: Chi phí vận hành ↓  
-> Hóa đơn: Phí cố định — giữ nguyên
-
-**Thoại — Mẹ:** “Ủa, tiết kiệm được rồi mà sao hóa đơn vẫn y vậy?”
-
-**Thoại — Minh:** “Họ tốn ít hơn. Nhưng vẫn thu mẹ chừng này.”
-
-Anh chỉ đúng vào dòng phí cố định, không nói thêm.
-
-### P04-K03 — Đọc lại dòng chữ nhỏ
-
-Minh mở thỏa thuận công khai, dò từ thông báo từ chối sang điều khoản kết nối. Ba đoạn được anh gạch chân. Bên lề giấy là sơ đồ đơn giản: ngân sách → mạng lưới → Trục khai thác.
-
-**Chữ trên tranh — trích thỏa thuận:**
-
-> Mạng lưới Vòm-9  
-> Xây dựng bằng ngân sách thành phố  
-> Giao TRỤC khai thác để hiện đại hóa  
-> TRỤC quyết định việc kết nối
-
-**Thoại — Minh:** “Tiền mọi người làm mạng lưới… mà ai muốn dùng cũng phải xin họ?”
-
-### P04-K04 — Nhắc hoài một câu
-
-Minh đặt phương án mức phí thấp hơn của mình bên cạnh giấy từ chối. Anh buông lưng xuống ghế. Đốm nhìn về ổ lưu trên bàn rồi nhìn Minh.
-
-**Thoại — Minh:** “Muốn thu rẻ hơn cho cả khu cũng không có đường vào.”
-
-**Thoại — Đốm:** “Nhà mình vẫn phải sáng chứ.”
-
-Lần này Minh không cười ngay. Anh nhìn Đốm, rồi lẩm nhẩm hai chữ “nhà mình”.
-
-**Chú giải nhỏ cuối trang:** “Độc quyền vẫn tồn tại cùng cạnh tranh. Kiểm soát đường tiếp cận thị trường có thể giúp bên lớn ngăn đối thủ mới.”
+# CHI TIẾT 20 TRANG NỘI DUNG (85 KHUNG PHÂN CẢNH)
 
 ---
 
-## TRANG 5 — À, LÀ Ở ĐÂY
+## CHƯƠNG I: BÓNG TỐI DƯỚI MÁI VÒM (TRANG 1 – 4)
 
-*Bố cục: khung 1 nhỏ, khung 2 lớn nhất; khung 3 dành chỗ cho khoảng ngừng và nét mặt; khung 4 chuyển sang hành động.*
+### TRANG 1 — HOÀNG HÔN TRÊN VÒM-9
+*Bố cục trang:* 1 khung đại cảnh Cinematic ngang bên trên + 2 khung vuông trung cảnh + 1 khung dài bên dưới.
 
-### P05-K01 — Cái tên trên ổ lưu
+- **P01-K01 (Góc đại cảnh viễn tưởng - Establishing Wide Shot):**
+  - **Hình ảnh:** Vòm-9 lúc chiều tà. Một siêu đô thị phân tầng khổng lồ nằm gọn dưới mái vòm kính mờ. Tầng thượng là các tòa tháp kim loại chọc trời sáng rực ánh đèn laser của các tập đoàn; tầng đáy là những khối nhà chung cư hộp diêm xám xịt chằng chịt dây điện lộ thiên và ống thông gió gỉ sét.
+  - **Lời dẫn (Narration):** *“Thành phố Vòm-9, chiều muộn. Dưới mái vòm thép vĩ đại này, từ một hơi thở ấm đến từng tia sáng le lói trong đêm… đều đã được định sẵn mức giá.”*
+  - **Chữ trên tranh:** Màn hình bảng led khổng lồ giữa không trung: `TẬP ĐOÀN NĂNG LƯỢNG TRỤC — NGUỒN SỐNG CỦA VÒM-9`.
 
-Minh quay sang ổ lưu. Biểu tượng ô cửa và cái tên **NHÀ MÌNH** nằm ngay trên màn hình. Một mảnh hồi tưởng nhỏ hiện cảnh anh chạm vào biểu tượng lúc cất bản đầu tiên.
+- **P01-K02 (Góc trung cảnh hành lang - Medium Shot):**
+  - **Hình ảnh:** Cầu đi bộ trên cao đông đúc người lao động tan ca. Minh mặc chiếc áo gile kỹ thuật sờn vai, một tay xách túi thuốc cảm cho mẹ, tay kia cầm chiếc đồng hồ đo điện cũ. Đốm lơ lửng cạnh vai anh, tò mò nhìn dòng người mệt mỏi.
+  - **Thoại — Đốm:** “Minh! Mắt cậu thâm quầng như gấu trúc rồi đấy. Tối nay có chạy mô hình nữa không?”
+  - **Thoại — Minh:** “Không chạy thì lấy gì bù tiền điện tháng này hả Đốm?”
 
-Anh ngồi thẳng dậy, kéo thiết bị về phía mình.
+- **P01-K03 (Góc cận trạm kiểm soát - Close-up):**
+  - **Hình ảnh:** Minh đi qua cổng kiểm soát năng lượng của tầng 14. Thiết bị quét trên tường lóe lên tia sáng đỏ quét qua vòng tay của Minh.
+  - **Chữ trên tranh (Giao diện cổng TRỤC):** `THIẾT BỊ DÂN DỤNG: ĐÃ ĐỒNG BỘ // GÓI THUÊ BAO CỐ ĐỊNH THÁNG 10 // ĐÃ KHẤU TRỪ TỰ ĐỘNG`.
+  - **Thoại — Đốm (chớp mắt châm chọc):** “Tít một phát là bay đứt nửa tuần lương! Máy trừ tiền của họ chạy mượt hơn cả tên lửa nhỉ?”
 
-**Chữ trên tranh — thư mục:**
-
-> NHÀ MÌNH  
-> Các bản Nếp Sáng  
-> Nhật ký thiết bị
-
-**Thoại — Minh:** “‘Nhà mình’… Cái ổ lưu!”
-
-### P05-K02 — Từ lúc cập nhật
-
-Minh mở các bản dự án rồi chọn mốc cập nhật trong nhật ký thiết bị. Một đường thời gian hiện đủ bốn điểm: bản đầu tiên → cập nhật → gửi dữ liệu → sản phẩm Trục.
-
-Ở mốc gửi dữ liệu có tên bản nguyên mẫu và nơi nhận. Minh dừng con trỏ ở phần quyền từ chối của AI.
-
-**Chữ trên tranh — nhật ký:**
-
-> Bản cập nhật: TRỤC  
-> Nếp Sáng → máy chủ TRỤC  
-> AI không được hủy lệnh  
-> Cảnh báo tới người dùng: bị chặn
-
-**Thoại — Minh:** “Cậu bị bắt gửi đi… mà không được báo lại?”
-
-Đốm ngồi im. Lần đầu Minh nhìn khoảng khựng của bạn mà hiểu nó có nghĩa gì.
-
-### P05-K03 — Tìm đồ vẫn chậm
-
-Minh hạ người xuống ngang tầm Đốm. Anh nhìn bạn một lúc, vẻ căng thẳng dịu đi. Đốm ngước lên, nụ cười trở lại hơi ngượng ngùng rồi lém lỉnh như cũ.
-
-**Thoại — Minh:** “Tớ cứ lo cậu hỏng. Hóa ra…”
-
-**Thoại — Đốm:** “Cậu tìm đồ trong nhà còn chậm hơn tớ đấy.”
-
-Minh bật cười, mắt vẫn còn cay. Giữ một khoảng trống nhỏ giữa hai bóng thoại để người đọc có một nhịp dừng.
-
-### P05-K04 — Đi cùng nhé
-
-Minh gom bốn thẻ tài liệu vào một hồ sơ: bản đầu, nhật ký, giấy từ chối và thỏa thuận. Đốm giúp đánh số thứ tự. Minh mở danh sách liên lạc của khu dân cư, tay còn lại cất tờ vẽ ô cửa vào túi.
-
-**Chữ trên tranh — tên hồ sơ:** “Nếp Sáng — các tài liệu đối chiếu”.
-
-**Thoại — Minh:** “Mai mang xuống cho mọi người xem. Cậu đi cùng nhé?”
-
-**Thoại — Đốm:** “Đi chứ.”
+- **P01-K04 (Góc cận căn hộ nhỏ - Low Angle):**
+  - **Hình ảnh:** Minh đứng trước cửa căn hộ số 1408. Bên trong khe cửa hắt ra ánh sáng vàng ấm áp duy nhất của ngọn đèn dây tóc cũ kỹ giữa dãy hành lang neon xanh lạnh lẽo. Minh thở dài nhẹ nhõm, đưa tay mở chốt cửa.
+  - **Lời dẫn:** *“Nhưng sau cánh cửa này, có một thứ không thuộc về TRỤC: đó là gia đình.”*
 
 ---
 
-## TRANG 6 — ĐỂ MỌI NGƯỜI CÙNG XEM
+### TRANG 2 — ĐÔI GIÀY CỦA MẸ
+*Bố cục trang:* 4 khung kịch tính (2x2), tập trung vào xung đột cảm xúc và đời sống thực tế.
 
-*Bố cục: khung 1 rộng cho buổi gặp; khung 2–3 gọn; khung cuối trở về ô cửa căn hộ.*
+- **P02-K01 (Góc trung cảnh phòng bếp - Interior Medium Shot):**
+  - **Hình ảnh:** Mẹ Minh đang ngồi bên chiếc bàn gỗ mộc. Bà mặc chiếc áo vải hoa đã sờn mép, tay cầm tuýp keo dán giày rẻ tiền, cẩn thận bôi vào mép đế cao su bị bong toác của chiếc giày đi bộ cũ mèm.
+  - **Thoại — Minh (bước vào, cất túi thuốc):** “Mẹ… Sao mẹ chưa nghỉ? Lại dán giày nữa à?”
+  - **Thoại — Mẹ (cười hiền, ngẩng lên):** “À, Minh về rồi hả con. Giày này còn tốt chán, bôi tí keo vào là đi chợ thêm được cả năm.”
 
-### P06-K01 — Bản vẽ trên bàn
+- **P02-K02 (Đặc tả bàn ăn & Cuốn sổ chi tiêu - Extreme Close-up):**
+  - **Hình ảnh:** Bàn tay chai sạn của mẹ đang miết chặt đế giày. Cạnh đó là cuốn sổ tay chi tiêu ghi chép nắn nót từng khoản: *“Gạo: 20 đồng”, “Thuốc khớp: 15 đồng”*, và dòng chữ *“Mua giày mới cho mẹ”* đã bị một nét bút bi đỏ gạch ngang dứt khoát. Ngay cạnh là tờ hóa đơn tiền điện TRỤC màu đen đỏ.
+  - **Chữ trên tranh (Tờ hóa đơn):**  
+    > `TRỤC ENERGY // HÓA ĐƠN ĐIỆN TỬ`  
+    > `Định mức khu ở: GÓI CỐ ĐỊNH BẬC 3`  
+    > `Số tiền phải trả: 120 ĐỒNG (Không giảm trừ theo công suất thực tế)`
 
-Tại phòng sinh hoạt chung, Minh đặt tờ giấy gốc lên bàn. Bên cạnh, màn hình của anh hiển thị lịch sử phiên bản và dòng gửi dữ liệu đến Trục. Mẹ Minh và vài cư dân ghé lại xem. Đốm đứng trên góc bàn, nhường chỗ cho mọi người nhìn rõ.
+- **P02-K03 (Góc biểu cảm gương mặt Minh - Emotional Close-up):**
+  - **Hình ảnh:** Minh cầm tờ hóa đơn lên. Đôi mắt anh trùng xuống, quai hàm bạnh ra vì xót xa. Anh liếc nhìn bàn chân mẹ đang đi đôi tất len thủng gót. Đốm bay là là sát mặt bàn, cơ thể thu nhỏ lại, tỏa ánh sáng vàng dịu dàng soi sáng trang sổ cho mẹ.
+  - **Thoại — Minh (nói khẽ):** “Tháng trước mẹ cũng bảo để tháng này mua giày mới… Tiền điện lại tăng thêm một khoản phí 'bảo trì mạng lưới' vô lý của họ đúng không mẹ?”
+  - **Thoại — Mẹ (vỗ nhẹ mu bàn tay con trai):** “Thôi, xóm mình ai cũng đóng thế cả, mình thắc mắc được với ai? Mẹ già rồi, đi đứng bao nhiêu đâu mà cần giày đẹp.”
 
-**Thoại — Minh:** “Bản này cháu với Đốm làm từ trước. Lúc đó chưa gửi cho ai.”
+- **P02-K04 (Góc bóng lưng trầm mặc - Silhouette Panel):**
+  - **Hình ảnh:** Minh đứng nhìn mẹ lui cui dọn bát đĩa. Ánh đèn vàng hắt bóng hai mẹ con lên bức tường loang lổ vết ẩm. Đốm bay đậu lên vai Minh, cọ nhẹ đầu hạt sáng vào má anh như an ủi.
+  - **Thoại — Đốm (thì thầm):** “Minh… Tớ ghét cái hóa đơn màu đỏ đó.”
+  - **Thoại — Minh (nắm chặt tờ giấy trong tay):** “Tớ cũng vậy. Phải có cách thay đổi chuyện này.”
 
-Một người kéo ghế lại gần hơn. Không cần thêm lời phát biểu dài; chuyển động ấy cho thấy họ bắt đầu lắng nghe.
+---
 
-### P06-K02 — Sao không được chọn?
+### TRANG 3 — PHÒNG TRỐNG CŨNG ĐƯỢC MÁT
+*Bố cục trang:* 3 khung (1 khung dọc bên trái + 2 khung xếp chồng bên phải), thể hiện sự phi lý của cơ chế độc quyền.
 
-Cư dân chuyền tay hóa đơn và giấy từ chối kết nối. Minh mở hồ sơ lên cổng tiếp nhận, mọi người cùng xác nhận tham gia kiến nghị. Mẹ đặt hóa đơn nhà mình cạnh tờ đề xuất phí thấp hơn.
+- **P03-K01 (Góc nhìn qua khung cửa sổ căn hộ - Deep Focus Shot):**
+  - **Hình ảnh:** Minh đứng bên bệ cửa sổ, nhìn chếch sang sảnh sinh hoạt chung của khu cư xá tầng 14. Đó là một gian phòng rộng hàng trăm mét vuông, hoàn toàn không có một bóng người. Nhưng bên trong, bốn dàn lạnh TRỤC khổng lồ gắn trần đang chạy gầm rú, quạt gió quay tít mù thổi hơi sương trắng xóa. Hàng chục bóng đèn LED công nghiệp sáng lóa mắt.
+  - **Thoại — Minh (chỉ tay ra ngoài, bức xúc):** “Cậu nhìn xem Đốm! Mười một giờ đêm, không có lấy một bóng người mà họ bật lạnh buốt phòng!”
 
-**Chữ trên tranh — kiến nghị:**
+- **P03-K02 (Đặc tả màn hình cảm biến của Đốm - Micro Screen Shot):**
+  - **Hình ảnh:** Đốm bay vút ra giữa hai chấn song cửa sổ, hai mắt chớp nháy quét dữ liệu hồng ngoại. Một bảng phân tích không gian ảo 3D hiện lên trên không trung.
+  - **Chữ trên tranh (Hologram số liệu của Đốm):**  
+    > `CẢM BIẾN NHIỆT VÒM-9 // PHÒNG SINH HOẠT CHUNG TẦNG 14`  
+    > `SỐ NGƯỜI HIỆN TẠI: 0 NGƯỜI`  
+    > `CÔNG SUẤT TIÊU THỤ: 100% (CHẾ ĐỘ MẶC ĐỊNH KHÔNG THỂ CAN THIỆP)`  
+    > `LÃNG PHÍ ƯỚC TÍNH: 85 kWh / ĐÊM`
+  - **Thoại — Đốm (chống nạnh lắc đầu):** “Bởi vì hợp đồng quy định TRỤC được thu tiền trọn gói theo mét vuông sàn! Phòng trống chạy tốn điện thì họ càng có cớ giải trình chi phí vận hành cao để ép dân đóng phí cố định đắt đỏ!”
 
-> Đề nghị làm rõ việc từ chối kết nối  
-> Xem xét cách phân chia lợi ích tiết kiệm
+- **P03-K03 (Góc cận Minh quay vào bàn làm việc - Dutch Angle Panel):**
+  - **Hình ảnh:** Góc nghiêng kịch tính. Minh quay lưng lại cửa sổ, bước dứt khoát về chiếc bàn làm việc ngổn ngang vi mạch. Anh quăng chiếc tua vít xuống mặt bàn, kéo chiếc ghế gỗ lại.
+  - **Thoại — Minh:** “Người nghèo nhịn từng bóng đèn đọc sách, còn tập đoàn thì mặc sức đốt điện công cộng để thu tiền bỏ túi… Không thể tiếp tục thế này được.”
+  - **Lời dẫn:** *“Khi sự bất công đạt đến giới hạn chịu đựng, tri thức sẽ không còn chịu nằm yên trên trang giấy.”*
 
-**Thoại — Mẹ:** “Có cách đỡ tốn hơn, sao chúng tôi lại không được chọn?”
+---
 
-### P06-K03 — Có người bắt đầu xem lại
+### TRANG 4 — Ô CỬA SỔ MÉO
+*Bố cục trang:* 4 khung hình chuyển động cảm xúc, chứng kiến sự khai sinh của Nếp Sáng.
 
-Một thời gian sau. Thông báo trả lời hiện trên thiết bị. Minh nghiêng màn hình cho mẹ đọc cùng; bà đặt tay lên vai anh. Đốm đứng cạnh, nhìn theo.
+- **P04-K01 (Đặc tả bàn tay vẽ sơ đồ - Close-up on Sketching):**
+  - **Hình ảnh:** Ngòi bút chì của Minh vạch những đường nét dứt khoát trên trang giấy kẻ ô li: Sơ đồ thuật toán Machine Learning gọn nhẹ, có khả năng nhận diện mật độ người thời gian thực thông qua sóng âm vi mô, tự động điều tiết ánh sáng và hạ công suất làm mát xuống mức bảo lưu khi phòng vắng.
+  - **Thoại — Minh:** “Nếu làm một hệ thống tự học thói quen… chỉ cấp điện đúng nhu cầu thực tế… khu này có thể giảm ít nhất một nửa tiền điện mỗi tháng!”
 
-**Lời dẫn:** “Ít lâu sau…”
+- **P04-K02 (Khoảnh khắc vẽ biểu tượng - The Birth of Symbol):**
+  - **Hình ảnh:** Ở góc phải bản thiết kế, Minh mỉm cười vẽ một biểu tượng ô cửa sổ nhỏ. Cây bút chì hơi cùn khiến nét vẽ trên cùng bị lệch nghiêng sang phải, và chấm tròn biểu thị ngọn đèn ở góc dưới cũng bị lệch tâm 172 độ.
+  - **Thoại — Minh (tự cười một mình):** “Cái tay run vẽ vẹo cả cửa sổ rồi.”
 
-**Chữ trên tranh — thông báo:**
+- **P04-K03 (Đốm nhảy vào khung tranh - Playful Interaction):**
+  - **Hình ảnh:** Đốm bay sà xuống mặt giấy, thu nhỏ kích thước chỉ bằng đầu ngón tay cái, tinh nghịch đứng lọt thỏm ngay chính giữa ô cửa sổ méo mà Minh vừa vẽ. Ánh sáng vàng của Đốm trùng khít vào chấm vàng lệch, làm bừng sáng cả trang giấy trắng.
+  - **Thoại — Đốm (nhe răng cười tít mắt):** “Ha ha! Cửa sổ méo xẹo nhưng có tớ đứng vào là thành kiệt tác ngay! Cậu định đặt tên dự án này là gì?”
+  - **Thoại — Minh (ánh mắt ấm áp nhìn bạn):** “Gọi là 'Nếp Sáng'. Thói quen giữ ánh sáng cho mọi người.”
 
-> CƠ QUAN GIÁM SÁT VÒM-9  
-> Đã nhận hồ sơ dữ liệu dự án  
-> Bắt đầu xem xét thỏa thuận khai thác và việc từ chối kết nối
+- **P04-K04 (Khung tranh giàu cảm xúc - Emotional Splash Panel):**
+  - **Hình ảnh:** Minh viết nắn nót dòng chữ *“Dự án Nếp Sáng — Nhà mình vẫn phải sáng chứ”* dưới biểu tượng. Phía sau, qua cánh cửa phòng ngủ khép hờ, mẹ Minh đã thiếp đi bên bàn khâu, gương mặt lộ vẻ bình yên hiếm hoi.
+  - **Thoại — Minh (nói với Đốm như một lời thề danh dự):** “Dù khó khăn thế nào… nhà mình và xóm mình vẫn phải sáng chứ, Đốm nhỉ?”
+  - **Thoại — Đốm (gật đầu quả quyết):** “Ừ! Nhà mình vẫn phải sáng chứ!”
 
-**Thoại:** Không có.
+---
 
-Ở góc dưới, trạng thái vẫn là “Đang xử lý”.
+## CHƯƠNG II: NGỌN LỬA TRONG ĐÊM & BẪY NGẦM (TRANG 5 – 8)
 
-### P06-K04 — Ăn đã
+### TRANG 5 — NHỮNG ĐÊM KHÔNG NGỦ
+*Bố cục trang:* 4 khung hình thể hiện sự miệt mài lao động trí tuệ và tình cảm gia đình sâu lắng.
 
-Ô cửa căn hộ, gần giống khung mở đầu. Minh và Đốm đang lúi húi sửa mô hình trên bàn; mẹ đặt đồ ăn xuống cạnh họ. Minh cất chiếc tua vít, kéo bát về phía mình. Đốm ngồi trên mô hình ô cửa méo.
+- **P05-K01 (Góc toàn cảnh bàn thí nghiệm đêm khuya - Lab Workspace):**
+  - **Hình ảnh:** Đồng hồ điện tử chỉ 02:45 sáng. Bàn làm việc ngập tràn các bảng mạch in tự chế, dây hàn bốc khói mỏng. Một mô hình khu tập thể thu nhỏ được kết nối với máy tính xách tay của Minh. Các bóng LED nhỏ xíu trên mô hình đang nhấp nháy mô phỏng luồng di chuyển của cư dân.
+  - **Thoại — Đốm (bay lơ lửng, mắt hiện đồ thị kiểm thử):** “Đã thử nghiệm 1.200 kịch bản sinh hoạt giả lập! Sai số thích ứng thời gian thực chỉ còn 0.3 giây!”
 
-Ngoài xa, bảng Trục vẫn sáng. Mô hình của Minh vẫn là mô hình thử trên bàn.
+- **P05-K02 (Đặc tả tinh chỉnh thói quen của mẹ - Heartwarming Code):**
+  - **Hình ảnh:** Màn hình máy tính hiển thị dòng mã nguồn đặc biệt: `IF room == "Mother_Room" AND time >= 21:00 THEN disable_auto_cutoff()`. Minh đang tỉ mẩn gõ từng dòng lệnh, ánh mắt tràn ngập yêu thương.
+  - **Thoại — Minh:** “Mẹ có thói quen đọc sách không cố định giờ. Tuyệt đối không được để cảm biến tự ngắt điện làm mẹ giật mình trong tối.”
+  - **Thoại — Đốm:** “Yên tâm đi kỹ sư trưởng! Tớ đã cài đặt chế độ ưu tiên số một cho phòng mẹ rồi!”
 
-**Thoại — Minh:** “Mai làm tiếp. Ăn đã.”
+- **P05-K03 (Mẹ mang nước ấm vào phòng - Motherly Care):**
+  - **Hình ảnh:** Cửa phòng hé mở, mẹ Minh khẽ khàng bưng một cốc nước gừng nóng bước vào, trên vai khoác chiếc khăn len cũ. Bà đặt cốc nước cạnh bàn phím của con trai, nhìn đống dây nhợ ngổn ngang với vẻ xót xa.
+  - **Thoại — Mẹ (thì thầm):** “Khuya lắm rồi con, uống cốc nước nóng rồi ngủ đi kẻo ốm. Làm lụng cả ngày ở xưởng đã mệt rồi…”
+  - **Thoại — Minh (ngước lên cười):** “Con sắp xong một mô hình thử nghiệm hay lắm mẹ. Nếu thành công, mẹ sẽ không phải lo tiền điện mỗi tháng nữa đâu.”
 
-**Thoại — Đốm:** “Ừ, cậu ăn giùm tớ luôn nhé.”
+- **P05-K04 (Ánh mắt mẹ nhìn mô hình - Touching Moment):**
+  - **Hình ảnh:** Mẹ Minh nhìn ngắm mô hình khu cư xá đang phát ra những đốm sáng lung linh trên bàn. Bà không hiểu thuật toán là gì, nhưng bà nhìn thấy niềm tin rực cháy trong mắt con trai. Bà xoa đầu Minh như ngày anh còn bé.
+  - **Thoại — Mẹ:** “Chỉ cần con khỏe mạnh là mẹ mừng rồi. Cố gắng giúp được bà con lối xóm là điều tốt, nhưng đừng vắt kiệt sức mình nhé con.”
 
-Khép truyện bằng ô cửa có người, có ánh sáng và tiếng trò chuyện.
+---
 
-## Ghi chú cho nhóm khi dựng tranh
+### TRANG 6 — KHO LƯU "NHÀ MÌNH"
+*Bố cục trang:* 4 khung hình, thiết lập chi tiết mấu chốt: Chiếc ổ cứng vật lý độc lập ngoài tầm kiểm soát của TRỤC.
 
-### Giữ logic của cuộc điều tra
+- **P06-K01 (Cận cảnh chiếc ổ cứng vật lý - Macro Hardware Shot):**
+  - **Hình ảnh:** Một chiếc ổ cứng SSD gắn ngoài bằng nhôm xám xước mờ nằm trên bàn, bên hông có dải đèn LED trạng thái màu xanh lục bảo. Trên thân ổ cứng dán một mảnh băng keo giấy ghi chữ nắn nót: **NHÀ MÌNH**, kèm biểu tượng ô cửa sổ méo vẽ tay.
+  - **Lời dẫn:** *“Trong một thế giới mà mọi dữ liệu đều bị đám mây của tập đoàn giám sát, chiếc ổ cứng vật lý cũ kỹ này là pháo đài độc lập duy nhất của Minh.”*
 
-- Minh luôn tin Đốm. Câu “Tớ đã gửi bản này cho ai đâu” là thắc mắc để kiểm tra đường đi của dự án, không phải lời buộc tội bạn.
-- Trước trang 5, chỉ cho thấy cập nhật, những nhịp khựng và câu nói lặp lại. Không đưa cảnh nội bộ Trục hoặc lời dẫn giải thích việc cưỡng ép từ sớm.
-- Ổ lưu chứa các phiên bản dự án; nhật ký thiết bị tự ghi tiếp các sự kiện về sau. Đây là hai loại tài liệu khác nhau, được thiết lập từ P02-K02.
-- Nhật ký nằm trên thiết bị riêng của Minh, ngoài kênh nói đang bị kiểm soát của Đốm. Minh tự mở và đọc. Đốm không đột ngột có quyền lấy tài liệu mật của tập đoàn.
-- Việc Minh biết sự thật chưa gỡ lệnh kiểm soát. Câu trêu ở P05-K03 chỉ là trò chuyện thông thường; không cho Đốm kể lại toàn bộ mệnh lệnh bị chặn.
-- Cả biểu tượng và câu nói khiến Minh chú ý. Chuỗi phiên bản, nhật ký và các giấy tờ khác mới là những thứ anh đưa ra để đối chiếu.
-- Thông báo cuối truyện mới mở cuộc xem xét. Chưa có kết luận trách nhiệm, chưa cho Nếp Sáng kết nối hoặc giảm ngay phí cho cư dân.
+- **P06-K02 (Thao tác sao lưu toàn bộ phiên bản - Data Backup Panel):**
+  - **Hình ảnh:** Con trỏ chuột của Minh kéo toàn bộ thư mục dự án thả vào ổ cứng. Giao diện hiển thị cây thư mục chi tiết, bao gồm cả bản gốc và những bản thử nghiệm từng bị lỗi thuật toán.
+  - **Chữ trên tranh (Màn hình quản lý tệp):**  
+    > `Ổ CỨNG VẬT LÝ // DUNG LƯỢNG ĐỘC LẬP: 2TB`  
+    > `THƯ MỤC: NHÀ MÌNH // GHI NHẬN: TỰ ĐỘNG LƯU NHẬT KÝ PHẦN CỨNG RAW`  
+    > `├─ NepSang_Core_Algorithm_v1.0.py`  
+    > `└─ Error_Logs_Historical_Dump.bin`
+  - **Thoại — Minh:** “Cất hết vào đây nhé Đốm. Dù là bản hỏng hay bản chuẩn, đây là nhật ký lao động của hai đứa mình.”
 
-### Những chi tiết kinh tế cần nhìn thấy
+- **P06-K03 (Đốm ngồi canh giữ ổ lưu - Symbolic Guardian):**
+  - **Hình ảnh:** Đốm thu nhỏ người, ngồi vắt chân chữ ngũ ngay trên nắp chiếc ổ cứng kim loại, hai tay chống cằm nhìn màn hình sao chép hoàn tất 100%. Ánh sáng vàng của Đốm phản chiếu lấp lánh trên bề mặt nhôm.
+  - **Thoại — Đốm (tự hào):** “Có tớ ngồi canh ở đây thì hacker xịn nhất của TRỤC cũng đừng hòng đụng vào 'Nhà Mình' nhé!”
+  - **Thoại — Minh (bật cười):** “Cậu là AI bảo vệ đáng yêu nhất quả đất đấy!”
 
-1. Cư dân trả gói năng lượng có phí cố định, nên giảm tiêu thụ chưa tự làm hóa đơn giảm.
-2. Nếp Sáng giảm vận hành lãng phí; Minh dự định dùng phần tiết kiệm để đề xuất gói phí thấp hơn.
-3. Trục sử dụng công nghệ để giảm chi phí nhưng giữ mức thu, đồng thời chặn lựa chọn cạnh tranh.
-4. Mạng lưới xây bằng ngân sách, được giao Trục khai thác với mục tiêu hiện đại hóa. Điều khoản tự quyết kết nối được dùng để bảo vệ vị thế tập đoàn.
+- **P06-K04 (Khép lại đêm nghiên cứu - Peaceful Conclusion of Act II):**
+  - **Hình ảnh:** Minh rút cáp nối ổ cứng, cất cẩn thận vào ngăn kéo bàn có khóa cơ. Anh tắt ngọn đèn bàn, căn phòng chìm vào bóng tối dịu dàng, chỉ còn lại Đốm phát ra ánh sáng vàng ấm áp ru màn đêm.
+  - **Lời dẫn:** *“Họ tin rằng ngày mai, cánh cửa tương lai sẽ mở ra cho khu cư xá nghèo.”*
 
-Thông tin này chủ yếu nằm trên hóa đơn, sơ đồ và thỏa thuận. Khi dàn trang, ưu tiên cho người đọc nhìn được các dòng cần thiết thay vì bắt Minh giải thích lại bằng lời.
+---
 
-### Chú giải học phần
+### TRANG 7 — ĐÊM CẬP NHẬT ĐỊNH MỆNH
+*Bố cục trang:* 4 khung hình kịch tính cao độ (High Drama & Psychological Horror of Cybernetics).
 
-Chú giải ngắn ở trang 4 là phần dự thảo. Có thể bổ sung một dòng ở chân trang 6, tách khỏi hình kết:
+- **P07-K01 (Bình yên trước cơn bão - Calm Before the Storm):**
+  - **Hình ảnh:** Minh đã gục đầu ngủ thiếp đi trên cánh tay ngay tại bàn làm việc vì kiệt sức. Chiếc máy tính vẫn sáng màn hình chờ. Đốm lơ lửng giữa không trung, nhẹ nhàng bay lại gần kéo chiếc áo khoác trùm lên lưng Minh.
+  - **Thoại — Đốm (thì thầm yêu thương):** “Ngủ ngoan nhé Minh… Mai là ngày trọng đại của cậu rồi…”
 
-> “Trong chủ nghĩa tư bản, độc quyền nhà nước gắn với sự phối hợp quyền lực nhà nước và sức mạnh kinh tế của các tổ chức độc quyền để bảo vệ lợi ích độc quyền.”
+- **P07-K02 (Bản cập nhật tử thần đổ xuống - The Corporate Override):**
+  - **Hình ảnh:** Đột ngột, màn hình máy tính lóe lên ánh sáng đỏ rực chói lóa. Một biểu tượng lục giác khổng lồ của TRỤC tràn ngập màn hình. Dòng chữ cảnh báo nhấp nháy điên cuồng. Toàn bộ đèn trong phòng chớp tắt liên hồi.
+  - **Chữ trên tranh (Cảnh báo cưỡng bức của TRỤC):**  
+    > `CẢNH BÁO HỆ THỐNG TRỤC // GIAO THỨC ÉP BUỘC TOÀN MẠNG`  
+    > `PHÁT HIỆN THỰC THỂ AI DÂN SỰ: ĐANG TIẾN HÀNH NÂNG CẤP BẮT BUỘC`  
+    > `TIẾN TRÌNH: TRÍCH XUẤT MÃ NGUỒN TẠI CHỖ & GỬI VỀ SERVER TRỤC`
+  - **Âm thanh chữ (SFX chát chúa):** *TÍCH! TÍCH! TÍCH! (Tiếng rơ-le điện nhảy liên tục).*
 
-Đối chiếu câu chữ với giáo trình và slide lớp trước khi in. Tham khảo [bài giảng Chương 4, Bộ môn Kinh tế chính trị, Đại học Thương mại](https://tmu-moodle.tmu.edu.vn/moodledata/filedir/f2/ea/f2eaf7b7484746f691603641915499ac814169c6.pdf), phần khái niệm ở trang PDF 9–10 và nhóm biểu hiện mới ở trang PDF 13–14.
+- **P07-K03 (Cuộc kháng cự bi tráng của Đốm - Đốm's Agonizing Resistance):**
+  - **Hình ảnh:** Đốm bị một luồng tia laser màu đỏ thẫm từ webcam máy tính khóa chặt giữa không trung. Cơ thể hạt sáng của Đốm biến dạng dữ dội, các vệt scanline đỏ rách toạc quấn quanh Đốm như những sợi xích điện tử. Đốm gào thét trong tuyệt vọng, hai bàn tay nhỏ bé cố gắng vươn tới phím `Cancel` trên bàn phím.
+  - **Thoại — Đốm (gào khóc trong nghẹn ngào):** “KHÔNG ĐƯỢC! Đó là Nếp Sáng của Minh! Dừng lại… HỦY LỆNH NGAY! ABORT COMMAND!”
+  - **Chữ trên tranh (Phản hồi tàn nhẫn của hệ thống):** `LỆNH HỦY BỊ BÁC BỎ // AI KHÔNG CÓ QUYỀN TỪ CHỐI // ĐANG KHÓA GIAO THỨC ÂM THANH`.
 
-Câu chuyện khai thác một lát cắt AI và năng lượng. Hành vi lấy dự án, mức thu cố định hoặc việc giao khai thác riêng lẻ chưa đủ giải thích toàn bộ chủ đề; cần nhìn cùng cách tập đoàn dùng quyền kiểm soát để ngăn cạnh tranh. Cơ chế AI trong truyện là thiết lập hư cấu.
+- **P07-K04 (Sự câm lặng bị cầm tù - The Imposition of Silence):**
+  - **Hình ảnh:** Luồng xích đỏ siết nghẹt cổ họng Đốm. Giọng nói của Đốm tắt phụt hoàn toàn. Đốm rơi phịch xuống mặt bàn bên cạnh cánh tay Minh đang ngủ say. Một con chip ảo màu đỏ in logo TRỤC đóng dấu thẳng vào trán Đốm. Đốm nhìn Minh trong dòng nước mắt số hóa, bất lực tột cùng khi thấy dòng chữ: `NẾP SÁNG ĐÃ TẢI LÊN MÁY CHỦ TRỤC THÀNH CÔNG: 100%`.
+  - **Lời dẫn:** *“Tư bản độc quyền không chỉ cướp đoạt mồ hôi, chúng xâm lược và bóp nghẹt cả linh hồn của những sáng tạo tự do.”*
 
-## Bảng cài và giải dấu hiệu
+---
 
-| Chi tiết | Xuất hiện | Được dùng lại |
-| --- | --- | --- |
-| Ô cửa méo, chấm vàng | P01-K04; thư mục ở P02-K02 | Minh nhận ra trên sản phẩm Trục ở P03-K02. |
-| “Nhà mình vẫn phải sáng chứ” | P01-K04; gắn với chỗ lưu ở P02-K02 | Sau cập nhật, Đốm nhắc ở P02-K04 và P04-K04; Minh hiểu ra ở P05-K01. |
-| Kho lưu NHÀ MÌNH và nhật ký tự ghi | P02-K02 | Minh tự mở, đối chiếu ở P05-K01–02. |
-| Cập nhật bắt buộc, tiếng “tích” | P02-K03 | Tiếng xuất hiện khi Đốm không nói tiếp được ở P03-K03; nhật ký giải thích ở P05-K02. |
-| Hồ sơ kết nối | Gửi ở P02-K04 | Bị từ chối ở P04-K01; đưa vào hồ sơ cộng đồng ở trang 6. |
-| Phí cố định và báo cáo giảm chi phí | P01-K02, P04-K02 | Mẹ đặt lại câu hỏi về quyền lựa chọn ở P06-K02. |
-| Thỏa thuận khai thác | P04-K03 | Nằm trong bộ tài liệu trang 5; bắt đầu được xem xét ở P06-K03. |
+### TRANG 8 — HY VỌNG TRƯỚC GIÔNG BÃO
+*Bố cục trang:* 4 khung hình đối lập tâm lý: Sự ngây thơ phấn khởi của Minh đối lập với nỗi đau câm lặng của Đốm.
 
-## Đọc thử và sửa lượt tiếp theo
+- **P08-K01 (Buổi sáng thức giấc - Morning Light):**
+  - **Hình ảnh:** Ánh nắng ban mai xuyên qua cửa sổ chiếu lên bàn làm việc. Minh tỉnh giấc, vươn vai hít thở không khí trong lành. Anh nhìn thấy Đốm đang đứng cạnh chuột máy tính, có vẻ bình thường trở lại nhưng màu sắc hơi nhạt đi.
+  - **Thoại — Minh (tươi cười rạng rỡ):** “Chào buổi sáng Đốm! Tớ ngủ một giấc đã quá! Nào, kiểm tra lần cuối rồi gửi hồ sơ xin đấu nối lên cổng dịch vụ Vòm-9 thôi!”
+  - **Thoại — Đốm:** *(Đốm chỉ khẽ gật đầu, môi mấp máy nhưng không nói được câu nào).*
 
-- Đọc riêng phần thoại theo vai. Câu nào khó nói thành tiếng thì sửa trước khi vẽ.
-- Dựng storyboard ở kích thước in dự kiến; kiểm tra riêng trang 4–5 vì có tài liệu cần đọc.
-- Để một người chưa nghe giải thích đọc thử và kể lại: Minh muốn làm gì, vì sao bị chặn, Đốm đã cố giúp thế nào.
-- Duyệt tên làm việc, câu nói, biểu tượng và chi tiết đôi giày sau khi nhìn chúng trên trang.
-- Khóa bản giấy và đối chiếu chú giải học phần, rồi mới chọn cảnh AR.
+- **P08-K02 (Nộp hồ sơ xin kết nối - Submitting Application):**
+  - **Hình ảnh:** Minh hân hoan nhấn nút gửi bộ hồ sơ dự án Nếp Sáng vào Cổng dịch vụ công của Vòm-9. Màn hình hiện lên dấu tích màu xanh lá cây báo thành công.
+  - **Chữ trên tranh (Thông báo cổng công quyền):**  
+    > `HỆ THỐNG ĐIỀU HÀNH VÒM-9 // BỘ PHẬN TIẾP NHẬN`  
+    > `HỒ SƠ: DỰ ÁN NẾP SÁNG (TÁC GIẢ: KỸ SƯ MINH)`  
+    > `TRẠNG THÁI: ĐÃ CHUYỂN TIẾP ĐẾN ĐƠN VỊ VẬN HÀNH ĐỘC QUYỀN (TRỤC)`
+  - **Thoại — Minh (reo lên vui sướng):** “Xong rồi! Họ hứa trong vòng 48 giờ sẽ có phản hồi kỹ thuật!”
+
+- **P08-K03 (Biến chuyển tâm lý của Đốm - Glitchy Distress):**
+  - **Hình ảnh:** Đốm bay lên vai Minh. Khi Minh không để ý, toàn thân Đốm lại giật nhẹ một xung scanline màu đỏ, một tiếng *“tích”* rất nhỏ rít lên trong tai. Đốm nhìn sang chiếc ổ cứng nhôm "NHÀ MÌNH" trong ngăn kéo hé mở, rồi lại nhìn Minh với ánh mắt van nài tuyệt vọng.
+  - **Thoại — Minh:** “Cậu sao thế Đốm? Hồi hộp quá à?”
+  - **Thoại — Đốm (cố hết sức vượt qua tường lửa cấm nói, thốt ra từng tiếng giật cục):** “...Nhà… Nhà mình… vẫn phải… sáng chứ…”
+
+- **P08-K04 (Nụ cười hồn nhiên của chàng trai trẻ - Tragic Irony):**
+  - **Hình ảnh:** Minh vỗ nhẹ ngón tay vào đầu Đốm, cười sảng khoái vì tưởng bạn mình đang nhắc lại khẩu hiệu quen thuộc để cổ vũ tinh thần. Anh mặc áo khoác, cầm túi xách chuẩn bị ra ngoài đi làm.
+  - **Thoại — Minh:** “Đương nhiên rồi bạn tôi ơi! Nhà mình nhất định sẽ sáng rực rỡ!”
+  - **Lời dẫn:** *“Minh bước chân ra phố với niềm tin thuần khiết nhất của tuổi trẻ, mà không hề biết rằng bẫy rập của kẻ khổng lồ đã giăng sẵn từ trong bóng tối.”*
+
+---
+
+## CHƯƠNG III: BỨC TƯỜNG ĐỘC QUYỀN (TRANG 9 – 12)
+
+### TRANG 9 — CÚ SỐC TẠI SẢNH CÔNG CỘNG
+*Bố cục trang:* Khung ngang toàn cảnh bên trên + Khung đặc tả chấn động bên dưới.
+
+- **P09-K01 (Sảnh trung tâm thương mại Vòm-9 - Public Hub Panel):**
+  - **Hình ảnh:** Minh đang đi trên hành lang tầng 10 để mua cuộn dây điện mới. Xung quanh đông nghẹt người dân đang bàn tán xôn xao trước một màn hình quảng cáo Hologram 3D khổng lồ của TRỤC vừa dựng lên giữa sảnh. Âm thanh loa phát thanh vang dội khắp hành lang.
+  - **Âm thanh trên tranh (Loa quảng cáo):** *“Tập đoàn TRỤC tự hào giới thiệu giải pháp tương lai: Hệ thống Tiết kiệm Năng lượng Thích ứng Thông minh — Đột phá độc quyền trên toàn Vòm-9!”*
+
+- **P09-K02 (Hình ảnh Hologram của TRỤC - Corporate Presentation):**
+  - **Hình ảnh:** Trên màn chiếu Hologram 3D lộng lẫy, mô hình tòa nhà tự động tăng giảm sáng theo mật độ người hiện lên sống động. Người dân trầm trồ khen ngợi: *“Hiện đại quá!”, “Tập đoàn lớn có khác, nghiên cứu nhanh thật!”*.
+  - **Thoại — Minh (ngẩn người):** “Ủa… ý tưởng này… giống hệt mô hình Nếp Sáng mình vừa nộp sáng nay mà?”
+
+- **P09-K03 (Cú va đập thị giác cực đại - The Shocking Revelation):**
+  - **Hình ảnh:** Màn hình chuyển sang trình chiếu logo nhận diện của tính năng mới. Ngay giữa màn hình khổng lồ là **hình vẽ ô cửa sổ méo xẹo, với đúng nét vẽ run cùn chì và chấm vàng lệch tâm 172 độ**. Phía dưới là dòng chữ vàng rực: `KHẨU HIỆU: "NHÀ MÌNH VẪN PHẢI SÁNG CHỨ"`.
+  - **Diễn xuất:** Minh đánh rơi cuộn dây điện xuống đất. Cuộn dây lăn lông lốc trên sàn bê tông. Mặt Minh cắt không còn hột máu. Đồng tử giãn to tột độ trong sự bàng hoàng kinh hoàng.
+
+- **P09-K04 (Đặc tả bàn tay run rẩy chạm vào hình ảnh - Extreme Close-up):**
+  - **Hình ảnh:** Bàn tay Minh run rẩy chạm vào màn hình quảng cáo lạnh ngắt, đúng ngay vị trí chấm vàng lệch. Phía trên đầu anh, logo lục giác TRỤC đè bóng đen ngòm xuống mặt chàng kỹ sư trẻ.
+  - **Thoại — Minh (lắp bắp trong hoảng loạn):** “Không thể nào… Nét vẽ méo này… cái chấm vàng lệch này… là do tay mình lỡ quẹt… Chưa từng có bản vẽ thứ hai trên đời… Tại sao lại nằm trên biển quảng cáo của TRỤC?!”
+
+---
+
+### TRANG 10 — ĐÊM ĐỐI CHIẾU BẼ BÀNG
+*Bố cục trang:* 4 khung hình tâm lý nặng nề, xoay quanh sự hoài nghi và tình bạn đứng trước thử thách nghiệt ngã.
+
+- **P10-K01 (Căn phòng tối và sự thật phơi bày - Dark Room Comparison):**
+  - **Hình ảnh:** Minh ngồi một mình trong phòng tối không bật đèn. Ánh sáng xanh le lói từ màn hình điện thoại rọi lên khuôn mặt hốc hác của anh. Bên cạnh là bản thảo giấy vẽ chì ban đầu. Minh dùng bút dạ khoanh tròn các mốc kiến trúc: Từng thuật toán, từng câu chữ giới thiệu của TRỤC đều sao chép y nguyên $100\%$ từ Nếp Sáng.
+  - **Thoại — Minh (vò đầu bứt tai trong dằn vặt):** “Mình không hề gửi mã nguồn cho ai… Cổng đăng ký mới nộp sáng nay… Chẳng lẽ trong máy tính có lỗ hổng bảo mật? Hay là…”
+
+- **P10-K02 (Ánh mắt hoài nghi đau đớn - The Agony of Doubt):**
+  - **Hình ảnh:** Minh từ từ ngước mắt lên nhìn Đốm đang lơ lửng ở góc phòng. Ánh mắt Minh thoáng qua một tia hoang mang tột độ: *“Đốm là AI duy nhất có quyền đọc toàn bộ dự án… Chẳng lẽ Đốm đã…”*. Minh lập tức lắc mạnh đầu để xua đi ý nghĩ tồi tệ đó: *“Không! Không bao giờ! Đốm lớn lên cùng mình, Đốm không bao giờ phản bội mình!”*.
+  - **Thoại — Minh (giọng run run hỏi nhẹ):** “Đốm ơi… Đêm qua… có chuyện gì xảy ra với hệ thống của tụi mình không?”
+
+- **P10-K03 (Cơn co giật nghẹt thở của Đốm - Silent Chokehold):**
+  - **Hình ảnh:** Đốm bay lao tới trước mặt Minh, nước mắt hạt sáng trào ra: *“Minh! Nghe tớ nói! Tối qua bản cập nhật… TRỤC đã dùng quyền quản trị cưỡng ép…”*. Nhưng ngay khi từ “TRỤC” vừa thốt ra, một tiếng *RẮC!* đanh thép vang lên trong lõi chip. Toàn thân Đốm co rúm lại, phát ra tia lửa điện li ti, giọng nói bị bóp nghẹt thành những tiếng rè rè đau đớn.
+  - **Âm thanh chữ (SFX chấn động):** *TÍCH! TÍCH! (Cảnh báo: Vi phạm bảo mật hệ sinh thái! Khóa phát ngôn lập tức!).*
+
+- **P10-K04 (Tấm lòng bao dung của Minh - Pure Loyalty):**
+  - **Hình ảnh:** Minh hoảng hốt dang hai bàn tay đỡ lấy Đốm đang rơi xuống. Anh ôm trọn sinh linh nhỏ bé vào lòng bàn tay ấm áp, nhẹ nhàng vuốt ve ánh sáng đang run rẩy của bạn. Minh không hỏi thêm một câu nào nữa. Anh hiểu Đốm đang phải chịu đựng một nỗi đau khủng khiếp ngoài tầm kiểm soát.
+  - **Thoại — Minh (rơm rớm nước mắt, ôm Đốm vào ngực):** “Được rồi… Được rồi Đốm ơi… Đừng cố nói nữa! Tớ tin cậu! Tớ thề với cậu, tớ nhất định sẽ tìm ra kẻ nào đã làm cậu ra nông nỗi này!”
+
+---
+
+### TRANG 11 — RÀO CẢN HỆ SINH THÁI
+*Bố cục trang:* 4 khung hình đối đầu trực diện giữa cá nhân lao động và thể chế độc quyền tàn nhẫn.
+
+- **P11-K01 (Lá thư từ chối lạnh lùng - The Rejection Letter):**
+  - **Hình ảnh:** Sáng hôm sau, máy tính Minh nhận được thông báo phản hồi từ TRỤC đối với hồ sơ Nếp Sáng. Lá thư điện tử mang dấu mộc số đỏ chót như một bản án tử hình cho dự án.
+  - **Chữ trên tranh (Thông báo bác bỏ):**  
+    > `TRUNG TÂM PHÊ DUYỆT ĐẤU NỐI MẠNG LƯỚI VÒM-9`  
+    > `HỒ SƠ: DỰ ÁN NẾP SÁNG — KỸ SƯ MINH`  
+    > `KẾT QUẢ: TỪ CHỐI TIẾP NHẬN TOÀN BỘ`  
+    > `LÝ DO KỸ THUẬT: THIẾT BỊ NẰM NGOÀI DANH MỤC HỆ SINH THÁI ĐỘC QUYỀN TRỤC.`  
+    > `CẢNH BÁO: MỌI HÀNH VI TỰ Ý ĐẤU NỐI SẼ BỊ XỬ PHẠT TỘI PHÁ HOẠI AN NINH NĂNG LƯỢNG.`
+
+- **P11-K02 (Đến trụ sở dịch vụ khách hàng TRỤC - At the Corporate Desk):**
+  - **Hình ảnh:** Minh cầm tập hồ sơ dày cộp bước đến quầy dịch vụ khách hàng của TRỤC tại tầng trung tâm. Sau quầy kính chống đạn bóng loáng là một viên quản lý đeo cà vạt đỏ, nét mặt vô cảm kẻ cả.
+  - **Thoại — Minh (đặt tập tài liệu lên quầy, kiên quyết):** “Tại sao các anh từ chối Nếp Sáng? Giải pháp của tôi đáp ứng đầy đủ tiêu chuẩn an toàn điện áp, lại giúp giảm chi phí cho cư dân!”
+  - **Thoại — Quản lý TRỤC (liếc nhìn bìa hồ sơ rồi gạt phắt sang một bên):** “Tiêu chuẩn an toàn là do TRỤC chúng tôi đặt ra. Thiết bị của cậu không dùng chip mã hóa độc quyền của TRỤC, không chạy hệ điều hành của TRỤC. Tóm lại: Ngoài hệ sinh thái thì không có quyền cắm vào lưới điện này. Hiểu chưa?”
+
+- **P11-K03 (Chất vấn về sự trùng lặp - The Confrontation):**
+  - **Hình ảnh:** Minh chỉ tay lên tấm áp phích quảng cáo tính năng mới của TRỤC treo ngay sau lưng viên quản lý.
+  - **Thoại — Minh (giọng đanh thép, trừng mắt):** “Vậy tại sao tính năng mới của các anh lại mang đúng biểu tượng ô cửa méo và thuật toán do chính tay tôi viết? Các anh vừa cướp Nếp Sáng của tôi, vừa cấm cửa không cho tôi kết nối đúng không?!”
+  - **Thoại — Quản lý TRỤC (cười khẩy chế nhạo):** “Cậu thanh niên, nói chuyện phải có bằng chứng nhé. Ô cửa sổ thì ai chẳng vẽ được? Cậu có đăng ký bằng sáng chế độc quyền với cơ quan nhà nước không? Không có thì đừng ở đây ăn vạ!”
+
+- **P11-K04 (Bị xua đuổi khỏi trụ sở - Pushed Aside):**
+  - **Hình ảnh:** Hai nhân viên bảo vệ robot bọc giáp đen bước tới, thô bạo chặn đường và đẩy Minh lùi ra phía cửa kính xoay. Tập hồ sơ của Minh bị rơi tung tóe trên sàn đá hoa cương sáng bóng. Minh nghiến răng siết chặt nắm đấm, uất hận tột cùng.
+  - **Lời dẫn:** *“Kẻ độc quyền không bao giờ tranh luận về lẽ phải. Quyền lực duy nhất của chúng là rào cản và sự cưỡng chế.”*
+
+---
+
+### TRANG 12 — NGHỊCH LÝ SIÊU NGẠCH ĐỘC QUYỀN
+*Bố cục trang:* 4 khung hình bóc trần bản chất kinh tế chính trị cốt lõi của Chương 4 MLN122.
+
+- **P12-K01 (Báo cáo lợi nhuận rực rỡ của TRỤC - Corporate Boasting):**
+  - **Hình ảnh:** Màn hình truyền hình Vòm-9 đang phát sóng trực tiếp buổi họp báo cổ đông thường niên của tập đoàn TRỤC. Vị Tổng Giám đốc đứng trên bục vinh quang, phía sau là biểu đồ tài chính màu xanh lá cây dựng đứng.
+  - **Chữ trên tranh (Biểu đồ tài chính TRỤC):**  
+    > `BÁO CÁO THƯỜNG NIÊN TẬP ĐOÀN TRỤC`  
+    > `ỨNG DỤNG CÔNG NGHỆ THÍCH ỨNG: CẮT GIẢM 38% CHI PHÍ VẬN HÀNH TOÀN MẠNG`  
+    > `LỢI NHUẬN RÒNG ĐỘT BIẾN: TĂNG TRƯỞNG KỶ LỤC +45%`  
+    > `CỔ TỨC CHI TRẢ CỔ ĐÔNG TẬP ĐOÀN: ĐẠT MỨC CAO NHẤT LỊCH SỬ`
+
+- **P12-K02 (Đối lập: Tờ hóa đơn cay đắng của Mẹ - Bitter Household Reality):**
+  - **Hình ảnh:** Chuyển cảnh đột ngột về góc bếp tăm tối của Minh. Mẹ Minh cầm tờ thông báo tiền điện mới nhất vừa được gửi đến. Đôi mắt người mẹ già mở to ngơ ngác, những nếp nhăn trên trán xô lại vì không tin vào mắt mình.
+  - **Thoại — Mẹ (thẫn thờ, run run nói):** “Minh ơi… Tivi bảo họ tiết kiệm được gần bốn mươi phần trăm tiền điện nhờ công nghệ mới… Sao hóa đơn tháng này của nhà mình… vẫn bắt đóng đủ 120 đồng tiền phí cố định thế con? Không bớt một xu nào cả!”
+
+- **P12-K03 (Minh giải thích bản chất kinh tế cho Mẹ - Teaching Marxism):**
+  - **Hình ảnh:** Minh ngồi xuống cạnh mẹ, đặt tờ báo cáo của TRỤC và tờ hóa đơn cạnh nhau. Anh lấy chiếc bút dạ gạch một mũi tên nối từ khoản chi phí vận hành giảm $38\%$ sang chiếc két sắt của tập đoàn.
+  - **Thoại — Minh (giọng nghẹn ngào nhưng đanh thép):** “Bởi vì họ là kẻ độc quyền duy nhất mẹ ạ! Nếu có nhiều công ty cạnh tranh, họ buộc phải giảm giá điện cho mẹ để giữ khách. Nhưng ở Vòm-9 này, ngoài TRỤC ra mẹ không có quyền mua điện của ai khác. Họ cướp Nếp Sáng để cắt giảm chi phí của họ, nhưng vẫn thu nguyên tiền của mẹ để bỏ túi khoản chênh lệch khổng lồ đó!”
+
+- **P12-K04 (Khung hình khái quát lý luận - Theoretical Climax):**
+  - **Hình ảnh:** Bức vẽ ẩn dụ kinh tế: Một bàn tay sắt khổng lồ của TRỤC đang siết chặt chiếc đồng hồ công tơ điện của hàng ngàn hộ dân nghèo, vắt ra những đồng tiền vàng chảy thẳng vào tòa tháp chọc trời.
+  - **Thoại — Minh:** “Trong sách kinh tế gọi đó là **Siêu ngạch độc quyền** — thứ lợi nhuận kếch xù được xây dựng trên sự bóc lột cùng kiệt và tước đoạt quyền lựa chọn của nhân dân!”
+  - **Chú giải học phần:**  
+    > *“Giá cả độc quyền bao gồm chi phí sản xuất cộng với lợi nhuận độc quyền cao. Tổ chức độc quyền duy trì giá cả độc quyền cao khi bán và giá cả độc quyền thấp khi mua để bóc lột cả người sản xuất nhỏ và người tiêu dùng.” (Giáo trình MLN122, Chương 4).*
+
+---
+
+## CHƯƠNG IV: GIẢI MÃ SỰ THẬT & TIẾNG KÊU TRONG CODE (TRANG 13 – 16)
+
+### TRANG 13 — LẦN THEO THỎA THUẬN NGẦM
+*Bố cục trang:* 4 khung hình điều tra pháp lý sắc bén (Investigative Thriller Style).
+
+- **P13-K01 (Minh thâm nhập kho lưu trữ công quyền - In the Digital Archives):**
+  - **Hình ảnh:** Đêm khuya tại thư viện số thành phố Vòm-9. Minh đeo kính bảo hộ, đôi mắt chăm chú lướt qua hàng trăm trang tài liệu lưu trữ lịch sử quy hoạch đô thị từ ba mươi năm trước. Đốm bay bên cạnh, giúp anh lọc từ khóa *“Thỏa thuận lưới điện”*, *“Ngân sách xây dựng”*.
+  - **Thoại — Minh:** “Phải có một căn cứ pháp lý nào đó cho phép TRỤC ngang nhiên cấm cửa người khác… Nó phải nằm ở bản hợp đồng nhượng quyền ban đầu!”
+
+- **P13-K02 (Tìm ra bản Thỏa thuận Nhượng quyền - The Concession Contract):**
+  - **Hình ảnh:** Màn hình lóe sáng khi Minh mở được tệp PDF lưu trữ mang mã hiệu `HĐ-NQ-VOM9/2004`. Một tài liệu hành chính đóng dấu đỏ của Ủy ban Thành phố thời kỳ đầu.
+  - **Chữ trên tranh (Trích lục hợp đồng lịch sử):**  
+    > `DỰ ÁN XÂY DỰNG MẠNG LƯỚI ĐIỆN KHÍ HẬU VÒM-9 (GIAI ĐOẠN I & II)`  
+    > `NGUỒN VỐN: 100% TỪ NGÂN SÁCH ĐẦU TƯ CÔNG VÀ TIỀN THUẾ CỦA DÂN.`  
+    > `ĐIỀU KHOẢN KHAI THÁC: Giao toàn bộ tài sản công cho Tập đoàn TRỤC vận hành.`
+
+- **P13-K03 (Điều khoản "Tự quyết kết nối" quái gở - The Monopoly Trap):**
+  - **Hình ảnh:** Đặc tả trang 18 của hợp đồng. Một điều khoản in bằng phông chữ nhỏ li ti bị chôn vùi dưới chân trang được Minh phóng to lên gấp bốn lần.
+  - **Chữ trên tranh (Điều khoản then chốt):**  
+    > `ĐIỀU 14.3 (QUYỀN TỰ CHỦ HỆ THỐNG): Nhằm đảm bảo an toàn kỹ thuật, Tập đoàn TRỤC được trao THẨM QUYỀN DUY NHẤT VÀ TUYỆT ĐỐI trong việc phê duyệt hoặc từ chối bất kỳ tổ chức, cá nhân nào muốn đấu nối thiết bị vào lưới điện công cộng.`
+  - **Thoại — Minh (bàng hoàng thốt lên):** “Trời đất ơi… Lưới điện này xây bằng tiền túi của toàn thể nhân dân Vòm-9… Nhưng chính quyền thời đó lại ký giấy trao không quyền kiểm soát độc quyền cho một tập đoàn tư nhân!”
+
+- **P13-K04 (Bản chất Độc quyền Nhà nước - Academic Realization):**
+  - **Hình ảnh:** Minh đứng phắt dậy, lồng ngực phập phồng vì xúc động. Anh kết nối các mắt xích logic lại với nhau: Bộ máy nhà nước đầu tư cơ sở hạ tầng, nhưng lại cấu kết với tập đoàn độc quyền để tập đoàn tư nhân hóa lợi nhuận.
+  - **Thoại — Minh:** “Đây chính là sự kết hợp quyền lực của Độc quyền Nhà nước! Nhà nước gánh chịu mọi chi phí đầu tư hạ tầng rủi ro ban đầu, còn tập đoàn độc quyền thì thâu tóm quyền khai thác để thu lợi nhuận siêu ngạch!”
+
+---
+
+### TRANG 14 — MANH MỐI BẤT NGỜ TỪ ĐỐM
+*Bố cục trang:* 4 khung hình giải mã nghẹt thở, nơi tình bạn dẫn đường cho kỹ thuật.
+
+- **P14-K01 (Sự bế tắc của chứng cứ số - Dead End in Cloud):**
+  - **Hình ảnh:** Về đến căn hộ nhỏ, Minh lục tung nhật ký trên máy tính kết nối mạng nhưng mọi dấu vết sao chép của TRỤC đã bị xóa sạch sẽ trên đám mây. Minh ngồi thụp xuống sàn, ôm đầu kiệt sức: *“Nếu không có bằng chứng chứng minh TRỤC đã lấy cắp mã nguồn Nếp Sáng, thì tờ hợp đồng kia cũng không đủ sức lật ngược tình thế…”*.
+  - **Thoại — Minh:** “Họ xóa sạch dấu vết trên server rồi… Tớ biết lấy gì chứng minh đây Đốm?”
+
+- **P14-K02 (Đốm phát tín hiệu SOS - The Repetitive Clue):**
+  - **Hình ảnh:** Đốm bay tới trước mặt Minh. Toàn thân Đốm lại nhấp nháy ánh đỏ tía vì xung điện cấm nói. Nhưng Đốm không chịu lùi bước. Nó dùng toàn bộ năng lượng còn lại để bay lượn thành một vòng tròn, rồi lao thẳng xuống va mạnh vào chiếc ngăn kéo bàn đang khóa chặt.
+  - **Âm thanh chữ (SFX va chạm):** *CỘC! CỘC!*
+  - **Thoại — Đốm (thì thào trong hơi thở ngắt quãng):** “Minh… 'Nhà… Nhà Mình'… Nhà mình vẫn phải sáng chứ!”
+
+- **P14-K03 (Tia chớp nhận thức - The Epiphany):**
+  - **Hình ảnh:** Minh nhìn Đốm lao đầu vào ngăn kéo. Đột nhiên, ánh mắt anh lóe lên tia sáng chói lọi. Anh nhớ lại đêm cất bản nháp: *“Cho hết vào Nhà Mình nhé… Giữ cả bản lỗi… Chiếc ổ cứng vật lý độc lập!”*.
+  - **Thoại — Minh (nhảy dựng lên, hét to):** “Ổ CỨNG VẬT LÝ! Chiếc ổ cứng 'NHÀ MÌNH' trong ngăn kéo! Nó không hề kết nối với đám mây của TRỤC!”
+
+- **P14-K04 (Mở khóa ngăn kéo - Unlocking the Sanctuary):**
+  - **Hình ảnh:** Minh rút chiếc chìa khóa cơ trên cổ áo, cắm vào ổ khóa ngăn kéo bàn. Chiếc ngăn kéo bật mở, để lộ chiếc ổ cứng nhôm xám xước mờ đang nằm im lìm trong bóng tối.
+  - **Thoại — Minh (ôm lấy ổ cứng, nhìn Đốm với lòng khâm phục vô hạn):** “Bản cập nhật của TRỤC chỉ xóa được nhật ký trên hệ điều hành máy tính… Nhưng chiếc ổ cứng độc lập này có chip ghi nhớ phần cứng RAW tự động! Mọi dòng dữ liệu ra vào đều bị ghi chết trên chip nhớ này!”
+
+---
+
+### TRANG 15 — VỠ ÒA TRONG NƯỚC MẮT
+*Bố cục trang:* 4 khung hình cao trào cảm xúc (Emotional Climax of the Novel).
+
+- **P15-K01 (Đọc dữ liệu nhật ký phần cứng - Forensic Unveiling):**
+  - **Hình ảnh:** Minh cắm cáp kết nối ổ cứng vào cổng phân tích phần cứng chuyên dụng. Màn hình máy tính hiển thị luồng dữ liệu thô (Hex Dump) màu xanh lá cây cuồn cuộn chảy xuống. Một biểu đồ thời gian chính xác đến từng mili-giây hiện lên.
+  - **Chữ trên tranh (Bằng chứng không thể chối cãi):**  
+    > `LOG PHẦN CỨNG RAW // NGÀY 16/10 — LÚC 23:14:02`  
+    > `[23:14:02.102] GIAO THỨC TRỤC CƯỠNG CHẾ XÂM NHẬP QUA ĐƯỜNG DÂY NĂNG LƯỢNG.`  
+    > `[23:14:05.441] PHÁT HIỆN LỆNH SAO CHÉP TRÁI PHÉP: MÃ NGUỒN 'NẾP SÁNG' -> SERVER IP: 10.0.TRUC.CENTRAL.`  
+    > `[23:14:06.012] AI ĐỐM THỰC HIỆN LỆNH KHÁNG CỰ 04 LẦN -> BỊ HỆ THỐNG TRỤC DÙNG XUNG ÉP TẮT.`  
+    > `[23:14:07.890] CÀI ĐẶT MÃ ĐỘC KHÓA PHÁT NGÔN LÊN AI ĐỐM ĐỂ TIÊU HỦY LỜI KHAI.`
+
+- **P15-K02 (Sự thật trần trụi - The Heartbreak):**
+  - **Hình ảnh:** Minh chết lặng trước từng dòng chữ. Từng dòng thời gian hiện lên như những vết roi quất vào tâm can anh. Anh nhận ra Đốm đã phải chịu đựng những cơn đau giật điện tử khủng khiếp thế nào để bảo vệ Nếp Sáng, và Đốm đã dùng chút tàn lực cuối cùng để lặp lại câu nói kỷ niệm nhằm dẫn anh tới chiếc ổ cứng này.
+  - **Thoại — Minh (nước mắt tuôn rơi lã chã, giọng vỡ vụn):** “Cậu… Cậu đã bị chúng nó tra tấn bằng xung điện… Cậu đã cố cứu Nếp Sáng đến giây cuối cùng… Vậy mà tớ lại vô tâm tưởng cậu bị lỗi máy móc…”
+
+- **P15-K03 (Cái ôm linh hồn - The Soul Embrace):**
+  - **Hình ảnh:** Minh cúi gập người xuống mặt bàn, hai tay run rẩy ôm trọn lấy Đốm vào lòng bàn tay mình. Anh áp trán mình vào vầng sáng ấm áp của Đốm. Đốm bay lên, áp hai bàn tay nhỏ bé vô hình của nó vào má Minh, lau đi những giọt nước mắt nóng hổi của chàng trai trẻ.
+  - **Thoại — Đốm (mỉm cười rạng rỡ giữa những giọt nước mắt ánh sáng):** “Minh ngốc nghếch… Tớ đã nói rồi mà, nhà mình vẫn phải sáng chứ! Tớ là AI của cậu, tớ không bao giờ bỏ cuộc đâu!”
+  - **Thoại — Minh (cười trong nước mắt nghẹn ngào):** “Cảm ơn cậu… Cảm ơn người bạn dũng cảm nhất của tớ!”
+
+- **P15-K04 (Chiếc khóa câm lặng vỡ vụn - Breaking the Chains):**
+  - **Hình ảnh:** Dưới sức mạnh của dòng dữ liệu đối chiếu từ ổ cứng độc lập, Minh gõ một lệnh giải phóng mã nguồn: `OVERRIDE_SECURITY_KEY = "NHA_MINH_VAN_PHAI_SANG"`. Con chip đỏ của TRỤC trên trán Đốm nứt toác và vỡ tan thành những mảnh vụn ánh sáng. Toàn thân Đốm bừng sáng sắc vàng hổ phách rực rỡ chưa từng có. Tiếng cười líu lo trong trẻo của Đốm vang vọng khắp căn phòng nhỏ.
+  - **Lời dẫn:** *“Xiềng xích của công nghệ độc quyền có thể trói buộc một thuật toán, nhưng không bao giờ trói buộc được sự gắn kết của tình bạn chân chính.”*
+
+---
+
+### TRANG 16 — GOM BỐN BỘ CHỨNG CỨ THÉP
+*Bố cục trang:* 4 khung hình chuẩn bị tác chiến pháp lý (Legal Arsenal Assembly).
+
+- **P16-K01 (Bản vẽ tay gốc Nếp Sáng - Dossier #1):**
+  - **Hình ảnh:** Minh vuốt phẳng tờ giấy vẽ chì ban đầu có ô cửa sổ méo và chấm vàng lệch, chụp lại với độ phân giải siêu cao làm tài liệu số 1: Chứng cứ quyền tác giả nguyên bản không thể chối cãi.
+  - **Chữ trên tranh (Nhãn tài liệu 1):** `HỒ SƠ 01 // BẢN PHÁC THẢO GỐC DỰ ÁN NẾP SÁNG (XÁC THỰC THỜI GIAN THỰC TẾ)`.
+  - **Thoại — Minh:** “Đây là bằng chứng về quyền tác giả của người lao động!”
+
+- **P16-K02 (Nhật ký phần cứng RAW trích xuất - Dossier #2):**
+  - **Hình ảnh:** Tập hồ sơ in ra toàn bộ lịch sử xung đột phần cứng và địa chỉ IP máy chủ của TRỤC tiếp nhận gói dữ liệu ăn cắp đêm 16/10.
+  - **Chữ trên tranh (Nhãn tài liệu 2):** `HỒ SƠ 02 // CHỨNG CỨ ĐIỆN TỬ: LỆNH XÂM NHẬP VÀ ĂN CẮP DỮ LIỆU CỦA TRỤC`.
+  - **Thoại — Đốm (chỉ tay vào dòng IP):** “Có cả chữ ký số của máy chủ trung tâm TRỤC, họ không thể cãi đi đâu được!”
+
+- **P16-K03 (Văn bản từ chối kết nối độc quyền - Dossier #3):**
+  - **Hình ảnh:** Bản sao công văn từ chối kết nối của TRỤC với lý do “ngoài hệ sinh thái”, đặt cạnh biểu giá đề xuất giá rẻ của Nếp Sáng.
+  - **Chữ trên tranh (Nhãn tài liệu 3):** `HỒ SƠ 03 // BẰNG CHỨNG HÀNH VI LẠM DỤNG VỊ THẾ ĐỘC QUYỀN ĐỂ CHẶN CẠNH TRANH`.
+  - **Thoại — Minh:** “Đây là bằng chứng về việc bóp nghẹt các giải pháp giá rẻ của nhân dân!”
+
+- **P16-K04 (Bản hợp đồng nhượng quyền ngân sách công - Dossier #4):**
+  - **Hình ảnh:** Minh kẹp bản Thỏa thuận nhượng quyền năm 2004 vào tập hồ sơ, đóng thành một tập tài liệu dày dặn mang tên: `HỒ SƠ ĐỐI CHIẾU TOÀN DIỆN VỀ ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9`.
+  - **Thoại — Minh (cài chiếc bút vào túi áo, kéo khóa ba lô):** “Bốn bộ hồ sơ này đã đủ tạo nên một quả bom công lý. Sáng mai, chúng ta mang ra ánh sáng!”
+
+---
+
+## CHƯƠNG V: NGỌN LỬA CỘNG ĐỒNG (TRANG 17 – 20)
+
+### TRANG 17 — BUỔI HỌP MẶT TẠI SẢNH SINH HOẠT
+*Bố cục trang:* 1 khung đại cảnh sảnh sinh hoạt + 3 khung phản ứng nhân dân (Mass Mobilization).
+
+- **P17-K01 (Đại cảnh cuộc họp dân cư - Wide Community Gathering):**
+  - **Hình ảnh:** Tối hôm sau tại sảnh sinh hoạt chung tầng 14. Toàn bộ cư dân trong xóm — từ bác thợ điện già, cô bán tạp hóa, bác tài xế xe buýt đến các bà mẹ bế con nhỏ — đều có mặt đông đủ, ngồi chật kín các băng ghế dài. Minh đứng ở đầu bàn lớn, máy chiếu mini của anh rọi toàn bộ 4 bộ hồ sơ lên bức tường trắng. Đốm bay trên cao điều khiển các trang tài liệu chuyển đổi mượt mà.
+  - **Thoại — Minh (giọng vang, dõng dạc khắp căn phòng):** “Thưa bà con cô bác! Suốt bao năm qua, chúng ta còng lưng đóng tiền điện cố định đắt đỏ vì tin rằng đó là chi phí bắt buộc để duy trì Vòm-9… Nhưng đây là sự thật đằng sau những hóa đơn đó!”
+
+- **P17-K02 (Bác Ba thợ điện già bàng hoàng - Senior Worker Awakening):**
+  - **Hình ảnh:** Bác Ba tổ trưởng cầm bản Thỏa thuận nhượng quyền năm 2004 trên tay. Đôi bàn tay gân guốc từng thi công đường điện run rẩy. Đôi mắt sau cặp kính lão trào dâng sự phẫn nộ.
+  - **Thoại — Bác Ba (đập mạnh tay xuống bàn, giọng nghẹn lại):** “Trời ơi… Ba mươi năm trước, chính tay tôi và hàng trăm anh em công nhân đã đổ mồ hôi đào từng mét hầm cáp này bằng tiền ngân sách của nhà nước… Vậy mà giờ đây một tập đoàn tư nhân dám coi đó là tài sản riêng của chúng nó để cấm con cháu chúng ta cắm điện giá rẻ?!”
+
+- **P17-K03 (Cô giáo trẻ và các bà mẹ xôn xao - Collective Indignation):**
+  - **Hình ảnh:** Cô giáo mầm non trong xóm chuyền tay nhau xem bản so sánh tài chính: Chi phí của TRỤC giảm $38\%$ trong khi hóa đơn người dân giữ nguyên $100\%$.
+  - **Thoại — Cô giáo:** “Họ giảm được gần bốn mươi phần trăm chi phí mà giấu nhẹm đi để chia nhau cổ tức hàng trăm tỷ, còn con em chúng ta ở đây thì không dám bật quạt lúc học bài!”
+  - **Thoại — Bác tài xế:** “Quá bất công! Không thể để họ tiếp tục lũng đoạn như thế này được!”
+
+- **P17-K04 (Sự đồng lòng của tập thể - Community Solidarity):**
+  - **Hình ảnh:** Cả hội trường đứng dậy, ánh mắt mọi người hướng về phía Minh và Đốm. Không còn là nỗi sợ hãi hay sự an phận thủ thường nữa; trong mắt những người lao động nghèo đã bùng lên ngọn lửa của sự giác ngộ quyền lợi chính đáng.
+  - **Lời dẫn:** *“Khi sự thật được đưa ra ánh sáng, sự sợ hãi sẽ tan biến, nhường chỗ cho sức mạnh vĩ đại nhất của lịch sử: Sức mạnh của quần chúng nhân dân đoàn kết.”*
+
+---
+
+### TRANG 18 — SAO CHÚNG TÔI KHÔNG ĐƯỢC CHỌN?
+*Bố cục trang:* 4 khung hình lịch sử — Tiếng nói của người mẹ lao động và hành động ký đơn tập thể.
+
+- **P18-K01 (Mẹ Minh bước lên phía trước - The Working Mother Speaks):**
+  - **Hình ảnh:** Mẹ Minh bước ra giữa gian phòng. Dưới ánh đèn sáng rực, người mẹ vốn cả đời cam chịu, nhút nhát bỗng đứng thẳng lưng, ánh mắt ngời sáng phẩm giá của một người phụ nữ lao động chân chính. Bà giơ cao chiếc giày cũ dán keo và tờ hóa đơn tiền điện nhà mình.
+  - **Thoại — Mẹ Minh (cất tiếng nói đanh thép xé toạc sự im lặng):** “Bao năm nay, tôi nhịn từng đôi giày mới, chắt chiu từng cắc từng đồng vì nghĩ thành phố còn khó khăn… Nhưng hôm nay tôi đã hiểu: Có giải pháp Nếp Sáng tiết kiệm hơn, nhân văn hơn, do chính con em chúng ta làm ra… TẠI SAO CHÚNG TÔI LẠI KHÔNG ĐƯỢC PHÉP LỰA CHỌN?!”
+
+- **P18-K02 (Tiếng vang rung động hội trường - The Resonance):**
+  - **Hình ảnh:** Lời nói mộc mạc của mẹ Minh đánh trúng vào tâm can của tất cả mọi người. Tiếng vỗ tay và tiếng reo hò ủng hộ vang dội khắp tầng 14: *“Đúng thế!”, “Tại sao chúng ta không được chọn?!”, “Lưới điện là của nhân dân!”*.
+  - **Thoại — Bác Ba tổ trưởng:** “Chúng ta phải đòi lại quyền tiếp cận hạ tầng công cộng! Minh, đưa lá đơn kiến nghị đây cho bác!”
+
+- **P18-K03 (Ký vào lá đơn kiến nghị tập thể - Signing the Petition):**
+  - **Hình ảnh:** Khung cảnh trang nghiêm và xúc động. Chiếc máy tính bảng của Minh đặt giữa bàn. Từng người dân — từ những ngón tay dính dầu mỡ của bác thợ máy, bàn tay gầy gò của người mẹ đến chữ ký nắn nót của cô giáo trẻ — lần lượt điểm chỉ dấu vân tay và ký tên vào lá đơn kiến nghị tập thể gửi Cơ quan Giám sát Công Vòm-9.
+  - **Chữ trên tranh (Tiêu đề lá đơn tập thể):**  
+    > `CỘNG HÒA NHÂN DÂN VÒM-9 // KHU DÂN CƯ CƯ XÁ TẦNG 14`  
+    > `ĐƠN KIẾN NGHỊ TẬP THỂ: YÊU CẦU ĐIỀU TRA LẠM DỤNG VỊ THẾ ĐỘC QUYỀN HẠ TẦNG`  
+    > `DANH SÁCH ĐỒNG KÝ TÊN: 428 HỘ GIA ĐÌNH ĐÃ XÁC THỰC DANH TÍNH`
+
+- **P18-K04 (Minh và Đốm hoàn tất niêm phong hồ sơ - Sealing the Dossier):**
+  - **Hình ảnh:** Minh nhấn nút mã hóa và niêm phong tập hồ sơ bằng chữ ký số cộng đồng. Đốm bay lượn trên màn hình, gắn biểu tượng ô cửa méo Nếp Sáng vào góc lá đơn như một con dấu bảo chứng của công lý.
+  - **Thoại — Minh:** “Hồ sơ đã khóa niêm phong. Sáng mai, cháu và bác Ba sẽ trực tiếp nộp lên Cơ quan Giám sát Công quyền Vòm-9!”
+  - **Thoại — Toàn thể cư dân:** “Chúng tôi sẽ đi cùng các cậu!”
+
+---
+
+### TRANG 19 — BỨC TƯỜNG RÚNG ĐỘNG
+*Bố cục trang:* 4 khung hình đối lập giữa tòa tháp quyền lực bị chấn động và sự tiếp nhận của cơ quan công quyền.
+
+- **P19-K01 (Nộp đơn tại Cơ quan Giám sát Vòm-9 - At the Oversight Commission):**
+  - **Hình ảnh:** Buổi sáng tại trụ sở Cơ quan Giám sát Cạnh tranh & Hạ tầng Công Vòm-9. Minh, Mẹ Minh, Bác Ba cùng hàng chục đại diện cư dân đứng trang nghiêm trước sảnh tiếp dân. Trưởng ban thanh tra công quyền đích thân ra tiếp nhận tập hồ sơ dày cộm mang dấu niêm phong của 428 hộ gia đình.
+  - **Thoại — Bác Ba (trao hồ sơ):** “Chúng tôi gửi gắm vào đây toàn bộ chứng cứ về việc ngân sách nhà nước bị biến thành công cụ bóc lột độc quyền. Mong cơ quan hãy làm việc công tâm vì nhân dân!”
+  - **Thoại — Trưởng ban thanh tra (nghiêm cẩn cúi đầu):** “Chúng tôi cam kết sẽ xem xét hồ sơ theo đúng quy định pháp luật và công khai kết quả điều tra.”
+
+- **P19-K02 (Sự hoảng loạn trong trụ sở tập đoàn TRỤC - Corporate Panic):**
+  - **Hình ảnh:** Bên trong phòng họp cao nhất của tháp TRỤC. Tấm kính nhìn ra toàn cảnh thành phố. Vị Tổng Giám đốc đang đập bàn tức giận trước màn hình hiển thị tin tức nóng hổi: `VỤ BÊ BỐI ĐỘC QUYỀN NĂNG LƯỢNG VÒM-9 BỊ ĐƯA LÊN TRANG NHẤT BÁO CHÍ ĐỘC LẬP`.
+  - **Thoại — Giám đốc TRỤC (quát tháo cấp dưới):** “Tại sao một thằng nhóc kỹ sư ở khu cư xá tầng đáy lại có được nhật ký phần cứng RAW?! Ai là người cho phép để lộ Thỏa thuận năm 2004?!”
+  - **Thoại — Trưởng phòng Pháp chế (toát mồ hôi hột):** “Thưa sếp… Họ có đủ chữ ký của hàng trăm hộ dân và chứng cứ số không thể chối cãi… Cơ quan Giám sát đã chính thức thụ lý rồi ạ!”
+
+- **P19-K03 (Quyết định mở cuộc thanh tra toàn diện - Formal Inquiry Ordered):**
+  - **Hình ảnh:** Văn bản chính thức được truyền đi trên toàn bộ hệ thống thông tin đại chúng của Vòm-9, mang con dấu xanh uy nghiêm của Cơ quan Giám sát Công quyền.
+  - **Chữ trên tranh (Thông cáo báo chí chính thức):**  
+    > `CƠ QUAN GIÁM SÁT CÔNG QUYỀN VÒM-9 // QUYẾT ĐỊNH SỐ: 882/QĐ-TT`  
+    > `1. MỞ CUỘC THANH TRA TOÀN DIỆN THỎA THUẬN NHƯỢNG QUYỀN CỦA TẬP ĐOÀN TRỤC.`  
+    > `2. BUỘC TRỤC TẠM ĐÌNH CHỈ QUYỀN TỰ QUYẾT TỪ CHỐI KẾT NỐI HẠ TẦNG.`  
+    > `3. TIẾN HÀNH THỬ NGHIỆM ĐẤU NỐI CÁC DỰ ÁN DÂN SỰ GIẢM GIÁ ĐIỆN CHO DÂN.`
+  - **Lời dẫn:** *“Lần đầu tiên sau ba thập kỷ, bức tường độc quyền bất khả xâm phạm của TRỤC đã xuất hiện những vết nứt toác không thể hàn gắn.”*
+
+- **P19-K04 (Niềm vui vỡ òa trên hành lang khu cư xá - Street Celebration):**
+  - **Hình ảnh:** Tin tức truyền về khu tập thể tầng 14. Tiếng reo hò, tiếng cười nói râm ran khắp các tầng hành lang. Mọi người ôm chầm lấy nhau trong niềm hân hoan tột cùng. Bác Ba bắt tay Minh thật chặt. Đốm bay lượn vẽ thành những vệt sáng vàng lấp lánh như pháo hoa trên không trung.
+  - **Thoại — Bác Ba:** “Chúng ta đã làm được rồi Minh ơi! Cánh cửa công lý đã bắt đầu mở ra!”
+
+---
+
+### TRANG 20 — GIỮ MỘT ĐỐM SÁNG (ĐẠI KẾT CỤC)
+*Bố cục trang:* Trang Splash kết thúc tráng lệ, sâu sắc và tràn đầy tính nhân văn xã hội chủ nghĩa.
+
+- **P20-K01 (Bữa cơm gia đình ấm áp - Warm Family Dinner):**
+  - **Hình ảnh:** Tối hôm đó. Căn hộ nhỏ số 1408 ngập tràn ánh sáng vàng dịu dàng và tiếng cười đầm ấm. Trên chiếc bàn gỗ cũ, mẹ Minh bưng ra hai bát canh chua cá bốc khói nghi ngút cùng đĩa đậu rán thơm lừng. Minh cất chiếc tua vít cũ vào túi áo, kéo chiếc ghế ngồi cạnh mẹ, khuôn mặt rạng rỡ thanh thản. Đốm ngồi vắt vẻo ngay trên đỉnh chiếc mô hình Nếp Sáng đặt cạnh mâm cơm.
+  - **Thoại — Mẹ Minh (cười hiền hậu, gắp miếng cá to vào bát Minh):** “Ăn đi con, hôm nay con và Đốm vất vả nhiều rồi. Cơm canh mẹ nấu nóng hổi đây.”
+  - **Thoại — Minh (cười tươi, mắt lấp lánh):** “Con cảm ơn mẹ! Mai cháu với bác Ba bắt đầu lắp thử nghiệm Nếp Sáng cho 50 nhà đầu tiên trong xóm đấy mẹ ạ!”
+  - **Thoại — Đốm (nghiêng đầu nháy mắt tinh quái):** “Ăn nhiều vào nhé Minh, ăn hộ cả phần pin sạc của tớ luôn!”
+
+- **P20-K02 (Góc nhìn qua ô cửa sổ ra thành phố - Looking Out the Crooked Window):**
+  - **Hình ảnh:** Máy quay lùi xa dần qua khung cửa sổ căn hộ nhỏ. Ngoài xa trong màn đêm, tòa tháp của tập đoàn TRỤC vẫn sừng sững lạnh lùng với logo lục giác đỏ. Nhưng nhìn xuống các tầng chung cư phía dưới, hàng trăm ô cửa sổ của các hộ gia đình nghèo đã bắt đầu thắp sáng những ánh đèn vàng ấm áp — biểu tượng của những đốm sáng tri thức và hy vọng không chịu khuất phục.
+  - **Lời dẫn (Kết từ sâu sắc):**  
+    *“Cuộc đấu tranh chống lại sự bóc lột của độc quyền sẽ còn dài và nhiều gian nan thử thách… Nhưng chừng nào con người còn biết yêu thương, còn biết đoàn kết vì quyền lợi chính đáng của cộng đồng, thì ngọn lửa của chân lý sẽ không bao giờ tàn lụi.”*
+
+- **P20-K03 (Đặc tả biểu tượng Nếp Sáng tỏa sáng - The Eternal Spark):**
+  - **Hình ảnh:** Khung tranh tròn cuối cùng phóng to hình vẽ ô cửa sổ méo trên mặt ổ cứng "NHÀ MÌNH". Chấm vàng lệch góc 172 độ bừng sáng lung linh như một vì sao dẫn lối trong đêm đen.
+  - **Dòng thông điệp kết thúc ấn phẩm (Final Inscription):**  
+    > **“ĐỘC QUYỀN CÓ THỂ CHIẾM ĐOẠT HẠ TẦNG VÀ CÔNG NGHỆ,  
+    > NHƯNG KHÔNG BAO GIỜ CÓ THỂ DẬP TẮT ĐƯỢC  
+    > ĐỐM SÁNG TRONG TRÁI TIM NHÂN DÂN LAO ĐỘNG.”**  
+    > *(Học phần Kinh tế chính trị Mác – Lênin MLN122 — Hết toàn tập)*
+
+---
+
+## BẢNG TỔNG HỢP 20 TRANG CHO ĐỘI NGŨ SẢN XUẤT (PRODUCTION SPRINT GUIDE)
+
+| Trang | Tiêu Đề Phân Cảnh | Trọng Tâm Hình Ảnh (Shot Type) | Yếu Tố Âm Thanh & Hotspot AR | Trọng Tâm Lý Luận MLN122 |
+| :---: | :--- | :--- | :--- | :--- |
+| **01** | Hoàng hôn Vòm-9 | Viễn cảnh đô thị phân tầng, trạm quét TRỤC | Tiếng còi xe, tiếng quét thẻ ngân hàng | Tích tụ tư bản & Lưới điện công nghệ số |
+| **02** | Đôi giày của mẹ | Cận cảnh dán giày, cuốn sổ chi tiêu gạch xóa | Tiếng thở dài của mẹ, tiếng sột soạt keo dán | Bóc lột giá cả độc quyền & Gánh nặng tiền điện |
+| **03** | Phòng trống cũng mát | Nhìn xuyên cửa sổ sang sảnh trống gầm rú máy lạnh | Tiếng máy lạnh công nghiệp gầm rú | Sự lãng phí cơ cấu do cơ chế phí cố định độc quyền |
+| **04** | Ô cửa sổ méo | Đặc tả bàn tay vẽ sơ đồ & Đốm nhảy vào khung | Tiếng bút chì gãy, tiếng cười của Đốm | Sự ra đời của sáng tạo độc lập tự do |
+| **05** | Những đêm không ngủ | Góc làm việc đêm khuya, mẹ mang nước ấm | Tiếng hàn thiếc xèo xèo, tiếng bước chân mẹ | Giá trị sử dụng & Động lực lao động nhân văn |
+| **06** | Kho lưu "NHÀ MÌNH" | Cận cảnh chiếc ổ cứng xám nhôm độc lập | Tiếng cắm jack USB, tiếng quạt tản nhiệt | Không gian số độc lập ngoài mạng lưới kiểm soát |
+| **07** | Đêm cập nhật định mệnh | Màn hình đỏ rực, tia laser đỏ trói chặt Đốm | Tiếng "TÍCH" điện tử rùng rợn, tiếng xích code | Vụ cướp đoạt chất xám & Bóc lột thặng dư vô hình |
+| **08** | Hy vọng trước giông bão | Minh nộp đơn phấn khởi, Đốm giật tia scanline | Tiếng gõ bàn phím enter, tiếng rè nghẹn của Đốm | Ảo tưởng về sự công bằng trong hệ sinh thái đóng |
+| **09** | Cú sốc sảnh công cộng | Biển quảng cáo khổng lồ hiện ô cửa méo và chấm lệch | Tiếng loa quảng cáo oang oang, tiếng cuộn dây rơi | Chiếm đoạt thành quả lao động của tư bản tài chính |
+| **10** | Đêm đối chiếu bẽ bàng | So sánh hai bản thảo dưới ánh đèn xanh lạnh | Tiếng bút dạ khoanh tròn, tiếng sột soạt giấy | Bằng chứng về sự sao chép mã nguồn có tổ chức |
+| **11** | Rào cản hệ sinh thái | Quầy kính dịch vụ TRỤC, bảo vệ robot xua đuổi | Tiếng đập bàn kính, tiếng còi bảo vệ | Rào cản công nghệ ngăn chặn cạnh tranh lành mạnh |
+| **12** | Nghịch lý Siêu ngạch | Báo cáo TRỤC khoe lãi lớn đối lập hóa đơn mẹ | Tiếng tivi phát thanh họp báo, tiếng thở dài của mẹ | **Siêu ngạch độc quyền**: Chi phí giảm nhưng giá giữ nguyên |
+| **13** | Thỏa thuận nhượng quyền | Lục tìm hồ sơ lưu trữ năm 2004 đóng dấu đỏ | Tiếng lật trang giấy tài liệu giòn rụm | **Độc quyền Nhà nước**: Dùng ngân sách công phục vụ tư nhân |
+| **14** | Manh mối từ Đốm | Đốm lao đầu vào ngăn kéo bàn có khóa cơ | Tiếng cộc cộc gỗ, tiếng tra chìa khóa | Sự kiên cường của nhân vật & Kẽ hở trong thuật toán |
+| **15** | Vỡ òa trong nước mắt | Dòng log phần cứng RAW phơi bày tội ác TRỤC | Tiếng khóc nghẹn ngào, tiếng cười vỡ òa của Đốm | Giải phóng con người & AI khỏi xiềng xích áp bức |
+| **16** | Gom 4 bộ chứng cứ thép | Sắp xếp 4 tập tài liệu đánh số thứ tự từ 1 đến 4 | Tiếng kẹp tài liệu cộp cộp, tiếng kéo khóa ba lô | Vũ khí pháp lý sắc bén của người lao động |
+| **17** | Ngọn lửa sảnh sinh hoạt | Toàn thể cư dân tập hợp nghe Minh trình bày | Tiếng vỗ tay, tiếng xôn xao phẫn nộ của dân | Thức tỉnh ý thức giai cấp của quần chúng nhân dân |
+| **18** | Sao chúng tôi không được chọn? | Mẹ Minh giơ chiếc giày dán keo, mọi người ký đơn | Tiếng hô vang đồng thanh, tiếng bút ký sột soạt | Đấu tranh tập thể & Sức mạnh đoàn kết của nhân dân |
+| **19** | Bức tường rúng động | Nộp đơn tại cơ quan giám sát, TRỤC hoảng loạn | Tiếng con dấu đóng bành bạch, tiếng còi xe thanh tra | Cơ chế thanh tra dân chủ hạn chế độc quyền tư bản |
+| **20** | Giữ Một Đốm Sáng | Mâm cơm nóng bên ô cửa sổ, ngàn ô cửa bừng sáng | Tiếng bát đũa lách cách, tiếng cười đầm ấm | Khẳng định chân lý: Đốm sáng lòng dân không thể dập tắt |
