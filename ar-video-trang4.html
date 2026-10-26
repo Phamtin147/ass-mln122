@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#081420">
+  <title>AR video · Trang 4 Nếp Sáng</title>
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <style>
+    /* Giao diện tối duy nhất: chạy chồng lên hình camera. */
+    :root {
+      --ink: #081420;
+      --ink-2: #0e2133;
+      --panel: rgba(8, 20, 32, 0.84);
+      --line: rgba(62, 230, 255, 0.28);
+      --amber: #ffd23f;
+      --cyan: #3ee6ff;
+      --text: #f2f6f9;
+      --muted: #a6b8c6;
+      --font: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--text); font-family: var(--font); -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    button:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+    [hidden] { display: none !important; }
+
+    /* video nguồn: phải nằm trong trang (iPhone không giải mã video bị display:none) nhưng không hiện ra */
+    #vid { position: fixed; left: 0; top: 0; width: 2px; height: 2px; opacity: 0; pointer-events: none; }
+
+    #stage { position: fixed; inset: 0; z-index: 1; background: radial-gradient(120% 80% at 50% 30%, #12304a 0%, var(--ink) 70%); }
+    #stage a-scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #stage video { position: absolute !important; z-index: 0 !important; max-width: none !important; max-height: none !important; }
+    #stage .a-canvas { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; z-index: 1 !important; }
+    body.preview #stage { touch-action: none; cursor: grab; }
+
+    #intro {
+      position: fixed; inset: 0; z-index: 30; overflow-y: auto;
+      display: grid; place-items: center;
+      padding-block: max(24px, env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-bottom, 0px));
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+      background:
+        radial-gradient(90% 60% at 80% 0%, rgba(255, 210, 63, 0.16), transparent 60%),
+        radial-gradient(80% 60% at 0% 100%, rgba(62, 230, 255, 0.14), transparent 60%),
+        var(--ink);
+    }
+    .intro-card { width: min(440px, 100%); display: grid; gap: 18px; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); }
+    h1 { margin: 0; font-size: clamp(28px, 8vw, 38px); line-height: 1.12; font-weight: 800; text-wrap: balance; }
+    h1 em { font-style: normal; color: var(--amber); white-space: nowrap; }
+    .lede { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .thumb {
+      display: grid; grid-template-columns: 92px 1fr; gap: 14px; align-items: center;
+      padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(14, 33, 51, 0.7);
+    }
+    .thumb img { width: 92px; aspect-ratio: 896 / 1200; object-fit: cover; border-radius: 6px; transform: rotate(-3deg); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); }
+    .thumb p { margin: 0; font-size: 14px; line-height: 1.5; min-width: 0; }
+    .thumb b { color: var(--amber); font-weight: 700; }
+    .actions { display: grid; gap: 10px; }
+    .btn {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      width: 100%; padding: 15px 18px; border-radius: 12px; border: 1px solid var(--line);
+      background: var(--ink-2); font-size: 16px; font-weight: 700; text-align: left;
+    }
+    .btn small { display: block; font-size: 12.5px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+    .btn.primary { background: var(--amber); color: #1a1405; border-color: transparent; }
+    .btn.primary small { color: #4a3b0a; }
+    .btn .arrow { font-size: 20px; line-height: 1; opacity: 0.8; }
+    .btn:disabled { opacity: 0.55; cursor: progress; }
+    .note { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+    .note code { color: var(--cyan); font-size: 12px; }
+    .note a { color: var(--cyan); }
+    #error { margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(255, 80, 80, 0.12); border: 1px solid rgba(255, 110, 110, 0.5); font-size: 14px; line-height: 1.5; }
+
+    #hud { position: fixed; inset: 0; z-index: 20; pointer-events: none; }
+    .hud-top {
+      position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 8px;
+      padding: calc(12px + env(safe-area-inset-top, 0px)) max(14px, env(safe-area-inset-right, 0px)) 12px max(14px, env(safe-area-inset-left, 0px));
+      background: linear-gradient(rgba(8, 20, 32, 0.85), rgba(8, 20, 32, 0));
+    }
+    .chip { font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); white-space: nowrap; }
+    #status { color: var(--muted); }
+    #status.found { color: #1a1405; background: var(--amber); border-color: transparent; }
+    .hud-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+      padding: 12px max(14px, env(safe-area-inset-right, 0px)) calc(14px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px));
+      background: linear-gradient(rgba(8, 20, 32, 0), rgba(8, 20, 32, 0.85));
+    }
+    .hud-bottom button { pointer-events: auto; padding: 11px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 14px; font-weight: 700; }
+    #btnUnmute { background: var(--amber); color: #1a1405; border-color: transparent; }
+    #progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255, 255, 255, 0.12); }
+    #progress span { display: block; height: 100%; width: 0; background: var(--amber); }
+    #guide {
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      width: min(62vw, 300px); aspect-ratio: 896 / 1200; border: 2px dashed rgba(255, 210, 63, 0.8); border-radius: 10px;
+      display: grid; place-items: end center; padding: 14px;
+    }
+    #guide span { font-size: 13.5px; font-weight: 600; line-height: 1.45; text-align: center; padding: 8px 10px; border-radius: 10px; background: var(--panel); }
+
+    #pageView { position: fixed; inset: 0; z-index: 40; background: #ffffff; }
+    #pageView img { position: absolute; top: 16px; left: 16px; width: calc(100% - 32px); height: calc(100% - 32px); max-width: none; object-fit: contain; }
+    #pageView button { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: max(12px, env(safe-area-inset-right, 0px)); padding: 10px 14px; border-radius: 999px; border: 0; background: #081420; color: #fff; font-weight: 700; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <!-- Video phát lên trang 4: bản mp4 cho điện thoại, bản webm dự phòng -->
+  <video id="vid" playsinline webkit-playsinline preload="auto" loop crossorigin="anonymous">
+    <source src="assets/video/trang4.mp4" type="video/mp4">
+    <source src="assets/video/trang4.webm" type="video/webm">
+  </video>
+
+  <div id="stage">
+    <a-scene id="scene"
+      mindar-image="imageTargetSrc: ./assets/trang4.mind; maxTrack: 1; autoStart: false; uiLoading: no; uiScanning: no; uiError: no; filterMinCF: 0.0005; filterBeta: 0.01; warmupTolerance: 4; missTolerance: 15"
+      renderer="antialias: true; alpha: true; colorManagement: false"
+      vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" loading-screen="enabled: false" embedded>
+      <a-camera position="0 0 0" look-controls="enabled: false" wasd-controls="enabled: false"></a-camera>
+
+      <!-- AR: video phủ khít trang 4 (rộng 1, cao 1200/896) -->
+      <a-entity id="target" mindar-image-target="targetIndex: 0">
+        <a-plane id="arVideo" width="1" height="1.3393" position="0 0 0.002" material="shader: flat; src: #vid"></a-plane>
+      </a-entity>
+
+      <!-- Xem thử: video trên một tấm trang trước camera, kéo để xoay -->
+      <a-entity id="preview" visible="false" position="0 0 -2.15">
+        <a-entity id="previewTilt" rotation="-12 0 0">
+          <a-plane width="1" height="1.3393" material="shader: flat; src: #vid"></a-plane>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </div>
+
+  <section id="intro" aria-labelledby="title">
+    <div class="intro-card">
+      <div class="eyebrow">Giữ Một Đốm Sáng · AR video</div>
+      <h1 id="title">Trang 4: <em>Dự án Nếp Sáng</em></h1>
+      <p class="lede">Quét trang 4, trang truyện sẽ chuyển động ngay trên giấy: mạng Nếp Sáng chạy tín hiệu, ô cửa méo sáng lên, Đốm lấp lánh, có nhạc và hiệu ứng âm thanh.</p>
+
+      <div class="thumb">
+        <img src="assets/comic_page4.jpg" alt="Trang 4: Minh vẽ sơ đồ Nếp Sáng và ô cửa méo, Đốm xuất hiện">
+        <p>Quét <b>trang 4</b> in trên giấy, hoặc mở trang 4 trên màn hình máy tính rồi quét bằng điện thoại. Bật âm lượng.</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="btnAR">
+          <span>Quét bằng camera<small>Cần cho phép quyền camera</small></span><span class="arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="btn" id="btnPreview">
+          <span>Xem thử không cần camera<small>Phát video trên tấm trang, kéo để xoay</small></span><span class="arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="btn" id="btnPage">
+          <span>Mở trang 4 để quét<small>Dùng trên máy tính, quét bằng điện thoại</small></span><span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <p id="error" hidden></p>
+      <p class="note">Camera chỉ hoạt động khi trang được mở qua <code>https://</code>.</p>
+      <p class="note"><a href="ar-trang4.html">AR trang 4 bản 3D</a> · <a href="index.html">Về truyện tương tác</a> · <a href="ar-camera.html">AR các trang khác</a></p>
+    </div>
+  </section>
+
+  <div id="hud" hidden>
+    <div class="hud-top">
+      <span class="chip">Trang 4 · AR video</span>
+      <span class="chip" id="status" role="status">Đang mở camera…</span>
+    </div>
+    <div id="guide"><span>Đưa camera vào trang 4<br>giữ cả trang trong khung, đủ sáng</span></div>
+    <div class="hud-bottom">
+      <button id="btnUnmute" hidden>Chạm để bật tiếng</button>
+      <button id="btnReplay">Phát lại</button>
+      <button id="btnSound" aria-pressed="true">Âm thanh: bật</button>
+      <button id="btnExit">Thoát</button>
+    </div>
+    <div id="progress" aria-hidden="true"><span></span></div>
+  </div>
+
+  <section id="pageView" hidden aria-label="Trang 4 để quét">
+    <img src="assets/comic_page4.jpg" alt="Trang 4 của truyện">
+    <button id="btnPageClose">Đóng</button>
+  </section>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const scene = $('scene');
+      const target = $('target');
+      const vid = $('vid');
+      let mode = 'intro';  // intro | ar | preview
+      let soundOn = true;
+      let lostAt = 0;
+      let everFound = false;
+
+      function setStatus(text, found) {
+        $('status').textContent = text;
+        $('status').classList.toggle('found', !!found);
+        $('guide').hidden = !!found || mode === 'preview';
+      }
+      function showError(msg) {
+        $('error').textContent = msg;
+        $('error').hidden = false;
+      }
+      function enterHud() {
+        $('intro').hidden = true;
+        $('hud').hidden = false;
+      }
+
+      // Mở khoá phát video có tiếng: phải gọi ngay trong lúc người dùng chạm (yêu cầu của iPhone/Android).
+      function unlockVideo() {
+        vid.muted = !soundOn;
+        const p = vid.play();
+        if (p && p.then) {
+          return p.then(() => { vid.pause(); vid.currentTime = 0; }).catch(() => { vid.muted = true; });
+        }
+        return Promise.resolve();
+      }
+
+      // Phát; nếu trình duyệt chặn tiếng thì phát không tiếng và hiện nút bật tiếng.
+      function playVideo(fromStart) {
+        if (fromStart) vid.currentTime = 0;
+        vid.muted = !soundOn;
+        const p = vid.play();
+        if (p && p.catch) {
+          p.catch(() => {
+            vid.muted = true;
+            $('btnUnmute').hidden = !soundOn;
+            vid.play().catch(() => {});
+          });
+        }
+      }
+
+      vid.addEventListener('timeupdate', () => {
+        const k = vid.duration ? vid.currentTime / vid.duration : 0;
+        $('progress').firstElementChild.style.width = (k * 100).toFixed(1) + '%';
+      });
+
+      // ----- AR bằng camera -----
+      $('btnAR').addEventListener('click', () => {
+        if (!window.isSecureContext) {
+          showError('Trang đang mở qua http nên trình duyệt chặn camera. Hãy mở bằng địa chỉ https://');
+          return;
+        }
+        unlockVideo();
+        mode = 'ar';
+        enterHud();
+        setStatus('Đang mở camera…');
+        const start = () => {
+          const sys = scene.systems['mindar-image-system'];
+          scene.addEventListener('arReady', () => setStatus('Đang tìm trang 4…'), { once: true });
+          scene.addEventListener('arError', () => {
+            mode = 'intro';
+            $('hud').hidden = true;
+            $('intro').hidden = false;
+            showError('Không mở được camera. Hãy cho phép quyền camera cho trang này (biểu tượng ổ khoá cạnh thanh địa chỉ), rồi thử lại.');
+          }, { once: true });
+          sys.start();
+        };
+        if (scene.hasLoaded) start(); else scene.addEventListener('loaded', start, { once: true });
+      });
+
+      target.addEventListener('targetFound', () => {
+        setStatus('Đã nhận trang 4', true);
+        const longGone = performance.now() - lostAt > 3000;
+        playVideo(!everFound || longGone);
+        everFound = true;
+      });
+      target.addEventListener('targetLost', () => {
+        lostAt = performance.now();
+        vid.pause();
+        setStatus('Mất dấu, đưa camera lại gần');
+      });
+
+      // ----- Xem thử -----
+      function fitPreview() {
+        const aspect = window.innerWidth / window.innerHeight;
+        const half = Math.tan(40 * Math.PI / 180);
+        const z = Math.max(1.12 / (2 * half * aspect), 1.5 / (2 * half));
+        $('preview').object3D.position.set(0, 0, -z);
+      }
+      $('btnPreview').addEventListener('click', () => {
+        mode = 'preview';
+        document.body.classList.add('preview');
+        enterHud();
+        setStatus('Xem thử: kéo để xoay', true);
+        const show = () => { fitPreview(); $('preview').setAttribute('visible', true); };
+        if (scene.hasLoaded) show(); else scene.addEventListener('loaded', show, { once: true });
+        playVideo(true);
+      });
+      window.addEventListener('resize', () => { if (mode === 'preview') fitPreview(); });
+
+      let drag = null;
+      const tilt = $('previewTilt');
+      const rot = { x: -12, y: 0 };
+      $('stage').addEventListener('pointerdown', (e) => { if (mode === 'preview') drag = { x: e.clientX, y: e.clientY, rx: rot.x, ry: rot.y }; });
+      window.addEventListener('pointermove', (e) => {
+        if (!drag) return;
+        rot.y = Math.max(-55, Math.min(55, drag.ry + (e.clientX - drag.x) * 0.25));
+        rot.x = Math.max(-60, Math.min(10, drag.rx + (e.clientY - drag.y) * 0.2));
+        tilt.setAttribute('rotation', `${rot.x} ${rot.y} 0`);
+      });
+      window.addEventListener('pointerup', () => { drag = null; });
+
+      // ----- nút -----
+      $('btnUnmute').addEventListener('click', () => {
+        vid.muted = false;
+        vid.play().catch(() => {});
+        $('btnUnmute').hidden = true;
+      });
+      $('btnReplay').addEventListener('click', () => {
+        if (mode === 'preview' || everFound) playVideo(true);
+      });
+      $('btnSound').addEventListener('click', () => {
+        soundOn = !soundOn;
+        vid.muted = !soundOn;
+        if (soundOn && !vid.paused) vid.play().catch(() => {});
+        $('btnUnmute').hidden = true;
+        $('btnSound').textContent = 'Âm thanh: ' + (soundOn ? 'bật' : 'tắt');
+        $('btnSound').setAttribute('aria-pressed', String(soundOn));
+      });
+      $('btnExit').addEventListener('click', () => {
+        vid.pause();
+        if (mode === 'ar') {
+          try { scene.systems['mindar-image-system'].stop(); } catch (e) {}
+          location.reload();
+          return;
+        }
+        $('preview').setAttribute('visible', false);
+        document.body.classList.remove('preview');
+        mode = 'intro';
+        $('hud').hidden = true;
+        $('intro').hidden = false;
+      });
+
+      $('btnPage').addEventListener('click', () => {
+        $('pageView').hidden = false;
+        try { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {}); } catch (e) {}
+      });
+      $('btnPageClose').addEventListener('click', () => {
+        $('pageView').hidden = true;
+        try { document.fullscreenElement && document.exitFullscreen(); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>

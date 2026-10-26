@@ -60,6 +60,12 @@
 3. Mạng Nếp Sáng nổi lên, ô cửa méo bay khỏi trang, Đốm xuất hiện và nói *"Nhà mình vẫn phải sáng chứ."*, cuối cùng là thẻ lý luận MLN122. Có chế độ **xem thử không cần camera** để thuyết trình.
 4. Chữ trên AR là tiếng Việt có dấu, vẽ bằng canvas (`assets/nep-sang-effect.js`). Target riêng của trang này: `assets/trang4.mind` (biên dịch từ `assets/comic_page4.jpg` bằng mind-ar 1.2.5).
 
+### Cách 4: AR video trang 4 (`ar-video-trang4.html`)
+1. Quét trang 4 như Cách 3: một video 26 giây phát khít lên trang giấy. Video mở đầu và kết thúc bằng đúng trang in nên chuyển cảnh liền mạch; ở giữa từng khung tranh lần lượt sáng lên, mạng Nếp Sáng chạy tín hiệu, ô cửa méo được tô sáng, Đốm lấp lánh, các lời thoại bật lên, Đốm nói *"Nhà mình vẫn phải sáng chứ!"* và thẻ kết MLN122.
+2. Mất dấu trang thì video tạm dừng; quét lại trong 3 giây thì phát tiếp, lâu hơn thì phát lại từ đầu.
+3. Nếu trình duyệt chặn tiếng, video vẫn phát không tiếng và hiện nút **"Chạm để bật tiếng"**.
+4. File video: `assets/video/trang4.mp4` (cho iPhone/Android) và `assets/video/trang4.webm` (dự phòng), 720×964, nhạc và hiệu ứng âm thanh tổng hợp, không dùng nhạc có bản quyền.
+
 ---
 
 ## 📁 4. CẤU TRÚC DỰ ÁN
@@ -69,6 +75,7 @@ ass-mln122/
 ├── index.html                 # Đọc truyện 3D Flipbook + Hotspots tương tác
 ├── ar-camera.html             # Camera quét thực tế tăng cường WebAR (MindAR + A-Frame)
 ├── ar-trang4.html             # AR thử trang 4 "Dự án Nếp Sáng" (chữ tiếng Việt có dấu)
+├── ar-video-trang4.html       # AR video: quét trang 4, video phát khít lên trang
 ├── targets-viewer.html        # Màn hình trình chiếu tranh mẫu để quét AR
 ├── compiler.html              # Trình duyệt biên dịch file .mind
 ├── compile-cli.mjs            # Công cụ Node.js CLI biên dịch targets.mind offline
@@ -81,5 +88,6 @@ ass-mln122/
     ├── comic_page1.jpg - page6.jpg # 6 trang truyện tranh minh họa chi tiết
     ├── targets.mind           # Dữ liệu điểm đặc trưng AR đã biên dịch chuẩn xác
     ├── trang4.mind            # Target AR riêng của trang 4
-    └── nep-sang-effect.js     # Hiệu ứng AR trang 4 (component A-Frame nep-sang-effect)
+    ├── nep-sang-effect.js     # Hiệu ứng AR trang 4 (component A-Frame nep-sang-effect)
+    └── video/trang4.mp4, trang4.webm # Video "trang 4 sống dậy" cho AR video
 ```
