@@ -54,6 +54,12 @@
 2. Trên điện thoại: Truy cập `ar-camera.html`, bấm **"BẬT CAMERA QUÉT AR"** và hướng vào màn hình máy tính (hoặc bản in giấy).
 3. Hệ thống tự động nhận diện và bung mô hình Hologram 3D (Vòng quay Vòm-9, nón laser cảnh báo cập nhật, khối dữ liệu xoay) kèm âm thanh Synth cybernetic!
 
+### Cách 3: AR thử trang 4 "Dự án Nếp Sáng" (`ar-trang4.html`)
+1. Trên máy tính: mở `ar-trang4.html`, bấm **"Mở trang 4 để quét"**.
+2. Trên điện thoại (qua https): mở `ar-trang4.html`, bấm **"Quét bằng camera"** và hướng vào trang 4.
+3. Mạng Nếp Sáng nổi lên, ô cửa méo bay khỏi trang, Đốm xuất hiện và nói *"Nhà mình vẫn phải sáng chứ."*, cuối cùng là thẻ lý luận MLN122. Có chế độ **xem thử không cần camera** để thuyết trình.
+4. Chữ trên AR là tiếng Việt có dấu, vẽ bằng canvas (`assets/nep-sang-effect.js`). Target riêng của trang này: `assets/trang4.mind` (biên dịch từ `assets/comic_page4.jpg` bằng mind-ar 1.2.5).
+
 ---
 
 ## 📁 4. CẤU TRÚC DỰ ÁN
@@ -62,6 +68,7 @@
 ass-mln122/
 ├── index.html                 # Đọc truyện 3D Flipbook + Hotspots tương tác
 ├── ar-camera.html             # Camera quét thực tế tăng cường WebAR (MindAR + A-Frame)
+├── ar-trang4.html             # AR thử trang 4 "Dự án Nếp Sáng" (chữ tiếng Việt có dấu)
 ├── targets-viewer.html        # Màn hình trình chiếu tranh mẫu để quét AR
 ├── compiler.html              # Trình duyệt biên dịch file .mind
 ├── compile-cli.mjs            # Công cụ Node.js CLI biên dịch targets.mind offline
@@ -72,5 +79,7 @@ ass-mln122/
 └── assets/
     ├── comic_cover.jpg        # Bìa truyện "Giữ Một Đốm Sáng"
     ├── comic_page1.jpg - page6.jpg # 6 trang truyện tranh minh họa chi tiết
-    └── targets.mind           # Dữ liệu điểm đặc trưng AR đã biên dịch chuẩn xác
+    ├── targets.mind           # Dữ liệu điểm đặc trưng AR đã biên dịch chuẩn xác
+    ├── trang4.mind            # Target AR riêng của trang 4
+    └── nep-sang-effect.js     # Hiệu ứng AR trang 4 (component A-Frame nep-sang-effect)
 ```
