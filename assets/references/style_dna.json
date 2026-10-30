@@ -1,15 +1,16 @@
 {
-  "project": "DAS KAPITAL 2.0 - MLN122 Creative Comic",
+  "project": "DAS KAPITAL 2.0 / GIỮ MỘT ĐỐM SÁNG - MLN122 Creative Manga Comic",
   "taste_direction": {
     "family": "Cyberpunk-Manga x Taste-Application (Dark / Systemic / Retro-Print)",
     "palette": {
       "void_base": "#05060a",
       "screentone_paper": "#f4f1ea",
       "hero_accents": {
-        "kael_data": "#00f0ff",
-        "surplus_value": "#00ff66",
-        "das_kapital_gold": "#ffe600",
-        "omni_warning_red": "#ff0055"
+        "kael_cyan": "#00f0ff",
+        "surplus_value_gold": "#ffe600",
+        "nep_sang_green": "#00ff66",
+        "omni_crimson": "#ff0055",
+        "maternal_amber": "#ffb703"
       },
       "rule": "One dominant neon accent per shot against deep chiaroscuro manga ink."
     },
@@ -19,47 +20,98 @@
   "master_style_suffix": "Classic cyberpunk manga character concept sheet, heavy black ink outlines, authentic halftone screentone dot shading, high contrast chiaroscuro shadows, Katsuhiro Otomo and Tsutomu Nihei graphic novel aesthetic, 2D black and white manga illustration with selective vivid neon accents, crisp clean line art, no blurry artifacts, no photorealistic 3D, masterpiece comic art.",
   "characters": {
     "kael": {
-      "name": "Kael",
+      "name": "Minh / Kael",
+      "file": "assets/references/characters/ref_kael_sheet.jpg",
       "role": "Lead Hacker / Anti-Algorithmic Resistance",
-      "mln122_symbolism": "Digital Proletariat / Variable Capital (v)",
+      "mln122_symbolism": "Digital Proletariat / Variable Capital (v) & Free Labor",
       "prompt": "Full body character concept turnaround sheet of Kael, a 22-year-old male cyberpunk hacker. Multiple angles: front view, 3/4 profile, and intense face close-up. Sharp angular jaw, messy spiky jet-black hair with a single vibrant electric cyan streak. Glowing cyan cybernetic monocular lens over his right eye with intricate circuit lines trailing to his temple. Wearing a dark weathered tactical techwear hoodie with orange wire straps, fingerless mechanical gloves, and cargo combat pants. In his hand he holds a rugged glowing data-storage cyberdeck. Classic cyberpunk manga art style, clean white background, heavy ink line art, retro screentone dots, single electric cyan accent light, Katsuhiro Otomo aesthetic."
     },
+    "mom_minh": {
+      "name": "Mẹ Minh (Bà Lan)",
+      "file": "assets/references/characters/ref_mom_minh.jpg",
+      "role": "Minh's Mother / Heart of the Proletariat",
+      "mln122_symbolism": "Real-world Labor Exploitation & Human Dignity",
+      "prompt": "Full body character concept turnaround sheet of Mrs. Lan (Minh's Mother), a 50-year-old working-class woman living in dystopian Cyberpunk Dome-9. Multiple angles: front view, 3/4 profile, and emotional face close-up. Gentle weathered face with warm tired wrinkles, hair tied back in a humble practical bun with silver strands. Wearing a humble, worn floral patterned linen work shirt with patched elbows, faded trousers, and worn-out walking shoes with reglued rubber soles. In her close-up, she holds a tube of cheap shoe glue and an old shoe, her expression carries both maternal gentleness and quiet dignity of the working class. Classic cyberpunk manga art style, clean white concept sheet background, heavy black ink outlines, authentic halftone screentone dots, Katsuhiro Otomo character design aesthetic, subtle warm sepia/amber accent, crisp line art, masterpiece illustration."
+    },
+    "bac_ba": {
+      "name": "Bác Ba (Tổ trưởng Tầng 14)",
+      "file": "assets/references/characters/ref_bac_ba.jpg",
+      "role": "Community Elder / Veteran Machinist",
+      "mln122_symbolism": "Traditional Working Class & Collective Solidarity",
+      "prompt": "Full body character concept turnaround sheet of Uncle Ba (Bác Ba), a 62-year-old retired veteran machinist and community leader in Cyberpunk Dome-9. Multiple angles: front view, 3/4 profile, and smiling dignified face close-up. Sturdy build, salt-and-pepper short hair and rugged stubble, deep honest smile lines around his eyes. Wearing a faded grey-blue mechanic's denim work jumpsuit with oil smudges, a tool holster on his hip with wrenches, and rolled-up sleeves showing weathered muscular forearms. In his hands he holds an old legal document titled '2004 Franchise Agreement'. Classic Japanese manga style, clean turnaround sheet layout, heavy black ink lines, rich retro screentone dots, warm amber and vintage cyan accents, Katsuhiro Otomo aesthetic, dignified proletariat elder, crisp line art."
+    },
+    "dom_ai": {
+      "name": "AI Đốm (The Spark Companion)",
+      "file": "assets/references/characters/ref_dom_ai_companion.jpg",
+      "role": "Miniature Hovering AI Companion Drone",
+      "mln122_symbolism": "Emancipated Technology / Tool for Human Liberation",
+      "prompt": "Concept design turnaround sheet of 'Đốm' (The Spark), a miniature hovering AI companion drone. Multiple views and expressions: floating front view, side profile, top angle, and 4 emotional face modes on its circular front lens (happy curved eyes, curious scanning mode with blue grid, warning mode with red pulses, and comforting warm amber glow). Spherical sleek compact body made of matte brushed white and dark ceramic alloy, two micro ion-thruster fins on the sides, tiny retractable sensor antenna on top. Emitting a soft cyan holographic HUD displaying circuit diagrams and economic formulas. Classic Japanese manga mechanical design, clean concept sheet layout, crisp ink linework, halftone screentone shading, glowing neon cyan and warm golden amber accents, Tsutomu Nihei and Akira tech aesthetic."
+    },
     "cyber_marx": {
-      "name": "Cyber-Marx",
+      "name": "Cyber-Marx (Karl Marx Số Hóa)",
+      "file": "assets/references/characters/ref_cyber_marx.jpg",
       "role": "Ideological Mentor / The Ghost of Political Economy",
       "mln122_symbolism": "The Theory of Surplus Value (W = c + v + m)",
       "prompt": "Character concept art sheet of Cyber-Marx, a legendary futuristic philosopher and resistance leader. Majestic flowing white beard and unruly silver hair, wearing high-tech glowing cyberpunk neon visor across his eyes. Long dark circuit-lined trench coat with luminous copper data bus lines along the lapels. In one gloved cybernetic hand, he holds a radiant glowing holographic book titled 'DAS KAPITAL 2.0' casting warm golden light. Stern, dignified, revolutionary expression. Classic cyberpunk manga line art, heavy black ink, halftone screentone, gold and cyan neon accents, Tsutomu Nihei graphic novel style, clean concept sheet layout."
     },
     "ceo_sterling": {
-      "name": "CEO Sterling Vane",
-      "role": "Head of Omni-Corp / The Arch-Monopolist",
-      "mln122_symbolism": "State Monopoly Capitalism / Platform Exploitation",
+      "name": "CEO Sterling Vane (Tập đoàn TRỤC)",
+      "file": "assets/references/characters/ref_ceo_sterling.jpg",
+      "role": "Head of Omni-Corp / Arch-Monopolist",
+      "mln122_symbolism": "State Monopoly Capitalism & Platform Enclosure",
       "prompt": "Character concept turnaround sheet of CEO Sterling Vane, a ruthless 45-year-old tech conglomerate oligarch. Slicked-back silver-black hair, aristocratic cold features. Wearing a bespoke charcoal-grey cyber-nanotech three-piece business suit with a glowing golden geometric monopoly lapel pin. His left eye is replaced by a red-tinted augmented reality lens displaying real-time stock ticker graphs and financial flowcharts. Smug, calculating expression of absolute market control. Classic Japanese manga style, high-contrast black ink, luxury corporate cyberpunk, sharp shadows, screentone shading, subtle crimson and gold accents."
     },
     "omni_enforcer": {
-      "name": "Omni-Patrol Drone & Cyborg Enforcer",
+      "name": "Omni-Drone & Cyborg Enforcer",
+      "file": "assets/references/characters/ref_omni_drone_enforcer.jpg",
       "role": "Algorithmic State Coercion Unit",
       "mln122_symbolism": "Enforcement of Capitalist Private Property Rights",
       "prompt": "Concept design sheet of Omni-Corp police enforcement. On the top: sleek angular black matte surveillance drone with menacing red searchlight laser cone and dual quad-rotors. On the bottom: armored Cyborg Riot Enforcer in matte-black exoskeleton armor with transparent riot visor, holding an electromagnetic stun baton. Tactical police markings 'OMNI-SECURITY'. Cyberpunk manga mechanical line art, technical turnaround callouts, screentone shading, bold red warning accents, Tsutomu Nihei mechanical design aesthetic."
     }
   },
+  "props": {
+    "nep_sang_device": {
+      "name": "Thiết bị 'Nếp Sáng' & Ổ cứng 'NHÀ MÌNH'",
+      "file": "assets/references/props/ref_prop_nep_sang_device.jpg",
+      "role": "Open Hardware Modulator & Storage Vault",
+      "mln122_symbolism": "Socialization of Means of Production (c)",
+      "prompt": "Detailed technical prop concept sheet of the 'Nếp Sáng' (The Spark Modulator) open-hardware energy balancer and the 'NHÀ MÌNH' (Our Home) external SSD storage vault. Multiple technical views: exploded axonometric diagram, front view, and connector detail callouts. The SSD is a rugged brushed aluminum enclosure with laser-engraved custom emblem of a charming crooked window tilted at 172 degrees. Connected via modular optical ribbon cables to a custom open-source circuit board featuring glowing phosphor LED status indicators, exposed copper bus bars, heatsinks, and a small OLED display showing decentralized power flow. Industrial cyberpunk manga technical blueprint, crisp black ink line art, clean white background, halftone screentone dot shading, glowing emerald green and amber LED indicators, Otomo Akira mechanical drawing."
+    }
+  },
   "backgrounds": {
     "neo_metropolis": {
-      "name": "Neo-Metropolis Street",
-      "role": "The Platform City",
+      "name": "Đô thị Vòm-9 (Phố Xá Chiều Tà)",
+      "file": "assets/references/backgrounds/ref_bg_neometropolis.jpg",
+      "role": "The Platform Megacity Street",
       "mln122_symbolism": "Social Production under Private Monopoly Ownership",
       "prompt": "Environment concept art of Neo-Metropolis street level. Extreme wide establishing angle. Dystopian megacity with towering brutalist architecture under dark acid rain. Colossal neon holographic billboards dominating the skyline flashing 'OMNI-LIFE: CONSUME. OBEY. OMNI.' Crowded wet asphalt street reflecting neon lights, docile citizen pedestrians walking with neural headsets, swarms of surveillance drones patrolling overhead between tangled high-voltage power cables. Classic cyberpunk manga wide shot, heavy black ink hatching, rich screentone textures, vibrant cyan and magenta reflections on dark wet ground, Katsuhiro Otomo city scale."
     },
+    "apartment_1408": {
+      "name": "Căn hộ 1408 & Bàn ăn gia đình Mẹ Minh",
+      "file": "assets/references/backgrounds/ref_bg_apartment_1408.jpg",
+      "role": "Minh's Humble Tenement Home",
+      "mln122_symbolism": "Reproduction of Labor Power & Working-class Warmth",
+      "prompt": "Interior environment concept art of Minh's humble apartment (Unit 1408) in the worker tenement block of Cyberpunk Dome-9. Wide establishing interior view. Small cozy 20-square-meter living space: a rustic wooden dining table in the center with a single hanging incandescent Edison bulb casting a warm pool of golden light against water-stained concrete walls. In the corner, a small workbench cluttered with soldering tools, CRT monitors, and tangled wires next to a cracked window looking out into the rain-slicked neon cyberpunk megacity. Contrast between cold dystopian exterior and warm humble maternal home. Classic Japanese manga interior line art, heavy black ink hatching, rich screentone textures, warm amber lamp light and distant neon blue city glow, Katsuhiro Otomo background aesthetic."
+    },
     "kael_den": {
-      "name": "Kael's Underground Hacker Den",
-      "role": "The Resistance Workshop",
-      "mln122_symbolism": "De-alienation & Liberated Labor",
+      "name": "Mật thất Kael (Underground Hacker Den)",
+      "file": "assets/references/backgrounds/ref_bg_kael_den.jpg",
+      "role": "The Resistance Hardware Workshop",
+      "mln122_symbolism": "De-alienation & Liberated Technological Labor",
       "prompt": "Interior environment concept art of an underground cyberpunk hacker hideout. Grimy industrial basement packed with CRT monitors, stacked server blade racks, tangled optical cables, soldering stations, and instant noodle bowls. On the main curved glowing monitors, large green phosphor code displays economic formulas 'W = c + v + m' and decentralized open-grid protocols. Through a rain-streaked grimy skylight window, a searchlight from an Omni-Corp police blimp cuts through the gloom. Detailed manga interior, dense mechanical clutter, screentone shading, glowing terminal screen light, dark chiaroscuro contrast."
     },
+    "community_hall": {
+      "name": "Sảnh sinh hoạt chung Tầng 14",
+      "file": "assets/references/backgrounds/ref_bg_community_hall.jpg",
+      "role": "Worker Community Assembly Hall",
+      "mln122_symbolism": "Proletarian Class Consciousness & Collective Action",
+      "prompt": "Interior environment concept art of the Floor 14 Community Assembly Hall in Cyberpunk Dome-9. Deep perspective wide angle shot. A cavernous public hall with brutalist concrete pillars, exposed ceiling pipes, and rusty industrial ventilation ducts. Suspended from the high ceiling are massive commercial cooling units with glowing red hexagonal logos of the TRỤC/OMNI monopoly corporation. On the floor below is a simple wooden stage with a microphone stand, surrounded by rows of metal folding chairs where working-class residents gather. Large wall-mounted public holographic screen casting blue light. Dystopian social realism cyberpunk manga art, heavy ink cross-hatching, authentic screentone dot shading, high contrast chiaroscuro, Tsutomu Nihei and Katsuhiro Otomo architectural scale."
+    },
     "server_citadel": {
-      "name": "Omni-Corp Quantum Server Citadel",
-      "role": "The Big Data Capital Vault",
-      "mln122_symbolism": "Accumulation of Constant Capital (c) & Stolen Surplus Value (m)",
+      "name": "Tháp máy chủ lượng tử TRỤC (Server Citadel)",
+      "file": "assets/references/backgrounds/ref_bg_server_citadel.jpg",
+      "role": "Big Data Vault of Monopoly Capital",
+      "mln122_symbolism": "Accumulation of Constant Capital (c) & Extracted Surplus (m)",
       "prompt": "Environment concept art of the central Omni-Corp Big Data Vault. A monolithic, cavernous room stretching into vanishing infinity, filled with towering black monolithic server racks cooled by glowing blue cryogenic vapor. Overhead gantry walkways where corporate executives look down upon the glowing data conduits pulsing with digital surplus value. Mirror-polished dark obsidian floor reflecting glowing fiber optics. Monumental, oppressive, clinical corporate cyberpunk scale, classic manga architectural drawing, fine ink line art, screentone dots, electric cyan conduits."
     }
   }

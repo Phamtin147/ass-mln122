@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber-Marx: Bảng Tham Chiếu Hình Ảnh & Concept Art (MLN122)</title>
+  <title>Cyber-Marx: Bảng Tham Chiếu Hình Ảnh Hoàn Chỉnh (13 Đối Tượng MLN122)</title>
   <link rel="icon" href="icon.png">
   <style>
     :root {
@@ -14,10 +14,11 @@
       --neon-pink: #ff007f;
       --neon-green: #00ff66;
       --neon-gold: #ffe600;
+      --neon-amber: #ffb703;
       --text-muted: #8892b0;
     }
 
-    * { margin:0; padding:0; box-sizing:border-box; user-select:none; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: var(--void-bg);
       color: #e6f1ff;
@@ -83,10 +84,35 @@
 
     main {
       flex: 1;
-      max-width: 1300px;
+      max-width: 1400px;
       width: 100%;
       margin: 0 auto;
       padding: 30px 20px 60px 20px;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: #111422;
+      border: 1px solid var(--border-color);
+      color: #a0aec0;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: rgba(0, 240, 255, 0.15);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
     }
 
     .section-header {
@@ -98,7 +124,7 @@
       align-items: flex-end;
     }
     .section-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       color: #fff;
       display: flex;
@@ -207,7 +233,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       z-index: 1000;
       justify-content: center;
       align-items: center;
@@ -221,7 +247,7 @@
       max-height: 85vh;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.4);
     }
     .modal-close {
       position: absolute;
@@ -258,171 +284,315 @@
       <img src="icon.png" width="32" height="32" alt="Logo" style="border-radius:6px;">
       <div>
         <div class="brand-title">CYBER-MARX: VISUAL ANCHOR LIBRARY</div>
-        <div class="brand-sub">BẢNG THAM CHIẾU HÌNH ẢNH CỐ ĐỊNH NHÂN VẬT & BỐI CẢNH (MLN122)</div>
+        <div class="brand-sub">BẢNG 13 THAM CHIẾU HÌNH ẢNH TOÀN DIỆN CHO 20 TRANG MANGA (MLN122)</div>
       </div>
     </div>
     <div class="nav-links">
-      <a href="index.html" class="btn-nav">📖 CUỐN TRUYỆN 3D</a>
+      <a href="novel-reader.html" class="btn-nav">📖 ĐỌC TRUYỆN 20 TRANG</a>
+      <a href="index.html" class="btn-nav">📚 SÁCH LẬT 3D</a>
       <a href="ar-camera.html" class="btn-nav" style="border-color:var(--neon-pink); color:var(--neon-pink);">📷 CAMERA AR</a>
-      <a href="targets-viewer.html" class="btn-nav" style="border-color:var(--neon-gold); color:var(--neon-gold);">🖥️ MÀN HÌNH CHIẾU</a>
     </div>
   </header>
 
   <main>
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCatalog('all')">🌟 TẤT CẢ (13 MỤC)</button>
+      <button class="filter-btn" onclick="filterCatalog('characters')">👤 NHÂN VẬT (7)</button>
+      <button class="filter-btn" onclick="filterCatalog('props')">⚙️ ĐẠO CỤ & PHẦN CỨNG (1)</button>
+      <button class="filter-btn" onclick="filterCatalog('backgrounds')">🏙️ BỐI CẢNH & KHÔNG GIAN (5)</button>
+    </div>
+
     <!-- Section 1: Characters -->
-    <div class="section-header">
-      <div class="section-title">
-        <span>👤 BỘ THAM CHIẾU NHÂN VẬT (CHARACTER TURNAROUNDS)</span>
+    <div class="section-group" data-category="characters">
+      <div class="section-header">
+        <div class="section-title">
+          <span>👤 BỘ THAM CHIẾU NHÂN VẬT (7 NHÂN VẬT CỐT LÕI)</span>
+        </div>
+        <div class="section-badge">CHARACTER TURNAROUNDS</div>
       </div>
-      <div class="section-badge">4 NHÂN VẬT TRỌNG TÂM</div>
+
+      <div class="grid">
+        <!-- 1. Kael -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_kael_sheet.jpg')">
+            <img src="assets/references/characters/ref_kael_sheet.jpg" class="card-img" alt="Kael Sheet">
+            <div class="card-badge">PROTAGONIST</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">MINH / KAEL</div>
+              <div class="card-role">Kỹ sư Hacker Phản kháng Thuật toán</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Tư bản khả biến (v)</em> — Giai cấp công nhân số bị bóc lột nhưng nắm giữ tri thức công nghệ để giải phóng sức lao động.
+              </div>
+              <div class="card-desc">
+                Tóc rối đen tia cyan, kính cybernetic lens mắt phải, tactical hoodie sờn vai viền cam, găng tay hở ngón, cầm cyberdeck lưu trữ thuật toán nguồn mở.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mẹ Minh -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_mom_minh.jpg')">
+            <img src="assets/references/characters/ref_mom_minh.jpg" class="card-img" alt="Mẹ Minh">
+            <div class="card-badge" style="color:var(--neon-amber);">THE MOTHER</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">MẸ MINH (BÀ LAN)</div>
+              <div class="card-role">Tâm điểm Cảm xúc Giai cấp Cần lao</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Hiện thân của <em>Tái sản xuất sức lao động</em> trong điều kiện bị tư bản độc quyền bóp nghẹt chi phí sinh hoạt thiết yếu (tiền điện/nước).
+              </div>
+              <div class="card-desc">
+                50 tuổi, gương mặt đôn hậu nhiều nếp nhăn lao động, áo vải hoa sờn cùi chỏ, tay cầm tuýp keo dán đế giày cao su cũ, đôi mắt ngời sáng phẩm giá kiên cường.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Bác Ba -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_bac_ba.jpg')">
+            <img src="assets/references/characters/ref_bac_ba.jpg" class="card-img" alt="Bác Ba">
+            <div class="card-badge" style="color:var(--neon-cyan);">COMMUNITY ELDER</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">BÁC BA (TỔ TRƯỞNG TẦNG 14)</div>
+              <div class="card-role">Thợ máy Kỳ cựu & Tiếng nói Đoàn kết Quần chúng</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Biểu tượng cho <em>Giai cấp công nhân truyền thống</em> và sức mạnh liên minh tập thể chống lại độc quyền tư bản.
+              </div>
+              <div class="card-desc">
+                62 tuổi, thợ máy về hưu, dáng người vạm vỡ, râu tóc hoa râm, mặc đồ yếm mechanic jumpsuit xám xanh dầu mỡ, tay cầm bản 'Thỏa thuận nhượng quyền 2004'.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. AI Đốm -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_dom_ai_companion.jpg')">
+            <img src="assets/references/characters/ref_dom_ai_companion.jpg" class="card-img" alt="AI Đốm">
+            <div class="card-badge" style="color:var(--neon-cyan);">AI COMPANION</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">AI ĐỐM (THE SPARK)</div>
+              <div class="card-role">Robot Trợ lý Hạt sáng Thông minh</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Biểu tượng cho <em>Công nghệ được giải phóng</em> — Công nghệ sinh ra từ lao động quay lại phục vụ con người thay vì bóc lột con người.
+              </div>
+              <div class="card-desc">
+                Drone mini hình cầu lơ lửng, mắt thấu kính LED 4 cảm xúc (vui tươi cyan, quét hồng ngoại, cảnh báo đỏ, ấm áp vàng), vây ion cân bằng, chiếu HUD kinh tế chính trị.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Cyber-Marx -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_cyber_marx.jpg')">
+            <img src="assets/references/characters/ref_cyber_marx.jpg" class="card-img" alt="Cyber-Marx Sheet">
+            <div class="card-badge">THE MENTOR</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">CYBER-MARX (KARL MARX)</div>
+              <div class="card-role">Biểu tượng Tư tưởng & Người soi đường</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Hiện thân của <em>Học thuyết Giá trị thặng dư (W = c + v + m)</em>, ngọn hải đăng vạch trần cơ chế chiếm đoạt thặng dư số.
+              </div>
+              <div class="card-desc">
+                Râu tóc bạc uy nghiêm, áo măng tô vi mạch với bus đồng phát sáng, kính neon visor, cầm cuốn sách phát quang <em>Das Kapital 2.0</em>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. CEO Sterling Vane -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_ceo_sterling.jpg')">
+            <img src="assets/references/characters/ref_ceo_sterling.jpg" class="card-img" alt="CEO Sterling Vane">
+            <div class="card-badge" style="color:var(--neon-pink);">ARCH-MONOPOLIST</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">CEO STERLING VANE</div>
+              <div class="card-role">Tài phiệt Tập đoàn Độc quyền TRỤC</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Chủ nghĩa Tư bản Độc quyền Nhà nước</em> và sự lũng đoạn của liên minh độc quyền tư bản hạ tầng.
+              </div>
+              <div class="card-desc">
+                Vest nanotech ba mảnh xám than, huy hiệu độc quyền mạ vàng, mắt bionic đỏ rực chiếu đồ thị dòng tiền và cổ phiếu real-time.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Drone & Enforcer -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_omni_drone_enforcer.jpg')">
+            <img src="assets/references/characters/ref_omni_drone_enforcer.jpg" class="card-img" alt="Omni Drone & Enforcer">
+            <div class="card-badge" style="color:var(--neon-pink);">SECURITY UNIT</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">OMNI-PATROL & ENFORCER</div>
+              <div class="card-role">Bộ máy Trấn áp Cưỡng chế Thuật toán</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Công cụ bạo lực nhà nước tư sản bảo vệ <em>chế độ chiếm hữu tư nhân về tư liệu sản xuất và dữ liệu</em>.
+              </div>
+              <div class="card-desc">
+                Drone trinh sát nón quét laser đỏ, cảnh sát cơ động cyborg exoskeleton vũ trang dùi cui điện từ, huy hiệu OMNI-SECURITY.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid">
-      <!-- Kael -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_kael_sheet.jpg')">
-          <img src="assets/references/characters/ref_kael_sheet.jpg" class="card-img" alt="Kael Sheet">
-          <div class="card-badge">PROTAGONIST</div>
+    <!-- Section 2: Props -->
+    <div class="section-group" data-category="props">
+      <div class="section-header">
+        <div class="section-title">
+          <span>⚙️ BỘ THAM CHIẾU ĐẠO CỤ & PHẦN CỨNG (HARDWARE PROPS)</span>
         </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">KAEL</div>
-            <div class="card-role">Kỹ sư Hacker Phản kháng Thuật toán</div>
-            <div class="card-theory">
-              <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Tư bản khả biến (v)</em> — Giai cấp công nhân số bị bóc lột nhưng nắm giữ tri thức công nghệ để giải phóng sức lao động.
-            </div>
-            <div class="card-desc">
-              Tóc rối đen highlight xanh cyan, mắt kính cybernetic lens mắt phải, tactical hoodie viền cam, cầm cyberdeck lưu trữ thuật toán nguồn mở.
-            </div>
-          </div>
-        </div>
+        <div class="section-badge" style="background:rgba(0,255,102,0.15); color:var(--neon-green);">OPEN HARDWARE PROP</div>
       </div>
 
-      <!-- Cyber Marx -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_cyber_marx.jpg')">
-          <img src="assets/references/characters/ref_cyber_marx.jpg" class="card-img" alt="Cyber-Marx Sheet">
-          <div class="card-badge">MENTOR / SYMBOL</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">CYBER-MARX</div>
-            <div class="card-role">Biểu tượng Tư tưởng & Người dẫn đường</div>
-            <div class="card-theory">
-              <strong>Ý nghĩa KTCT:</strong> Biểu tượng cho <em>Học thuyết Giá trị thặng dư (W = c + v + m)</em>, kim chỉ nam vạch trần bản chất áp bức trong kỷ nguyên số.
-            </div>
-            <div class="card-desc">
-              Râu tóc bạc uy nghiêm, áo măng tô vi mạch với bus đồng phát sáng, kính neon visor, cầm cuốn sách phát quang <em>Das Kapital 2.0</em>.
-            </div>
+      <div class="grid">
+        <!-- 8. Nếp Sáng Device & SSD -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/props/ref_prop_nep_sang_device.jpg')">
+            <img src="assets/references/props/ref_prop_nep_sang_device.jpg" class="card-img" alt="Nếp Sáng Device">
+            <div class="card-badge" style="color:var(--neon-green);">CORE MACGUFFIN</div>
           </div>
-        </div>
-      </div>
-
-      <!-- CEO Sterling Vane -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_ceo_sterling.jpg')">
-          <img src="assets/references/characters/ref_ceo_sterling.jpg" class="card-img" alt="CEO Sterling Vane">
-          <div class="card-badge">ANTAGONIST</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">CEO STERLING VANE</div>
-            <div class="card-role">Tài phiệt Siêu tập đoàn Omni-Corp</div>
-            <div class="card-theory">
-              <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Chủ nghĩa Tư bản Độc quyền Nhà nước (PPP)</em> và độc quyền hạ tầng dữ liệu lớn (Big Data Monopoly).
-            </div>
-            <div class="card-desc">
-              Vest công nghệ ba mảnh xám than, huy hiệu độc quyền mạ vàng, mắt bionic đỏ rực chiếu đồ thị dòng tiền và ticker tài chính.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Drone & Cyborg Enforcer -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_omni_drone_enforcer.jpg')">
-          <img src="assets/references/characters/ref_omni_drone_enforcer.jpg" class="card-img" alt="Omni Drone & Enforcer">
-          <div class="card-badge">SECURITY APPARATUS</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">OMNI-PATROL & ENFORCER</div>
-            <div class="card-role">Bộ máy Trấn áp Thuật toán & Bản quyền</div>
-            <div class="card-theory">
-              <strong>Ý nghĩa KTCT:</strong> Công cụ cưỡng chế của tư bản nhằm bảo hộ <em>Chế độ chiếm hữu tư nhân về tư liệu sản xuất và dữ liệu</em>.
-            </div>
-            <div class="card-desc">
-              Drone trinh sát kim cương đen với nón quét laser đỏ, cảnh sát cơ động cyborg bọc giáp exoskeleton vũ trang dùi cui điện từ.
+          <div class="card-body">
+            <div>
+              <div class="card-name">THIẾT BỊ "NẾP SÁNG" & Ổ CỨNG "NHÀ MÌNH"</div>
+              <div class="card-role">Bộ điều phối Năng lượng & Kho dữ liệu Nguồn mở</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Biểu tượng cho <em>Xã hội hóa tư liệu sản xuất</em> — Phá vỡ thế độc quyền đóng kín của tập đoàn tư bản, đưa phương tiện kỹ thuật về tay cộng đồng.
+              </div>
+              <div class="card-desc">
+                Ổ cứng nhôm xước mờ khắc laser biểu tượng ô cửa sổ méo 172 độ, kết nối module mạch hở vi điều khiển, thanh bus đồng, màn hình OLED nhỏ và đèn LED báo trạng thái xanh phosphor.
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Section 2: Environments -->
-    <div class="section-header">
-      <div class="section-title">
-        <span>🏙️ BỘ THAM CHIẾU BỐI CẢNH (ENVIRONMENT ANCHORS)</span>
-      </div>
-      <div class="section-badge">3 KHÔNG GIAN CỐT LÕI</div>
-    </div>
-
-    <div class="grid">
-      <!-- Neo-Metropolis -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_neometropolis.jpg')">
-          <img src="assets/references/backgrounds/ref_bg_neometropolis.jpg" class="card-img" alt="Neo-Metropolis">
-          <div class="card-badge">CITY STREET</div>
+    <!-- Section 3: Environments -->
+    <div class="section-group" data-category="backgrounds">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🏙️ BỘ THAM CHIẾU BỐI CẢNH (5 KHÔNG GIAN CỐT LÕI)</span>
         </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">ĐÔ THỊ NEO-METROPOLIS</div>
-            <div class="card-role">Không gian Đô thị Bóc lột Nền tảng</div>
-            <div class="card-theory">
-              <strong>Bản chất KTCT:</strong> Xã hội hóa lực lượng sản xuất bị kìm hãm trong quan hệ sản xuất tư bản độc quyền.
-            </div>
-            <div class="card-desc">
-              Tòa tháp chọc trời brutalist mù sương, bảng Hologram khổng lồ <em>'OMNI-LIFE: CONSUME. OBEY. OMNI.'</em>, người lao động cúi đầu trong mưa axit.
+        <div class="section-badge">ENVIRONMENT ANCHORS</div>
+      </div>
+
+      <div class="grid">
+        <!-- 9. Neo-Metropolis -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_neometropolis.jpg')">
+            <img src="assets/references/backgrounds/ref_bg_neometropolis.jpg" class="card-img" alt="Neo-Metropolis">
+            <div class="card-badge">THE PLATFORM CITY</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">ĐÔ THỊ VÒM-9 (PHỐ CHIỀU TÀ)</div>
+              <div class="card-role">Không gian Bóc lột Đô thị Nền tảng</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Mâu thuẫn giữa <em>tính chất xã hội hóa cao độ của sản xuất</em> với <em>chế độ chiếm hữu tư nhân tư bản chủ nghĩa</em>.
+              </div>
+              <div class="card-desc">
+                Tòa tháp chọc trời brutalist dưới mưa axit, bảng Hologram khổng lồ <em>'OMNI-LIFE: CONSUME. OBEY. OMNI.'</em>, dây điện cao thế chằng chịt, dòng người cúi đầu tan ca.
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Kael's Den -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_kael_den.jpg')">
-          <img src="assets/references/backgrounds/ref_bg_kael_den.jpg" class="card-img" alt="Kael's Den">
-          <div class="card-badge">RESISTANCE WORKSHOP</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">MẬT THẤT KAEL</div>
-            <div class="card-role">Xưởng Lập trình Phá vỡ Giá trị Thặng dư</div>
-            <div class="card-theory">
-              <strong>Bản chất KTCT:</strong> Nơi phân tích và giải mã công thức thặng dư $W = c + v + m$, xây dựng mạng lưới lưới mở phi tập trung.
-            </div>
-            <div class="card-desc">
-              Tầng hầm công nghiệp ngập tràn màn hình CRT xanh lục hiển thị công thức KTCT, dây cáp ngổn ngang, khinh khí cầu cảnh sát rọi đèn qua giếng trời.
+        <!-- 10. Apartment 1408 -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_apartment_1408.jpg')">
+            <img src="assets/references/backgrounds/ref_bg_apartment_1408.jpg" class="card-img" alt="Apartment 1408">
+            <div class="card-badge" style="color:var(--neon-amber);">HUMBLE TENEMENT</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">CĂN HỘ 1408 & BÀN ĂN GIA ĐÌNH</div>
+              <div class="card-role">Mái ấm Khiêm nhường của Người Thợ</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Nơi nuôi dưỡng sức lao động và tinh thần phản kháng của giai cấp vô sản trước gánh nặng chi phí sinh hoạt độc quyền.
+              </div>
+              <div class="card-desc">
+                Căn hộ nhỏ 20m2 ấm áp, chiếc bàn ăn gỗ mộc, ngọn đèn sợi đốt vàng ấm áp soi bóng bức tường loang ẩm, góc bàn làm việc ngổn ngang vi mạch bên ô cửa nứt nhìn ra màn mưa.
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Server Citadel -->
-      <div class="card">
-        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_server_citadel.jpg')">
-          <img src="assets/references/backgrounds/ref_bg_server_citadel.jpg" class="card-img" alt="Server Citadel">
-          <div class="card-badge">CAPITAL VAULT</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <div class="card-name">PHÁO ĐÀI SERVER CITADEL</div>
-            <div class="card-role">Trung tâm Dữ liệu Lớn & Tư bản Bất biến</div>
-            <div class="card-theory">
-              <strong>Bản chất KTCT:</strong> Tích tụ tư bản bất biến $(c)$ ở trình độ cao nhất, biến dữ liệu toàn xã hội thành của riêng tư bản.
+        <!-- 11. Kael's Den -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_kael_den.jpg')">
+            <img src="assets/references/backgrounds/ref_bg_kael_den.jpg" class="card-img" alt="Kael's Den">
+            <div class="card-badge">RESISTANCE DEN</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">MẬT THẤT KAEL (HACKER WORKSHOP)</div>
+              <div class="card-role">Xưởng Chế tạo Vi mạch & Phần cứng Mở</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Không gian của <em>Lao động tự do không bị tha hóa</em>, nơi ứng dụng khoa học công nghệ để giải phóng con người.
+              </div>
+              <div class="card-desc">
+                Tầng hầm công nghiệp ngập tràn màn hình CRT hiển thị công thức KTCT $W = c + v + m$, giá server blade xếp chồng, đèn trinh sát khinh khí cầu rọi qua giếng trời.
+              </div>
             </div>
-            <div class="card-desc">
-              Phòng máy chủ lượng tử sâu hút tầm mắt, cột server đen bóng làm mát bằng hơi cryogenic xanh, sàn gương phản chiếu luồng dữ liệu vàng/cyan.
+          </div>
+        </div>
+
+        <!-- 12. Community Hall -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_community_hall.jpg')">
+            <img src="assets/references/backgrounds/ref_bg_community_hall.jpg" class="card-img" alt="Community Hall">
+            <div class="card-badge" style="color:var(--neon-green);">PROLETARIAN ASSEMBLY</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">SẢNH SINH HOẠT CHUNG TẦNG 14</div>
+              <div class="card-role">Không gian Hội tụ & Khởi nghĩa của Quần chúng</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Sự thức tỉnh của <em>Ý thức giai cấp</em> và chuyển từ "giai cấp tự nó" thành "giai cấp vì nó" thông qua hành động đấu tranh tập thể.
+              </div>
+              <div class="card-desc">
+                Đại sảnh bê tông cao rộng với cột trụ brutalist, các dàn lạnh TRỤC khổng lồ gắn trần, bục gỗ mộc đơn sơ với micrô nơi cư dân cùng ký vào lá đơn kiến nghị đòi năng lượng mở.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Server Citadel -->
+        <div class="card">
+          <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_server_citadel.jpg')">
+            <img src="assets/references/backgrounds/ref_bg_server_citadel.jpg" class="card-img" alt="Server Citadel">
+            <div class="card-badge" style="color:var(--neon-pink);">CAPITAL VAULT</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <div class="card-name">PHÁO ĐÀI SERVER CITADEL (TRỤC)</div>
+              <div class="card-role">Kho Tích tụ Tư bản Lượng tử & Dữ liệu Lớn</div>
+              <div class="card-theory">
+                <strong>Ý nghĩa KTCT:</strong> Tích tụ tư bản bất biến $(c)$ ở đỉnh cao độc quyền, biến tri thức chung của nhân loại thành đặc quyền riêng để vắt kiệt thặng dư $(m)$.
+              </div>
+              <div class="card-desc">
+                Phòng máy chủ vô tận, khối server đen bóng làm mát bằng hơi cryogenic xanh ngắt, hành lang gantry trên cao của giới lãnh đạo, sàn obsidian bóng loáng phản chiếu sợi quang.
+              </div>
             </div>
           </div>
         </div>
@@ -451,6 +621,20 @@
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeModal();
     });
+
+    function filterCatalog(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const groups = document.querySelectorAll('.section-group');
+      groups.forEach(g => {
+        if (cat === 'all' || g.getAttribute('data-category') === cat) {
+          g.style.display = 'block';
+        } else {
+          g.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 </html>
