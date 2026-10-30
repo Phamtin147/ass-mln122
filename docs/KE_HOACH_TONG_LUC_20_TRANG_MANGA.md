@@ -2,7 +2,10 @@
 **Học phần:** Kinh tế chính trị Mác - Lênin (MLN122)  
 **Tác phẩm:** *DAS KAPITAL 2.0 / GIỮ MỘT ĐỐM SÁNG*  
 **Hệ thống Neo Tham Chiếu:** 13 Tài sản Cố định Đã Hoàn Thiện (7 Nhân vật, 1 Đạo cụ Nếp Sáng, 5 Bối cảnh Không gian)  
-**Aesthetic Core (Khóa Duy Nhất 1 Phong Cách - Zero Drift):** Full-Color Japanese Cyberpunk Anime Manga (Kyoto Animation x Makoto Shinkai aesthetic, 2D clean crisp linework, soft cinematic cel shading, vibrant atmospheric lighting, high-contrast chiaroscuro with neon cyan #00f0ff and golden amber #ffe600 accents).
+**Aesthetic Core (Manga Chuẩn Nhật Bản - Selective Neon Accents):** 
+- **Mực vẽ & Trame Manga:** Nét mực đen Katsuhiro Otomo và Tsutomu Nihei dứt khoát, sắc bén; đổ bóng hạt screentone halftone xám mịn, tương phản chiaroscuro cao trên nền giấy manga ngà `#f4f1ea` và nền tối `#05060a`.
+- **Spot Color / Điểm Nhấn Neon Chọn Lọc:** **TUYỆT ĐỐI KHÔNG DÙNG FULL-COLOR MÀU MÈ**. Toàn bộ tranh là đen - trắng - xám manga, CHỈ tô màu neon phát sáng nổi bật cho các chi tiết then chốt (Mắt LED cyan `#00f0ff` của Đốm và HUD dữ liệu, Lõi vàng hổ phách `#ffe600` của Nếp Sáng, Đỏ thẫm `#ff0055` của cảnh báo cưỡng chế TRỤC).
+- **Tích Hợp Text & Thoại Trong Tranh (In-Panel Lettering):** Mọi trang BẮT BUỘC có bóng thoại manga (speech balloons) viền đen trắng chứa lời thoại nhân vật, hộp dẫn chuyện (caption boxes) ở góc khung hình, và chữ hiệu ứng âm thanh (Manga Onomatopoeia SFX: *TÍCH!*, *RẮC!*, *KENG!*, *VÙ...*).
 
 ---
 
@@ -11,12 +14,12 @@
 Để triệt tiêu 100% tình trạng trôi dạt nhân vật và lệch phong cách (Character & Style Drift), mọi prompt sinh ảnh BẮT BUỘC tuân thủ:
 
 ### 1. Khóa Tạo Hình Minh (Protagonist Anchor):
-* **Bắt buộc luôn có:** `handsome 22yo Vietnamese young engineer Minh, ALWAYS wearing thin round wireframe glasses, messy short layered dark hair with bangs over forehead, dark grey t-shirt #2c2c36 under an olive-green utility tech vest #4b5320 with orange zip accents, lean build, determined expressive anime eyes`.
-* **Phủ định nghiêm ngặt (Negative):** `NEVER without glasses, no beard, no sunglasses, not Western, not muscular, face must be identical in all panels`.
+* **Bắt buộc luôn có:** `handsome 22yo Vietnamese young engineer Minh, ALWAYS wearing thin round wireframe glasses, messy short layered dark hair with bangs over forehead, dark grey t-shirt #2c2c36 under an olive-green utility tech vest #4b5320 with orange zip accents, lean build, determined expressive manga eyes`.
+* **Phủ định nghiêm ngặt (Negative):** `NEVER without glasses, no goggles, no sunglasses, no beard, not Western, not muscular, face must be identical in all panels`.
 
-### 2. Khóa Tạo Hình Đốm AI (Companion Anchor - CẤM DÙNG TỪ "WISP/FLAME"):
+### 2. Khóa Tạo Hình Đốm AI (Companion Anchor - Robot Drone Hình Cầu):
 * **Bắt buộc luôn có:** `Đốm: a miniature hovering spherical white-ceramic robot drone (grapefruit-sized), circular front glass lens displaying expressive glowing cyan (#00f0ff) digital LED eyes, two micro horizontal thruster fins on sides, warm amber core #ffe600 glowing inside`.
-* **Phủ định nghiêm ngặt (Negative):** `NEVER a flame, NEVER a ghost, NEVER an organic creature, NEVER a wisp, NEVER a spirit. Must strictly be a high-tech spherical mechanical robot drone`.
+* **Phủ định nghiêm ngặt (Negative):** `NEVER a flame, NEVER a fire, NEVER a ghost, NEVER an organic creature, NEVER a wisp, NEVER a bee, NEVER an insect. Must strictly be a high-tech spherical mechanical robot drone`.
 
 ### 3. Khóa Tạo Hình Mẹ Minh (Bà Lan):
 * **Bắt buộc luôn có:** `52yo Vietnamese working-class mother, gentle weathered face with warm tired wrinkles, hair tied back in a modest low bun with silver strands, wearing a humble faded floral patterned linen blouse, worn work trousers`.
@@ -24,9 +27,8 @@
 ### 4. Khóa Tạo Hình Bác Ba (Tổ trưởng Tầng 14):
 * **Bắt buộc luôn có:** `62yo Vietnamese veteran machinist, sturdy build, salt-and-pepper short hair and rugged stubble, warm smile lines, wearing faded grey-blue denim mechanic jumpsuit with oil smudges, tool holster on hip`.
 
-### 5. Thống nhất Phong cách (Style Unification):
-* **Loại bỏ việc gọi tên nhiều studio khác nhau** (Ghibli, Edgerunners, Wit, v.v.).
-* **Duy nhất một Master Style:** `Japanese anime manga comic page layout, vertical 3:4 ratio, distinct dynamic panels separated by clean white gutters, Makoto Shinkai and Kyoto Animation style, clean delicate anime line art, soft cinematic cel shading, glowing atmospheric bokeh, vibrant color grading`.
+### 5. Quy Chuẩn Đồ Họa Manga & Lettering (Manga Style & In-Panel Text):
+* **Duy nhất một Master Style:** `Authentic Japanese cyberpunk manga comic page layout, vertical 3:4 ratio, 4 dynamic panels with clean gutters, Katsuhiro Otomo and Tsutomu Nihei aesthetic, crisp black ink linework, fine halftone screentone shading, selective neon spot-color accents (cyan #00f0ff, golden amber #ffe600, crimson #ff0055). Integrated manga speech bubbles with legible dialogue, square narration caption boxes, stylized bold manga sound effects (SFX)`.
 
 ---
 
