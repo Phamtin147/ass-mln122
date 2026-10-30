@@ -12,7 +12,7 @@ references:
     usage: "direct"
 character_consistency:
   minh: "Vietnamese 22yo male, messy dark hair, thin wireframe glasses, dark grey tee #2c2c36, olive tech vest #4b5320"
-  dom: "tiny floating glowing chibi wisp, amber core #ffe600, cyan aura #00f0ff, expressive anime eyes"
+  dom: "miniature hovering spherical white robot drone, cyan LED eye screen, micro side fins, amber core #ffe600"
   mother: "52yo Vietnamese mother, modest low bun, faded floral blouse #8b5a5a, tired loving eyes"
 ---
 
@@ -27,7 +27,7 @@ character_consistency:
 ## 2. Master Prompt (Midjourney V6 / Niji 6 / Flux.1)
 
 ```text
-/imagine prompt: Full-color Japanese anime manga comic page layout, vertical 3:4 ratio, 4 distinct dynamic panels separated by clean white gutters, Makoto Shinkai and Kyoto Animation style, clean crisp linework, cel shading, rich atmospheric lighting, trending on Pixiv. Panel 1 (Top wide): Panoramic anime shot of futuristic dome city Vòm-9 at sunset under a gigantic glass dome with glowing neon skyscrapers and skybridges. Panel 2: Anime medium shot of handsome 22yo Vietnamese anime engineer Minh with messy dark hair, wire glasses, techwear vest walking with super cute glowing chibi wisp mascot Đốm. Panel 3: Sleek high-tech TRUC scanner emitting neon laser over Minh's holographic wristband. Panel 4: Warm cinematic anime interior of Minh sliding open door 1408 with golden light spilling outward. --niji 6 --ar 3:4
+/imagine prompt: Full-color Japanese anime manga comic page layout, vertical 3:4 ratio, 4 distinct dynamic panels separated by clean white gutters, Makoto Shinkai and Kyoto Animation style, clean crisp linework, cel shading, rich atmospheric lighting, trending on Pixiv. Panel 1 (Top wide): Panoramic anime shot of futuristic dome city Vòm-9 at sunset under a gigantic glass dome with glowing neon skyscrapers and skybridges. Panel 2: Anime medium shot of handsome 22yo Vietnamese anime engineer Minh with messy dark hair, ALWAYS wearing thin round wireframe glasses, techwear vest walking with super cute glowing spherical robot drone Đốm with cyan LED eyes. Panel 3: Sleek high-tech TRUC scanner emitting neon laser over Minh's holographic wristband. Panel 4: Warm cinematic anime interior of Minh sliding open door 1408 with golden light spilling outward. --niji 6 --ar 3:4
 ```
 
 ---

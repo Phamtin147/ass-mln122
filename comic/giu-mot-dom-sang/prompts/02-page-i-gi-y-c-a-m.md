@@ -12,7 +12,7 @@ references:
     usage: "direct"
 character_consistency:
   minh: "Vietnamese 22yo male, messy dark hair, thin wireframe glasses, dark grey tee #2c2c36, olive tech vest #4b5320"
-  dom: "tiny floating glowing chibi wisp, amber core #ffe600, cyan aura #00f0ff, expressive anime eyes"
+  dom: "miniature hovering spherical white robot drone, cyan LED eye screen, micro side fins, amber core #ffe600"
   mother: "52yo Vietnamese mother, modest low bun, faded floral blouse #8b5a5a, tired loving eyes"
 ---
 
@@ -27,7 +27,7 @@ character_consistency:
 ## 2. Master Prompt (Midjourney V6 / Niji 6 / Flux.1)
 
 ```text
-/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 4 clean panels, Kyoto Animation and Makoto Shinkai emotional drama aesthetic, delicate linework, warm tender lighting. Panel 1: Modest cozy anime apartment, gentle 52yo Vietnamese anime mother sitting at low wooden table pressing the worn glued sole of her walking shoe, Minh stepping in from hallway looking tenderly concerned. Panel 2: Extreme close-up of table showing handwritten budget notebook with line 'Mẹ mua giày mới' crossed out in red ink next to a red-and-black TRUC electric bill with high fixed tariff. Panel 3: Emotional close-up of Minh clenching his fist with tears of determination in his dark anime eyes, cute chibi wisp Đốm dimming sympathetically near his shoulder. Panel 4: Heartwarming silhouette panel of mother and son in soft golden lantern light against the wall, poignant familial love. --niji 6 --ar 3:4
+/imagine prompt: Full-color Japanese anime manga comic page, vertical 3:4 ratio, 4 clean panels, Kyoto Animation and Makoto Shinkai emotional drama aesthetic, delicate linework, warm tender lighting. Panel 1: Modest cozy anime apartment, gentle 52yo Vietnamese anime mother sitting at low wooden table pressing the worn glued sole of her walking shoe, Minh stepping in from hallway looking tenderly concerned. Panel 2: Extreme close-up of table showing handwritten budget notebook with line 'Mẹ mua giày mới' crossed out in red ink next to a red-and-black TRUC electric bill with high fixed tariff. Panel 3: Emotional close-up of Minh clenching his fist with tears of determination in his dark anime eyes, cute spherical robot drone Đốm with cyan LED eyes dimming sympathetically near his shoulder. Panel 4: Heartwarming silhouette panel of mother and son in soft golden lantern light against the wall, poignant familial love. --niji 6 --ar 3:4
 ```
 
 ---

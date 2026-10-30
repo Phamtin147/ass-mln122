@@ -12,7 +12,7 @@ references:
     usage: "direct"
 character_consistency:
   minh: "Vietnamese 22yo male, messy dark hair, thin wireframe glasses, dark grey tee #2c2c36, olive tech vest #4b5320"
-  dom: "tiny floating glowing chibi wisp, amber core #ffe600, cyan aura #00f0ff, expressive anime eyes"
+  dom: "miniature hovering spherical white robot drone, cyan LED eye screen, micro side fins, amber core #ffe600"
   mother: "52yo Vietnamese mother, modest low bun, faded floral blouse #8b5a5a, tired loving eyes"
 ---
 

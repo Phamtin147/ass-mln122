@@ -42,15 +42,16 @@
 
 ## Character 2: AI ĐỐM
 
-**Role**: Bạn đồng hành / Thực thể AI tri thức (Companion / Chibi Mascot).  
+**Role**: Bạn đồng hành / Robot AI tri thức (Companion / High-Tech Mechanical Drone).  
 **Age**: 3 năm gắn bó (từ thời đồ án tốt nghiệp của Minh).  
 
-**Appearance (Nhận diện diện mạo)**:
-- **Form**: Quả cầu năng lượng hạt sáng lơ lửng, kích thước bằng quả cam (đường kính khoảng 12 - 15cm).
-- **Core**: Lõi phát sáng màu vàng hổ phách ấm áp `#ffe600`.
-- **Aura**: Hào quang viền ngoài màu xanh ngọc cyan rực rỡ `#00f0ff`.
-- **Face**: Hai đốm mắt kỹ thuật số màu đen hình hạt đậu cực kỳ biểu cảm, có thể biến đổi thành hình ngôi sao `(★_★)`, hình nháy mắt `(^_<)`, hoặc vòng xoáy glitch khi bị lỗi. Miệng cười vòng cung nhỏ dễ thương.
-- **Particles**: Thường tỏa ra một vệt hạt bụi sáng li ti bay bám theo chuyển động.
+**Appearance (Nhận diện diện mạo - Khóa Cứng Zero Drift)**:
+- **Form**: Quả cầu robot cơ khí công nghệ cao (miniature spherical robot drone), kích thước nhỏ gọn cầm tay (khoảng 12 - 15cm).
+- **Material**: Vỏ hợp kim gốm trắng mờ cao cấp (matte white ceramic alloy).
+- **Core**: Lõi phát sáng màu vàng hổ phách ấm áp `#ffe600` bên trong.
+- **Thrusters**: Hai vây ion thăng bằng nhỏ nằm ngang ở hai bên sườn (micro thruster fins).
+- **Face / Lens**: Màn hình thấu kính tròn bóng phía trước hiển thị đôi mắt LED kỹ thuật số màu xanh cyan `#00f0ff` cực kỳ biểu cảm (mắt cong vui vẻ, mắt quét dữ liệu, mắt ngấn lệ khi bị khống chế).
+- **Negative Anchor (Cấm Tuyệt Đối)**: Tuyệt đối KHÔNG PHẢI là đốm lửa (flame), ma quỷ/linh hồn (ghost/spirit/wisp) hay sinh vật hữu cơ. Bắt buộc luôn là một chú robot hình cầu cơ khí tinh tế.
 
 **Expression Range (Biểu cảm cảm xúc)**:
 - **Vui vẻ / Tinh nghịch**: Mắt cong tít hình vầng trăng khuyết `(^_^)`, nhảy tưng tưng trên vai Minh.
