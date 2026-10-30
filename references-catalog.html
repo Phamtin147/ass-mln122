@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber-Marx: Bảng Tham Chiếu Hình Ảnh & Concept Art (MLN122)</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --void-bg: #05060a;
+      --card-bg: #0d0f18;
+      --border-color: #1e2235;
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-green: #00ff66;
+      --neon-gold: #ffe600;
+      --text-muted: #8892b0;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; user-select:none; }
+    body {
+      background: var(--void-bg);
+      color: #e6f1ff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(10, 12, 20, 0.95);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-title {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--neon-cyan);
+      letter-spacing: 1.5px;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-nav {
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--neon-cyan);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-nav:hover {
+      background: var(--neon-cyan);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-cyan);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 20px 60px 20px;
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-badge {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: rgba(0, 240, 255, 0.15);
+      color: var(--neon-cyan);
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      background: #000;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(5, 6, 10, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--neon-gold);
+    }
+
+    .card-body {
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .card-role {
+      font-size: 12px;
+      color: var(--neon-cyan);
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .card-theory {
+      background: rgba(0, 255, 102, 0.08);
+      border-left: 3px solid var(--neon-green);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 12px;
+      color: #bbf7d0;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Modal for Image Inspection */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: rgba(255, 0, 127, 0.3);
+      border: 1px solid var(--neon-pink);
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+      background: #040508;
+      border-top: 1px solid var(--border-color);
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="icon.png" width="32" height="32" alt="Logo" style="border-radius:6px;">
+      <div>
+        <div class="brand-title">CYBER-MARX: VISUAL ANCHOR LIBRARY</div>
+        <div class="brand-sub">BẢNG THAM CHIẾU HÌNH ẢNH CỐ ĐỊNH NHÂN VẬT & BỐI CẢNH (MLN122)</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="btn-nav">📖 CUỐN TRUYỆN 3D</a>
+      <a href="ar-camera.html" class="btn-nav" style="border-color:var(--neon-pink); color:var(--neon-pink);">📷 CAMERA AR</a>
+      <a href="targets-viewer.html" class="btn-nav" style="border-color:var(--neon-gold); color:var(--neon-gold);">🖥️ MÀN HÌNH CHIẾU</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Characters -->
+    <div class="section-header">
+      <div class="section-title">
+        <span>👤 BỘ THAM CHIẾU NHÂN VẬT (CHARACTER TURNAROUNDS)</span>
+      </div>
+      <div class="section-badge">4 NHÂN VẬT TRỌNG TÂM</div>
+    </div>
+
+    <div class="grid">
+      <!-- Kael -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_kael_sheet.jpg')">
+          <img src="assets/references/characters/ref_kael_sheet.jpg" class="card-img" alt="Kael Sheet">
+          <div class="card-badge">PROTAGONIST</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">KAEL</div>
+            <div class="card-role">Kỹ sư Hacker Phản kháng Thuật toán</div>
+            <div class="card-theory">
+              <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Tư bản khả biến (v)</em> — Giai cấp công nhân số bị bóc lột nhưng nắm giữ tri thức công nghệ để giải phóng sức lao động.
+            </div>
+            <div class="card-desc">
+              Tóc rối đen highlight xanh cyan, mắt kính cybernetic lens mắt phải, tactical hoodie viền cam, cầm cyberdeck lưu trữ thuật toán nguồn mở.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cyber Marx -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_cyber_marx.jpg')">
+          <img src="assets/references/characters/ref_cyber_marx.jpg" class="card-img" alt="Cyber-Marx Sheet">
+          <div class="card-badge">MENTOR / SYMBOL</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">CYBER-MARX</div>
+            <div class="card-role">Biểu tượng Tư tưởng & Người dẫn đường</div>
+            <div class="card-theory">
+              <strong>Ý nghĩa KTCT:</strong> Biểu tượng cho <em>Học thuyết Giá trị thặng dư (W = c + v + m)</em>, kim chỉ nam vạch trần bản chất áp bức trong kỷ nguyên số.
+            </div>
+            <div class="card-desc">
+              Râu tóc bạc uy nghiêm, áo măng tô vi mạch với bus đồng phát sáng, kính neon visor, cầm cuốn sách phát quang <em>Das Kapital 2.0</em>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEO Sterling Vane -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_ceo_sterling.jpg')">
+          <img src="assets/references/characters/ref_ceo_sterling.jpg" class="card-img" alt="CEO Sterling Vane">
+          <div class="card-badge">ANTAGONIST</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">CEO STERLING VANE</div>
+            <div class="card-role">Tài phiệt Siêu tập đoàn Omni-Corp</div>
+            <div class="card-theory">
+              <strong>Ý nghĩa KTCT:</strong> Đại diện cho <em>Chủ nghĩa Tư bản Độc quyền Nhà nước (PPP)</em> và độc quyền hạ tầng dữ liệu lớn (Big Data Monopoly).
+            </div>
+            <div class="card-desc">
+              Vest công nghệ ba mảnh xám than, huy hiệu độc quyền mạ vàng, mắt bionic đỏ rực chiếu đồ thị dòng tiền và ticker tài chính.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drone & Cyborg Enforcer -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/characters/ref_omni_drone_enforcer.jpg')">
+          <img src="assets/references/characters/ref_omni_drone_enforcer.jpg" class="card-img" alt="Omni Drone & Enforcer">
+          <div class="card-badge">SECURITY APPARATUS</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">OMNI-PATROL & ENFORCER</div>
+            <div class="card-role">Bộ máy Trấn áp Thuật toán & Bản quyền</div>
+            <div class="card-theory">
+              <strong>Ý nghĩa KTCT:</strong> Công cụ cưỡng chế của tư bản nhằm bảo hộ <em>Chế độ chiếm hữu tư nhân về tư liệu sản xuất và dữ liệu</em>.
+            </div>
+            <div class="card-desc">
+              Drone trinh sát kim cương đen với nón quét laser đỏ, cảnh sát cơ động cyborg bọc giáp exoskeleton vũ trang dùi cui điện từ.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Environments -->
+    <div class="section-header">
+      <div class="section-title">
+        <span>🏙️ BỘ THAM CHIẾU BỐI CẢNH (ENVIRONMENT ANCHORS)</span>
+      </div>
+      <div class="section-badge">3 KHÔNG GIAN CỐT LÕI</div>
+    </div>
+
+    <div class="grid">
+      <!-- Neo-Metropolis -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_neometropolis.jpg')">
+          <img src="assets/references/backgrounds/ref_bg_neometropolis.jpg" class="card-img" alt="Neo-Metropolis">
+          <div class="card-badge">CITY STREET</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">ĐÔ THỊ NEO-METROPOLIS</div>
+            <div class="card-role">Không gian Đô thị Bóc lột Nền tảng</div>
+            <div class="card-theory">
+              <strong>Bản chất KTCT:</strong> Xã hội hóa lực lượng sản xuất bị kìm hãm trong quan hệ sản xuất tư bản độc quyền.
+            </div>
+            <div class="card-desc">
+              Tòa tháp chọc trời brutalist mù sương, bảng Hologram khổng lồ <em>'OMNI-LIFE: CONSUME. OBEY. OMNI.'</em>, người lao động cúi đầu trong mưa axit.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kael's Den -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_kael_den.jpg')">
+          <img src="assets/references/backgrounds/ref_bg_kael_den.jpg" class="card-img" alt="Kael's Den">
+          <div class="card-badge">RESISTANCE WORKSHOP</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">MẬT THẤT KAEL</div>
+            <div class="card-role">Xưởng Lập trình Phá vỡ Giá trị Thặng dư</div>
+            <div class="card-theory">
+              <strong>Bản chất KTCT:</strong> Nơi phân tích và giải mã công thức thặng dư $W = c + v + m$, xây dựng mạng lưới lưới mở phi tập trung.
+            </div>
+            <div class="card-desc">
+              Tầng hầm công nghiệp ngập tràn màn hình CRT xanh lục hiển thị công thức KTCT, dây cáp ngổn ngang, khinh khí cầu cảnh sát rọi đèn qua giếng trời.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Server Citadel -->
+      <div class="card">
+        <div class="card-img-wrap" onclick="openModal('assets/references/backgrounds/ref_bg_server_citadel.jpg')">
+          <img src="assets/references/backgrounds/ref_bg_server_citadel.jpg" class="card-img" alt="Server Citadel">
+          <div class="card-badge">CAPITAL VAULT</div>
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-name">PHÁO ĐÀI SERVER CITADEL</div>
+            <div class="card-role">Trung tâm Dữ liệu Lớn & Tư bản Bất biến</div>
+            <div class="card-theory">
+              <strong>Bản chất KTCT:</strong> Tích tụ tư bản bất biến $(c)$ ở trình độ cao nhất, biến dữ liệu toàn xã hội thành của riêng tư bản.
+            </div>
+            <div class="card-desc">
+              Phòng máy chủ lượng tử sâu hút tầm mắt, cột server đen bóng làm mát bằng hơi cryogenic xanh, sàn gương phản chiếu luồng dữ liệu vàng/cyan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Inspection Modal -->
+  <div class="modal" id="inspectModal" onclick="closeModal()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img src="" id="modalImg" class="modal-img" alt="Inspection">
+  </div>
+
+  <footer>
+    ĐỒ ÁN SÁNG TẠO HỌC PHẦN MLN122 • KINH TẾ CHÍNH TRỊ MÁC - LÊNIN • ĐẠI HỌC FPT
+  </footer>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('inspectModal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('inspectModal').classList.remove('active');
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

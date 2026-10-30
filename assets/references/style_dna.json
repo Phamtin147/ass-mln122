@@ -1,0 +1,66 @@
+{
+  "project": "DAS KAPITAL 2.0 - MLN122 Creative Comic",
+  "taste_direction": {
+    "family": "Cyberpunk-Manga x Taste-Application (Dark / Systemic / Retro-Print)",
+    "palette": {
+      "void_base": "#05060a",
+      "screentone_paper": "#f4f1ea",
+      "hero_accents": {
+        "kael_data": "#00f0ff",
+        "surplus_value": "#00ff66",
+        "das_kapital_gold": "#ffe600",
+        "omni_warning_red": "#ff0055"
+      },
+      "rule": "One dominant neon accent per shot against deep chiaroscuro manga ink."
+    },
+    "light_and_texture": "Heavy black inking lines, authentic retro screentone halftone dots, razor-sharp silhouettes, darkness pierced by a single directional light source.",
+    "aesthetic_masters": ["Katsuhiro Otomo (Akira)", "Tsutomu Nihei (Blame!)", "Yoji Shinkawa"]
+  },
+  "master_style_suffix": "Classic cyberpunk manga character concept sheet, heavy black ink outlines, authentic halftone screentone dot shading, high contrast chiaroscuro shadows, Katsuhiro Otomo and Tsutomu Nihei graphic novel aesthetic, 2D black and white manga illustration with selective vivid neon accents, crisp clean line art, no blurry artifacts, no photorealistic 3D, masterpiece comic art.",
+  "characters": {
+    "kael": {
+      "name": "Kael",
+      "role": "Lead Hacker / Anti-Algorithmic Resistance",
+      "mln122_symbolism": "Digital Proletariat / Variable Capital (v)",
+      "prompt": "Full body character concept turnaround sheet of Kael, a 22-year-old male cyberpunk hacker. Multiple angles: front view, 3/4 profile, and intense face close-up. Sharp angular jaw, messy spiky jet-black hair with a single vibrant electric cyan streak. Glowing cyan cybernetic monocular lens over his right eye with intricate circuit lines trailing to his temple. Wearing a dark weathered tactical techwear hoodie with orange wire straps, fingerless mechanical gloves, and cargo combat pants. In his hand he holds a rugged glowing data-storage cyberdeck. Classic cyberpunk manga art style, clean white background, heavy ink line art, retro screentone dots, single electric cyan accent light, Katsuhiro Otomo aesthetic."
+    },
+    "cyber_marx": {
+      "name": "Cyber-Marx",
+      "role": "Ideological Mentor / The Ghost of Political Economy",
+      "mln122_symbolism": "The Theory of Surplus Value (W = c + v + m)",
+      "prompt": "Character concept art sheet of Cyber-Marx, a legendary futuristic philosopher and resistance leader. Majestic flowing white beard and unruly silver hair, wearing high-tech glowing cyberpunk neon visor across his eyes. Long dark circuit-lined trench coat with luminous copper data bus lines along the lapels. In one gloved cybernetic hand, he holds a radiant glowing holographic book titled 'DAS KAPITAL 2.0' casting warm golden light. Stern, dignified, revolutionary expression. Classic cyberpunk manga line art, heavy black ink, halftone screentone, gold and cyan neon accents, Tsutomu Nihei graphic novel style, clean concept sheet layout."
+    },
+    "ceo_sterling": {
+      "name": "CEO Sterling Vane",
+      "role": "Head of Omni-Corp / The Arch-Monopolist",
+      "mln122_symbolism": "State Monopoly Capitalism / Platform Exploitation",
+      "prompt": "Character concept turnaround sheet of CEO Sterling Vane, a ruthless 45-year-old tech conglomerate oligarch. Slicked-back silver-black hair, aristocratic cold features. Wearing a bespoke charcoal-grey cyber-nanotech three-piece business suit with a glowing golden geometric monopoly lapel pin. His left eye is replaced by a red-tinted augmented reality lens displaying real-time stock ticker graphs and financial flowcharts. Smug, calculating expression of absolute market control. Classic Japanese manga style, high-contrast black ink, luxury corporate cyberpunk, sharp shadows, screentone shading, subtle crimson and gold accents."
+    },
+    "omni_enforcer": {
+      "name": "Omni-Patrol Drone & Cyborg Enforcer",
+      "role": "Algorithmic State Coercion Unit",
+      "mln122_symbolism": "Enforcement of Capitalist Private Property Rights",
+      "prompt": "Concept design sheet of Omni-Corp police enforcement. On the top: sleek angular black matte surveillance drone with menacing red searchlight laser cone and dual quad-rotors. On the bottom: armored Cyborg Riot Enforcer in matte-black exoskeleton armor with transparent riot visor, holding an electromagnetic stun baton. Tactical police markings 'OMNI-SECURITY'. Cyberpunk manga mechanical line art, technical turnaround callouts, screentone shading, bold red warning accents, Tsutomu Nihei mechanical design aesthetic."
+    }
+  },
+  "backgrounds": {
+    "neo_metropolis": {
+      "name": "Neo-Metropolis Street",
+      "role": "The Platform City",
+      "mln122_symbolism": "Social Production under Private Monopoly Ownership",
+      "prompt": "Environment concept art of Neo-Metropolis street level. Extreme wide establishing angle. Dystopian megacity with towering brutalist architecture under dark acid rain. Colossal neon holographic billboards dominating the skyline flashing 'OMNI-LIFE: CONSUME. OBEY. OMNI.' Crowded wet asphalt street reflecting neon lights, docile citizen pedestrians walking with neural headsets, swarms of surveillance drones patrolling overhead between tangled high-voltage power cables. Classic cyberpunk manga wide shot, heavy black ink hatching, rich screentone textures, vibrant cyan and magenta reflections on dark wet ground, Katsuhiro Otomo city scale."
+    },
+    "kael_den": {
+      "name": "Kael's Underground Hacker Den",
+      "role": "The Resistance Workshop",
+      "mln122_symbolism": "De-alienation & Liberated Labor",
+      "prompt": "Interior environment concept art of an underground cyberpunk hacker hideout. Grimy industrial basement packed with CRT monitors, stacked server blade racks, tangled optical cables, soldering stations, and instant noodle bowls. On the main curved glowing monitors, large green phosphor code displays economic formulas 'W = c + v + m' and decentralized open-grid protocols. Through a rain-streaked grimy skylight window, a searchlight from an Omni-Corp police blimp cuts through the gloom. Detailed manga interior, dense mechanical clutter, screentone shading, glowing terminal screen light, dark chiaroscuro contrast."
+    },
+    "server_citadel": {
+      "name": "Omni-Corp Quantum Server Citadel",
+      "role": "The Big Data Capital Vault",
+      "mln122_symbolism": "Accumulation of Constant Capital (c) & Stolen Surplus Value (m)",
+      "prompt": "Environment concept art of the central Omni-Corp Big Data Vault. A monolithic, cavernous room stretching into vanishing infinity, filled with towering black monolithic server racks cooled by glowing blue cryogenic vapor. Overhead gantry walkways where corporate executives look down upon the glowing data conduits pulsing with digital surplus value. Mirror-polished dark obsidian floor reflecting glowing fiber optics. Monumental, oppressive, clinical corporate cyberpunk scale, classic manga architectural drawing, fine ink line art, screentone dots, electric cyan conduits."
+    }
+  }
+}
