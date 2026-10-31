@@ -146,6 +146,33 @@ Toàn bộ 20 file ảnh truyện tranh mới được sinh theo chuẩn Taste:
 
 ---
 
+## BẢNG THEO DÕI TIẾN ĐỘ THỰC HIỆN 20 TRANG MANGA
+
+| Trang | Tiêu đề | Phân đoạn | Trạng thái Tranh | Phong cách & Lettering |
+| :---: | :--- | :--- | :---: | :--- |
+| **01** | Hoàng Hôn Vòm-9 | Chương I | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Thoại tiếng Việt, Kael kính gọng tròn + Đốm drone |
+| **02** | Đôi Giày Của Mẹ | Chương I | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Mẹ Lan dán giày, Hóa đơn TRỤC 120đ |
+| **03** | Phòng Trống Cũng Mát | Chương I | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Dàn lạnh OMNI lãng phí, HUD cảm biến Đốm |
+| **04** | Ô Cửa Sổ Méo | Chương I | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Khởi sinh Dự án Nếp Sáng & Đốm dạ quang |
+| **05** | Những Đêm Không Ngủ | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Mô hình vi kiến trúc, Code thương mẹ, Trà gừng |
+| **06** | Kho Lưu "Nhà Mình" | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Ổ cứng SSD nhôm 'NHÀ MÌNH', Đốm canh giữ, Khóa ngăn kéo |
+| **07** | Đêm Cập Nhật Định Mệnh | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, TRỤC cưỡng chế trích xuất, Đốm bị xích laser đỏ |
+| **08** | Hy Vọng Trước Giông Bão | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Nộp đơn dịch vụ công, Đốm chập chờn cảnh báo |
+| **09** | Cú Sốc Sảnh Công Cộng | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Màn chiếu 3D cướp Nếp Sáng, Minh sững sờ rơi cuộn dây |
+| **10** | Đêm Đối Chiếu Bẽ Bàng | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **11** | Rào Cản Hệ Sinh Thái | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **12** | Nghịch Lý Siêu Ngạch | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **13** | Thỏa Thuận Ngầm | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **14** | Manh Mối Bất Ngờ Từ Đốm | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **15** | Vỡ Òa Trong Nước Mắt | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **16** | Gom Bốn Bộ Chứng Cứ Thép | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **17** | Họp Mặt Sảnh Tầng 14 | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **18** | Sao Chúng Tôi Không Được Chọn? | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **19** | Bức Tường Rúng Động | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **20** | Giữ Một Đốm Sáng (Đại Kết Cục) | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+
+---
+
 ## Verification Plan
 
 ### Automated Tests
