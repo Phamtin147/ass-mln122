@@ -159,11 +159,11 @@ Toàn bộ 20 file ảnh truyện tranh mới được sinh theo chuẩn Taste:
 | **07** | Đêm Cập Nhật Định Mệnh | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, TRỤC cưỡng chế trích xuất, Đốm bị xích laser đỏ |
 | **08** | Hy Vọng Trước Giông Bão | Chương II | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Nộp đơn dịch vụ công, Đốm chập chờn cảnh báo |
 | **09** | Cú Sốc Sảnh Công Cộng | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Màn chiếu 3D cướp Nếp Sáng, Minh sững sờ rơi cuộn dây |
-| **10** | Đêm Đối Chiếu Bẽ Bàng | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **11** | Rào Cản Hệ Sinh Thái | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **12** | Nghịch Lý Siêu Ngạch | Chương III | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **13** | Thỏa Thuận Ngầm | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **14** | Manh Mối Bất Ngờ Từ Đốm | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **10** | Đêm Đối Chiếu Bẽ Bàng | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đối chiếu 172 độ, Đốm chập tia đỏ, Minh che chở |
+| **11** | Rào Cản Hệ Sinh Thái | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đóng dấu bác bỏ đỏ rực, Điều 4 độc quyền TRỤC |
+| **12** | Nghịch Lý Siêu Ngạch | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, CEO khoe siêu lợi nhuận xanh, Hóa đơn 120đ của Mẹ |
+| **13** | Thỏa Thuận Ngầm | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Hồ sơ 2004 ngân sách công, Bác Ba đèn pin trong kho |
+| **14** | Manh Mối Bất Ngờ Từ Đốm | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đốm đập ngăn kéo ổ cứng 'NHÀ MÌNH', Mở khóa đồng |
 | **15** | Vỡ Òa Trong Nước Mắt | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
 | **16** | Gom Bốn Bộ Chứng Cứ Thép | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
 | **17** | Họp Mặt Sảnh Tầng 14 | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
