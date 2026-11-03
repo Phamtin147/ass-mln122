@@ -164,12 +164,12 @@ Toàn bộ 20 file ảnh truyện tranh mới được sinh theo chuẩn Taste:
 | **12** | Nghịch Lý Siêu Ngạch | Chương III | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, CEO khoe siêu lợi nhuận xanh, Hóa đơn 120đ của Mẹ |
 | **13** | Thỏa Thuận Ngầm | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Hồ sơ 2004 ngân sách công, Bác Ba đèn pin trong kho |
 | **14** | Manh Mối Bất Ngờ Từ Đốm | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đốm đập ngăn kéo ổ cứng 'NHÀ MÌNH', Mở khóa đồng |
-| **15** | Vỡ Òa Trong Nước Mắt | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **16** | Gom Bốn Bộ Chứng Cứ Thép | Chương IV | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **17** | Họp Mặt Sảnh Tầng 14 | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **18** | Sao Chúng Tôi Không Được Chọn? | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **19** | Bức Tường Rúng Động | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
-| **20** | Giữ Một Đốm Sáng (Đại Kết Cục) | Chương V | ⏳ **CHỜ QUOTA RESET (14:42 VN)** | Đã sẵn sàng Master Prompt chuẩn Manga Spot-Color & Thoại |
+| **15** | Vỡ Òa Trong Nước Mắt | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đốm bẻ gãy mã độc đỏ, Nước mắt giải mã |
+| **16** | Gom Bốn Bộ Chứng Cứ Thép | Chương IV | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, 4 bộ hồ sơ thép, Bác Ba & Minh sẵn sàng |
+| **17** | Họp Mặt Sảnh Tầng 14 | Chương V | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Đại cảnh 428 hộ dân, Bác Ba phát biểu trước micro |
+| **18** | Sao Chúng Tôi Không Được Chọn? | Chương V | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Mẹ Minh giơ giày dán keo, 428 chữ ký kiến nghị |
+| **19** | Bức Tường Rúng Động | Chương V | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Gõ búa thanh tra TRỤC, Cổ phiếu độc quyền lao dốc |
+| **20** | Giữ Một Đốm Sáng (Đại Kết Cục) | Chương V | ✅ **HOÀN THÀNH** (896x1200) | Manga B&W, Spot-Color Neon, Cơm tối gia đình, Vòm-9 bừng sáng, Lời kết triết học |
 
 ---
 
