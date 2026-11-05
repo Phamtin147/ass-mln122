@@ -25,10 +25,10 @@
     "semantic_hash": "179e59b01226a8e3116eebf65dc65762"
   },
   "build-novel-reader.js": {
-    "mtime": 1793323295.1675098,
-    "seen": 1793846703.3956218,
-    "ast_hash": "7186a8fa4e29c015fd0d0862006a1f79",
-    "semantic_hash": "7186a8fa4e29c015fd0d0862006a1f79"
+    "mtime": 1793848551.1573544,
+    "seen": 1793848569.6434999,
+    "ast_hash": "cacc12ee335f2e30eb8dc896459624ee",
+    "semantic_hash": ""
   },
   "compile-cli.mjs": {
     "mtime": 1791939795.6610255,
@@ -325,8 +325,8 @@
     "semantic_hash": ""
   },
   "gallery.html": {
-    "mtime": 1793846701.5307465,
-    "seen": 1793846703.395691,
+    "mtime": 1793848497.1817229,
+    "seen": 1793848569.6435995,
     "ast_hash": "a12ef510aa0fcf17d937080939efc677",
     "semantic_hash": ""
   },
@@ -337,9 +337,9 @@
     "semantic_hash": ""
   },
   "novel-reader.html": {
-    "mtime": 1793846701.501746,
-    "seen": 1793846703.3956935,
-    "ast_hash": "84b85f94c2d962ecde3b8ac69eac844c",
+    "mtime": 1793848555.6744072,
+    "seen": 1793848569.643603,
+    "ast_hash": "451e5f24c0c16409c29707e1604c342d",
     "semantic_hash": ""
   },
   "references-catalog.html": {
@@ -541,9 +541,9 @@
     "semantic_hash": ""
   },
   "assets/comic_cover.jpg": {
-    "mtime": 1793323295.1085093,
-    "seen": 1793846703.3957405,
-    "ast_hash": "32259d026dc7593b62d2f4775c350e70",
+    "mtime": 1793848477.9674978,
+    "seen": 1793848569.6436605,
+    "ast_hash": "a60824ced47c46da209f5c4027c09360",
     "semantic_hash": ""
   },
   "assets/comic_page1.jpg": {
@@ -766,6 +766,12 @@
     "mtime": 1791937251.416824,
     "seen": 1793846703.3957903,
     "ast_hash": "b3fe42afcd0aedabe06941b6a1525722",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_legacy_backup.jpg": {
+    "mtime": 1793848477.966498,
+    "seen": 1793848569.643663,
+    "ast_hash": "32259d026dc7593b62d2f4775c350e70",
     "semantic_hash": ""
   },
   "package-lock.json": {

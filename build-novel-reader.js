@@ -872,7 +872,7 @@ const html = `<!DOCTYPE html>
     <div class="hero-badge">ĐẠI HỌC FPT • HỌC PHẦN KINH TẾ CHÍNH TRỊ MÁC - LÊNIN (MLN122)</div>
     <h1 class="hero-title">BỘ TRUYỆN TRANH ANIME / MANGA: 20 TRANG TOÀN TẬP</h1>
     <p class="hero-subtitle">
-      Khám phá 5 Chương kịch tính với 85 Phân cảnh điện ảnh chuẩn phong cách <strong>Japanese Anime / Manga (Makoto Shinkai & Kyoto Animation)</strong>, lồng ghép sâu sắc lý luận <strong>Chương 4: Cạnh tranh & Độc quyền Nhà nước</strong> — Cuộc đấu tranh vì ánh sáng công bằng tại đô thị Vòm-9.
+      Khám phá 5 Chương kịch tính với 85 Phân cảnh điện ảnh chuẩn phong cách <strong>Cyberpunk Manga (Katsuhiro Otomo & Tsutomu Nihei)</strong>, lồng ghép sâu sắc lý luận <strong>Chương 4: Cạnh tranh & Độc quyền Nhà nước</strong> — Cuộc đấu tranh vì ánh sáng công bằng tại đô thị Vòm-9.
     </p>
 
     <!-- Project Metrics Chips -->
@@ -882,7 +882,7 @@ const html = `<!DOCTYPE html>
         <span class="stat-lbl">Trang Nội Dung</span>
       </div>
       <div class="stat-chip">
-        <span class="stat-val" style="color:var(--neon-green);">9</span>
+        <span class="stat-val" style="color:var(--neon-green);">${pagesData.filter(p => p.hasImage).length} / 20</span>
         <span class="stat-lbl">Tranh Đã Xuất Bản</span>
       </div>
       <div class="stat-chip">
@@ -891,7 +891,7 @@ const html = `<!DOCTYPE html>
       </div>
       <div class="stat-chip">
         <span class="stat-val">100%</span>
-        <span class="stat-lbl">Phong Cách Anime Nhật</span>
+        <span class="stat-lbl">Phong Cách Manga Otomo/Nihei</span>
       </div>
       <div class="stat-chip">
         <span class="stat-val">MLN122</span>
