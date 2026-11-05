@@ -194,57 +194,146 @@
     .cover-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(7,7,15,0.7) 0%, rgba(7,7,15,0.2) 50%, rgba(7,7,15,0.9) 100%);
+      background: linear-gradient(180deg, rgba(5,6,12,0.88) 0%, rgba(5,6,12,0.12) 28%, rgba(5,6,12,0.18) 58%, rgba(5,6,12,0.94) 100%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 20px;
+      padding: 16px 14px;
     }
 
-    .cover-header {
-      font-size: 11px;
+    .cover-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 8px;
+    }
+
+    .manga-edition-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 8.5px;
       font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--neon-cyan);
-      text-transform: uppercase;
-      background: rgba(0,0,0,0.6);
-      padding: 6px 12px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 0, 127, 0.5);
+      padding: 4px 8px;
       border-radius: 4px;
-      align-self: center;
-      border: 1px solid rgba(0,240,255,0.3);
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+    }
+
+    .kanji-stamp {
+      background: var(--neon-pink);
+      color: #000;
+      font-weight: 900;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-size: 8px;
+    }
+
+    .volume-pill {
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #000;
+      background: var(--neon-cyan);
+      padding: 4px 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+      text-transform: uppercase;
+    }
+
+    .cover-academic-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.75);
+      text-transform: uppercase;
+      margin-top: 6px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      text-align: left;
     }
 
     .cover-footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 3px;
+      background: rgba(8, 10, 18, 0.78);
+      backdrop-filter: blur(8px);
+      padding: 12px 10px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 240, 255, 0.35);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.85);
+      width: 100%;
+    }
+
+    .cover-kanji-sub {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--neon-cyan);
+      font-weight: 700;
+      opacity: 0.9;
     }
 
     .cover-title {
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 900;
-      color: #fff;
-      text-shadow: 0 0 15px var(--neon-cyan), 2px 2px var(--neon-pink);
-      letter-spacing: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 16px rgba(0, 240, 255, 0.8), 0 0 30px rgba(0, 240, 255, 0.3), 2px 2px 0px rgba(0, 0, 0, 0.9);
+      letter-spacing: 1.5px;
       line-height: 1.1;
+      margin: 2px 0;
+      text-transform: uppercase;
+    }
+
+    .cover-english-sub {
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--neon-pink);
+      text-transform: uppercase;
     }
 
     .cover-tagline {
-      font-size: 12px;
+      font-size: 10.5px;
       color: var(--neon-yellow);
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+
+    .cover-meta-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 8px;
+      color: #8892b0;
+      font-family: monospace;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+      border-top: 1px dashed rgba(255,255,255,0.15);
+      padding-top: 4px;
+      width: 100%;
+      justify-content: center;
     }
 
     .flip-hint {
-      margin-top: 10px;
-      font-size: 11px;
-      color: #aaa;
+      margin-top: 6px;
+      font-size: 10px;
+      color: #fff;
+      font-weight: 700;
       animation: bounce 1.5s infinite;
       display: flex;
       align-items: center;
       gap: 6px;
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid rgba(0, 240, 255, 0.4);
+      padding: 3px 10px;
+      border-radius: 12px;
     }
 
     @keyframes bounce {
@@ -480,11 +569,26 @@
           <div class="cover-content">
             <img src="assets/comic_cover.jpg" class="cover-img" alt="Giữ Một Đốm Sáng Cover">
             <div class="cover-overlay">
-              <div class="cover-header">ĐẠI HỌC FPT • HỌC PHẦN MLN122</div>
+              <div>
+                <div class="cover-top-bar">
+                  <div class="manga-edition-badge">
+                    <span class="kanji-stamp">青年</span>
+                    <span>SEINEN GRAPHIC NOVEL</span>
+                  </div>
+                  <div class="volume-pill">VOL. 01 • TOÀN TẬP</div>
+                </div>
+                <div class="cover-academic-tag">ĐẠI HỌC FPT • HỌC PHẦN MLN122</div>
+              </div>
+
               <div class="cover-footer">
+                <div class="cover-kanji-sub">『資本論 2.0 • かすかな光を守って』</div>
                 <div class="cover-title">GIỮ MỘT ĐỐM SÁNG</div>
+                <div class="cover-english-sub">DAS KAPITAL 2.0 // KEEPING THE SPARK</div>
                 <div class="cover-tagline">MINH & ĐỐM: CUỘC ĐẤU TRANH VÌ ÁNH SÁNG CỘNG ĐỒNG</div>
-                <div class="flip-hint">👆 BẤM HOẶC KÉO GÓC TRANG ĐỂ LẬT SÁCH ➔</div>
+                <div class="cover-meta-strip">
+                  <span>NHÓM 5</span> • <span>ISBN 978-604-MLN-122</span> • <span>VÒM-9 CHRONICLES</span>
+                </div>
+                <div class="flip-hint">👆 BẤM HOẶC KÉO GÓC TRANG ĐỂ LẬT TRUYỆN ➔</div>
               </div>
             </div>
           </div>

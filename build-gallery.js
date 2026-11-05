@@ -111,12 +111,12 @@ let articlesHtml = `
     <!-- Bìa Truyện -->
     <article class="page-wrapper">
       <div class="page-tag-bar">
-        <span class="page-title">BÌA TRUYỆN — VÒM-9</span>
+        <span class="page-title">BÌA TRUYỆN — VÒM-9 (DELUXE TANKOBON)</span>
         <span class="page-badge live">✨ ĐÃ XUẤT BẢN</span>
       </div>
       <img src="assets/comic_cover.jpg" class="comic-img" alt="Bìa Truyện" onclick="openLightbox(this.src)">
       <div class="page-caption">
-        <strong>Giữ Một Đốm Sáng:</strong> Minh và AI Đốm đứng trước toàn cảnh thành phố Vòm-9 lúc chiều tà dưới mái vòm thép khổng lồ.
+        <strong>Giữ Một Đốm Sáng (Bìa Manga Tankobon Toàn Tập):</strong> Góc máy ngước nhìn (low-angle) đầy điện ảnh: Minh đứng trên lan can sắt tầng 14 giữa đô thị Vòm-9, tay nâng niu tia sáng Nếp Sáng ấm áp bên cạnh AI Đốm lướt bay với vệt sáng cyan huyền ảo, đối diện thành lũy tập đoàn TRỤC chọc trời.
       </div>
     </article>
 `;
