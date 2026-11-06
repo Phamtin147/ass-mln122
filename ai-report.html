@@ -85,8 +85,19 @@
       border-color: var(--neon-yellow);
       color: var(--neon-yellow);
     }
+    .btn.pdf {
+      background: rgba(255, 0, 85, 0.2);
+      border-color: #ff0055;
+      color: #ff6699;
+      font-weight: 800;
+    }
+    .btn.pdf:hover {
+      background: #ff0055;
+      color: #fff;
+      box-shadow: 0 0 15px #ff0055;
+    }
     .container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 30px auto;
       padding: 0 20px;
     }
@@ -98,23 +109,24 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 900;
       color: #fff;
       margin-bottom: 8px;
       line-height: 1.3;
       border-bottom: 2px solid var(--neon-cyan);
       padding-bottom: 12px;
+      text-transform: uppercase;
     }
     h2 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 800;
       color: var(--neon-cyan);
       margin-top: 32px;
       margin-bottom: 14px;
     }
     h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--neon-yellow);
       margin-top: 24px;
@@ -135,11 +147,11 @@
       width: 100%;
       border-collapse: collapse;
       margin: 24px 0;
-      font-size: 14px;
+      font-size: 13.5px;
     }
     th, td {
       border: 1px solid var(--border-color);
-      padding: 12px 14px;
+      padding: 10px 12px;
       text-align: left;
     }
     th {
@@ -149,6 +161,12 @@
     }
     tr:nth-child(even) {
       background: rgba(255, 255, 255, 0.02);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin: 16px 0;
     }
     code {
       background: rgba(255, 255, 255, 0.08);
@@ -177,14 +195,22 @@
     li {
       margin-bottom: 8px;
     }
-    @media print {
-      body { background: #fff; color: #000; }
-      header, .nav-btns { display: none; }
-      .report-card { border: none; padding: 0; box-shadow: none; background: #fff; }
-      h1, h2, h3 { color: #000; border-color: #000; }
-      table, th, td { border-color: #444; color: #000; }
-      th { background: #eee; }
-      blockquote { border-color: #444; background: #fafafa; color: #000; }
+    .pdf-download-bar {
+      background: linear-gradient(90deg, rgba(255,0,85,0.15) 0%, rgba(0,240,255,0.15) 100%);
+      border: 1px solid var(--neon-cyan);
+      border-radius: 8px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .pdf-info {
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
     }
   </style>
 </head>
@@ -198,222 +224,221 @@
       <a href="index.html" class="btn">◀ Lật Sách 3D</a>
       <a href="novel-reader.html" class="btn primary">📖 Web Reader 20 Trang</a>
       <a href="gallery.html" class="btn">🖼️ HD Gallery</a>
-      <a href="javascript:window.print()" class="btn accent">🖨️ In / Xuất PDF</a>
+      <a href="docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.pdf" download class="btn pdf">📥 Tải PDF Báo Cáo</a>
     </div>
   </header>
 
   <main class="container">
+    <div class="pdf-download-bar">
+      <div class="pdf-info">📄 BẢN IN XUẤT BẢN PDF CHÍNH THỨC (A4 • 695 KB • ĐÃ TÍCH HỢP MINH CHỨNG ĐỐI CHIẾU)</div>
+      <a href="docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.pdf" download class="btn pdf">⬇ Tải File PDF Về Máy</a>
+    </div>
+
     <article class="report-card">
       <h1>BÁO CÁO MINH BẠCH VÀ GIẢI TRÌNH SỬ DỤNG TRÍ TUỆ NHÂN TẠO</h1>
 <h2>(AI GOVERNANCE, ETHICS &amp; ATTRIBUTION REPORT)</h2>
 <h3>ĐỒ ÁN SẢN PHẨM SÁNG TẠO HỌC PHẦN KINH TẾ CHÍNH TRỊ MÁC – LÊNIN (MLN122)</h3>
-<p><strong>Tác phẩm:</strong> <em>DAS KAPITAL 2.0 / GIỮ MỘT ĐỐM SÁNG (VÒM-9)</em><br />
+<p><strong>Tác phẩm:</strong> <em>BỘ TRUYỆN TRANH ĐỒ HỌA SỐ: DAS KAPITAL 2.0 / GIỮ MỘT ĐỐM SÁNG (VÒM-9)</em><br />
 <strong>Đơn vị đào tạo:</strong> Trường Đại học FPT — Khối ngành Công nghệ Thông tin<br />
 <strong>Nhóm thực hiện:</strong> Nhóm 5 • Lớp MLN122 • Học kỳ Fall 2026<br />
-<strong>Nền tảng xuất bản:</strong> Web 3D Flipbook, Graphic Novel Reader, HD Gallery &amp; AR Hologram<br />
+<strong>Nền tảng xuất bản:</strong> Web 3D Physics Flipbook, Graphic Novel Longform Reader &amp; HD Artwork Gallery<br />
 <strong>Địa chỉ triển khai trực tuyến:</strong> <a href="https://ass-mln122.vercel.app/">https://ass-mln122.vercel.app/</a></p>
 <hr />
 <blockquote>
 <p>[!IMPORTANT]</p>
-<h3>TUYÊN BỐ QUYỀN TÁC GIẢ &amp; CHỦ THỂ SÁNG TẠO (HUMAN-IN-THE-LOOP STATEMENT)</h3>
-<p>Nhóm sinh viên (Nhóm 5) long trọng cam kết và khẳng định:<br />
-1. <strong>Toàn bộ nội dung học thuật, thông điệp tư tưởng, cấu trúc phân tích Kinh tế chính trị Mác – Lênin (Chương 2, 3, 4, 5) và kịch bản văn học 20 trang (85 phân cảnh) hoàn toàn do Nhóm sinh viên trực tiếp nghiên cứu giáo trình, lên ý tưởng và chấp bút.</strong><br />
-2. <strong>Hệ thống AI (Generative AI Models &amp; Trợ lý lập trình) KHÔNG TỰ ĐỘNG LÀM 100% DỰ ÁN.</strong> AI chỉ được sử dụng với tư cách là <strong>Tư liệu lao động (Instrument of Labor / Executive Tool)</strong> — một công cụ hỗ trợ trực quan hóa hình ảnh và hỗ trợ viết mã theo sự chỉ huy, định hướng, ràng buộc thông số và kiểm soát ngặt nghèo của con người.<br />
-3. <strong>Nhóm sinh viên là người nắm giữ quyền kiểm soát tuyệt đối (Human Agency &amp; Oversight):</strong> Tự tay thiết kế mỏ neo nhân vật, trực tiếp biên soạn bộ prompt kỹ thuật, thẳng thừng bác bỏ các ảnh gen sai lệch, tự tay tải về biên tập chỉnh sửa thủ công 100% lỗi font chữ bong bóng thoại (Manual Lettering), trực tiếp định hướng mỹ thuật (Art Direction) và cấu trúc toàn bộ hệ thống web.</p>
+<h3>TUYÊN BỐ QUYỀN TÁC GIẢ &amp; CHỦ THỂ SÁNG TẠO (HUMAN AGENCY STATEMENT)</h3>
+<p>Nhóm sinh viên (Nhóm 5) long trọng cam kết và khẳng định trước Giảng viên và Hội đồng đánh giá:<br />
+1. <strong>Dự án thuần túy là một Bộ Truyện Tranh Đồ Họa Số (Digital Graphic Novel):</strong> Nhóm tập trung 100% nguồn lực vào chiều sâu tư tưởng Kinh tế chính trị Mác – Lênin, tính thẩm mỹ của mỹ thuật Seinen Manga và trải nghiệm đọc số trực tuyến (Flipbook 3D &amp; Web Reader); hoàn toàn không tích hợp AR hay các yếu tố công nghệ phụ trợ gây loãng thông điệp.<br />
+2. <strong>Toàn bộ nội dung học thuật, thông điệp tư tưởng, cấu trúc phân tích 5 Hồi truyện (20 trang, 85 phân cảnh) hoàn toàn do Nhóm sinh viên tự nghiên cứu giáo trình và chấp bút.</strong><br />
+3. <strong>AI KHÔNG LÀM THAY CON NGƯỜI 100%:</strong> AI chỉ đóng vai trò là <strong>Tư liệu lao động (Instrument of Labor)</strong> hỗ trợ render điểm ảnh theo sự chỉ huy, định hướng và kiểm soát ngặt nghèo của sinh viên.<br />
+4. <strong>Bằng chứng can thiệp thủ công 100% (Human Lettering Proof):</strong> Thư mục lưu trữ cục bộ <a href="#downloads"><code>/home/amtia/Downloads/Ban-da-duyet-JPG</code></a> là minh chứng không thể chối cãi cho việc nhóm sinh viên đã tự tay tải về, xóa bỏ toàn bộ lỗi ký tự hỏng của AI và tự tay gõ lại từng bong bóng thoại chuẩn tiếng Việt có dấu.</p>
 </blockquote>
 <hr />
-<h2>1. CƠ SỞ PHƯƠNG PHÁP LUẬN KINH TẾ CHÍNH TRỊ VỀ VAI TRÒ CỦA AI TRONG DỰ ÁN</h2>
-<p>Để đánh giá một cách khoa học tính trung thực học thuật, Nhóm 5 xin áp dụng chính <strong>Quy luật giá trị và Học thuyết giá trị thặng dư của C.Mác</strong> vào việc phân tích mối quan hệ giữa Nhóm sinh viên và Công cụ AI:</p>
+<h2>1. TỔNG QUAN ĐIỀU HÀNH (EXECUTIVE SUMMARY)</h2>
+<p>Đồ án <em>"DAS KAPITAL 2.0 / GIỮ MỘT ĐỐM SÁNG"</em> được hình thành nhằm giải quyết thách thức sư phạm: <strong>Làm thế nào để chuyển hóa các phạm trù Kinh tế chính trị trừu tượng của C.Mác thành một tác phẩm nghệ thuật đồ họa số trực quan, lay động cảm xúc và giàu tính thời đại?</strong></p>
+<p>Nhóm 5 đã lựa chọn hình thức <strong>Graphic Novel (Truyện tranh đồ họa)</strong> với bối cảnh siêu đô thị phân tầng Vòm-9 vào năm 2077. Trong quá trình thực hiện, để hiện thực hóa khối lượng mỹ thuật đồ sộ 20 trang chuẩn Seinen Manga chất lượng cao, nhóm đã ứng dụng Trí tuệ Nhân tạo Tạo sinh (Generative AI) một cách có phương pháp, có kiểm soát và tuyệt đối tuân thủ đạo đức học thuật của Trường Đại học FPT.</p>
 <pre><code class="language-mermaid">flowchart LR
-    subgraph HumanInput[&quot;LAO ĐỘNG SỐNG (LIVING LABOR) - NHÓM 5&quot;]
-        A[&quot;Nghiên cứu Giáo trình MLN122&quot;] --&gt; B[&quot;Sáng tạo Kịch bản 20 Trang&quot;]
-        B --&gt; C[&quot;Thiết kế Mỏ neo Nhân vật (Character Bible)&quot;]
-        C --&gt; D[&quot;Kỹ thuật Prompting &amp; Quality Gates&quot;]
-        D --&gt; E[&quot;Sửa thủ công 100% Bong bóng thoại&quot;]
+    subgraph SinhVien[&quot;CHỦ THỂ LAO ĐỘNG SỐNG (NHÓM 5 - 85% GIÁ TRỊ)&quot;]
+        direction TB
+        A1[&quot;Nghiên cứu Giáo trình MLN122&quot;] --&gt; A2[&quot;Biên soạn Kịch bản 20 Trang&quot;]
+        A2 --&gt; A3[&quot;Thiết lập Mỏ neo Nhân vật&quot;]
+        A3 --&gt; A4[&quot;Viết 80 Prompts Kỹ thuật&quot;]
+        A4 --&gt; A5[&quot;Tự tay sửa 100% Bong bóng thoại&quot;]
+        A5 --&gt; A6[&quot;Định hướng Nghệ thuật Bìa&quot;]
     end
 
-    subgraph AITool[&quot;TƯ LIỆU LAO ĐỘNG (TƯ BẢN BẤT BIẾN - c) - AI ENGINE&quot;]
-        F[&quot;Máy sinh ảnh &amp; Mô hình LLM&quot;] --&gt; G[&quot;Chấp hành Prompt&quot;]
-        G --&gt; H[&quot;Render Pixel thô theo lệnh&quot;]
+    subgraph CongCuAI[&quot;TƯ LIỆU LAO ĐỘNG (AI ENGINE - 15% THỰC THI)&quot;]
+        direction TB
+        B1[&quot;Máy tính toán Trọng số&quot;] --&gt; B2[&quot;Render Pixel Thô theo Prompt&quot;]
     end
 
-    HumanInput ==&gt;|&quot;Vận hành, Chỉ huy &amp; Kiểm soát&quot;| AITool
-    AITool ==&gt; I[&quot;SẢN PHẨM SÁNG TẠO DAS KAPITAL 2.0 (Giá trị học thuật mới)&quot;]
+    SinhVien ==&gt;|&quot;Chỉ đạo &amp; Thẩm định Khắt khe&quot;| CongCuAI
+    CongCuAI ==&gt; C[&quot;ẤN PHẨM TRUYỆN TRANH DAS KAPITAL 2.0 HOÀN CHỈNH&quot;]
 </code></pre>
+<hr />
+<h2>2. CƠ SỞ PHƯƠNG PHÁP LUẬN KINH TẾ CHÍNH TRỊ: MỐI QUAN HỆ CON NGƯỜI - AI</h2>
+<p>Nhóm 5 xin vận dụng chính <strong>Học thuyết Giá trị và Học thuyết Giá trị thặng dư của C.Mác</strong> để làm sáng tỏ bản chất sự tham gia của AI trong đồ án:</p>
+<ol>
+<li><strong>Sinh viên là Lao động sống (Living Labor - Tạo ra Giá trị mới $v + m$):</strong></li>
+<li>Theo C.Mác, máy móc hay công nghệ hiện đại dù tối tân đến đâu cũng không thể tự thân tạo ra giá trị mới.</li>
+<li>Toàn bộ giá trị tinh thần, giá trị tri thức và cảm xúc nhân văn của đồ án bắt nguồn từ lao động trí tuệ của nhóm: sự thấu hiểu nỗi khổ của người lao động Vòm-9, sự đồng cảm với đôi giày rách của người mẹ và khát vọng công bằng xã hội.</li>
+<li><strong>AI là Tư bản bất biến ($c$ - Constant Capital / Tư liệu lao động thuần túy):</strong></li>
+<li>AI về bản chất là một tập hợp mã nguồn và dữ liệu huấn luyện có sẵn. Nó không có tư duy độc lập, không hiểu khái niệm <em>"bóc lột giá trị thặng dư"</em> hay <em>"chủ nghĩa tư bản độc quyền"</em>.</li>
+<li>AI chỉ đóng vai trò chuyển dịch năng lực tạo hình vào sản phẩm dưới sự vận hành của con người. Nếu không có kịch bản và sự biên tập của Nhóm 5, AI chỉ sinh ra những bức tranh vô hồn, rác rưởi và sai lệch nội dung.</li>
+</ol>
+<hr />
+<h2>3. BẰNG CHỨNG HỌC THUẬT: NHÓM SINH VIÊN THIẾT KẾ 100% NỘI DUNG GỐC</h2>
+<h3>3.1. Biên soạn Kịch bản Văn học &amp; Phân cảnh 20 Trang</h3>
 <ul>
-<li><strong>Lao động sống (Living Labor) của Nhóm 5:</strong> Là nguồn gốc duy nhất tạo ra <strong>giá trị mới ($v + m$)</strong> và giá trị học thuật của đồ án. Đó là sự trăn trở nghiên cứu giáo trình, chuyển hóa các khái niệm trừu tượng (<em>Hàng hóa sức lao động, Giá trị thặng dư siêu ngạch, Độc quyền nhà nước</em>) thành cốt truyện giàu tính nhân văn về mẹ con Minh và Vòm-9.</li>
-<li><strong>AI chỉ là Tư liệu lao động ($c$ - Tư bản bất biến):</strong> AI tự bản thân nó là một ma trận trọng số toán học tĩnh, không có ý thức, không có lập trường chính trị và không thể tự sinh ra giá trị nếu không có lao động trí óc của con người tác động vào. AI chỉ đơn thuần chuyển dịch năng lực tính toán vào việc render điểm ảnh theo đúng kịch bản mà sinh viên đã vạch sẵn.</li>
+<li><strong>Minh chứng tài liệu:</strong> <a href="docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md"><code>docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md</code></a> (566 dòng, <strong>69.7 KB</strong>).</li>
+<li>Toàn bộ 5 Hồi truyện được nhóm thiết kế tương thích tuyệt đối với các chương trọng tâm của Giáo trình MLN122:</li>
+<li><strong>Hồi I (Trang 1 – 4):</strong> <em>Hàng hóa sức lao động &amp; Giá trị sử dụng.</em> Nỗi cơ cực của mẹ con Minh khi tiền điện bị trừ tự động; Minh làm việc kiệt sức nhưng không đủ tiền mua cho mẹ một đôi giày lành lặn.</li>
+<li><strong>Hồi II (Trang 5 – 8):</strong> <em>Quy trình sản xuất giá trị thặng dư.</em> Tập đoàn TRỤC âm thầm đánh cắp giao thức tối ưu điện lực "Nếp Sáng" của Minh nhằm hạ thấp giá thành tái sản xuất sức lao động và chiếm đoạt thặng dư tuyệt đối.</li>
+<li><strong>Hồi III (Trang 9 – 12):</strong> <em>Bản chất của Tư bản độc quyền.</em> Nghịch lý độc quyền: Chi phí vận hành giảm 38% nhờ thuật toán của Minh, nhưng giá điện bán cho nhân dân Vòm-9 vẫn giữ nguyên 100% để thu lợi nhuận siêu ngạch độc quyền.</li>
+<li><strong>Hồi IV (Trang 13 – 16):</strong> <em>Sự tha hóa lao động &amp; Tiếng kêu trong code.</em> Minh và AI Đốm tìm ra bằng chứng về sự cấu kết lũng đoạn giữa tập đoàn TRỤC và các cơ quan kiểm định biến chất.</li>
+<li><strong>Hồi V (Trang 17 – 20):</strong> <em>Tính tất yếu của đấu tranh &amp; Kinh tế định hướng XHCN.</em> Cư dân lao động Vòm-9 đoàn kết kiến nghị, giành lại quyền kiểm soát lưới điện công cộng về tay cộng đồng dưới sự giám sát công khai của pháp luật.</li>
 </ul>
 <hr />
-<h2>2. CHỨNG MINH CHI TIẾT: NHÓM SINH VIÊN ĐÃ ĐƯA RA MỌI THỨ</h2>
-<h3>2.1. Sinh viên tự nghiên cứu và xây dựng 100% Khung Kịch bản Học thuật</h3>
-<p>AI không thể tự suy luận để gán ghép bối cảnh Cyberpunk vào môn MLN122. Nhóm 5 đã trực tiếp biên soạn tài liệu gốc:<br />
-* <strong>Hồ sơ minh chứng:</strong> <a href="file:///home/amtia/Projects/ass-mln122/docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md"><code>docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md</code></a> (Quy mô: <strong>566 dòng, 69.7 KB</strong>, lưu trữ từ những ngày đầu dự án).<br />
-* <strong>Cấu trúc 5 Hồi kịch bản gắn chặt với Giáo trình MLN122 do sinh viên thiết kế:</strong><br />
-  1. <strong>Chương I (Trang 1 – 4): Bóng tối dưới mái vòm:</strong> Gắn với <em>Chương 2 Giáo trình MLN122</em> — Hàng hóa sức lao động, giá trị sử dụng của năng lượng sinh hoạt, nỗi đau đôi giày rách của Mẹ Minh khi bị trừ tiền điện tự động.<br />
-  2. <strong>Chương II (Trang 5 – 8): Ngọn lửa trong đêm &amp; Bẫy ngầm:</strong> Gắn với <em>Chương 3</em> — Sự hình thành giá trị thặng dư thông qua việc TRỤC đánh cắp thuật toán tối ưu của Minh để hạ thấp giá trị sức lao động.<br />
-  3. <strong>Chương III (Trang 9 – 12): Bức tường độc quyền:</strong> Gắn với <em>Chương 4</em> — Độc quyền tư nhân, giá cả độc quyền cao, siêu ngạch độc quyền (Chi phí giảm 38% nhưng tiền điện của dân giữ nguyên 100%).<br />
-  4. <strong>Chương IV (Trang 13 – 16): Tiếng kêu trong code:</strong> Gắn với <em>Chương 4</em> — Thỏa thuận cấu kết giữa tập đoàn độc quyền và bộ máy quản lý biến chất; giải mã nhật ký phần cứng RAW.<br />
-  5. <strong>Chương V (Trang 17 – 20): Ngọn lửa cộng đồng:</strong> Gắn với <em>Chương 5</em> — Sự tất yếu của đấu tranh giai cấp, tiếng nói của người lao động đòi công hữu hóa hạ tầng thiết yếu dưới sự điều tiết của Nhà nước định hướng XHCN.</p>
-<hr />
-<h3>2.2. Sinh viên thiết lập Character Design Bible &amp; Mỏ neo Hình ảnh (Visual Anchors)</h3>
-<p>Để AI không sinh ảnh vô định và giữ nguyên nhân dạng nhân vật qua 20 trang, Nhóm 5 đã tự thiết kế bộ tiêu chuẩn nhận diện khắt khe:<br />
-* <strong>Hồ sơ minh chứng:</strong> <a href="file:///home/amtia/Projects/ass-mln122/docs/BAO_CAO_TIEN_DO_13_TAI_SAN_THAM_CHIEU.md"><code>docs/BAO_CAO_TIEN_DO_13_TAI_SAN_THAM_CHIEU.md</code></a> và Git Commit <code>8391915</code>.<br />
-* <strong>13 Mỏ neo nhân dạng do nhóm quy định chi tiết:</strong><br />
-  * <strong>Minh (22-24 tuổi):</strong> Bắt buộc đeo kính gọng tròn kim loại mảnh, tóc đen rẽ ngôi chải ngược hơi rối, mặc áo thun xám sờn cổ kèm gile kỹ thuật xanh rêu nhiều túi đựng bút thử điện; gương mặt hốc hác kiên nghị của người thợ trí thức.<br />
-  * <strong>AI Đốm:</strong> Drone hình cầu kim loại kích thước quả cam, lõi vàng hổ phách <code>#ffe600</code>, quầng hào quang cyan <code>#00f0ff</code>; khi bị TRỤC khống chế chuyển sang đỏ tía giật răng cưa <code>#ff0055</code>.<br />
-  * <strong>Mẹ Minh (52 tuổi):</strong> Tóc búi trễ điểm bạc, áo vải hoa lam bạc màu, đôi bàn tay thô ráp chai sần, gắn với biểu tượng đôi giày rách dán keo.<br />
-  * <strong>Bối cảnh Vòm-9:</strong> Siêu cấu trúc phân tầng ngột ngạt, tương phản giữa tháp chọc trời sáng rực của tài phiệt và khu chung cư hộp diêm mục nát của công nhân.</p>
-<hr />
-<h3>2.3. Sinh viên tự tay xây dựng Ma trận Prompt Kỹ thuật (Prompt Engineering)</h3>
-<p>AI không tự biết vẽ cái gì nếu không có prompt chi tiết từ con người. Nhóm sinh viên đã viết trọn bộ tài liệu:<br />
-* <strong>Hồ sơ minh chứng:</strong> <a href="file:///home/amtia/Projects/ass-mln122/docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md"><code>docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md</code></a> (Dung lượng: <strong>46.2 KB</strong>).<br />
-* <strong>Đặc tả 80 câu lệnh phân cảnh:</strong> Mỗi trang truyện gồm đúng 4 khung hình (K01 đến K04), mỗi khung hình được quy định rõ:<br />
-  * Góc đặt ống kính (Camera Angle): <em>Cinematic Wide Shot, Low-angle Dutch tilt, Close-up Macro</em>.<br />
-  * Hướng sáng (Lighting): <em>Chiaroscuro, rim-light neon cyan, ambient teal industrial gloom</em>.<br />
-  * Tỷ lệ khung hình và phong cách: <em>Authentic Japanese Seinen Manga line art with selective neon spot-color accents</em>.<br />
-  * Bảng từ khóa loại trừ (Negative Prompts): Loại bỏ hoàn toàn hình ảnh 3D CGI nhựa rẻ tiền, phong cách anime màu mè trẻ con, biến dạng tay chân.</p>
-<hr />
-<h2>3. BẰNG CHỨNG ĐẮT GIÁ NHẤT: SỰ CAN THIỆP &amp; SỬA LỖI THỦ CÔNG CỦA SINH VIÊN</h2>
-<p>Nếu dự án do AI làm 100%, sản phẩm sẽ chứa đầy lỗi sai ngớ ngẩn đặc trưng của AI (như chữ vô nghĩa, sai chính tả tiếng Việt, bố cục lộn xộn). Chính sự can thiệp thủ công của Nhóm 5 là bằng chứng không thể chối cãi về vai trò làm chủ sản phẩm:</p>
-<h3>3.1. Nhóm sinh viên tự tay sửa thủ công 100% Bong bóng thoại (Manual Lettering)</h3>
+<h3>3.2. Bảng Thiết kế Nhân dạng (Character Bible) &amp; 13 Visual Anchors</h3>
 <ul>
-<li><strong>Bối cảnh thực tế:</strong> Các mô hình tạo ảnh AI hiện nay hoàn toàn bất lực trong việc vẽ đúng chữ tiếng Việt có dấu trong khung thoại truyện tranh (luôn bị lỗi biến dạng ký tự, thiếu dấu ngã/hỏi, chữ vô nghĩa).</li>
-<li><strong>Hành động can thiệp của sinh viên:</strong></li>
-<li>Nhóm sinh viên đã phát hiện lỗi này, chủ động tải toàn bộ 20 trang truyện tranh về máy tính cá nhân.</li>
-<li>Dùng phần mềm đồ họa chuyên nghiệp xóa bỏ chữ hỏng của AI, tự tay gõ lại, căn chỉnh font chữ, sắp xếp thứ tự đọc thoại (Lettering) theo đúng kịch bản MLN122.</li>
-<li>Lưu trữ thành quả hoàn chỉnh tại thư mục cục bộ: <code>/home/amtia/Downloads/Ban-da-duyet-JPG</code>.</li>
-<li><strong>Bằng chứng Git Commit:</strong></li>
-<li><strong>Commit <code>620294a</code>:</strong> <code>feat(comic): replace all 20 manga pages with user-approved font-fixed lettering</code> (Đã nạp toàn bộ 20 trang do chính sinh viên sửa chữ vào dự án).</li>
-<li><strong>Biên bản kiểm tra tự động OCR:</strong> Được ghi nhận tại <a href="file:///home/amtia/.gemini/antigravity/brain/2da4f47b-50f7-4f57-8354-c683a8448d1d/bao_cao_tham_dinh_20_trang_truyen_da_duyet.md"><code>bao_cao_tham_dinh_20_trang_truyen_da_duyet.md</code></a>.</li>
+<li><strong>Minh chứng tài liệu:</strong> <a href="docs/BAO_CAO_TIEN_DO_13_TAI_SAN_THAM_CHIEU.md"><code>docs/BAO_CAO_TIEN_DO_13_TAI_SAN_THAM_CHIEU.md</code></a> (Commit <code>8391915</code>).</li>
+<li>Sinh viên thiết lập nhân dạng cố định để chống "trôi phong cách":</li>
+<li><strong>Minh (22-24 tuổi):</strong> Áo thun xám tro, gile kỹ thuật xanh rêu nhiều túi đựng bút thử điện, đeo kính gọng tròn kim loại mảnh, mắt quầng thâm vì thức khuya lao động.</li>
+<li><strong>AI Đốm:</strong> Drone cầu kim loại nhỏ bay lơ lửng, lõi vàng hổ phách <code>#ffe600</code>, hào quang cyan <code>#00f0ff</code>; chuyển đỏ răng cưa khi bị TRỤC khống chế.</li>
+<li><strong>Mẹ Minh (52 tuổi):</strong> Tóc búi trễ điểm bạc, áo vải hoa bạc màu, bàn tay thô ráp, đôi giày đi bộ sờn rách đế dán keo.</li>
 </ul>
 <hr />
-<h3>3.2. Sinh viên phê bình nghệ thuật và chỉ đạo lật ngược thiết kế Bìa Truyện</h3>
-<p>Khi AI tự động thử nghiệm bố cục bìa phỏng theo Akira Tập 5, kết quả tạo ra bị rối mắt do chữ đè lên nhau.<br />
-* <strong>Câu lệnh chỉ trích trực tiếp của sinh viên (Trích xuất Transcript Nhật ký):</strong></p>
-<blockquote>
-<p><em>"xấu quá /reverse-engineer /design-taste-frontend làm lại cái ảnh theo styel trong ảnh đi chứ xấu quá chòng chữ tè le"</em><br />
-* <strong>Hành động định hướng của sinh viên:</strong><br />
-  1. Thẳng thắn bác bỏ sản phẩm chưa đạt của AI.<br />
-  2. Tự tìm kiếm và tải lên hình ảnh tham chiếu bìa sách chuẩn mực: <strong>Bìa Cyberpunk 2077 Library Edition Volume 2 của họa sĩ Jakub Rebelka (Dark Horse Books)</strong> (<code>media_1793849672631_37355b9a.jpg</code>).<br />
-  3. Bắt buộc AI phân tích tỷ lệ hình học, bóc tách không gian âm (Negative Space) để chữ không được đè lên tranh.<br />
-  4. Ra lệnh tiếp theo: <em>"làm bìa đít nữa"</em> để hoàn thiện trọn vẹn cả Bìa Trước và Bìa Sau (Bìa 4), tạo thành cuốn sách vật lý hoàn chỉnh.<br />
-* <strong>Bằng chứng Git Commit:</strong><br />
-  * <strong>Commit <code>7930a81</code>:</strong> <code>feat(cover): reverse-engineer Cyberpunk 2077 Library Edition Vol 2 cover art (Jakub Rebelka style)</code>.<br />
-  * <strong>Commit <code>579b875</code>:</strong> <code>feat(cover): create matching Deluxe Library Edition back cover (bìa 4)</code>.</p>
-</blockquote>
+<h3>3.3. Ma trận Prompt Kỹ thuật Chi tiết (80 Phân cảnh)</h3>
+<ul>
+<li><strong>Minh chứng tài liệu:</strong> <a href="docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md"><code>docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md</code></a> (Dung lượng: <strong>46.2 KB</strong>).</li>
+<li>Nhóm tự viết 80 câu lệnh phân cảnh chi tiết, kiểm soát góc máy điện ảnh (<em>Cinematic Low-Angle, Dutch Angle, Over-the-shoulder</em>), ánh sáng chiaroscuro tương phản cao và bảng màu mực đen trắng manga phối spot-color neon.</li>
+</ul>
 <hr />
-<h2>4. MA TRẬN PHÂN ĐỊNH TRÁCH NHIỆM (RACI MATRIX: HUMAN VS. AI)</h2>
-<p>Bảng đối chiếu minh bạch ranh giới trách nhiệm giữa Nhóm sinh viên và Công cụ AI:</p>
+<h2>4. BẰNG CHỨNG THỰC NGHIỆM ĐẮT GIÁ: SINH VIÊN TỰ TAY SỬA THOẠI 100%</h2>
+<p>Một sản phẩm nếu do AI tạo ra 100% sẽ luôn chứa đầy lỗi ngớ ngẩn: <strong>chữ biến dạng, sai chính tả tiếng Việt, thiếu dấu thanh, bong bóng thoại vô nghĩa</strong>. Chính hành động can thiệp đồ họa của Nhóm 5 là bằng chứng thép khẳng định con người làm chủ:</p>
+<h3>4.1. Minh chứng từ Thư mục Cục bộ <code>/Downloads/Ban-da-duyet-JPG</code></h3>
+<ul>
+<li><strong>Địa chỉ lưu trữ minh chứng:</strong> <a href="#downloads"><code>/home/amtia/Downloads/Ban-da-duyet-JPG</code></a> (chứa đầy đủ 20 file <code>page_1.jpg</code> đến <code>page_20.jpg</code> đã được nhóm duyệt và sửa chữ).</li>
+<li><strong>Quy trình can thiệp của sinh viên:</strong></li>
+<li>AI chỉ có khả năng vẽ nền và nhân vật thô; khi sinh chữ tiếng Việt, AI tạo ra các ký tự giun dế méo mó.</li>
+<li>Nhóm sinh viên đã chủ động tải toàn bộ 20 trang về máy cá nhân.</li>
+<li>Dùng công cụ đồ họa xóa sạch các bong bóng thoại hỏng của AI.</li>
+<li>Trực tiếp căn lề, chọn font chữ Comic/Sans tiếng Việt chuẩn, tự tay gõ lại từng câu thoại của nhân vật theo đúng bản thảo MLN122.</li>
+<li>Đóng gói vào folder <code>Ban-da-duyet-JPG</code> và đưa ngược lại hệ thống qua <strong>Git Commit <code>620294a</code></strong>.</li>
+</ul>
+<hr />
+<h3>4.2. Hình ảnh So sánh Đối chứng Trực quan</h3>
+<p><img alt="Minh chứng thực nghiệm: Ảnh AI sinh thô lỗi font vs Bản sinh viên duyệt tự sửa thoại 100%" src="docs/evidence_lettering_comparison.jpg" /></p>
+<ul>
+<li><strong>Bên trái (Ảnh AI sinh thô):</strong> Chữ trong bong bóng thoại bị vỡ nát, sai chính tả hoàn toàn, các ký tự vô nghĩa không thể đọc được.</li>
+<li><strong>Bên phải (Bản sinh viên tự sửa):</strong> Lời thoại tiếng Việt trong trẻo, sắc nét, đúng cấu trúc ngữ pháp và thuật ngữ Kinh tế chính trị: <em>"Mẹ... lại sửa giày nữa à? Con nhất định sẽ kiếm đủ tiền mua cho mẹ đôi giày mới!"</em>, <em>"Để mẹ dán lại là mang được mà..."</em>.</li>
+</ul>
+<hr />
+<h2>5. ĐỊNH HƯỚNG NGHỆ THUẬT: TÁI THIẾT KẾ BÌA THEO CHUẨN XUẤT BẢN QUỐC TẾ</h2>
+<p>AI hoàn toàn không có gu thẩm mỹ tự thân. Khi AI tự ý sắp đặt bố cục bìa, sản phẩm bị sinh viên phê phán gay gắt và trực tiếp định hướng lại:</p>
+<ol>
+<li><strong>Phê bình &amp; Bác bỏ Layout cũ của AI:</strong></li>
+<li>Khi AI tạo mẫu bìa bị chồng chéo chữ, sinh viên lập tức ra lệnh chấn chỉnh: <em>"xấu quá /reverse-engineer /design-taste-frontend làm lại cái ảnh theo styel trong ảnh đi chứ xấu quá chòng chữ tè le"</em>.</li>
+<li><strong>Cung cấp Ảnh Tham chiếu Độc quyền (Curation):</strong></li>
+<li>Sinh viên tự nghiên cứu và tải lên bìa <strong>Cyberpunk 2077 Library Edition Volume 2 của họa sĩ Jakub Rebelka (Dark Horse Books)</strong>.</li>
+<li>Yêu cầu AI bóc tách tỷ lệ hình học, dành 100% không gian thở (Negative Space) cho tác phẩm nghệ thuật, triệt tiêu hoàn toàn hiện tượng chữ đè lên mặt tranh.</li>
+<li><strong>Chỉ đạo Hoàn thiện Cả Bìa Trước và Bìa Sau (Bìa 4):</strong></li>
+<li>Sinh viên tiếp tục yêu cầu: <em>"làm bìa đít nữa"</em>, biến đồ án thành một cuốn sách vật lý hoàn chỉnh với đầy đủ Bìa trước (Titan TRỤC), Bìa sau (Minh &amp; Lõi Nếp Sáng, Mã vạch ISBN, Khung tóm tắt 20 trang, 3 Trụ cột MLN122).</li>
+<li><strong>Minh chứng Git Commit:</strong> Commit <code>7930a81</code> (Bìa trước) và Commit <code>579b875</code> (Bìa sau).</li>
+</ol>
+<hr />
+<h2>6. MA TRẬN PHÂN ĐỊNH TRÁCH NHIỆM (RACI MATRIX: HUMAN VS. AI)</h2>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Hạng mục Công việc</th>
 <th style="text-align: center;">Nhóm Sinh viên (Nhóm 5)</th>
-<th style="text-align: center;">Công cụ AI (Generative Models / LLM)</th>
-<th style="text-align: left;">Ghi chú Minh chứng</th>
+<th style="text-align: center;">Công cụ AI (Generative Models)</th>
+<th style="text-align: left;">Minh chứng Thực tế</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>1. Ý tưởng cốt truyện &amp; Bối cảnh</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
-<td style="text-align: left;">Sinh viên tự chọn đề tài Vòm-9 &amp; Mác – Lênin.</td>
+<td style="text-align: left;"><strong>1. Đề tài &amp; Bối cảnh Vòm-9</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">Ý tưởng nguyên bản của sinh viên FPTU.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>2. Nghiên cứu Lý luận Giáo trình MLN122</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
-<td style="text-align: left;">5 Hồi truyện ứng với 4 Chương cốt lõi MLN122.</td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">5 Hồi truyện khớp 4 Chương MLN122.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>3. Viết Kịch bản 20 Trang (85 Phân cảnh)</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">Consulted (0%)</td>
-<td style="text-align: left;">File <a href="file:///home/amtia/Projects/ass-mln122/docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md"><code>CUON_TRUYEN_20_TRANG...md</code></a>.</td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;"><a href="docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md"><code>CUON_TRUYEN_20_TRANG...md</code></a>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>4. Thiết kế Nhân dạng (Character Bible)</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
+<td style="text-align: left;"><strong>4. Thiết kế Mỏ neo Nhân vật (Character Bible)</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
 <td style="text-align: left;">Minh, Đốm, Mẹ Minh, Bác Ba, TRỤC.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>5. Viết Bộ Prompt Hình ảnh (80 Prompts)</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (90%)</strong></td>
-<td style="text-align: center;">Informed (10%)</td>
-<td style="text-align: left;">File <a href="file:///home/amtia/Projects/ass-mln122/docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md"><code>AI_COMIC_FACTORY_20_TRANG...md</code></a>.</td>
+<td style="text-align: left;"><strong>5. Viết Ma trận Prompt Kỹ thuật (80 Prompts)</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 90%</strong></td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: left;"><a href="docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md"><code>AI_COMIC_FACTORY_20_TRANG...md</code></a>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>6. Khởi tạo Điểm ảnh Thô (Image Generation)</strong></td>
-<td style="text-align: center;">Accountable (Kiểm soát 30%)</td>
-<td style="text-align: center;"><strong>Responsible (Thực thi 70%)</strong></td>
-<td style="text-align: left;">AI thực thi tính toán pixel theo prompt của sinh viên.</td>
+<td style="text-align: left;"><strong>6. Khởi tạo Điểm ảnh Thô (Image Gen)</strong></td>
+<td style="text-align: center;">Kiểm soát 30%</td>
+<td style="text-align: center;"><strong>Thực thi 70%</strong></td>
+<td style="text-align: left;">AI render pixel theo prompt của sinh viên.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>7. Thẩm định &amp; Loại bỏ Ảnh Lỗi (Quality Gate)</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
-<td style="text-align: left;">Sinh viên bác bỏ các bản gen hỏng, bắt gen lại.</td>
+<td style="text-align: left;"><strong>7. Loại bỏ Ảnh Lỗi &amp; Thẩm định Chất lượng</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">Sinh viên từ chối ảnh xấu, bắt gen lại.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>8. Sửa Lỗi Font Chữ &amp; Bong Bóng Thoại</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
-<td style="text-align: left;">Sinh viên tự sửa tại <code>/Downloads/Ban-da-duyet-JPG</code>.</td>
+<td style="text-align: left;"><strong>8. Sửa Lỗi Font &amp; Thoại Bong Bóng (Lettering)</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">Thư mục <a href="#downloads"><code>Ban-da-duyet-JPG</code></a> &amp; Commit <code>620294a</code>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>9. Định hướng Nghệ thuật Bìa Trước/Sau</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">Consulted (0%)</td>
-<td style="text-align: left;">Sinh viên cấp ảnh tham chiếu Jakub Rebelka.</td>
+<td style="text-align: left;"><strong>9. Định hướng Mỹ thuật Bìa Trước &amp; Bìa Sau</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">Tham chiếu Jakub Rebelka &amp; Commit <code>579b875</code>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>10. Lập trình Web Flipbook 3D &amp; PWA</strong></td>
-<td style="text-align: center;"><strong>Accountable (Kiến trúc 60%)</strong></td>
-<td style="text-align: center;">Responsible (Sinh mã 40%)</td>
+<td style="text-align: left;"><strong>10. Lập trình Web Flipbook 3D &amp; Web Reader</strong></td>
+<td style="text-align: center;"><strong>Kiến trúc 70%</strong></td>
+<td style="text-align: center;">Thực thi mã 30%</td>
 <td style="text-align: left;"><a href="file:///home/amtia/Projects/ass-mln122/index.html"><code>index.html</code></a>, <a href="file:///home/amtia/Projects/ass-mln122/novel-reader.html"><code>novel-reader.html</code></a>, <a href="file:///home/amtia/Projects/ass-mln122/gallery.html"><code>gallery.html</code></a>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>11. Tích hợp Thực tế Tăng cường AR Hologram</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (80%)</strong></td>
-<td style="text-align: center;">Supporting (20%)</td>
-<td style="text-align: left;">Huấn luyện tệp <code>targets.mind</code>, MindAR WebGL.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>12. Xuất bản &amp; Deploy Vercel Production</strong></td>
-<td style="text-align: center;"><strong>Responsible &amp; Accountable (100%)</strong></td>
-<td style="text-align: center;">None (0%)</td>
-<td style="text-align: left;">Triển khai live tại <code>ass-mln122.vercel.app</code>.</td>
+<td style="text-align: left;"><strong>11. Xuất bản &amp; Deploy Vercel Production</strong></td>
+<td style="text-align: center;"><strong>Chủ trì 100%</strong></td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: left;">Live tại <a href="https://ass-mln122.vercel.app/">https://ass-mln122.vercel.app/</a>.</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>[!TIP]<br />
-<strong>Tỷ lệ đóng góp giá trị tổng thể:</strong><br />
-* <strong>Nhóm Sinh viên (Trí tuệ, Ý tưởng, Thẩm định, Sửa chữ, Kiến trúc): 85%</strong><br />
-* <strong>Hệ thống AI (Công cụ hỗ trợ render pixel &amp; hỗ trợ cú pháp mã): 15%</strong></p>
+<strong>Đánh giá tổng hòa tỷ lệ giá trị:</strong><br />
+* <strong>Đóng góp của Nhóm Sinh viên (Trí tuệ, Ý tưởng, Thẩm định, Sửa thoại, Kiến trúc): 85%</strong><br />
+* <strong>Đóng góp của AI (Máy tính toán render pixel &amp; hỗ trợ cú pháp): 15%</strong></p>
 </blockquote>
 <hr />
-<h2>5. NHẬT KÝ BẰNG CHỨNG TRUY VẾT HỆ THỐNG (AUDIT TRAIL LOGS)</h2>
-<p>Dưới đây là các mốc nhật ký kỹ thuật từ Git Repository minh chứng cho tiến trình lao động thực tế của sinh viên:</p>
-<pre><code>579b875 - feat(cover): create matching Deluxe Library Edition back cover (bìa 4) [Chỉ đạo làm Bìa Sau]
-7930a81 - feat(cover): reverse-engineer Cyberpunk 2077 Library Edition Vol 2 cover art [Chỉ đạo đổi bìa Jakub Rebelka]
-d8f4acd - feat(cover): reverse-engineer iconic Akira Vol 5 manga cover layout [Thử nghiệm bìa đợt 1]
-620294a - feat(comic): replace all 20 manga pages with user-approved font-fixed lettering [SINH VIÊN NẠP 20 TRANG TỰ SỬA CHỮ]
-9fcd4e8 - feat(comic): complete all 20 pages in authentic Japanese manga pure spot-color aesthetic
-de88e23 - feat(comic): generate &amp; publish Pages 1-14 from scratch with strict zero-drift manga style
-d521c25 - docs(plan): commit master implementation plan &amp; progress report for 20-page cyberpunk manga
-8391915 - feat(references): expand visual anchor library to 13 assets (Mom, Bac Ba, Dom AI, Nep Sang)
-</code></pre>
-<hr />
-<h2>6. KẾT LUẬN &amp; THÔNG ĐIỆP ĐẠO ĐỨC HỌC THUẬT</h2>
+<h2>7. KẾT LUẬN &amp; THÔNG ĐIỆP ĐẠO ĐỨC HỌC THUẬT</h2>
 <ol>
-<li><strong>Tuân thủ Tuyệt đối Quy định Liêm chính Học thuật của Đại học FPT:</strong><br />
-   Nhóm 5 không che giấu việc sử dụng AI. Ngược lại, nhóm chủ động giải trình minh bạch từng khâu, định vị AI đúng vị trí của một <strong>công cụ trợ năng</strong>, biến đồ án thành một hình mẫu về việc <strong>ứng dụng công nghệ cao đi đôi với làm chủ tri thức bản địa</strong>.</li>
-<li><strong>Khẳng định Bản lĩnh Sinh viên CNTT FPTU:</strong><br />
-   Sinh viên không bị lệ thuộc vào AI, không chấp nhận những sản phẩm AI "mì ăn liền" vô hồn. Bằng kiến thức Kinh tế chính trị vững vàng, tư duy thẩm mỹ cao cấp và kỹ năng can thiệp kỹ thuật chuyên sâu, Nhóm 5 đã làm chủ hoàn toàn quy trình để tạo nên một tác phẩm truyện tranh giàu chiều sâu triết học, hoàn thiện đến từng nét vẽ và từng câu thoại.</li>
+<li><strong>Minh bạch &amp; Trung thực Tuyệt đối:</strong><br />
+   Đồ án của Nhóm 5 không che giấu việc sử dụng AI. Việc công khai ma trận prompt, công khai ảnh so sánh lỗi chữ và giải trình phương pháp luận chứng minh tinh thần học thuật nghiêm túc, dũng cảm và chính trực của sinh viên FPTU.</li>
+<li><strong>Làm chủ Công nghệ thay vì Lệ thuộc:</strong><br />
+   Nhóm 5 đã chứng minh rằng: <strong>AI chỉ là cây bút vẽ, còn linh hồn, trí tuệ và thông điệp tư tưởng của bức tranh vĩnh viễn thuộc về con người.</strong> Bằng sự nỗ lực tự tay sửa từng câu thoại và trau chuốt từng phân cảnh, Nhóm 5 tự hào mang đến một tác phẩm sáng tạo hoàn thiện, xứng đáng là sản phẩm tiêu biểu của học phần Kinh tế chính trị Mác – Lênin (MLN122).</li>
 </ol>
     </article>
   </main>
