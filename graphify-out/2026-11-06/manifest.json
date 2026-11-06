@@ -1,0 +1,825 @@
+{
+  "assets/ar-effects.js": {
+    "mtime": 1793323295.0815089,
+    "seen": 1793846703.3956058,
+    "ast_hash": "93f4772463e6370f9a52e17965872b54",
+    "semantic_hash": "93f4772463e6370f9a52e17965872b54"
+  },
+  "assets/nep-sang-effect.js": {
+    "mtime": 1793323295.1315095,
+    "seen": 1793846703.3956134,
+    "ast_hash": "13d407d0964437a7f96d9b8f50fb58ac",
+    "semantic_hash": "13d407d0964437a7f96d9b8f50fb58ac"
+  },
+  "assets/references/style_dna.json": {
+    "mtime": 1793324931.0507176,
+    "seen": 1793846703.395617,
+    "ast_hash": "362e101f979d88457053ad528e4df3cd",
+    "semantic_hash": "362e101f979d88457053ad528e4df3cd",
+    "ast_empty": true
+  },
+  "build-gallery.js": {
+    "mtime": 1793850444.1642303,
+    "seen": 1793924660.0719671,
+    "ast_hash": "d6ef8023dfa291e1d103dea3bdb10d79",
+    "semantic_hash": ""
+  },
+  "build-novel-reader.js": {
+    "mtime": 1793925721.4562175,
+    "seen": 1793926493.0427568,
+    "ast_hash": "fa9c188209abcaab6d5d2c54bcaef183",
+    "semantic_hash": ""
+  },
+  "compile-cli.mjs": {
+    "mtime": 1791939795.6610255,
+    "seen": 1793846703.3956237,
+    "ast_hash": "028802735aa30d4f44b5040b5f11f24d",
+    "semantic_hash": "028802735aa30d4f44b5040b5f11f24d"
+  },
+  "generate-baoyu-structure.js": {
+    "mtime": 1793323295.17251,
+    "seen": 1793846703.3956249,
+    "ast_hash": "8c1efcf186178340861452307b7ea1fb",
+    "semantic_hash": "8c1efcf186178340861452307b7ea1fb"
+  },
+  "libs/page-flip.browser.js": {
+    "mtime": 1791938282.19494,
+    "seen": 1793846703.3956265,
+    "ast_hash": "d437997444137c3d1ee879f2bd321b44",
+    "semantic_hash": "d437997444137c3d1ee879f2bd321b44"
+  },
+  "manifest.json": {
+    "mtime": 1791937258.4588807,
+    "seen": 1793846703.395628,
+    "ast_hash": "668585d51cefb0ac5f53e8b2ff348378",
+    "semantic_hash": "668585d51cefb0ac5f53e8b2ff348378"
+  },
+  "package.json": {
+    "mtime": 1793323295.17251,
+    "seen": 1793846703.39563,
+    "ast_hash": "1fa1625d43cc7dab2aaacee98410d5fa",
+    "semantic_hash": "1fa1625d43cc7dab2aaacee98410d5fa"
+  },
+  "sw.js": {
+    "mtime": 1792032904.7385786,
+    "seen": 1793846703.3956313,
+    "ast_hash": "fa96078fbc410a737cfac4001647b66f",
+    "semantic_hash": "fa96078fbc410a737cfac4001647b66f"
+  },
+  "tools/sync_all_manga_assets.py": {
+    "mtime": 1793587060.1594288,
+    "seen": 1793846703.395636,
+    "ast_hash": "7d20612ff3d4f2397df4562eac68510f",
+    "semantic_hash": "7d20612ff3d4f2397df4562eac68510f"
+  },
+  "tools/update_manga_prompts.py": {
+    "mtime": 1793587060.1594288,
+    "seen": 1793846703.3956375,
+    "ast_hash": "52240c4759b44f9a729146c13550ef84",
+    "semantic_hash": "52240c4759b44f9a729146c13550ef84"
+  },
+  "tools/video-trang4/audio.py": {
+    "mtime": 1793323295.1738605,
+    "seen": 1793846703.395639,
+    "ast_hash": "27e11206efd9a5ba8dfafd606892da2c",
+    "semantic_hash": "27e11206efd9a5ba8dfafd606892da2c"
+  },
+  "tools/video-trang4/render.py": {
+    "mtime": 1793323295.1738605,
+    "seen": 1793846703.3956406,
+    "ast_hash": "93d56a8e331443e6f3aed4d635035eba",
+    "semantic_hash": "93d56a8e331443e6f3aed4d635035eba"
+  },
+  "update-prompts-anime.js": {
+    "mtime": 1793323295.1738605,
+    "seen": 1793846703.395642,
+    "ast_hash": "9e7468fb6559b58312817440e1b1b1c9",
+    "semantic_hash": "9e7468fb6559b58312817440e1b1b1c9"
+  },
+  "vercel.json": {
+    "mtime": 1792032915.8354423,
+    "seen": 1793846703.395644,
+    "ast_hash": "687c7a2aa5866bec6377c28b33dc6080",
+    "semantic_hash": "687c7a2aa5866bec6377c28b33dc6080"
+  },
+  "assets/video/trang4.mp4": {
+    "mtime": 1793323295.16251,
+    "seen": 1793846703.3957918,
+    "ast_hash": "13d3b35f394c6ab583127b297e60f292",
+    "semantic_hash": "13d3b35f394c6ab583127b297e60f292"
+  },
+  "assets/video/trang4.webm": {
+    "mtime": 1793323295.1665099,
+    "seen": 1793846703.3957937,
+    "ast_hash": "526a113cf8ec78b4dac48d17bde1a263",
+    "semantic_hash": "526a113cf8ec78b4dac48d17bde1a263"
+  },
+  "tools/enforce_manga_pure_spotcolor.py": {
+    "mtime": 1793846688.0207198,
+    "seen": 1793846703.395634,
+    "ast_hash": "0563803344b2fb482b5735a8f0d8825d",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1793323295.0813224,
+    "seen": 1793846703.3956454,
+    "ast_hash": "e7715708debcfa485f9a9cbb24d136f7",
+    "semantic_hash": ""
+  },
+  "ar-camera.html": {
+    "mtime": 1793323295.0815089,
+    "seen": 1793846703.395647,
+    "ast_hash": "17871c8f01037dc907c4c4209fedd306",
+    "semantic_hash": ""
+  },
+  "ar-trang4.html": {
+    "mtime": 1793323295.0815089,
+    "seen": 1793846703.3956487,
+    "ast_hash": "8cd3857956e356540ca57ffd8e854b40",
+    "semantic_hash": ""
+  },
+  "ar-video-trang4.html": {
+    "mtime": 1793323295.0815089,
+    "seen": 1793846703.3956501,
+    "ast_hash": "99d48abf87e37b081df9f1e3dd6b6794",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/analysis.md": {
+    "mtime": 1793323295.1680584,
+    "seen": 1793846703.3956513,
+    "ast_hash": "8693e166c79ebc6d900ea84f1e8af39a",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/characters/characters.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956525,
+    "ast_hash": "e66be07786d4e04c5f449ecc4d626fad",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/01-page-ho-ng-h-n-tr-n-v-m-9.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956542,
+    "ast_hash": "7c8df1910a5fed472ea82aa78eedd539",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/02-page-i-gi-y-c-a-m.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956554,
+    "ast_hash": "e6f7b3a694b39befa474ff3088fa4d7e",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/03-page-ph-ng-tr-ng-c-ng-m-t.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956566,
+    "ast_hash": "ae2b5f51e9686e4b2560d7d40e93e0fc",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/04-page-c-a-s-m-o.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.395658,
+    "ast_hash": "6ce920d3d58c10206e5b650c7850de4b",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/05-page-nh-ng-m-kh-ng-ng.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956592,
+    "ast_hash": "e9cfa52a57e6ada316f0a2483c35c3c0",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/06-page-kho-l-u-nh-m-nh.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956606,
+    "ast_hash": "784937787da685fd290ada50c1b9f041",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/07-page-m-c-p-nh-t-nh-m-nh.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.395662,
+    "ast_hash": "5639d6d162c51dc0f86e863f19522cdc",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/08-page-hy-v-ng-tr-c-gi-ng-b-o.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956633,
+    "ast_hash": "c0978d97844c44adc51349cda7b163ef",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/09-page-c-s-c-t-i-s-nh-c-ng-c-ng.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956647,
+    "ast_hash": "0bc00dd62c62a0a6c81e3016cac87c13",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/10-page-m-i-chi-u-b-b-ng.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.395666,
+    "ast_hash": "095e677299e16ea65b824708f2c5c2c4",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/11-page-r-o-c-n-h-sinh-th-i.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956673,
+    "ast_hash": "9c6b43f25a9f04c95c181e8daab4515f",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/12-page-ngh-ch-l-si-u-ng-ch-c-quy-n.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956685,
+    "ast_hash": "5c0ec35b75b22b2f79e784220df1358b",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/13-page-l-n-theo-th-a-thu-n-ng-m.md": {
+    "mtime": 1793587060.157429,
+    "seen": 1793846703.3956697,
+    "ast_hash": "93c904e77f855d9d047feac8f660ba17",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/14-page-manh-m-i-b-t-ng-t-m.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956711,
+    "ast_hash": "70b765f59a23c0c9e0c2e440df983a47",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/15-page-v-a-trong-n-c-m-t.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956723,
+    "ast_hash": "18ba4073f50c0e9ea4138059ecfca9f6",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/16-page-gom-b-n-b-ch-ng-c-th-p.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956735,
+    "ast_hash": "4e519ab5f22da865838ab78bdd4026ec",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/17-page-bu-i-h-p-m-t-t-i-s-nh-sinh-ho-t.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.395675,
+    "ast_hash": "3ff95b841f4108b7f345996b08fe18ca",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/18-page-sao-ch-ng-t-i-kh-ng-c-ch-n.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956766,
+    "ast_hash": "63224fa0a2245dc2f4ec9f9fef597269",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/19-page-b-c-t-ng-r-ng-ng.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.395678,
+    "ast_hash": "1d8ded06d96f3b47d1371e09f4309a4c",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/prompts/20-page-gi-m-t-m-s-ng-i-k-t-c-c.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956792,
+    "ast_hash": "e7a8a73258c404c1ea81e09c6e9c4dd1",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/storyboard.md": {
+    "mtime": 1793323295.17151,
+    "seen": 1793846703.3956807,
+    "ast_hash": "fbf514603cd9e2602fd220abcb1d4a70",
+    "semantic_hash": ""
+  },
+  "compiler.html": {
+    "mtime": 1791937333.0204759,
+    "seen": 1793846703.395682,
+    "ast_hash": "d6ddaadcf6de9700968a898f80a76d9a",
+    "semantic_hash": ""
+  },
+  "docs/AI_COMIC_FACTORY_20_TRANG_PROMPTS.md": {
+    "mtime": 1793587060.158429,
+    "seen": 1793846703.3956833,
+    "ast_hash": "61c0e8793652fba3d3783460eca964b6",
+    "semantic_hash": ""
+  },
+  "docs/BAO_CAO_TIEN_DO_13_TAI_SAN_THAM_CHIEU.md": {
+    "mtime": 1793326677.3392704,
+    "seen": 1793846703.3956847,
+    "ast_hash": "487d0de89ce73b1c8c6edd5e5cd81e4f",
+    "semantic_hash": ""
+  },
+  "docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md": {
+    "mtime": 1793323295.1723132,
+    "seen": 1793846703.395686,
+    "ast_hash": "503050997e01756200ebb3564cd04a41",
+    "semantic_hash": ""
+  },
+  "docs/KE_HOACH_SOAN_KICH_BAN_TRUYEN_MLN122.md": {
+    "mtime": 1793323295.1723132,
+    "seen": 1793846703.395687,
+    "ast_hash": "9291b156c32a8e6c9299fe33f4fa25bd",
+    "semantic_hash": ""
+  },
+  "docs/KE_HOACH_TONG_LUC_20_TRANG_MANGA.md": {
+    "mtime": 1793846688.0185173,
+    "seen": 1793846703.3956888,
+    "ast_hash": "0cf397d568d22de8b8a63d87cf657325",
+    "semantic_hash": ""
+  },
+  "docs/KICH_BAN_CHI_TIET_TRUYEN_MLN122.md": {
+    "mtime": 1793323295.1723132,
+    "seen": 1793846703.39569,
+    "ast_hash": "503050997e01756200ebb3564cd04a41",
+    "semantic_hash": ""
+  },
+  "gallery.html": {
+    "mtime": 1793850449.3482716,
+    "seen": 1793924660.0720525,
+    "ast_hash": "57ad020629f5d38294295da80ead2682",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1793925708.582297,
+    "seen": 1793926493.0428336,
+    "ast_hash": "6deec73a1b2577b291db4a73e8f57bfb",
+    "semantic_hash": ""
+  },
+  "novel-reader.html": {
+    "mtime": 1793925725.5931928,
+    "seen": 1793926493.042835,
+    "ast_hash": "6df073e6a3e169fe821ae8c5553e539d",
+    "semantic_hash": ""
+  },
+  "references-catalog.html": {
+    "mtime": 1793324985.7936,
+    "seen": 1793846703.3956952,
+    "ast_hash": "42ce9b8441735d8457fc2e3d8c92e11f",
+    "semantic_hash": ""
+  },
+  "targets-viewer.html": {
+    "mtime": 1793323295.17251,
+    "seen": 1793846703.3956964,
+    "ast_hash": "dd2e1ed2c2d2c55b628c279b66e58ca7",
+    "semantic_hash": ""
+  },
+  "tools/video-trang4/README.md": {
+    "mtime": 1793323295.1738129,
+    "seen": 1793846703.3956976,
+    "ast_hash": "892a18d4e8011443875033587d4bf36b",
+    "semantic_hash": ""
+  },
+  "assets/character_sheet.jpg": {
+    "mtime": 1793323295.084509,
+    "seen": 1793846703.395699,
+    "ast_hash": "6ba69c810912e759b2806d235b4755f5",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_1.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957002,
+    "ast_hash": "6ba69c810912e759b2806d235b4755f5",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_2.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957016,
+    "ast_hash": "2e90c76a913b042a6077bda9ebaaa3de",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_3.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957033,
+    "ast_hash": "4e5245c4258fb99b9e942a2956fabf6a",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_4.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957047,
+    "ast_hash": "743caa5544fb2cacc41ca3a56ccca59a",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_5.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.395706,
+    "ast_hash": "d04c5456d287f108feb5629f2d204a8f",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_6.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957071,
+    "ast_hash": "243dd45a14b9f527ecf3010f9c7b097d",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_7.jpg": {
+    "mtime": 1793326076.3414314,
+    "seen": 1793846703.3957086,
+    "ast_hash": "54399a489956a90261dea438b7e965ca",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_8.jpg": {
+    "mtime": 1793326076.3424313,
+    "seen": 1793846703.39571,
+    "ast_hash": "c82963ff43c59daca149d5b29def2842",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/legacy_backup/page_9.jpg": {
+    "mtime": 1793326076.3424313,
+    "seen": 1793846703.3957112,
+    "ast_hash": "0f72e72d310b7a855278d4ec84f5faa9",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_1.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957126,
+    "ast_hash": "c08a38fcc120992aecaf5cefe149ccb6",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_10.jpg": {
+    "mtime": 1793846701.4384992,
+    "seen": 1793846703.395714,
+    "ast_hash": "c7ad9b1f9ed65741d2d96fee49df86fa",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_11.jpg": {
+    "mtime": 1793846701.4384992,
+    "seen": 1793846703.3957152,
+    "ast_hash": "13b3b20905c89acee1d842669b8a5fbe",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_12.jpg": {
+    "mtime": 1793846701.4384992,
+    "seen": 1793846703.3957167,
+    "ast_hash": "4b8356b9b93ef459ed29d55ad6ca9a3a",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_13.jpg": {
+    "mtime": 1793846701.438745,
+    "seen": 1793846703.395718,
+    "ast_hash": "2cd7237228f154c872a7c8f0d6749bb5",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_14.jpg": {
+    "mtime": 1793846701.438745,
+    "seen": 1793846703.395719,
+    "ast_hash": "60f5b41f5f0b0eba98d52b14f5abeeb7",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_15.jpg": {
+    "mtime": 1793846701.438745,
+    "seen": 1793846703.3957207,
+    "ast_hash": "e47314e87fa5bccb54741a1dcf03dc64",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_16.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957222,
+    "ast_hash": "3fd832922572cd7ab702cdf21d5fa7b5",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_17.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957236,
+    "ast_hash": "9f524737be34368fd77baeedc31d02f6",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_18.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957248,
+    "ast_hash": "a76fccdcdace7d404bee0b4a0ecba93e",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_19.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.395726,
+    "ast_hash": "500c353ffb6cfac2b555dc471485002c",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_2.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957274,
+    "ast_hash": "300d4612e4d8fca580e000f2cecfd306",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_20.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957288,
+    "ast_hash": "838b2b43e17e53f849cbcd5bd003140d",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_3.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957303,
+    "ast_hash": "404c09f227005174a6218d33749c88d9",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_4.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957314,
+    "ast_hash": "e1f93b610cbc2dbb95573226459d4751",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_5.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957326,
+    "ast_hash": "f0ac2783518bd4614cb67404e5ee66de",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_6.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.395735,
+    "ast_hash": "e3815460369c5ed47e36a1b3299938c5",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_7.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.3957362,
+    "ast_hash": "44a09a091f4c1327db12b238ae61e70e",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_8.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.395738,
+    "ast_hash": "cba26751b108a79c23867084f670bf22",
+    "semantic_hash": ""
+  },
+  "assets/comic_20pages/page_9.jpg": {
+    "mtime": 1793846701.4397788,
+    "seen": 1793846703.395739,
+    "ast_hash": "7b676fe8a42629db80dbbaf6ba598519",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover.jpg": {
+    "mtime": 1793850108.9309342,
+    "seen": 1793850300.6057951,
+    "ast_hash": "e0e7517bcff998327dc0841ebd963d36",
+    "semantic_hash": ""
+  },
+  "assets/comic_page1.jpg": {
+    "mtime": 1793846701.441466,
+    "seen": 1793846703.395742,
+    "ast_hash": "c08a38fcc120992aecaf5cefe149ccb6",
+    "semantic_hash": ""
+  },
+  "assets/comic_page10.jpg": {
+    "mtime": 1793846701.4517453,
+    "seen": 1793846703.3957431,
+    "ast_hash": "c7ad9b1f9ed65741d2d96fee49df86fa",
+    "semantic_hash": ""
+  },
+  "assets/comic_page11.jpg": {
+    "mtime": 1793846701.4527452,
+    "seen": 1793846703.3957446,
+    "ast_hash": "13b3b20905c89acee1d842669b8a5fbe",
+    "semantic_hash": ""
+  },
+  "assets/comic_page12.jpg": {
+    "mtime": 1793846701.4537451,
+    "seen": 1793846703.395746,
+    "ast_hash": "4b8356b9b93ef459ed29d55ad6ca9a3a",
+    "semantic_hash": ""
+  },
+  "assets/comic_page13.jpg": {
+    "mtime": 1793846701.4547453,
+    "seen": 1793846703.3957474,
+    "ast_hash": "2cd7237228f154c872a7c8f0d6749bb5",
+    "semantic_hash": ""
+  },
+  "assets/comic_page14.jpg": {
+    "mtime": 1793846701.4557452,
+    "seen": 1793846703.3957486,
+    "ast_hash": "60f5b41f5f0b0eba98d52b14f5abeeb7",
+    "semantic_hash": ""
+  },
+  "assets/comic_page15.jpg": {
+    "mtime": 1793846701.4567454,
+    "seen": 1793846703.3957498,
+    "ast_hash": "e47314e87fa5bccb54741a1dcf03dc64",
+    "semantic_hash": ""
+  },
+  "assets/comic_page16.jpg": {
+    "mtime": 1793846701.4577453,
+    "seen": 1793846703.3957512,
+    "ast_hash": "3fd832922572cd7ab702cdf21d5fa7b5",
+    "semantic_hash": ""
+  },
+  "assets/comic_page17.jpg": {
+    "mtime": 1793846701.4587452,
+    "seen": 1793846703.3957524,
+    "ast_hash": "9f524737be34368fd77baeedc31d02f6",
+    "semantic_hash": ""
+  },
+  "assets/comic_page18.jpg": {
+    "mtime": 1793846701.4597454,
+    "seen": 1793846703.395754,
+    "ast_hash": "a76fccdcdace7d404bee0b4a0ecba93e",
+    "semantic_hash": ""
+  },
+  "assets/comic_page19.jpg": {
+    "mtime": 1793846701.4597454,
+    "seen": 1793846703.3957553,
+    "ast_hash": "500c353ffb6cfac2b555dc471485002c",
+    "semantic_hash": ""
+  },
+  "assets/comic_page2.jpg": {
+    "mtime": 1793846701.4430583,
+    "seen": 1793846703.3957567,
+    "ast_hash": "300d4612e4d8fca580e000f2cecfd306",
+    "semantic_hash": ""
+  },
+  "assets/comic_page20.jpg": {
+    "mtime": 1793846701.4607453,
+    "seen": 1793846703.3957582,
+    "ast_hash": "838b2b43e17e53f849cbcd5bd003140d",
+    "semantic_hash": ""
+  },
+  "assets/comic_page3.jpg": {
+    "mtime": 1793846701.4430583,
+    "seen": 1793846703.3957593,
+    "ast_hash": "404c09f227005174a6218d33749c88d9",
+    "semantic_hash": ""
+  },
+  "assets/comic_page4.jpg": {
+    "mtime": 1793846701.4448934,
+    "seen": 1793846703.395761,
+    "ast_hash": "e1f93b610cbc2dbb95573226459d4751",
+    "semantic_hash": ""
+  },
+  "assets/comic_page5.jpg": {
+    "mtime": 1793846701.445745,
+    "seen": 1793846703.3957622,
+    "ast_hash": "f0ac2783518bd4614cb67404e5ee66de",
+    "semantic_hash": ""
+  },
+  "assets/comic_page6.jpg": {
+    "mtime": 1793846701.4467452,
+    "seen": 1793846703.3957634,
+    "ast_hash": "e3815460369c5ed47e36a1b3299938c5",
+    "semantic_hash": ""
+  },
+  "assets/comic_page7.jpg": {
+    "mtime": 1793846701.4484506,
+    "seen": 1793846703.3957648,
+    "ast_hash": "44a09a091f4c1327db12b238ae61e70e",
+    "semantic_hash": ""
+  },
+  "assets/comic_page8.jpg": {
+    "mtime": 1793846701.4497452,
+    "seen": 1793846703.395766,
+    "ast_hash": "cba26751b108a79c23867084f670bf22",
+    "semantic_hash": ""
+  },
+  "assets/comic_page9.jpg": {
+    "mtime": 1793846701.450745,
+    "seen": 1793846703.3957675,
+    "ast_hash": "7b676fe8a42629db80dbbaf6ba598519",
+    "semantic_hash": ""
+  },
+  "assets/cyber_marx.jpg": {
+    "mtime": 1791937023.3029563,
+    "seen": 1793846703.3957691,
+    "ast_hash": "9b36f7498140b3c4ade48b69832a5ef0",
+    "semantic_hash": ""
+  },
+  "assets/icon.png": {
+    "mtime": 1791937251.4408243,
+    "seen": 1793846703.3957703,
+    "ast_hash": "b3fe42afcd0aedabe06941b6a1525722",
+    "semantic_hash": ""
+  },
+  "assets/references/backgrounds/ref_bg_apartment_1408.jpg": {
+    "mtime": 1793324895.4981422,
+    "seen": 1793846703.3957717,
+    "ast_hash": "63b8d784b96998256009ce4bb0b27ff8",
+    "semantic_hash": ""
+  },
+  "assets/references/backgrounds/ref_bg_community_hall.jpg": {
+    "mtime": 1793324903.9132786,
+    "seen": 1793846703.395773,
+    "ast_hash": "830a25038268767d415a1f1af2f57eea",
+    "semantic_hash": ""
+  },
+  "assets/references/backgrounds/ref_bg_kael_den.jpg": {
+    "mtime": 1793323295.18151,
+    "seen": 1793846703.3957741,
+    "ast_hash": "c45562171a3d65fbd1fba884baf8f081",
+    "semantic_hash": ""
+  },
+  "assets/references/backgrounds/ref_bg_neometropolis.jpg": {
+    "mtime": 1793323295.18651,
+    "seen": 1793846703.3957756,
+    "ast_hash": "3841cf7a5918b919a29e023b880b12d2",
+    "semantic_hash": ""
+  },
+  "assets/references/backgrounds/ref_bg_server_citadel.jpg": {
+    "mtime": 1793323295.1905103,
+    "seen": 1793846703.3957772,
+    "ast_hash": "7b16e9d1613b321ae0f0873ac39aeb94",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_bac_ba.jpg": {
+    "mtime": 1793324895.492142,
+    "seen": 1793846703.3957787,
+    "ast_hash": "3c5a0586a397a83c5875123d34c770b9",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_ceo_sterling.jpg": {
+    "mtime": 1793323295.1935103,
+    "seen": 1793846703.3957798,
+    "ast_hash": "d107326458fb33b44d967c0094513914",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_cyber_marx.jpg": {
+    "mtime": 1793323295.1975102,
+    "seen": 1793846703.395781,
+    "ast_hash": "03fd2fda8228edd9477031f568617839",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_dom_ai_companion.jpg": {
+    "mtime": 1793324895.494142,
+    "seen": 1793846703.3957825,
+    "ast_hash": "896e57b53cf4d879e4d59678ce2bfa6c",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_kael_sheet.jpg": {
+    "mtime": 1793323295.2015102,
+    "seen": 1793846703.3957837,
+    "ast_hash": "7aa86ecfcbb584c63086952fb3ff99da",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_mom_minh.jpg": {
+    "mtime": 1793324895.4931421,
+    "seen": 1793846703.3957853,
+    "ast_hash": "e0e33421cff6ee1d9826af462cca3ddc",
+    "semantic_hash": ""
+  },
+  "assets/references/characters/ref_omni_drone_enforcer.jpg": {
+    "mtime": 1793323295.2035103,
+    "seen": 1793846703.3957865,
+    "ast_hash": "a0d7404c9468e07d6e4858970fd207cb",
+    "semantic_hash": ""
+  },
+  "assets/references/props/ref_prop_nep_sang_device.jpg": {
+    "mtime": 1793324895.4961421,
+    "seen": 1793846703.3957877,
+    "ast_hash": "9fec089173b71d6e03f4807666e8ecdf",
+    "semantic_hash": ""
+  },
+  "comic/giu-mot-dom-sang/characters/characters.png": {
+    "mtime": 1793323295.1705098,
+    "seen": 1793846703.3957891,
+    "ast_hash": "6ba69c810912e759b2806d235b4755f5",
+    "semantic_hash": ""
+  },
+  "icon.png": {
+    "mtime": 1791937251.416824,
+    "seen": 1793846703.3957903,
+    "ast_hash": "b3fe42afcd0aedabe06941b6a1525722",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_legacy_backup.jpg": {
+    "mtime": 1793848477.966498,
+    "seen": 1793848569.643663,
+    "ast_hash": "32259d026dc7593b62d2f4775c350e70",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_domsang.jpg": {
+    "mtime": 1793849397.3552263,
+    "seen": 1793849471.1367,
+    "ast_hash": "33015b877ed3cf8ed7986efad0152fa9",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_cyberpunk.jpg": {
+    "mtime": 1793850076.5417624,
+    "seen": 1793850300.605797,
+    "ast_hash": "86aa43f1e35a85a9a7b6e5d7945c104f",
+    "semantic_hash": ""
+  },
+  "assets/comic_back_cover.jpg": {
+    "mtime": 1793850417.3790193,
+    "seen": 1793924660.072112,
+    "ast_hash": "c4595d78ba82055ab5bc32f80edbf6c2",
+    "semantic_hash": ""
+  },
+  "ai-report.html": {
+    "mtime": 1793926559.08374,
+    "seen": 1793927291.7680364,
+    "ast_hash": "d749a11d28645da2e746a5f8d2369644",
+    "semantic_hash": ""
+  },
+  "docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.md": {
+    "mtime": 1793926533.326291,
+    "seen": 1793927291.7680862,
+    "ast_hash": "efb85f35fcf4dc9d60251dd9c64bad97",
+    "semantic_hash": ""
+  },
+  "docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.pdf": {
+    "mtime": 1793926553.4664066,
+    "seen": 1793927291.7681055,
+    "ast_hash": "18a6328cdeec53547593305bc6acd4e0",
+    "semantic_hash": ""
+  },
+  "docs/evidence_lettering_comparison.jpg": {
+    "mtime": 1793925565.106544,
+    "seen": 1793926493.0429478,
+    "ast_hash": "9fa5bd6ebc90f328352694baf53508f9",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1793323295.17251,
+    "seen": 1793846703.3957949,
+    "ast_hash": "dc61efdd31d4e2d73905698e6c0941bb",
+    "semantic_hash": ""
+  }
+}

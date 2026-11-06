@@ -19,15 +19,15 @@
     "ast_empty": true
   },
   "build-gallery.js": {
-    "mtime": 1793848917.3106296,
-    "seen": 1793848928.3617303,
-    "ast_hash": "b04e29b6884bd00463faf49aad72ae7c",
+    "mtime": 1793850444.1642303,
+    "seen": 1793924660.0719671,
+    "ast_hash": "d6ef8023dfa291e1d103dea3bdb10d79",
     "semantic_hash": ""
   },
   "build-novel-reader.js": {
-    "mtime": 1793848551.1573544,
-    "seen": 1793848569.6434999,
-    "ast_hash": "cacc12ee335f2e30eb8dc896459624ee",
+    "mtime": 1793925721.4562175,
+    "seen": 1793926493.0427568,
+    "ast_hash": "fa9c188209abcaab6d5d2c54bcaef183",
     "semantic_hash": ""
   },
   "compile-cli.mjs": {
@@ -325,21 +325,21 @@
     "semantic_hash": ""
   },
   "gallery.html": {
-    "mtime": 1793848922.0916853,
-    "seen": 1793848928.361805,
-    "ast_hash": "01d6a3b5b29739380521cfe02de7c37b",
+    "mtime": 1793850449.3482716,
+    "seen": 1793924660.0720525,
+    "ast_hash": "57ad020629f5d38294295da80ead2682",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1793848904.7554832,
-    "seen": 1793848928.3618066,
-    "ast_hash": "9cac1f12b8461f07c840be3d3ec3e8d5",
+    "mtime": 1793925708.582297,
+    "seen": 1793926493.0428336,
+    "ast_hash": "6deec73a1b2577b291db4a73e8f57bfb",
     "semantic_hash": ""
   },
   "novel-reader.html": {
-    "mtime": 1793848555.6744072,
-    "seen": 1793848569.643603,
-    "ast_hash": "451e5f24c0c16409c29707e1604c342d",
+    "mtime": 1793925725.5931928,
+    "seen": 1793926493.042835,
+    "ast_hash": "6df073e6a3e169fe821ae8c5553e539d",
     "semantic_hash": ""
   },
   "references-catalog.html": {
@@ -541,9 +541,9 @@
     "semantic_hash": ""
   },
   "assets/comic_cover.jpg": {
-    "mtime": 1793848838.3667085,
-    "seen": 1793848928.3618584,
-    "ast_hash": "0e66818fbed8315aa496510f2db85abf",
+    "mtime": 1793850108.9309342,
+    "seen": 1793850300.6057951,
+    "ast_hash": "e0e7517bcff998327dc0841ebd963d36",
     "semantic_hash": ""
   },
   "assets/comic_page1.jpg": {
@@ -772,6 +772,54 @@
     "mtime": 1793848477.966498,
     "seen": 1793848569.643663,
     "ast_hash": "32259d026dc7593b62d2f4775c350e70",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_domsang.jpg": {
+    "mtime": 1793849397.3552263,
+    "seen": 1793849471.1367,
+    "ast_hash": "33015b877ed3cf8ed7986efad0152fa9",
+    "semantic_hash": ""
+  },
+  "assets/comic_cover_cyberpunk.jpg": {
+    "mtime": 1793850076.5417624,
+    "seen": 1793850300.605797,
+    "ast_hash": "86aa43f1e35a85a9a7b6e5d7945c104f",
+    "semantic_hash": ""
+  },
+  "assets/comic_back_cover.jpg": {
+    "mtime": 1793850417.3790193,
+    "seen": 1793924660.072112,
+    "ast_hash": "c4595d78ba82055ab5bc32f80edbf6c2",
+    "semantic_hash": ""
+  },
+  "ai-report.html": {
+    "mtime": 1793926559.08374,
+    "seen": 1793927291.7680364,
+    "ast_hash": "d749a11d28645da2e746a5f8d2369644",
+    "semantic_hash": ""
+  },
+  "docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.md": {
+    "mtime": 1793927363.466261,
+    "seen": 1793927410.2749417,
+    "ast_hash": "c6a087610f9edb7de46bbb2fafd25597",
+    "semantic_hash": ""
+  },
+  "docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.pdf": {
+    "mtime": 1793927384.6534324,
+    "seen": 1793927410.2749639,
+    "ast_hash": "a27f15a309de0a0386a6ac0f784e95ea",
+    "semantic_hash": ""
+  },
+  "docs/evidence_lettering_comparison.jpg": {
+    "mtime": 1793925565.106544,
+    "seen": 1793926493.0429478,
+    "ast_hash": "9fa5bd6ebc90f328352694baf53508f9",
+    "semantic_hash": ""
+  },
+  "docs/evidence_cover_spread.jpg": {
+    "mtime": 1793927314.3648655,
+    "seen": 1793927410.2750952,
+    "ast_hash": "9885038897d26b8adcb97ef2ae7c3ac1",
     "semantic_hash": ""
   },
   "package-lock.json": {
