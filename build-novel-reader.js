@@ -863,7 +863,7 @@ const html = `<!DOCTYPE html>
       <a href="gallery.html" class="btn-nav">🖼️ HD Gallery</a>
       <a href="ar-camera.html" class="btn-nav">📷 AR Hologram</a>
       <a href="docs/CUON_TRUYEN_20_TRANG_GIU_MOT_DOM_SANG_MLN122.md" target="_blank" class="btn-nav accent">📥 Kịch Bản (.md)</a>
-      <a href="docs/BAO_CAO_MINH_BACH_SU_DUNG_AI_MLN122.md" target="_blank" class="btn-nav" style="border-color: var(--neon-yellow); color: var(--neon-yellow); background: rgba(255, 230, 0, 0.15);">⚖️ Báo Cáo Dùng AI (.md)</a>
+      <a href="ai-report.html" target="_blank" class="btn-nav" style="border-color: var(--neon-yellow); color: var(--neon-yellow); background: rgba(255, 230, 0, 0.15);">⚖️ Báo Cáo Dùng AI</a>
     </div>
   </header>
 
